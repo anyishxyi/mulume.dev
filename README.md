@@ -1,2 +1,1 @@
-# yajp
-my website
+Personal website
