@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,700,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,700,900&display=swap");
 html {
   height: 100%;
   box-sizing: border-box;
@@ -20,23 +19,23 @@ body {
 }
 
 h1 {
-	font-size: 4.5em;
+  font-size: 4.5em;
   font-weight: 500;
   margin-bottom: 0;
 }
 
 p {
-	line-height: 1.4;
+  line-height: 1.4;
   max-width: 26em;
-	font-size: 1.6em;
+  font-size: 1.6em;
   font-weight: 300;
 }
 
 .name {
-	font-weight: 500;
+  font-weight: 500;
   font-size: 2.2em;
 }
 
-a:-webkit-any-link{
-  text-decoration:none !important;
+a:-webkit-any-link {
+  text-decoration: none !important;
 }

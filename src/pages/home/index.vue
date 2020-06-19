@@ -1,12 +1,12 @@
 <template>
-<div class="home-page">
+<div>
 	<h1>Hello.</h1>
 
 	<p class="name">My name is Jean-Paul NGALULA.</p>
 
-	<p>I am student and software developer at <a href="https://ownest.io/" target="_blank">Ownest</a>. Most of my work is publicly available on <a href="https://github.com/nmcodes" target="_blank">GitHub</a>.</p>
+	<p>I am student and software developer at <a class="link" href="https://ownest.io/" target="_blank">Ownest</a>. Most of my work is publicly available on <a class="link" href="https://github.com/nmcodes" target="_blank">GitHub</a>.</p>
 
-	<p>You probably want to follow me on <a href="https://www.linkedin.com/in/jeanpaulngalula/" target="_blank">LinkedIn</a> and <a href="https://twitter.com/nmcodes" target="_blank">Twitter</a> for more up-to-date content.</p>
+	<p>You probably want to follow me on <a class="link" href="https://www.linkedin.com/in/jeanpaulngalula/" target="_blank">LinkedIn</a> and <a class="link" href="https://twitter.com/nmcodes" target="_blank">Twitter</a> for more up-to-date content.</p>
 
 	<p>Outside of programming, I enjoy video games, karaoke, football and eating pondu.</p>
   
@@ -41,10 +41,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home-page{
-
-}
-
 .flow {
   position: fixed;
   bottom: 0;
@@ -53,10 +49,46 @@ export default {
 }
 
 .flow svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.link {
+  /* RESET */
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 5px 5px;
+  overflow: hidden;
+  color: #fff;
+  vertical-align: bottom;
+  transition: color .3s ease-out;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% - 2px));
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(60deg, #3374FF 0%, #3374FF 100%);
+  transition: transform .25s ease-out;
+}
+
+.link:hover { 
+  color: #fff;
+}
+
+.link:hover::before {
+  transform: translateY(0);
+  transition: transform .25s ease-out;
 }
 </style>
