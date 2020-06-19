@@ -11,7 +11,7 @@ Vue.use(Router)
 export const constantRoutes = [
   {
     path: '',
-    component: () => import(/* webpackChunkName: "yajp routes" */ '@/components/home'),
+    component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/home'),
     hidden: true
   },
   { path: '*', redirect: '/', hidden: true }
