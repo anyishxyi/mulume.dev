@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "git reset HEAD --hard && git pull origin master && npm i && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "contributors": [
