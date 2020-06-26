@@ -1,6 +1,6 @@
 <template>
 <div>
-	<h1>Hello.</h1>
+	<h1><vuejsTypist :words="words" /></h1>
 
 	<p class="name">My name is Jean-Paul NGALULA.</p>
 
@@ -8,7 +8,7 @@
 
 	<p>You probably want to follow me on <a class="link" href="https://www.linkedin.com/in/jeanpaulngalula/" target="_blank">LinkedIn</a> and <a class="link" href="https://twitter.com/nmcodes" target="_blank">Twitter</a> for more up-to-date content.</p>
 
-	<p>Outside of programming, I enjoy video games, karaoke, football and eating pondu.</p>
+	<p>Outside of programming, I enjoy eating pondu, football, video games and karaoke</p>
   
   <div data-v-21d6155b="" data-v-19c62248="" class="flow flow" style="padding-top: 10%;">
     <svg data-v-21d6155b="" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -25,11 +25,17 @@
 </template>
 
 <script>
+import vuejsTypist from 'vuejs-typist'
 
 export default {
   name: 'HOMEPAGE',
+  components: {
+    vuejsTypist
+  },
   data(){
-    return {}
+    return {
+      words: ['Mbote', 'Bonjour', 'Hello']
+    }
   },
   async created() {
     this.init()
