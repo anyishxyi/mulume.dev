@@ -14,6 +14,11 @@ export const constantRoutes = [
     component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/home'),
     hidden: true
   },
+  {
+    path: '/uses',
+    component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/uses'),
+    hidden: true
+  },
   { path: '*', redirect: '/', hidden: true }
 ]
 
