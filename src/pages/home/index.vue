@@ -1,5 +1,6 @@
 <template>
-<div class="home-page">
+<div>
+  <input type="checkbox" class='theme-switch' v-model="darkMode"/>
 	<h1><vuejsTypist :words="words" /></h1>
 
 	<p class="name">My name is Jean-Paul NGALULA.</p>
@@ -47,7 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home-page {
   .flow {
     position: fixed;
     bottom: 0;
@@ -98,5 +98,5 @@ export default {
     transform: translateY(0);
     transition: transform .25s ease-out;
   }
-}
+
 </style>
