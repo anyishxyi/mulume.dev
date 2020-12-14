@@ -21,10 +21,10 @@
                     <input type="checkbox" id='theme-switch' class='theme-switch' v-model="darkMode"/>
                     <label for='theme-switch'>
                         <span v-if="darkMode === true">
-                            <img alt="logo" src="@/assets/images/sun.png" width="40">
+                            <img alt="logo" src="@/assets/images/png/sun.png" width="40">
                         </span>
                         <span v-else>
-                            <img alt="logo" src="@/assets/images/moon.png" width="40">
+                            <img alt="logo" src="@/assets/images/png/moon.png" width="40">
                         </span>
                     </label>
                 </div>

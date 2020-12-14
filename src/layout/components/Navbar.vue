@@ -1,21 +1,14 @@
 <template>
-  <div>
-    <div class="navbar navbar-default nav-color shadow">
-      <router-link :to="{path: '/home'}">
-        nmcodes
-      </router-link>
-      <div class="right-menu">
-        <el-button type="primary" class="pad">
-          <router-link :to="{path: '/home'}">
-            Accueil
-          </router-link>
-        </el-button>
-        <el-button type="primary" class="pad">
-          <router-link :to="{path: '/events'}">
-            Evenements
-          </router-link>
-        </el-button>
-      </div>
+  <div class="navbar navbar-default nav-color shadow">
+    <router-link :to="{path: '/home'}">
+      nmcodes
+    </router-link>
+    <div class="right-menu">
+      <!-- <el-button type="primary" class="pad">
+        <router-link :to="{path: '/home'}">
+          Accueil
+        </router-link>
+      </el-button> -->
     </div>
   </div>
 </template>
@@ -66,91 +59,91 @@ export default {
 
 <style lang="scss" scoped>
 
-.navbar {
-  height: 60px;
-  border: none;
-  z-index: 100;
-  transition: background-color 1s ease 0s;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  background-color: #222020;
-  // display: flex;
+// .navbar {
+//   height: 60px;
+//   border: none;
+//   z-index: 100;
+//   transition: background-color 1s ease 0s;
+//   top: 0;
+//   position: fixed;
+//   width: 100%;
+//   background-color: #222020;
+//   // display: flex;
 
-  .logo {
-    float: left;
-    width: 140px;
-    height: 18px;
-    line-height: 60px;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
+//   .logo {
+//     float: left;
+//     width: 140px;
+//     height: 18px;
+//     line-height: 60px;
+//     margin-left: 20px;
+//     margin-top: 20px;
+//   }
 
-  .right-menu {
-    float: right;
-    height: 100%;
-    line-height: 60px;
-    margin-right: 40px;
+//   .right-menu {
+//     float: right;
+//     height: 100%;
+//     line-height: 60px;
+//     margin-right: 40px;
 
-    &:focus {
-      outline: none;
-    }
+//     &:focus {
+//       outline: none;
+//     }
 
-    .right-menu-item {
-      display: inline-block;
-      padding: 0 8px;
-      height: 100%;
-      font-size: 1.1em;
-      color: white;
-      // vertical-align: text-bottom;
-      &.lang {
-        font-size: 1.7em;
-      }
-      &.hover-effect {
-        cursor: pointer;
-        transition: background .3s;
-        &:hover {
-          background: rgba(0, 0, 0, .025)
-        }
-      }
-      .el-icon-s-tools {
-        font-size: 1.15em;
-        line-height: 3.1em;
-      }
-    }
+//     .right-menu-item {
+//       display: inline-block;
+//       padding: 0 8px;
+//       height: 100%;
+//       font-size: 1.1em;
+//       color: white;
+//       // vertical-align: text-bottom;
+//       &.lang {
+//         font-size: 1.7em;
+//       }
+//       &.hover-effect {
+//         cursor: pointer;
+//         transition: background .3s;
+//         &:hover {
+//           background: rgba(0, 0, 0, .025)
+//         }
+//       }
+//       .el-icon-s-tools {
+//         font-size: 1.15em;
+//         line-height: 3.1em;
+//       }
+//     }
 
-    .avatar-container {
-      margin-right: 30px;
+//     .avatar-container {
+//       margin-right: 30px;
 
-      .avatar-wrapper {
-        margin-top: 5px;
-        position: relative;
+//       .avatar-wrapper {
+//         margin-top: 5px;
+//         position: relative;
 
-        .user-avatar {
-          cursor: pointer;
-          width: 40px;
-          height: 40px;
-          border-radius: 10px;
-        }
+//         .user-avatar {
+//           cursor: pointer;
+//           width: 40px;
+//           height: 40px;
+//           border-radius: 10px;
+//         }
 
-        .el-icon-caret-bottom {
-          cursor: pointer;
-          position: absolute;
-          right: -20px;
-          top: 25px;
-          font-size: 12px;
-        }
-      }
-    }
+//         .el-icon-caret-bottom {
+//           cursor: pointer;
+//           position: absolute;
+//           right: -20px;
+//           top: 25px;
+//           font-size: 12px;
+//         }
+//       }
+//     }
 
-    .btn_connexion {
-      color: blue($color: #000000);
-    }
-  }
-}
+//     .btn_connexion {
+//       color: blue($color: #000000);
+//     }
+//   }
+// }
 
-.pad {
-  padding-right: 10px;
-  padding-left: 10px;
-}
+// .pad {
+//   padding-right: 10px;
+//   padding-left: 10px;
+// }
 </style>

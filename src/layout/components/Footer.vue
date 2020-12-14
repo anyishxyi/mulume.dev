@@ -10,9 +10,9 @@
 
 <script>
 
-const twitter = require('@/assets/images/twitter.svg')
-const facebook = require('@/assets/images/github.svg')
-const france = require('@/assets/images/france.png')
+const twitter = require('@/assets/images/svg/twitter.svg')
+const facebook = require('@/assets/images/svg/github.svg')
+const france = require('@/assets/images/png/france.png')
 
 export default {
   name: 'Footer',
