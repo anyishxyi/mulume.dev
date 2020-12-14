@@ -22,6 +22,9 @@
       "pre-commit": "lint-staged"
     }
   },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  },
   "lint-staged": {
     "src/**/*.{js,vue}": [
       "eslint --fix",
@@ -30,7 +33,9 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "path": "^0.12.7",
     "vue": "^2.6.10",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.1.5",
     "vuejs-typist": "^0.1.1",
     "vuex": "^3.1.2",

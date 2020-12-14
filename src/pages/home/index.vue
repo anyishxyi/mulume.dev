@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="home-page">
 	<h1><vuejsTypist :words="words" /></h1>
 
 	<p class="name">My name is Jean-Paul NGALULA.</p>
@@ -47,54 +47,56 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.flow {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+.home-page {
+  .flow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
-.flow svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
+  .flow svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
 
-.link {
-  /* RESET */
-  text-decoration: none;
-  line-height: 1;
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  padding: 5px 5px;
-  overflow: hidden;
-  color: #fff;
-  vertical-align: bottom;
-  transition: color .3s ease-out;
-}
+  .link {
+    /* RESET */
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 5px 5px;
+    overflow: hidden;
+    color: #fff;
+    vertical-align: bottom;
+    transition: color .3s ease-out;
+  }
 
-.link::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  transform: translateY(calc(100% - 2px));
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(60deg, #3374FF 0%, #3374FF 100%);
-  transition: transform .25s ease-out;
-}
+  .link::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100% - 2px));
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #3374FF 0%, #3374FF 100%);
+    transition: transform .25s ease-out;
+  }
 
-.link:hover { 
-  color: #fff;
-}
+  .link:hover { 
+    color: #fff;
+  }
 
-.link:hover::before {
-  transform: translateY(0);
-  transition: transform .25s ease-out;
+  .link:hover::before {
+    transform: translateY(0);
+    transition: transform .25s ease-out;
+  }
 }
 </style>
