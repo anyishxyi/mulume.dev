@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Layout from '@/layout'
 
 Vue.use(Router)
 
@@ -10,14 +11,32 @@ Vue.use(Router)
  */
 export const constantRoutes = [
   {
-    path: '',
-    component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/home'),
-    hidden: true
+    path: '/redirect',
+    component: Layout,
+    children: [
+      {
+        path: '/redirect/:path(.*)',
+        component: () => import(/* webpackChunkName: "hand-me-routes" */ '@/pages/redirect/index')
+      }
+    ]
   },
   {
-    path: '/uses',
-    component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/uses'),
-    hidden: true
+    path: '',
+    component: Layout,
+    redirect: 'home',
+    children: [
+      {
+        path: 'home',
+        component: () => import(/* webpackChunkName: "hand-me-routes" */ '@/pages/home'),
+        name: 'home',
+        // meta: { title: 'events', icon: 'home', affix: true }
+      },
+      {
+        path: '/uses',
+        component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/uses'),
+        hidden: true
+      }
+    ]
   },
   { path: '*', redirect: '/', hidden: true }
 ]

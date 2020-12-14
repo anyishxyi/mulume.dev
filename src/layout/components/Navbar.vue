@@ -2,7 +2,7 @@
   <div>
     <div class="navbar navbar-default nav-color shadow">
       <router-link :to="{path: '/home'}">
-        <el-image class="logo" :src="logo" lazy />
+        nmcodes
       </router-link>
       <div class="right-menu">
         <el-button type="primary" class="pad">
@@ -15,45 +15,21 @@
             Evenements
           </router-link>
         </el-button>
-        <el-button v-if="loggedIn" type="success" class="pad" plain>
-          <router-link :to="{path: '/event/create'}">
-            Créer Evenement
-          </router-link>
-        </el-button>
-        <el-button v-if="!loggedIn" type="success" class="pad" @click="loginClicked" round>Connexion</el-button>
-        <el-dropdown v-if="loggedIn" class="right-menu-item hover-effect pad" trigger="click">
-          <i class="el-icon-s-tools" />
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item @click.native="goToProfile">Profil</el-dropdown-item>
-            <el-dropdown-item @click.native="openLogout" divided>
-              <span style="display:block;">Deconnexion</span>
-            </el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
       </div>
     </div>
-    <Login
-      :visibility="showLoginPage"
-      @eventToggleLoginVisibility="toggleLoginVisibility"
-    />
   </div>
 </template>
 
 <script>
-import Login from '@/components/Auth/Login'
-import { authComputed } from '@/store/helpers'
 const OFFSET = 60
-const logo = require('@/icons/png/handMe.png')
 
 export default {
-  components: { Login },
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
       scrollValue: 0,
-      showLoginPage: false,
-      logo
+      showLoginPage: false
     }
   },
   async beforeMount () {
@@ -66,9 +42,6 @@ export default {
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.onScroll)
-  },
-  computed: {
-    ...authComputed
   },
   methods: {
     onScroll () {
@@ -86,27 +59,6 @@ export default {
       this.showLoginPage = value
       // console.log('toggleLoginVisibility')
       // console.log(this.showLoginPage)
-    },
-    loginClicked() {
-      // console.log('clicked')
-      this.showLoginPage = true
-      // console.log(this.showLoginPage)
-    },
-    openLogout() {
-      this.$confirm('Voulez vous vraiment vous deconnecter ?', {
-        confirmButtonText: 'OK',
-        cancelButtonText: 'Annuler',
-        type: 'warning',
-        showClose: false
-      }).then( async () => {
-        // await this.$localforage.removeItem('userData').catch(error => console.log('error', error))
-        // this.userData = null
-        this.$store.dispatch('logout')
-        await this.$router.replace(`/home?redirect=${this.$route.fullPath}`)
-      })
-    },
-    goToProfile() {
-      this.$router.push(`/profile?redirect=${this.$route.fullPath}`)
     }
   }
 }

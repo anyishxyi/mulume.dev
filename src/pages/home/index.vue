@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <div class="section container">
-
             <div class="columns is-mobile">
                 <div class="column is-2">
                     <!-- dynamic logo -->

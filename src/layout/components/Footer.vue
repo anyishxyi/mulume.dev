@@ -4,15 +4,15 @@
     <el-image :src="twitter" class="flag-size" lazy />
     <el-image :src="facebook" class="flag-size icon-right" lazy />
   </div>
-  <div class="right"><el-image :src="france" class="flag-size" lazy /> Made in France, Paris copyright hand-me.fr 2020</div>
+  <div class="right"><el-image :src="france" class="flag-size" lazy /> Made in France, Paris copyright Jean-Paul NGALULA 2020</div>
 </div>
 </template>
 
 <script>
 
-const twitter = require('@/icons/png/twitter.png')
-const facebook = require('@/icons/png/facebook.png')
-const france = require('@/icons/png/france.png')
+const twitter = require('@/assets/images/twitter.svg')
+const facebook = require('@/assets/images/github.svg')
+const france = require('@/assets/images/france.png')
 
 export default {
   name: 'Footer',
