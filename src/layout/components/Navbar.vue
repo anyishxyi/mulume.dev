@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar navbar-default nav-color shadow">
+  <div class="navbar navbar-default nav-color">
     <router-link :to="{path: '/home'}">
       nmcodes
     </router-link>
