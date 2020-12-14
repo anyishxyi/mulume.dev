@@ -1,49 +1,101 @@
 <template>
-<div>
-  <input type="checkbox" class='theme-switch' v-model="darkMode"/>
-	<h1><vuejsTypist :words="words" /></h1>
+    <div id="app">
+        <div class="section container">
 
-	<p class="name">My name is Jean-Paul NGALULA.</p>
+            <div class="columns is-mobile">
+                <div class="column is-2">
+                    <!-- dynamic logo -->
+                    <a href="https://www.mynotepaper.com/" target="_blank">
+                        <span v-if="darkMode === true">
+                            <!-- <img alt="logo" src="./assets/images/logo-white.png"> -->
+                        </span>
+                        <span v-else>
+                            <!-- <img alt="logo" src="./assets/images/logo-black.png"> -->
+                        </span>
+                    </a>
+                </div>
+                <div class="column is-9">
+                    <!-- content -->
+                </div>
+                <div class="column is-1">
+                    <!-- theme switcher -->
+                    <input type="checkbox" id='theme-switch' class='theme-switch' v-model="darkMode"/>
+                    <label for='theme-switch'>
+                        <span v-if="darkMode === true">
+                            <img alt="logo" src="@/assets/images/sun.png" width="40">
+                        </span>
+                        <span v-else>
+                            <img alt="logo" src="@/assets/images/moon.png" width="40">
+                        </span>
+                    </label>
+                </div>
+            </div>
 
-	<p>I am student and software developer at <a class="link" href="https://ownest.io/" target="_blank">Ownest</a>. Most of my work is publicly available on <a class="link" href="https://github.com/nmcodes" target="_blank">GitHub</a>.</p>
+            <section class="hero is-medium has-text-centered">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title dynamic-title">
+                            <span v-if="darkMode === true">Dark Theme</span>
+                            <span v-else>Light Theme</span>
+                        </h1>
+                        <h2 class="subtitle dynamic-subtitle">Greetings from MyNotePaper!</h2>
+                    </div>
+                </div>
+            </section>
 
-	<p>You probably want to follow me on <a class="link" href="https://www.linkedin.com/in/jeanpaulngalula/" target="_blank">LinkedIn</a> and <a class="link" href="https://twitter.com/nmcodes" target="_blank">Twitter</a> for more up-to-date content.</p>
+        </div>
 
-	<p>Outside of programming, I enjoy eating pondu, football, video games and karaoke</p>
-  
-  <div data-v-21d6155b="" data-v-19c62248="" class="flow flow" style="padding-top: 10%;">
-    <svg data-v-21d6155b="" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <rect data-v-21d6155b="" width="100%" height="100%" fill="transparent"></rect>
-      <g data-v-21d6155b="" style="transform: translateY(40px);">
-        <path data-v-21d6155b="" fill="#1a1a1a" opacity="0.75" fill-rule="evenodd" xd="M0 150c363-106 446 114 800 0v150H0V150z" xxd="M0,0 H100 V50 H0 Z" xxxd="M0,0 C50,-50 50,50 100,0 V50 H0 Z" d="M-0,19.893982561382877 C50,41.63166447633141 50,-49.73495640345719 100,-16.652665790532563 V100 H0 Z" style="mix-blend-mode: normal;"></path>
-      </g>
-      <g data-v-21d6155b="" style="transform: translateY(60px);">
-        <path data-v-21d6155b="" fill="#1a1a1a" opacity="0.75" fill-rule="evenodd" xd="M0 150c363-106 446 114 800 0v150H0V150z" xxd="M0,0 H100 V50 H0 Z" xxxd="M0,0 C50,-50 50,50 100,0 V50 H0 Z" d="M-0,5.509328918102256 C50,43.274879190720114 50,-13.773322295255639 100,-17.309951676288044 V100 H0 Z" style="mix-blend-mode: normal;"></path>
-      </g>
-    </svg>
-  </div>
-</div>
+    </div>
 </template>
 
 <script>
-import vuejsTypist from 'vuejs-typist'
+// import vuejsTypist from 'vuejs-typist'
 
 export default {
   name: 'HOMEPAGE',
   components: {
-    vuejsTypist
+    // vuejsTypist
   },
   data(){
     return {
-      words: ['Mbote', 'Bonjour', 'Hello']
+      words: ['Mbote', 'Bonjour', 'Hello'],
+      darkMode: false,
     }
   },
-  async created() {
-    this.init()
-  },
-  methods: {
-    init() {}
-  }
+  mounted() {
+            // set page title
+            document.title = 'Multiple Themes in Vue.js';
+
+            // set 'app-background' class to body tag
+            let bodyElement = document.body;
+            bodyElement.classList.add("app-background");
+
+            // check for active theme
+            let htmlElement = document.documentElement;
+            let theme = localStorage.getItem("theme");
+
+            if (theme === 'dark') {
+                htmlElement.setAttribute('theme', 'dark')
+                this.darkMode = true
+            } else {
+                htmlElement.setAttribute('theme', 'light');
+                this.darkMode = false
+            }
+        },
+        watch: {
+            darkMode: function () {
+                // add/remove class to/from html tag
+                let htmlElement = document.documentElement;
+
+                if (this.darkMode) {
+                    localStorage.setItem("theme", 'dark');
+                    htmlElement.setAttribute('theme', 'dark');
+                } else {
+                    localStorage.setItem("theme", 'light');
+                    htmlElement.setAttribute('theme', 'light');
+                }
+            }
+        }
 }
 </script>
 
