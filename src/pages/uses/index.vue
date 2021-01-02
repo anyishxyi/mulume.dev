@@ -1,6 +1,6 @@
 <template>
 	<div>
-		hello world
+		uses
 	</div>
 </template>
 

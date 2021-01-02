@@ -1,5 +1,5 @@
 <template>
-	<div>home</div>
+	<div>resume</div>
 </template>
 
 <script>
@@ -10,4 +10,4 @@ export default {
 
 <style>
 
-</style>
+</style>templat

@@ -1,19 +1,24 @@
 <template>
   <div class="navbar navbar-default nav-color">
-    <router-link :to="{path: '/home'}">
+    <!-- <router-link :to="{path: '/home'}">
       nmcodes
-    </router-link>
+    </router-link> -->
     <div class="right-menu">
+      <el-image :src="sun" class="flag-size icon-right" lazy />
+      <!-- <svg-icon class="sun" icon-class="sun" @click="modalOpened = false" /> -->
       <!-- <el-button type="primary" class="pad">
         <router-link :to="{path: '/home'}">
           Accueil
         </router-link>
       </el-button> -->
+
+
     </div>
   </div>
 </template>
 
 <script>
+const sun = require('@/assets/images/svg/sun.svg')
 const OFFSET = 60
 
 export default {
@@ -22,7 +27,8 @@ export default {
       showNavbar: true,
       lastScrollPosition: 0,
       scrollValue: 0,
-      showLoginPage: false
+      showLoginPage: false,
+      sun
     }
   },
   async beforeMount () {
@@ -58,6 +64,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+    background-color: #222020;
+}
 
 // .navbar {
 //   height: 60px;
