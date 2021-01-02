@@ -1,14 +1,10 @@
 <template>
   <div class="navbar navbar-default nav-color">
-    <!-- <router-link :to="{path: '/home'}">
-      nmcodes
-    </router-link> -->
+    <router-link :to="{path: '/home'}">nmcodes</router-link>
     <div class="right-menu">
       <el-image :src="sun" class="flag-size icon-right" lazy />
       <svg-icon class="sun" icon-class="sun" @click="modalOpened = false" />
       <el-button type="primary" class="pad" @click="toggleTheme"> Accueil </el-button>
-
-
     </div>
   </div>
 </template>
@@ -54,9 +50,11 @@ mounted() {
       this.lastScrollPosition = window.pageYOffset
     },
     toggleTheme() {
-      console.log('clicked')
       this.$store.dispatch('setTheme', this.theme)
-                  .then(() => { this.theme = this.theme === 'darkMode' ? '' : 'darkMode' })
+                  .then(() => {
+                    this.theme = this.theme === 'darkMode' ? '' : 'darkMode'
+                    document.documentElement.setAttribute('theme', this.theme)
+                  })
                   .catch(error => { console.error(error) })
     }
   }

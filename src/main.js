@@ -11,7 +11,6 @@ import router from './router'
 
 import '@/assets/styles/index.scss' // global css
 import './assets/images'
-import 'buefy/dist/buefy.css'
 
 LocalForage.config({ driver: LocalForage.IndexedDB, name: 'Hand Me', version: 1.0, storeName: 'HandMe' })
 
@@ -31,7 +30,6 @@ new Vue({
   refreshOnceOnNavigation: true,
   created () {
     const userTheme = localStorage.getItem('user-theme')
-    console.log('userTheme', userTheme)
     if (userTheme) {
       const theme = JSON.parse(userTheme)
       this.$store.commit('SET_USER_THEME', theme)
