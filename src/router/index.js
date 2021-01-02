@@ -32,8 +32,18 @@ export const constantRoutes = [
         // meta: { title: 'events', icon: 'home', affix: true }
       },
       {
+        path: '/about',
+        component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/about'),
+        hidden: true
+      },
+      {
         path: '/uses',
         component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/uses'),
+        hidden: true
+      },
+      {
+        path: '/contact',
+        component: () => import(/* webpackChunkName: "yajp routes" */ '@/pages/contact'),
         hidden: true
       }
     ]

@@ -24,49 +24,12 @@ export default {
       github,
       france,
     }
-  },
-  async created() {
-    await this.init()
-  },
-  methods: {
-    init() {
-      // console.log('footer')
-    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.footer {
-  left: 0;
-  width: 100%;
-  background-color: #222020;
-  color: white;
-//  height: 20px;
-  font-size: 12px;
-  bottom: 0;
-  //  position: fixed; TODO in events page
-
-    .left {
-      float: left;
-      display: flex;
-      width: 50%;
-      padding-top: 25px;
-      padding-left: 160px;
-    }
-    .right {
-      float: right;
-      display: flex;
-      width: 30%;
-      padding-top: 25px;
-	}
-}
-
-.flag-size {
-  width: 20px;
-}
-
-span + span {
-  margin-left: 10px;
-}
+  span + span {
+    margin-left: 10px;
+  }
 </style>

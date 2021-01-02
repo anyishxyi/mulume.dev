@@ -1,10 +1,11 @@
 <template>
   <div class="navbar navbar-default nav-color">
-    <router-link :to="{path: '/home'}">nmcodes</router-link>
+    <router-link :to="{path: '/home'}">Jean-Paul NGALULA</router-link>
     <div class="right-menu">
-      <el-image :src="sun" class="flag-size icon-right" lazy />
-      <svg-icon class="sun" icon-class="sun" @click="modalOpened = false" />
-      <el-button type="primary" class="pad" @click="toggleTheme"> Accueil </el-button>
+      <el-button type="primary" class="pad" @click="toggleTheme"> theme </el-button>
+      <router-link :to="{path: '/about'}"><el-button type="primary" class="pad"> about </el-button></router-link>
+      <router-link :to="{path: '/uses'}"><el-button type="primary" class="pad"> uses </el-button></router-link>
+      <router-link :to="{path: '/contact'}"><el-button type="primary" class="pad"> Get in touch </el-button></router-link>
     </div>
   </div>
 </template>
@@ -39,13 +40,8 @@ mounted() {
   },
   methods: {
     onScroll () {
-      if (window.pageYOffset < 0) {
-        console.log('<0')
-        return
-      }
-      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) {
-        return
-      }
+      if (window.pageYOffset < 0) { return }
+      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) { return }
       this.showNavbar = window.pageYOffset < this.lastScrollPosition
       this.lastScrollPosition = window.pageYOffset
     },

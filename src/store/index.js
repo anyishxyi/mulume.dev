@@ -12,7 +12,6 @@ export default new Vuex.Store({
   mutations: {
     SET_USER_THEME(state, theme) {
       state.userTheme = theme
-      console.log('state.userTheme : ', state.userTheme)
       localStorage.setItem('user-theme', JSON.stringify(state.userTheme))
     },
     CLEAR_USER_THEME() {
