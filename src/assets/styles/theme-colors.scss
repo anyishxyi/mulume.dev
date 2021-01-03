@@ -1,7 +1,30 @@
 :root {
 	--app-background-color: #FFFFFF;
+	--bg: #fff;
+  --secondaryBg: #fff;
+  --secondaryBgHeavy: #fff;
+  --textNormal: #222;
+  --lightText: rgba(0, 0, 0, 0.45);
+  --slightlyLighterText: rgba(0, 0, 0, 0.8);
+  --lighterText: rgba(0, 0, 0, 0.35);
+	--textLink: #691375;
+	--custom-red: #e74c3c;
+	--text-accent: #5c61ff;
+	--text-opacity: 1;
+  // background-color: var(--bg);
 }
 
 [theme="darkMode"] {
+	-webkit-font-smoothing: antialiased;
 	--app-background-color: #010101;
+  --bg: rgb(21, 32, 43);
+  --secondaryBg: #243447;
+  --secondaryBgHeavy: #eee;
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --lightText: rgba(255, 255, 255, 0.5);
+  --lighterText: rgba(255, 255, 255, 0.35);
+  --slightlyLighterText: rgba(255, 255, 255, 0.6);
+	--textLink: rgb(29, 161, 242);
+	--text-accent: #00c58e;
+	--text-opacity: 1;
 }
