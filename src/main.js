@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
-import Element from 'element-ui'
-import locale from 'element-ui/lib/locale/lang/fr'
+import ElementUI from 'element-ui'
+// import locale from 'element-ui/lib/locale/lang/fr'
 import Buefy from 'buefy'
 import LocalForage from 'localforage'
 
@@ -19,7 +19,7 @@ Vue.config.productionTip = false
 Vue.prototype.handleEvent = new Vue()
 Vue.prototype.$localforage = LocalForage
 
-Vue.use(Element, { locale })
+Vue.use(ElementUI)
 
 Vue.use(Buefy, VueMeta)
 

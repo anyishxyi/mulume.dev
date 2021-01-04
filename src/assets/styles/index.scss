@@ -11,6 +11,17 @@ html, body {
   font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .app-background {
   background-color: var(--app-background-color);
 }
@@ -62,13 +73,7 @@ html, body {
 
 .text-theme-accent {
   color: var(--text-accent);
-  // color: rgba(92,97,255,var(--text-opacity));
 }
-
-// .text-dark-accent {
-//   color: #00c58e;
-//   color: rgba(0,197,142,var(--text-opacity));
-// }
 
 .flag-size {
   width: 20px;
@@ -97,40 +102,6 @@ input.theme-switch:checked + label {
 //////////////
 
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
-
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
 
 audio:not([controls]) {
   display: none;

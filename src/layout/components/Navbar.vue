@@ -2,14 +2,27 @@
   <div class="navbar navbar-default nav-color">
     <router-link :to="{path: '/home'}">
       <a class="flex items-center text-theme-accent font-bold text-lg mr-6">
-        <div class="responsive-image-container overflow-hidden inline-block w-10 h-10 mr-2 rounded-full border-2 border-light-accent dark:border-dark-accent">
+        <div class="inline-block mr-2 rounded-full border-2 border-light-accent dark:border-dark-accent">
           <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="object-cover h-full responsive-image-placeholder"></el-image>
         </div>
         <span>Jean-Paul NGALULA</span>
       </a>
     </router-link>
     <div class="right-menu">
-      <el-button type="primary" class="pad" @click="toggleTheme"> theme </el-button>
+      <button class="theme-switch-button" @click="toggleTheme">
+        <svg v-if="!!theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
       <router-link :to="{path: '/about'}"><a class=""> about </a></router-link>
       <router-link :to="{path: '/uses'}"><a class=""> uses </a></router-link>
       <router-link :to="{path: '/contact'}"><a class="bg-transparent text-light-accent dark:text-dark-accent font-semibold py-2 px-4 border-2 border-light-accent dark:border-dark-accent transition transition-all duration-300 rounded-lg hover:border-transparent hover:bg-light-accent dark-hover:bg-dark-accent hover:text-light-onAccent dark-hover:text-dark-onAccent get-in-touch text-base sm:text-base nuxt-link-exact-active nuxt-link-active" aria-current="page">Get in touch</a></router-link>
@@ -18,7 +31,6 @@
 </template>
 
 <script>
-const sun = require('@/assets/images/svg/sun.svg')
 const jeanpaul = require('@/assets/images/png/jeanpaul_ngalula.png')
 const OFFSET = 60
 
@@ -28,8 +40,7 @@ export default {
       showNavbar: true,
       lastScrollPosition: 0,
       theme: '',
-      jeanpaul,
-      sun
+      jeanpaul
     }
   },
 mounted() {
@@ -90,6 +101,23 @@ mounted() {
 
     &:focus {
       outline: none;
+    }
+
+    .theme-switch-button {
+      border: none;
+      background: none;
+      // cursor: pointer;
+      cursor: hand;
+      color: var(--textNormal);
+      outline: 0;
+      margin-top: 5px;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      
+      svg {
+        fill: var(--textNormal);
+      }
     }
 
     .right-menu-item {
