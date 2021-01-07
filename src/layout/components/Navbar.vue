@@ -1,12 +1,10 @@
 <template>
-  <div class="navbar navbar-default nav-color">
+  <div class="navbar flex mr-10">
     <router-link :to="{path: '/home'}">
-      <a class="flex items-center text-theme-accent font-bold text-lg mr-6">
-        <div class="inline-block mr-2 rounded-full border-2 border-light-accent dark:border-dark-accent">
-          <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="object-cover h-full responsive-image-placeholder"></el-image>
-        </div>
-        <span>Jean-Paul NGALULA</span>
-      </a>
+      <div class="items-center text-lg mr-6 flex">
+        <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="w-40 object-cover h-full responsive-image-placeholder"></el-image>
+        <span class="font-bold text-theme-accent">Jean-Paul NGALULA</span>
+      </div>
     </router-link>
     <div class="right-menu">
       <button class="theme-switch-button" @click="toggleTheme">
@@ -23,9 +21,9 @@
         </svg>
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <router-link :to="{path: '/about'}"><a class=""> about </a></router-link>
-      <router-link :to="{path: '/uses'}"><a class=""> uses </a></router-link>
-      <router-link :to="{path: '/contact'}"><a class="bg-transparent text-light-accent dark:text-dark-accent font-semibold py-2 px-4 border-2 border-light-accent dark:border-dark-accent transition transition-all duration-300 rounded-lg hover:border-transparent hover:bg-light-accent dark-hover:bg-dark-accent hover:text-light-onAccent dark-hover:text-dark-onAccent get-in-touch text-base sm:text-base nuxt-link-exact-active nuxt-link-active" aria-current="page">Get in touch</a></router-link>
+      <router-link :to="{path: '/about'}"><a class="text-theme-accent"> about </a></router-link>
+      <router-link :to="{path: '/uses'}"><a class="text-theme-accent"> uses </a></router-link>
+      <router-link :to="{path: '/contact'}"><a class="text-theme-accent bg-transparent text-light-accent dark:text-dark-accent font-semibold py-2 px-4 border-2 border-light-accent dark:border-dark-accent transition transition-all duration-300 rounded-lg hover:border-transparent hover:bg-light-accent dark-hover:bg-dark-accent hover:text-light-onAccent dark-hover:text-dark-onAccent get-in-touch text-base sm:text-base nuxt-link-exact-active nuxt-link-active" aria-current="page">Get in touch</a></router-link>
     </div>
   </div>
 </template>
@@ -43,10 +41,10 @@ export default {
       jeanpaul
     }
   },
-mounted() {
-  const localTheme = localStorage.getItem('theme'); //gets stored theme value if any
-  document.documentElement.setAttribute('data-theme', localTheme); // updates the data-theme attribute
-},
+  mounted() {
+    const localTheme = localStorage.getItem('theme'); //gets stored theme value if any
+    document.documentElement.setAttribute('data-theme', localTheme); // updates the data-theme attribute
+  },
   async beforeMount () {
     this.lastScrollPosition = window.pageYOffset
     window.addEventListener('scroll', this.onScroll)
@@ -82,16 +80,14 @@ mounted() {
   height: 60px;
   border: none;
   z-index: 100;
+  justify-content: space-between;
   transition: background-color 1s ease 0s;
   top: 0;
   position: fixed;
   width: 100%;
   background-color: var(--app-background-color);
+  overflow:auto;
   // display: flex;
-
-  // .logo {
-  //   width: 30px;
-  // }
 
   .right-menu {
     float: right;
@@ -111,35 +107,12 @@ mounted() {
       color: var(--textNormal);
       outline: 0;
       margin-top: 5px;
-      position: fixed;
-      top: 15px;
-      right: 15px;
+      // position: fixed;
+      // top: 15px;
+      // right: 15px;
       
       svg {
         fill: var(--textNormal);
-      }
-    }
-
-    .right-menu-item {
-      display: inline-block;
-      padding: 0 8px;
-      height: 100%;
-      font-size: 1.1em;
-      color: white;
-      // vertical-align: text-bottom;
-      &.lang {
-        font-size: 1.7em;
-      }
-      &.hover-effect {
-        cursor: pointer;
-        transition: background .3s;
-        &:hover {
-          background: rgba(0, 0, 0, .025)
-        }
-      }
-      .el-icon-s-tools {
-        font-size: 1.15em;
-        line-height: 3.1em;
       }
     }
 
@@ -171,10 +144,5 @@ mounted() {
       color: blue($color: #000000);
     }
   }
-.text-light-accent {
-  --text-opacity: 1;
-  color: #5c61ff;
-  color: rgba(92,97,255,var(--text-opacity));
-}
 }
 </style>

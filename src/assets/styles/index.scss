@@ -78,6 +78,33 @@ body {
 .flag-size {
   width: 20px;
 }
+
+.w-40 {
+  width: 40px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.text-light-accent {
+  --text-opacity: 1;
+  color: #5c61ff;
+  color: rgba(92,97,255,var(--text-opacity));
+}
+
 /*
 * === THEME SWITCH ===
 */
@@ -640,4 +667,3 @@ th {
 li {
   margin-bottom: calc(1.45rem / 2);
 }
-
