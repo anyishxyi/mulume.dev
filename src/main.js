@@ -10,7 +10,7 @@ import App from './App.vue'
 import router from './router'
 
 import '@/assets/styles/index.scss' // global css
-import './assets/images'
+import './assets/images/index' //for svg files
 
 LocalForage.config({ driver: LocalForage.IndexedDB, name: 'Hand Me', version: 1.0, storeName: 'HandMe' })
 

@@ -3,9 +3,54 @@
 /*
 * === BODY, APP BACKGROUND ETC. ===
 */
+
+* {
+  box-sizing: border-box;
+  // margin: 0;
+  padding: 0;
+  background-color: var(--app-background-color);
+}
+
+*:before {
+  box-sizing: border-box;
+}
+
+*:after {
+  box-sizing: border-box;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+html {
+  font: 112.5%/1.45em georgia, serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+
+body {
+  transition: all 0.3s linear;
+  color: var(--textNormal);
+  font-family: sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
 html, body {
   height: 100%;
-  background-color: var(--app-background-color);
+  // background-color: var(--app-background-color);
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -26,33 +71,24 @@ body {
   background-color: var(--app-background-color);
 }
 
-.footer {
-  left: 0;
-  width: 100%;
-  background-color: var(--app-background-color);
-  color: white;
-//  height: 20px;
-  font-size: 12px;
-  bottom: 0;
-  //  position: fixed; TODO in events page
+.space_between {
+  justify-content: space-between;
+}
 
-    .left {
-      float: left;
-      display: flex;
-      width: 50%;
-      padding-top: 25px;
-      padding-left: 160px;
-    }
-    .right {
-      float: right;
-      display: flex;
-      width: 30%;
-      padding-top: 25px;
-	}
+.space_around {
+  justify-content: space-around;
 }
 
 .flex {
   display: flex;
+}
+
+.m-0 {
+  margin: 0 auto;
+}
+
+.w-50 {
+  width: 50%;
 }
 
 .mr-6 {
@@ -309,47 +345,6 @@ textarea {
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-html {
-  font: 112.5%/1.45em georgia, serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-*:before {
-  box-sizing: border-box;
-}
-
-*:after {
-  box-sizing: border-box;
-}
-
-body {
-  transition: all 0.3s linear;
-  color: var(--textNormal);
-  font-family: sans-serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
 img {

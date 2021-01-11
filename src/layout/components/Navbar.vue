@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar flex mr-10">
+  <div class="navbar space_between flex mr-10">
     <router-link :to="{path: '/home'}">
       <div class="items-center text-lg mr-6 flex">
         <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="w-40 object-cover h-full responsive-image-placeholder"></el-image>
@@ -80,12 +80,11 @@ export default {
   height: 60px;
   border: none;
   z-index: 100;
-  justify-content: space-between;
   transition: background-color 1s ease 0s;
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: var(--app-background-color);
+  background-color: transparent;
   overflow:auto;
   // display: flex;
 
