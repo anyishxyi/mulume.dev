@@ -3,7 +3,7 @@
     <router-link :to="{path: '/home'}">
       <div class="items-center text-lg mr-6 flex">
         <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="w-40 object-cover h-full responsive-image-placeholder"></el-image>
-        <span class="font-bold text-theme-accent">Jean-Paul NGALULA</span>
+        <span class="font-bold color-theme-accent">Jean-Paul NGALULA</span>
       </div>
     </router-link>
     <div class="right-menu">
@@ -21,9 +21,9 @@
         </svg>
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <router-link :to="{path: '/about'}"><a class="text-theme-accent"> about </a></router-link>
-      <router-link :to="{path: '/uses'}"><a class="text-theme-accent"> uses </a></router-link>
-      <router-link :to="{path: '/contact'}"><a class="text-theme-accent bg-transparent text-light-accent dark:text-dark-accent font-semibold py-2 px-4 border-2 border-light-accent dark:border-dark-accent transition transition-all duration-300 rounded-lg hover:border-transparent hover:bg-light-accent dark-hover:bg-dark-accent hover:text-light-onAccent dark-hover:text-dark-onAccent get-in-touch text-base sm:text-base nuxt-link-exact-active nuxt-link-active" aria-current="page">Get in touch</a></router-link>
+      <router-link :to="{path: '/about'}"><a class="color-theme-accent"> about </a></router-link>
+      <router-link :to="{path: '/uses'}"><a class="color-theme-accent"> uses </a></router-link>
+      <router-link :to="{path: '/contact'}"><a class="color-theme-accent" aria-current="page">Get in touch</a></router-link>
     </div>
   </div>
 </template>
@@ -80,13 +80,10 @@ export default {
   height: 60px;
   border: none;
   z-index: 100;
-  transition: background-color 1s ease 0s;
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: transparent;
   overflow:auto;
-  // display: flex;
 
   .right-menu {
     float: right;
@@ -103,7 +100,7 @@ export default {
       background: none;
       // cursor: pointer;
       cursor: hand;
-      color: var(--textNormal);
+      color: var(--text-normal-color);
       outline: 0;
       margin-top: 5px;
       // position: fixed;
@@ -111,7 +108,7 @@ export default {
       // right: 15px;
       
       svg {
-        fill: var(--textNormal);
+        fill: var(--text-normal-color);
       }
     }
 

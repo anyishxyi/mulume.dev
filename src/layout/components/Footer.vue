@@ -1,7 +1,7 @@
 <template>
 <div class="footer m-0 w-50">
   <div class="flex m-0 w-50">
-    <svg-icon icon-class="code" />
+    <!-- <svg-icon icon-class="code" /> -->
     <el-image :src="code" class="flag-size" lazy /><span> with </span><el-image :src="heart" class="flag-size" lazy /><span> by Jean-Paul NGALULA © 2020</span>
   </div>
   <div class="flex m-0 w-50">
@@ -41,7 +41,6 @@ export default {
   .footer {
     padding-top: 40px;
     left: 0;
-    background-color: transparent;
     height: 20px;
     font-size: 12px;
     bottom: 0;
@@ -50,6 +49,6 @@ export default {
     margin-left: 10px;
   }
   el-image {
-    fill: var(--textNormal);
+    fill: var(--text-normal-color);
   }
 </style>
