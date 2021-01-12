@@ -9,25 +9,25 @@
 		</div>
 		<div class="details text-normal-color">
 			<div class="detail flex">
-				<div class="icon-dev">
+				<div class="icon-dev w-85">
 					<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="laptop-code" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon text-5xl text-light-secondary transition duration-1000 ease-in-out svg-inline--fa fa-laptop-code fa-w-20"><path fill="currentColor" d="M624 352h-48V64c0-35.2-28.8-64-64-64H128C92.8 0 64 28.8 64 64v288H16c-8.8 0-16 7.2-16 16v48c0 52.8 43.2 96 96 96h448c52.8 0 96-43.2 96-96v-48c0-8.8-7.2-16-16-16zM112 64c0-8.67 7.33-16 16-16h384c8.67 0 16 7.33 16 16v288H112V64zm480 352c0 26.47-21.53 48-48 48H96c-26.47 0-48-21.53-48-48v-16h180.9c5.57 9.39 15.38 16 27.1 16h128c11.72 0 21.52-6.61 27.1-16H592v16zM277.66 261.65l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.34 58.34c6.25 6.25 16.39 6.25 22.64 0zm73.38-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63z" class=""></path></svg>
 				</div>
-				<div>I am a full-stack developer / software consultant based in Luxembourg, right in the heart of Europe. I can do remote work for any place in the world.</div>
+				<div>I am a full-stack web developer / software consultant based in France, specifically in Paris. I can do remote work for any place in the world.</div>
 			</div>
 			<div class="detail flex">
-				<div class="icon-dev">
+				<div class="icon-dev w-65">
 					<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vuejs" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon text-5xl text-light-secondary transition duration-1000 ease-in-out svg-inline--fa fa-vuejs fa-w-14"><path fill="currentColor" d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z" class=""></path></svg>
 				</div>
-				<div>For frontend work, I am personally a huge fan of Vue.js and it's ecosystem (e.g. Nuxt.js).</div>
+				<div>For frontend work, I am personally a huge fan of Vue.js and I have some experience in angular too.</div>
 			</div>
 			<div class="detail flex">
-				<div class="icon-dev">
+				<div class="icon-dev w-65">
 					<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="node-js" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon text-5xl text-light-secondary transition duration-1000 ease-in-out svg-inline--fa fa-node-js fa-w-14"><path fill="currentColor" d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z" class=""></path></svg>
 				</div>
-				<div>For backend work, my go-to tool is Node.js, but I also have experience with Ruby on Rails and PHP..</div>
+				<div>For backend work, my go-to tool is Node.js with Express.js, but I also have experience with Java.</div>
 			</div>
 			<div class="detail flex">
-				<div class="icon-dev">
+				<div class="icon-dev w-65">
 					<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope-open-text" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon text-5xl text-light-secondary transition duration-1000 ease-in-out svg-inline--fa fa-envelope-open-text fa-w-16"><path fill="currentColor" d="M494.59 164.52c-1.52-1.26-13.86-11.2-30.59-24.66V96c0-26.51-21.49-48-48-48h-66.13C327.24 28.85 293.77 0 256 0c-37.65 0-70.9 28.63-93.85 48H96c-26.51 0-48 21.49-48 48v43.85c-16.81 13.52-29.15 23.46-30.48 24.56A48.002 48.002 0 0 0 0 201.48V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V201.51c0-14.31-6.38-27.88-17.41-36.99zM96 96h320v156.66c-36.26 29.32-78.69 63.67-86.59 69.95C311.25 337.12 279.6 368 256 368c-23.69 0-55.86-31.37-73.41-45.39-7.9-6.28-50.33-40.64-86.59-69.97V96zm368 362c0 3.31-2.69 6-6 6H54c-3.31 0-6-2.69-6-6V275.56c38.96 31.48 95.95 77.65 104.66 84.58C174.71 377.76 212.55 416 256 416c43.21 0 80.64-37.72 103.34-55.86 9-7.15 65.84-53.19 104.66-84.56V458zM176 192h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16zm176 64v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16z" class=""></path></svg>
 				</div>
 				<div>If you have any web development needs, I am happy to look at your project.</div>
@@ -65,14 +65,20 @@ export default {
 			}
 		}
 	}
-}
 
-.icon-dev {
-	width: 40px;
-	height: 40px;
-	svg {
-		width: 100%;
-		height: 100%;
+	.details {
+		.detail {
+			padding-top: 40px;
+			.icon-dev {
+				padding-right: 20px;
+				height: 65px;
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
 	}
 }
+
 </style>

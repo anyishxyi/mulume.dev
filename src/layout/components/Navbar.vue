@@ -6,7 +6,7 @@
         <span class="font-bold color-theme-accent">Jean-Paul NGALULA</span>
       </div>
     </router-link>
-    <div class="right-menu">
+    <div class="right-menu flex">
       <button class="theme-switch-button" @click="toggleTheme">
         <svg v-if="!!theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5"></circle>
@@ -21,9 +21,16 @@
         </svg>
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <router-link :to="{path: '/about'}"><a class="color-theme-accent"> about </a></router-link>
-      <router-link :to="{path: '/uses'}"><a class="color-theme-accent"> uses </a></router-link>
-      <router-link :to="{path: '/contact'}"><a class="color-theme-accent" aria-current="page">Get in touch</a></router-link>
+      <!-- <router-link :to="{path: '/about'}"><a class="btn btn-1"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>about</a></router-link>
+      <router-link :to="{path: '/uses'}"><a class="btn btn-1"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>uses</a></router-link>
+      <router-link :to="{path: '/contact'}"><a class="btn btn-2"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>contact</a></router-link> -->
+
+    
+    <!-- <a class="btn btn-2">Hover</a>  -->
+
+      <router-link :to="{path: '/about'}"><button class="btn btn-primary btn-ghost btn-open-line"> about </button></router-link>
+      <router-link :to="{path: '/uses'}"><button class="btn btn-primary btn-ghost btn-open-line"> uses </button></router-link>
+      <router-link :to="{path: '/contact'}"><button class="btn btn-primary btn-ghost"> contact </button></router-link>
     </div>
   </div>
 </template>
@@ -85,7 +92,7 @@ export default {
   width: 100%;
   overflow:auto;
 
-  .right-menu {
+  .right-menu flex {
     float: right;
     height: 100%;
     line-height: 60px;

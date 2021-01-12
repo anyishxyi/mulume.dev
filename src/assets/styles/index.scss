@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
 @import 'theme-colors';
+@import 'button-collection';
+// @import 'button-style';
 
 /*
 * === BODY, APP BACKGROUND ETC. ===
@@ -24,10 +26,10 @@
   opacity: 0.54;
 }
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
+// ::-webkit-file-upload-button {
+//   -webkit-appearance: button;
+//   font: inherit;
+// }
 
 html {
   font: 112.5%/1.45em georgia, serif;
@@ -126,6 +128,13 @@ html, body {
 
 .w-40 {
   width: 40px;
+}
+
+.w-65 {
+  width: 65px;
+}
+.w-85 {
+  width: 85px;
 }
 
 .overflow-hidden {
@@ -271,7 +280,7 @@ hr {
   overflow: visible;
 }
 
-button,
+// button,
 input,
 optgroup,
 select,
@@ -284,37 +293,37 @@ optgroup {
   font-weight: 700;
 }
 
-button,
+// button,
 input {
   overflow: visible;
 }
 
-button,
+// button,
 select {
   text-transform: none;
 }
 
 [type="reset"],
 [type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
+// button,
+// html [type="button"] {
+//   -webkit-appearance: button;
+// }
 
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
+// [type="button"]::-moz-focus-inner,
+// [type="reset"]::-moz-focus-inner,
+// [type="submit"]::-moz-focus-inner,
+// button::-moz-focus-inner {
+//   border-style: none;
+//   padding: 0;
+// }
 
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+// [type="button"]:-moz-focusring,
+// [type="reset"]:-moz-focusring,
+// [type="submit"]:-moz-focusring,
+// button:-moz-focusring {
+//   outline: 1px dotted ButtonText;
+// }
 
 fieldset {
   border: 1px solid silver;
@@ -341,20 +350,20 @@ textarea {
   padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+// [type="number"]::-webkit-inner-spin-button,
+// [type="number"]::-webkit-outer-spin-button {
+//   height: auto;
+// }
 
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+// [type="search"]::-webkit-search-cancel-button,
+// [type="search"]::-webkit-search-decoration {
+//   -webkit-appearance: none;
+// }
 
 img {
   max-width: 100%;
