@@ -100,7 +100,7 @@ export default {
       background: none;
       // cursor: pointer;
       cursor: hand;
-      color: var(--text-normal-color);
+      color: var(--text-primary-color);
       outline: 0;
       margin-top: 5px;
       // position: fixed;
@@ -108,7 +108,7 @@ export default {
       // right: 15px;
       
       svg {
-        fill: var(--text-normal-color);
+        fill: var(--text-primary-color);
       }
     }
 

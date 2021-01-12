@@ -1,6 +1,6 @@
 <template>
 	<div class="home_page m-0 w-70">
-		<div class="hello">
+		<div class="hello text-primary-color">
 			<h1>Hello, I'm Jean-Paul</h1>
 			<h1>and I love web development</h1>
 		</div>
