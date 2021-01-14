@@ -2,12 +2,11 @@
   <div class="app-wrapper">
     <Navbar />
     <app-main />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 <script>
-// import { AppMain, Navbar, Footer } from './components'
-import { AppMain, Navbar } from './components'
+import { AppMain, Navbar, Footer } from './components'
 
 import { mapState } from 'vuex'
 
@@ -16,7 +15,7 @@ export default {
   components: {
     AppMain,
     Navbar,
-    // Footer
+    Footer
   },
   computed: {
     ...mapState({
