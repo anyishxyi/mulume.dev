@@ -1,20 +1,16 @@
 <template>
   <div class="navbar space_between flex mr-10">
-    <router-link :to="{path: '/home'}">
-      <!-- <div class="items-center text-lg mr-6 flex">
-        <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="mt-12 rounded-full block mb-8 border-4 p-2 border-icon icon-width icon-height"></el-image>
-        <span class="font-bold color-theme-accent">Jean-Paul NGALULA</span>
-      </div> -->
-      <div class="text-lg justify-center align-items mr-6 flex">
-        <span class="icon-width icon-height img-container">
+    <router-link :to="{path: '/home'}" class="txt-deco-none">
+      <div class="text-lg mt-20 justify-center align-items mr-6 flex">
+        <span class="ml-20 icon-width icon-height">
           <figure class="pic-border">
             <img :src="jeanpaul" class="profile-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
           </figure>
         </span>
-        <span class="font-bold color-theme-accent">Jean-Paul NGALULA</span>
+        <span class="pl-5 font-bold name-size color-theme-accent">Jean-Paul NGALULA</span>
       </div>
     </router-link>
-    <div class="right-menu">
+    <div class="right-menu justify-center align-items">
       <button class="theme-switch-button" @click="toggleTheme">
         <svg v-if="!!theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5"></circle>
@@ -29,7 +25,7 @@
         </svg>
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <router-link :to="{path: '/home'}"><a class="link color-theme-accent"> start </a></router-link>
+      <!-- <router-link :to="{path: '/home'}"><a class="link color-theme-accent"> start </a></router-link> -->
       <!-- <router-link :to="{path: '/about'}"><a class="link color-theme-accent"> about </a></router-link> -->
       <!-- <router-link :to="{path: '/uses'}"><a class="link color-theme-accent"> uses </a></router-link> -->
       <router-link :to="{path: '/contact'}"><button class="slide">Get in touch</button></router-link>
@@ -94,7 +90,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 60px;
+  height: 70px;
   border: none;
   z-index: 100;
   top: 0;
@@ -115,14 +111,10 @@ export default {
     .theme-switch-button {
       border: none;
       background: none;
-      // cursor: pointer;
-      cursor: hand;
+      cursor: pointer;
       color: var(--text-primary-color);
       outline: 0;
       margin-top: 5px;
-      // position: fixed;
-      // top: 15px;
-      // right: 15px;
       
       svg {
         fill: var(--text-primary-color);
