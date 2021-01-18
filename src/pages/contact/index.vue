@@ -1,5 +1,5 @@
 <template>
-	<div class="contact_page m-0">
+	<div class="contact_page m-0 w-60">
 		<h1 class="heading text-primary-color">Let's talks</h1>
 		<div class="container flex">
 			<div class="img">
@@ -46,7 +46,7 @@ export default {
 		padding-bottom: 30px;
 		.img {
 			margin: 0 auto;
-			width: 50%;
+			width: 40%;
 			svg {
 				width: 100%;
 				height: 100%;
@@ -54,14 +54,19 @@ export default {
 		}
 		.content {
 			margin-left: 20px;
-			width: 50%;
+			width: 60%;
 			p {
 				margin-bottom: 2rem;
 				margin-top: 1rem;
 				a {
+					text-decoration: none;
+					color: var(--color-theme-accent);
 					svg {
 						width: 18px;
 						height: 18px;
+						path {
+							fill: var(--color-theme-accent);
+						}
 					}
 				}
 			}

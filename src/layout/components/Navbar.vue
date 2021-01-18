@@ -1,8 +1,16 @@
 <template>
   <div class="navbar space_between flex mr-10">
     <router-link :to="{path: '/home'}">
-      <div class="items-center text-lg mr-6 flex">
-        <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="w-40 object-cover h-full responsive-image-placeholder"></el-image>
+      <!-- <div class="items-center text-lg mr-6 flex">
+        <el-image :src="jeanpaul" alt="Profile picture of Jean-Paul NGALULA (very handsome)" class="mt-12 rounded-full block mb-8 border-4 p-2 border-icon icon-width icon-height"></el-image>
+        <span class="font-bold color-theme-accent">Jean-Paul NGALULA</span>
+      </div> -->
+      <div class="text-lg justify-center align-items mr-6 flex">
+        <span class="icon-width icon-height img-container">
+          <figure class="pic-border">
+            <img :src="jeanpaul" class="profile-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
+          </figure>
+        </span>
         <span class="font-bold color-theme-accent">Jean-Paul NGALULA</span>
       </div>
     </router-link>
@@ -24,7 +32,8 @@
       <router-link :to="{path: '/home'}"><a class="link color-theme-accent"> start </a></router-link>
       <!-- <router-link :to="{path: '/about'}"><a class="link color-theme-accent"> about </a></router-link> -->
       <!-- <router-link :to="{path: '/uses'}"><a class="link color-theme-accent"> uses </a></router-link> -->
-      <router-link :to="{path: '/contact'}"><a class="color-theme-accent" aria-current="page">Get in touch</a></router-link>
+      <router-link :to="{path: '/contact'}"><button class="slide">Get in touch</button></router-link>
+      <!-- <router-link :to="{path: '/contact'}"><a class="color-theme-accent" aria-current="page">Get in touch</a></router-link> -->
       <!-- <router-link :to="{path: '/about'}"><a class="btn btn-1"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>about</a></router-link>
       <router-link :to="{path: '/uses'}"><a class="btn btn-1"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>uses</a></router-link>
       <router-link :to="{path: '/contact'}"><a class="btn btn-2"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>contact</a></router-link> -->
@@ -92,7 +101,6 @@ export default {
   position: fixed;
   width: 100%;
   overflow:auto;
-  margin-top: 15px;
 
   .right-menu {
     float: right;
@@ -121,5 +129,9 @@ export default {
       }
     }
   }
+}
+
+el-image {
+  max-width: 100%;
 }
 </style>

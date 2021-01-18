@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
 @import 'theme-colors';
-// @import 'button-collection';
-// @import 'button-style';
+@import 'button';
 
 /*
 * === BODY, APP BACKGROUND ETC. ===
@@ -9,9 +8,9 @@
 
 * {
   box-sizing: border-box;
-  // margin: 0;
   padding: 0;
   background-color: var(--app-background-color);
+  // background: url("../images/jpeg/night.jpg") no-repeat center center fixed;
 }
 
 *:before {
@@ -44,16 +43,16 @@ body {
   font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   transition: background-color 1s ease 0s;
   color: var(--text-normal-color);
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  // font-weight: normal;
+  // word-wrap: break-word;
+  // font-kerning: normal;
+  // -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  // -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  // -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  // font-feature-settings: "kern", "liga", "clig", "calt";
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 html, body {
@@ -690,7 +689,7 @@ li {
   margin-right: 10px;
   overflow: hidden;
   color: var(--btn-txt);
-  vertical-align: bottom;
+  // vertical-align: bottom;
   transition: color .3s ease-out;
 }
 .link::before {
@@ -726,6 +725,9 @@ li {
 }
 .justify-center {
   justify-content: center;
+}
+.align-items {
+  align-items: center;
 }
 .justify-text {
   text-align: justify;
@@ -862,11 +864,57 @@ li {
 
 @keyframes wave-animation {
   0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(14.0deg) }
- 20% { transform: rotate(-8.0deg) }
- 30% { transform: rotate(14.0deg) }
- 40% { transform: rotate(-4.0deg) }
- 50% { transform: rotate(10.0deg) }
- 60% { transform: rotate( 0.0deg) }
-100% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.mt-12 {
+  // margin-top: 3rem;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.block {
+  display: block;
+}
+.mb-8 {
+  // margin-bottom: 2rem;
+}
+.border-4 {
+  border-width: 4px;
+}
+.p-2 {
+  padding: .5rem;
+}
+
+// Icon style
+
+.icon-width {
+  width: 50px;
+}
+.icon-height {
+  height: 50px;
+}
+.border-icon {
+  --tw-border-opacity: 1;
+  border-color: var(--color-theme-accent);
+}
+.img-container {
+  border: 1px solid red;
+}
+.pic-border,
+.profile-pic {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.pic-border {
+  box-sizing: border-box;
+  background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+  padding: 5px; // width of the profile pic border
 }
