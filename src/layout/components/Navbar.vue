@@ -1,7 +1,7 @@
 <template>
   <div class="navbar space_between flex mr-10">
     <router-link :to="{path: '/home'}" class="txt-deco-none">
-      <div class="text-lg mt-20 justify-center align-items mr-6 flex">
+      <div class="text-lg mt-20 justify-center align-items mr-24 flex">
         <span class="ml-20 icon-width icon-height">
           <figure class="pic-border">
             <img :src="jeanpaul" class="profile-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
