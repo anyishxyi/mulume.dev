@@ -10,6 +10,7 @@
   box-sizing: border-box;
   padding: 0;
   background-color: var(--app-background-color);
+  transition: all .2s linear;
   // background: url("../images/jpeg/night.jpg") no-repeat center center fixed;
 }
 
@@ -41,7 +42,7 @@ html {
 
 body {
   font-family: Zilla Slab,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  transition: background-color 1s ease 0s;
+  // transition: background-color 1s ease 0s;
   color: var(--text-normal-color);
   // font-weight: normal;
   // word-wrap: break-word;
@@ -178,7 +179,11 @@ html, body {
 .text-light-accent {
   --text-opacity: 1;
   color: #5c61ff;
-  color: rgba(92,97,255,var(--text-opacity));
+  // color: rgba(92,97,255,var(--text-opacity));
+}
+
+.box-shadow {
+  // box-shadow: 0 -10px 10px rgb(0 0 0 / 20%);
 }
 
 /*
