@@ -11,7 +11,7 @@
 
 [theme="darkMode"] {
   -webkit-font-smoothing: antialiased;
-  --app-background-color: #010101;
+  --app-background-color: rgba(17,24,39,var(--text-opacity));;
   --color-theme-accent: #00BFA6;
   --text-primary-color: #FFFFFF;
   --text-normal-color: #a4a7c1;
