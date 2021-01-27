@@ -1,0 +1,159 @@
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+	.navbar {
+		height: 70px;
+		border: none;
+		z-index: 100;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		overflow:auto;
+	
+		.right-menu {
+			float: right;
+			height: 100%;
+			line-height: 10px;
+			margin-right: 40px;
+			display: none;
+	
+			&:focus {
+				outline: none;
+			}
+	
+			.theme-switch-button {
+				border: none;
+				background: none;
+				cursor: pointer;
+				color: var(--text-primary-color);
+				outline: 0;
+				margin-top: 5px;
+				
+				svg {
+					fill: var(--text-primary-color);
+				}
+			}
+		}
+	}
+	.name-size {
+		font-size: 18px;
+	}
+	.text-lg {
+		font-size: 24px;
+	}
+}
+
+/* ----------- Galaxy S6 ----------- */
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+	.navbar {
+		height: 70px;
+		border: none;
+		z-index: 100;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		overflow:auto;
+	
+		.right-menu {
+			float: right;
+			height: 100%;
+			line-height: 10px;
+			margin-right: 40px;
+			display: none;
+	
+			&:focus {
+				outline: none;
+			}
+	
+			.theme-switch-button {
+				border: none;
+				background: none;
+				cursor: pointer;
+				color: var(--text-primary-color);
+				outline: 0;
+				margin-top: 5px;
+				
+				svg {
+					fill: var(--text-primary-color);
+				}
+			}
+		}
+	}
+	.name-size {
+		font-size: 18px;
+	}
+	.text-lg {
+		font-size: 24px;
+	}
+
+  //Icon style
+  .icon-width {
+		width: 30px;
+  }
+	.icon-height {
+		height: 30px;
+	}
+	.border-icon {
+		--tw-border-opacity: 1;
+		border-color: var(--color-theme-accent);
+	}
+	.pic-border,
+	.profile-pic {
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+	}
+	.pic-border {
+		box-sizing: border-box;
+		background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+		padding: 2px; // width of the profile pic border
+	}
+
+  //////// Others classes
+  .name-size {
+    font-size: 18px;
+  }
+  .text-lg {
+    font-size: 24px;
+  }
+  .mt-20 {
+    margin-top: 20px;
+  }
+  .mr-24 {
+    margin-right: 24px;
+  }
+  .ml-20 {
+    margin-left: 20px;
+	}
+	
+	////////////
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 23px;
+	}
+
+  img {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 23px;
+  }
+}

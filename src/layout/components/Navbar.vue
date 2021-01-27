@@ -25,18 +25,8 @@
         </svg>
         <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <!-- <router-link :to="{path: '/home'}"><a class="link color-theme-accent"> start </a></router-link> -->
-      <!-- <router-link :to="{path: '/about'}"><a class="link color-theme-accent"> about </a></router-link> -->
-      <!-- <router-link :to="{path: '/uses'}"><a class="link color-theme-accent"> uses </a></router-link> -->
+      <router-link :to="{path: '/home'}"><a class="link color-theme-accent"> start </a></router-link>
       <router-link :to="{path: '/contact'}"><button class="slide">Get in touch</button></router-link>
-      <!-- <router-link :to="{path: '/contact'}"><a class="color-theme-accent" aria-current="page">Get in touch</a></router-link> -->
-      <!-- <router-link :to="{path: '/about'}"><a class="btn btn-1"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>about</a></router-link>
-      <router-link :to="{path: '/uses'}"><a class="btn btn-1"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>uses</a></router-link>
-      <router-link :to="{path: '/contact'}"><a class="btn btn-2"><svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>contact</a></router-link> -->
-
-      <!-- <router-link :to="{path: '/about'}"><button class="btn btn-primary btn-ghost btn-open-line"> about </button></router-link>
-      <router-link :to="{path: '/uses'}"><button class="btn btn-primary btn-ghost btn-open-line"> uses </button></router-link>
-      <router-link :to="{path: '/contact'}"><button class="btn btn-primary btn-ghost"> contact </button></router-link> -->
     </div>
   </div>
 </template>
@@ -89,41 +79,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar {
-  height: 70px;
-  border: none;
-  z-index: 100;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  overflow:auto;
 
-  .right-menu {
-    float: right;
-    height: 100%;
-    line-height: 10px;
-    margin-right: 40px;
-
-    &:focus {
-      outline: none;
-    }
-
-    .theme-switch-button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      color: var(--text-primary-color);
-      outline: 0;
-      margin-top: 5px;
-      
-      svg {
-        fill: var(--text-primary-color);
-      }
-    }
-  }
-}
-
-el-image {
-  max-width: 100%;
-}
 </style>

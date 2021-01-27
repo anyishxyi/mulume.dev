@@ -1,5 +1,7 @@
-@import 'large-devices'; /* Large devices (laptops/desktops, 992px and up) */
-@import 'small-devices'; /* Small devices (portrait tablets and large phones, 600px and up) */
-
-
-
+// @import 'large-devices'; /* Large devices (laptops/desktops, 992px and up) */
+// @import 'extra-large-devices'; /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @import 'medium-devices'; /* Medium devices (landscape tablets, 768px and up) */
+// @import 'small-devices'; /* Small devices (portrait tablets and large phones, 600px and up) */
+// @import 'extra-small-devices'; /* Extra small devices (phones, 600px and down) */
+@import 'phones'; /* Extra small devices (phones, 600px and down) */
+@import 'laptops'; /* Extra small devices (phones, 600px and down) */

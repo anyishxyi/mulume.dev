@@ -61,19 +61,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .footer {
-    padding-bottom: 40px;
-    // left: 0;
-    // height: 20px;
-    // font-size: 12px;
-    // bottom: 0;
-  }
-  span + span {
-    margin-left: 10px;
-  }
-  el-image {
-    fill: var(--text-normal-color);
-  }
-</style>
