@@ -71,9 +71,6 @@
 	.text-lg {
 		font-size: 24px;
 	}
-	.text-lg {
-		font-size: 24px;
-	}
 
   //Icon style
   .icon-width {
@@ -100,7 +97,7 @@
 
   //////// Others classes
   .name-size {
-    font-size: 12px;
+    font-size: 16px;
   }
   .text-lg {
     font-size: 24px;
@@ -118,8 +115,8 @@
 		display: none;
 	}
 	.svg-theme-size {
-		width: 17px;
-		height: 17px;
+		width: 20px;
+		height: 20px;
 	}
   .mt-svg-theme {
     margin-top: 8px;
@@ -127,9 +124,94 @@
 
 	/* Home Page */
 	.w-content {
-		width: 80%;
+		width: 90%;
+	}
+	.home_page {
+		padding-top: 110px;
+		.coder {
+			margin: 0 auto;
+			width: 400px;
+			height: 400px;
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.details {
+			.detail:hover {
+				.icon-dev {
+					svg {
+						path {
+							fill: var(--color-theme-accent);
+						}
+					}
+				}
+			}
+		}
+	
+		.details {
+			.detail {
+				padding-top: 40px;
+				.icon-dev {
+					padding-right: 20px;
+					height: 65px;
+					svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
 	}
 	
+  /* Contact Page */
+  .contact_page {
+    max-width: 1000px;
+    padding-top: 110px;
+  
+    .heading {}
+  
+    .container {
+      padding-bottom: 30px;
+      .img {
+        margin: 0 auto;
+        width: 40%;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content {
+        margin-left: 20px;
+        width: 60%;
+        p {
+          margin-bottom: 2rem;
+          margin-top: 1rem;
+          a {
+            text-decoration: none;
+            color: var(--color-theme-accent);
+            svg {
+              width: 18px;
+              height: 18px;
+              path {
+                fill: var(--color-theme-accent);
+              }
+            }
+          }
+        }
+        .social-media-profiles {
+          a {
+            padding-right: 12px;
+            padding-left: 12px;
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
 	////////////
   figure {
     margin-left: 0;

@@ -1,5 +1,5 @@
 <template>
-  <footer class="app-background relative w-full bg-light-elevatedSurface text-light-secondary text-center mt-48 block">
+  <footer class="app-background name-size relative w-full bg-light-elevatedSurface text-light-secondary text-center mt-48 block">
     <div class="w-full flex flex-col justify-center">
       <div>
         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="code" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-code fa-w-18">
