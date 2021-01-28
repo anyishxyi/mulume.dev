@@ -37,8 +37,6 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
 	.navbar {
-		display: none;
-		visibility: hidden;
 		height: 70px;
 		border: none;
 		z-index: 100;
@@ -51,8 +49,6 @@
 			float: right;
 			height: 100%;
 			line-height: 10px;
-			margin-right: 40px;
-			display: none;
 	
 			&:focus {
 				outline: none;
@@ -72,14 +68,8 @@
 			}
 		}
 	}
-	.name-size {
-		font-size: 18px;
-	}
 	.text-lg {
 		font-size: 24px;
-	}
-	.name-size {
-		font-size: 18px;
 	}
 	.text-lg {
 		font-size: 24px;
@@ -110,19 +100,29 @@
 
   //////// Others classes
   .name-size {
-    font-size: 18px;
+    font-size: 12px;
   }
   .text-lg {
     font-size: 24px;
   }
   .mt-20 {
     margin-top: 20px;
-  }
+	}
   .mr-24 {
     margin-right: 24px;
-  }
+	}
   .ml-20 {
     margin-left: 20px;
+	}
+	.hidden {
+		display: none;
+	}
+	.svg-theme-size {
+		width: 17px;
+		height: 17px;
+	}
+  .mt-svg-theme {
+    margin-top: 8px;
 	}
 	
 	////////////

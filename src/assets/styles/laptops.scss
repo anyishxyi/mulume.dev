@@ -16,7 +16,6 @@
       float: right;
       height: 100%;
       line-height: 10px;
-      margin-right: 40px;
   
       &:focus {
         outline: none;
@@ -71,13 +70,36 @@
   .mt-20 {
     margin-top: 20px;
   }
+  .mt-8 {
+    margin-top: 10px;
+  }
   .mr-24 {
     margin-right: 24px;
+  }
+  .mr-40 {
+    margin-right: 40px;
   }
   .ml-20 {
     margin-left: 20px;
   }
-
+  .pt-7 {
+    padding-top: 7px;
+  }
+	.svg-theme-size {
+		width: 24px;
+    height: 24px;
+    // vertical-align: middle;
+  }
+  .vertical-middle {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .mt-svg-theme {
+    margin-top: 8px;
+	}
+  .inline-block {
+    display: inline-block;
+  }
   //////////
   figure {
     margin-left: 0;
