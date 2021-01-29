@@ -111,6 +111,9 @@
   .ml-20 {
     margin-left: 20px;
 	}
+	.pt-10 {
+		padding-top: 10px;
+	}
 	.hidden {
 		display: none;
 	}
@@ -120,6 +123,12 @@
 	}
   .mt-svg-theme {
     margin-top: 8px;
+	}
+	.icon-centered {
+		svg {
+			margin: auto;
+			vertical-align: middle;
+		}
 	}
 
 	/* Home Page */
@@ -175,15 +184,15 @@
       padding-bottom: 30px;
       .img {
         margin: 0 auto;
-        width: 40%;
+        width: 80%;
         svg {
           width: 100%;
           height: 100%;
         }
       }
       .content {
-        margin-left: 20px;
-        width: 60%;
+        // margin-left: 20px;
+        // width: 60%;
         p {
           margin-bottom: 2rem;
           margin-top: 1rem;
