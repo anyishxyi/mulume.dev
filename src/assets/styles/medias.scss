@@ -1,5 +1,3 @@
-@import 'large-devices'; /* Large devices (laptops/desktops, 992px and up) */
-@import 'small-devices'; /* Small devices (portrait tablets and large phones, 600px and up) */
-
-
-
+@import 'phones';
+@import 'tablets';
+@import 'laptops';

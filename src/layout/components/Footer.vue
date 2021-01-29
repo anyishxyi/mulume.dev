@@ -1,5 +1,5 @@
 <template>
-  <footer class="app-background relative w-full bg-light-elevatedSurface text-light-secondary text-center mt-48 block">
+  <footer class="app-background name-size relative w-full bg-light-elevatedSurface text-light-secondary text-center mt-48 block">
     <div class="w-full flex flex-col justify-center">
       <div>
         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="code" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-code fa-w-18">
@@ -61,19 +61,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .footer {
-    padding-bottom: 40px;
-    // left: 0;
-    // height: 20px;
-    // font-size: 12px;
-    // bottom: 0;
-  }
-  span + span {
-    margin-left: 10px;
-  }
-  el-image {
-    fill: var(--text-normal-color);
-  }
-</style>

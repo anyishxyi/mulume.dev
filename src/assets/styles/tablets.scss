@@ -1,0 +1,887 @@
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+		.navbar {
+			height: 70px;
+			border: none;
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
+			}
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+	
+		//Icon style
+		.icon-width {
+			width: 30px;
+		}
+		.icon-height {
+			height: 30px;
+		}
+		.border-icon {
+			--tw-border-opacity: 1;
+			border-color: var(--color-theme-accent);
+		}
+		.pic-border,
+		.profile-pic {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+		.pic-border {
+			box-sizing: border-box;
+			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+			padding: 2px; // width of the profile pic border
+		}
+	
+		//////// Others classes
+		.name-size {
+			font-size: 16px;
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+		.mt-20 {
+			margin-top: 20px;
+		}
+		.mr-24 {
+			margin-right: 24px;
+		}
+		.ml-20 {
+			margin-left: 20px;
+		}
+		.pt-10 {
+			padding-top: 10px;
+		}
+		.pb-5 {
+			padding-bottom: 5px;
+		}
+		.hidden {
+			display: none;
+		}
+		.svg-theme-size {
+			width: 20px;
+			height: 20px;
+		}
+		.mt-svg-theme {
+			margin-top: 8px;
+		}
+		.icon-centered {
+			svg {
+				margin: auto;
+				vertical-align: middle;
+			}
+		}
+	
+		.btn-pad {
+			padding: 3px 7px;
+		}
+	
+		/* Home Page */
+		.w-content {
+			width: 90%;
+		}
+		.home_page {
+			padding-top: 110px;
+			.coder {
+				margin: 0 auto;
+				width: 90%;
+				height: 400px;
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.details {
+				.detail:hover {
+					.icon-dev {
+						svg {
+							path {
+								fill: var(--color-theme-accent);
+							}
+						}
+					}
+				}
+			}
+		
+			.details {
+				.detail {
+					padding-top: 20px;
+					.icon-dev {
+						padding-right: 20px;
+						height: 65px;
+						svg {
+							width: 40px;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Contact Page */
+		.contact_page {
+			max-width: 1000px;
+			padding-top: 110px;
+		
+			.heading {}
+		
+			.container {
+				padding-bottom: 30px;
+				.img {
+					margin: 0 auto;
+					width: 80%;
+					svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.content {
+					p {
+						margin-bottom: 2rem;
+						margin-top: 1rem;
+						a {
+							text-decoration: none;
+							color: var(--color-theme-accent);
+							svg {
+								width: 18px;
+								height: 18px;
+								path {
+									fill: var(--color-theme-accent);
+								}
+							}
+						}
+					}
+					.social-media-profiles {
+						a {
+							padding-right: 12px;
+							padding-left: 12px;
+							svg {
+								width: 40px;
+								height: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+		////////////
+		figure {
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	
+		img {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+		.navbar {
+			height: 70px;
+			border: none;
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
+			}
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+	
+		//Icon style
+		.icon-width {
+			width: 30px;
+		}
+		.icon-height {
+			height: 30px;
+		}
+		.border-icon {
+			--tw-border-opacity: 1;
+			border-color: var(--color-theme-accent);
+		}
+		.pic-border,
+		.profile-pic {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+		.pic-border {
+			box-sizing: border-box;
+			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+			padding: 2px; // width of the profile pic border
+		}
+	
+		//////// Others classes
+		.name-size {
+			font-size: 16px;
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+		.mt-20 {
+			margin-top: 20px;
+		}
+		.mr-24 {
+			margin-right: 24px;
+		}
+		.ml-20 {
+			margin-left: 20px;
+		}
+		.pt-10 {
+			padding-top: 10px;
+		}
+		.pb-5 {
+			padding-bottom: 5px;
+		}
+		.hidden {
+			display: none;
+		}
+		.svg-theme-size {
+			width: 20px;
+			height: 20px;
+		}
+		.mt-svg-theme {
+			margin-top: 8px;
+		}
+		.icon-centered {
+			svg {
+				margin: auto;
+				vertical-align: middle;
+			}
+		}
+	
+		.btn-pad {
+			padding: 3px 7px;
+		}
+	
+		/* Home Page */
+		.w-content {
+			width: 90%;
+		}
+		.home_page {
+			padding-top: 110px;
+			.coder {
+				margin: 0 auto;
+				width: 90%;
+				height: 400px;
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.details {
+				.detail:hover {
+					.icon-dev {
+						svg {
+							path {
+								fill: var(--color-theme-accent);
+							}
+						}
+					}
+				}
+			}
+		
+			.details {
+				.detail {
+					padding-top: 20px;
+					.icon-dev {
+						padding-right: 20px;
+						height: 65px;
+						svg {
+							width: 40px;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Contact Page */
+		.contact_page {
+			max-width: 1000px;
+			padding-top: 110px;
+		
+			.heading {}
+		
+			.container {
+				padding-bottom: 30px;
+				.img {
+					margin: 0 auto;
+					width: 80%;
+					svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.content {
+					p {
+						margin-bottom: 2rem;
+						margin-top: 1rem;
+						a {
+							text-decoration: none;
+							color: var(--color-theme-accent);
+							svg {
+								width: 18px;
+								height: 18px;
+								path {
+									fill: var(--color-theme-accent);
+								}
+							}
+						}
+					}
+					.social-media-profiles {
+						a {
+							padding-right: 12px;
+							padding-left: 12px;
+							svg {
+								width: 40px;
+								height: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+		////////////
+		figure {
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	
+		img {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+		.navbar {
+			height: 70px;
+			border: none;
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
+			}
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+	
+		//Icon style
+		.icon-width {
+			width: 30px;
+		}
+		.icon-height {
+			height: 30px;
+		}
+		.border-icon {
+			--tw-border-opacity: 1;
+			border-color: var(--color-theme-accent);
+		}
+		.pic-border,
+		.profile-pic {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+		.pic-border {
+			box-sizing: border-box;
+			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+			padding: 2px; // width of the profile pic border
+		}
+	
+		//////// Others classes
+		.name-size {
+			font-size: 16px;
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+		.mt-20 {
+			margin-top: 20px;
+		}
+		.mr-24 {
+			margin-right: 24px;
+		}
+		.ml-20 {
+			margin-left: 20px;
+		}
+		.pt-10 {
+			padding-top: 10px;
+		}
+		.pb-5 {
+			padding-bottom: 5px;
+		}
+		.hidden {
+			display: none;
+		}
+		.svg-theme-size {
+			width: 20px;
+			height: 20px;
+		}
+		.mt-svg-theme {
+			margin-top: 8px;
+		}
+		.icon-centered {
+			svg {
+				margin: auto;
+				vertical-align: middle;
+			}
+		}
+	
+		.btn-pad {
+			padding: 3px 7px;
+		}
+	
+		/* Home Page */
+		.w-content {
+			width: 90%;
+		}
+		.home_page {
+			padding-top: 110px;
+			.coder {
+				margin: 0 auto;
+				width: 90%;
+				height: 400px;
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.details {
+				.detail:hover {
+					.icon-dev {
+						svg {
+							path {
+								fill: var(--color-theme-accent);
+							}
+						}
+					}
+				}
+			}
+		
+			.details {
+				.detail {
+					padding-top: 20px;
+					.icon-dev {
+						padding-right: 20px;
+						height: 65px;
+						svg {
+							width: 40px;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Contact Page */
+		.contact_page {
+			max-width: 1000px;
+			padding-top: 110px;
+		
+			.heading {}
+		
+			.container {
+				padding-bottom: 30px;
+				.img {
+					margin: 0 auto;
+					width: 80%;
+					svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.content {
+					p {
+						margin-bottom: 2rem;
+						margin-top: 1rem;
+						a {
+							text-decoration: none;
+							color: var(--color-theme-accent);
+							svg {
+								width: 18px;
+								height: 18px;
+								path {
+									fill: var(--color-theme-accent);
+								}
+							}
+						}
+					}
+					.social-media-profiles {
+						a {
+							padding-right: 12px;
+							padding-left: 12px;
+							svg {
+								width: 40px;
+								height: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+		////////////
+		figure {
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	
+		img {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	}
+
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+		.navbar {
+			height: 70px;
+			border: none;
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
+			}
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+	
+		//Icon style
+		.icon-width {
+			width: 30px;
+		}
+		.icon-height {
+			height: 30px;
+		}
+		.border-icon {
+			--tw-border-opacity: 1;
+			border-color: var(--color-theme-accent);
+		}
+		.pic-border,
+		.profile-pic {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+		.pic-border {
+			box-sizing: border-box;
+			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+			padding: 2px; // width of the profile pic border
+		}
+	
+		//////// Others classes
+		.name-size {
+			font-size: 16px;
+		}
+		.text-lg {
+			font-size: 24px;
+		}
+		.mt-20 {
+			margin-top: 20px;
+		}
+		.mr-24 {
+			margin-right: 24px;
+		}
+		.ml-20 {
+			margin-left: 20px;
+		}
+		.pt-10 {
+			padding-top: 10px;
+		}
+		.pb-5 {
+			padding-bottom: 5px;
+		}
+		.hidden {
+			display: none;
+		}
+		.svg-theme-size {
+			width: 20px;
+			height: 20px;
+		}
+		.mt-svg-theme {
+			margin-top: 8px;
+		}
+		.icon-centered {
+			svg {
+				margin: auto;
+				vertical-align: middle;
+			}
+		}
+	
+		.btn-pad {
+			padding: 3px 7px;
+		}
+	
+		/* Home Page */
+		.w-content {
+			width: 90%;
+		}
+		.home_page {
+			padding-top: 110px;
+			.coder {
+				margin: 0 auto;
+				width: 90%;
+				height: 400px;
+				svg {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.details {
+				.detail:hover {
+					.icon-dev {
+						svg {
+							path {
+								fill: var(--color-theme-accent);
+							}
+						}
+					}
+				}
+			}
+		
+			.details {
+				.detail {
+					padding-top: 20px;
+					.icon-dev {
+						padding-right: 20px;
+						height: 65px;
+						svg {
+							width: 40px;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+		
+		/* Contact Page */
+		.contact_page {
+			max-width: 1000px;
+			padding-top: 110px;
+		
+			.heading {}
+		
+			.container {
+				padding-bottom: 30px;
+				.img {
+					margin: 0 auto;
+					width: 80%;
+					svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.content {
+					p {
+						margin-bottom: 2rem;
+						margin-top: 1rem;
+						a {
+							text-decoration: none;
+							color: var(--color-theme-accent);
+							svg {
+								width: 18px;
+								height: 18px;
+								path {
+									fill: var(--color-theme-accent);
+								}
+							}
+						}
+					}
+					.social-media-profiles {
+						a {
+							padding-right: 12px;
+							padding-left: 12px;
+							svg {
+								width: 40px;
+								height: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+		////////////
+		figure {
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	
+		img {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			margin-bottom: 23px;
+		}
+	}
