@@ -1,5 +1,33 @@
 <template>
-  <div class="navbar space_between flex mr-10">
+<div class="nav space_between flex mr-10">
+  <input type="checkbox" id="nav-check">
+  <router-link :to="{path: '/home'}" class="txt-deco-none">
+    <div class="nav-header text-lg mt-20 justify-center align-items mr-24 flex">
+      <span class="ml-20 icon-width icon-height">
+        <figure class="pic-border">
+          <img :src="jeanpaul" class="profile-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
+        </figure>
+      </span>
+      <span class="pl-5 font-bold name-size color-theme-accent">Jean-Paul NGALULA</span>
+    </div>
+  </router-link>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="//github.io/jo_geek" target="_blank">Github</a>
+    <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
+    <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+    <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
+    <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+  </div>
+</div>
+  <!-- <div class="navbar space_between flex mr-10">
     <router-link :to="{path: '/home'}" class="txt-deco-none">
       <div class="text-lg mt-20 justify-center align-items mr-24 flex">
         <span class="ml-20 icon-width icon-height">
@@ -25,10 +53,11 @@
         </svg>
         <svg v-else class="svg-theme-size mt-svg-theme" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-      <!-- <router-link :to="{path: '/home'}"><a class="link color-theme-accent hidden inline-block"> start </a></router-link> -->
+      <router-link :to="{path: '/home'}"><a class="link color-theme-accent hidden inline-block"> start </a></router-link>
+      <router-link :to="{path: '/about'}"><a class="link color-theme-accent hidden inline-block"> about </a></router-link>
       <router-link :to="{path: '/contact'}"><button class="slide hidden btn-pad">Get in touch</button></router-link>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
