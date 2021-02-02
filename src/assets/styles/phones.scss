@@ -672,39 +672,78 @@
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-
-	.navbar {
-		height: 70px;
-		border: none;
-		z-index: 100;
-		top: 0;
-		position: fixed;
-		width: 100%;
-		overflow:auto;
-	
-		.right-menu {
-			float: right;
-			height: 100%;
-			line-height: 10px;
-	
-			&:focus {
-				outline: none;
-			}
-	
-			.theme-switch-button {
-				border: none;
-				background: none;
-				cursor: pointer;
-				color: var(--text-primary-color);
-				outline: 0;
-				margin-top: 5px;
-				padding: 10px 20px;
-				svg {
-					fill: var(--text-primary-color);
-				}
-			}
-		}
+	#nav-check {
+		display: none;
 	}
+	.nav {
+		height: 20px;
+		width: 100%;
+		position: relative;
+		z-index:1;
+	}
+	
+	.nav > .nav-header {
+		display: inline;
+	}
+	.nav > .nav-btn {
+		display: inline-block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	.nav > .nav-btn > label {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		padding: 13px;
+	}
+	// .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+	// 	background-color: rgba(0, 0, 0, 0.3);
+	// }
+	.nav > .nav-btn > label > span {
+		display: block;
+		width: 25px;
+		height: 10px;
+		border-top: 2px solid var(--text-primary-color);
+	}
+	.nav > .nav-links {
+		position: absolute;
+		display: block;
+		width: 100%;
+		background-color: var(--app-background-color);
+		height: 0px;
+		transition: all 0.3s ease-in;
+		overflow-y: hidden;
+		top: 50px;
+		left: 0px;
+	}
+	.nav > .nav-links > a {
+		display: block;
+		width: 100%;
+	}
+	.nav > #nav-check:not(:checked) ~ .nav-links {
+		height: 0px;
+	}
+	.nav > #nav-check:checked ~ .nav-links {
+		height: calc(100vh - 50px);
+		overflow-y: auto;
+	}
+
+  .theme-switch-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--text-primary-color);
+    outline: 0;
+    margin-top: 5px;
+    padding: 10px 20px;
+    svg {
+      fill: var(--text-primary-color);
+    }
+  }
+	// &:focus {
+	// 	outline: none;
+	// }
 	.text-lg {
 		font-size: 24px;
 	}
