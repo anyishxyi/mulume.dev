@@ -685,28 +685,25 @@
 	.nav > .nav-header {
 		display: inline;
 	}
-	.nav > .nav-btn {
+	.nav > .right-menu > .nav-btn {
 		display: inline-block;
 		position: absolute;
 		right: 0px;
 		top: 0px;
 	}
-	.nav > .nav-btn > label {
+	.nav > .right-menu > .nav-btn > label {
 		display: inline-block;
 		width: 50px;
 		height: 50px;
 		padding: 13px;
 	}
-	// .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-	// 	background-color: rgba(0, 0, 0, 0.3);
-	// }
-	.nav > .nav-btn > label > span {
+	.nav > .right-menu > .nav-btn > label > span {
 		display: block;
 		width: 25px;
 		height: 10px;
 		border-top: 2px solid var(--text-primary-color);
 	}
-	.nav > .nav-links {
+	.nav > .right-menu > .nav-links {
 		position: absolute;
 		display: block;
 		width: 100%;
@@ -717,27 +714,26 @@
 		top: 50px;
 		left: 0px;
 	}
-	.nav > .nav-links > a {
+	.nav > .right-menu > .nav-links > a {
 		display: block;
 		width: 100%;
 	}
-	.nav > #nav-check:not(:checked) ~ .nav-links {
+	.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
 		height: 0px;
 	}
-	.nav > #nav-check:checked ~ .nav-links {
+	.nav > #nav-check:checked ~ .right-menu > .nav-links {
 		height: calc(100vh - 50px);
 		overflow-y: auto;
 	}
 
-  .theme-switch-button {
+  .nav > .right-menu > .theme-switch-button {
     border: none;
     background: none;
     cursor: pointer;
     color: var(--text-primary-color);
-    outline: 0;
-		margin-top: 5px;
-		padding-right: 65px;
-    padding-top: 2px;
+		outline: 0;
+    padding-right: 60px;
+    margin-top: 5px;
     svg {
       fill: var(--text-primary-color);
     }
