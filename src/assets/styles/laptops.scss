@@ -227,7 +227,7 @@
   /* Contact Page */
   .contact_page {
     max-width: 1000px;
-    padding-top: 90px;
+    padding-top: 125px;
     padding-bottom: 130px;
   
     .heading {}
@@ -272,6 +272,18 @@
       }
     }
   }
+
+  /* About Page */
+  .about_page {
+    padding-top: 125px;
+    .heading {
+
+    }
+    .content {
+      padding-bottom: 30px;
+    }
+  }
+
   //////////
   figure {
     margin-left: 0;
