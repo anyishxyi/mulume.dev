@@ -676,10 +676,10 @@
 		display: none;
 	}
 	.nav {
-		height: 20px;
+		height: 55px;
 		width: 100%;
-		position: relative;
 		z-index:1;
+		position: fixed;
 	}
 	
 	.nav > .nav-header {
@@ -717,6 +717,7 @@
 	.nav > .right-menu > .nav-links > a {
 		display: block;
 		width: 100%;
+		color: var(--color-theme-accent);
 	}
 	.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
 		height: 0px;
@@ -939,8 +940,6 @@
 		.navbar {
 			height: 70px;
 			border: none;
-			z-index: 100;
-			top: 0;
 			position: fixed;
 			width: 100%;
 			overflow:auto;

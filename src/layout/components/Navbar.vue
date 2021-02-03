@@ -35,9 +35,9 @@
       </label>
     </div>
     <div class="nav-links">
-      <router-link :to="{path: '/home'}"><a class="link color-theme-accent hidden inline-block"> start </a></router-link>
-      <router-link :to="{path: '/about'}"><a class="link color-theme-accent hidden inline-block"> about </a></router-link>
-      <router-link :to="{path: '/contact'}"><button class="slide hidden btn-pad">Get in touch</button></router-link>
+      <router-link :to="{path: '/home'}"><button class="close ml-20 btn-no-border btn-pad"> start </button></router-link>
+      <router-link :to="{path: '/about'}"><button class="close ml-20 btn-no-border btn-pad"> about </button></router-link>
+      <router-link :to="{path: '/contact'}"><button class="slide ml-20 btn-border btn-pad">Get in touch</button></router-link>
     </div>
   </div>
 </div>

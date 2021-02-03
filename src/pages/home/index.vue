@@ -35,7 +35,7 @@
 				</div>
 				<div>
 					<div class="pb-5">If you have any web development needs, I am happy to look at your project.</div>
-					<router-link :to="{path: '/contact'}"><button class="slide btn-pad">Get in touch</button></router-link>
+					<router-link :to="{path: '/contact'}"><button class="slide btn-border btn-pad">Get in touch</button></router-link>
 				</div>
 			</div>
 		</div>
