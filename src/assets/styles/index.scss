@@ -234,6 +234,9 @@ html, body {
 .ml-40 {
   margin-left: 40px;
 }
+.ml-12 {
+  margin-left: 12px;
+}
 .mb-15 {
   margin-bottom: 15px;
 }
@@ -291,6 +294,16 @@ html, body {
   // color: rgba(92,97,255,var(--text-opacity));
 }
 
+.bounce {
+  -webkit-animation-name: bounce-animation;
+  animation-name: bounce-animation;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
 // .box-shadow {
 //   box-shadow: 0 -10px 10px rgb(0 0 0 / 20%);
 // }
