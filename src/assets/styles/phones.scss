@@ -7,110 +7,38 @@
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
+		.navbar {
+			height: 70px;
 			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
 			}
 		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
 		.text-lg {
 			font-size: 24px;
 		}
@@ -142,9 +70,6 @@
 		.name-size {
 			font-size: 16px;
 		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
 		.text-lg {
 			font-size: 24px;
 		}
@@ -156,9 +81,6 @@
 		}
 		.ml-20 {
 			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
 		}
 		.pt-10 {
 			padding-top: 10px;
@@ -176,6 +98,9 @@
 		.mt-svg-theme {
 			margin-top: 8px;
 		}
+		.mb-svg-theme {
+			margin-bottom: 8px;
+		}
 		.icon-centered {
 			svg {
 				margin: auto;
@@ -184,7 +109,7 @@
 		}
 	
 		.btn-pad {
-			padding: 7px 15px;
+			padding: 3px 7px;
 		}
 	
 		/* Home Page */
@@ -192,7 +117,7 @@
 			width: 90%;
 		}
 		.home_page {
-			padding-top: 65px;
+			padding-top: 110px;
 			.coder {
 				margin: 0 auto;
 				width: 90%;
@@ -232,7 +157,10 @@
 		/* Contact Page */
 		.contact_page {
 			max-width: 1000px;
-			padding-top: 65px;
+			padding-top: 110px;
+		
+			.heading {}
+		
 			.container {
 				padding-bottom: 30px;
 				.img {
@@ -304,110 +232,38 @@
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
+		.navbar {
+			height: 70px;
 			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
 			}
 		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
 		.text-lg {
 			font-size: 24px;
 		}
@@ -439,9 +295,6 @@
 		.name-size {
 			font-size: 16px;
 		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
 		.text-lg {
 			font-size: 24px;
 		}
@@ -453,9 +306,6 @@
 		}
 		.ml-20 {
 			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
 		}
 		.pt-10 {
 			padding-top: 10px;
@@ -473,6 +323,9 @@
 		.mt-svg-theme {
 			margin-top: 8px;
 		}
+		.mb-svg-theme {
+			margin-bottom: 8px;
+		}
 		.icon-centered {
 			svg {
 				margin: auto;
@@ -481,7 +334,7 @@
 		}
 	
 		.btn-pad {
-			padding: 7px 15px;
+			padding: 3px 7px;
 		}
 	
 		/* Home Page */
@@ -489,7 +342,7 @@
 			width: 90%;
 		}
 		.home_page {
-			padding-top: 65px;
+			padding-top: 110px;
 			.coder {
 				margin: 0 auto;
 				width: 90%;
@@ -529,7 +382,10 @@
 		/* Contact Page */
 		.contact_page {
 			max-width: 1000px;
-			padding-top: 65px;
+			padding-top: 110px;
+		
+			.heading {}
+		
 			.container {
 				padding-bottom: 30px;
 				.img {
@@ -601,110 +457,38 @@
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
+		.navbar {
+			height: 70px;
 			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
 			}
 		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
 		.text-lg {
 			font-size: 24px;
 		}
@@ -736,9 +520,6 @@
 		.name-size {
 			font-size: 16px;
 		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
 		.text-lg {
 			font-size: 24px;
 		}
@@ -750,9 +531,6 @@
 		}
 		.ml-20 {
 			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
 		}
 		.pt-10 {
 			padding-top: 10px;
@@ -770,6 +548,9 @@
 		.mt-svg-theme {
 			margin-top: 8px;
 		}
+		.mb-svg-theme {
+			margin-bottom: 8px;
+		}
 		.icon-centered {
 			svg {
 				margin: auto;
@@ -778,7 +559,7 @@
 		}
 	
 		.btn-pad {
-			padding: 7px 15px;
+			padding: 3px 7px;
 		}
 	
 		/* Home Page */
@@ -786,7 +567,7 @@
 			width: 90%;
 		}
 		.home_page {
-			padding-top: 65px;
+			padding-top: 110px;
 			.coder {
 				margin: 0 auto;
 				width: 90%;
@@ -826,7 +607,10 @@
 		/* Contact Page */
 		.contact_page {
 			max-width: 1000px;
-			padding-top: 65px;
+			padding-top: 110px;
+		
+			.heading {}
+		
 			.container {
 				padding-bottom: 30px;
 				.img {
@@ -897,110 +681,38 @@
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-	#nav-check {
-		display: none;
-	}
-	.nav {
-		height: 55px;
-		width: 100%;
-		z-index:100;
+	.navbar {
+		height: 70px;
+		border: none;
+		z-index: 100;
+		top: 0;
 		position: fixed;
-	}
-	
-	.nav > .nav-header {
-		display: inline;
-	}
-	.nav > .right-menu > .nav-btn {
-		display: inline-block;
-		position: absolute;
-		right: 0px;
-		top: 0px;
-	}
-	.nav > .right-menu > .nav-btn > label {
-		display: inline-block;
-		width: 50px;
-		height: 50px;
-		padding: 13px;
-	}
-	.nav > .right-menu > .nav-btn > label > span {
-		display: block;
-		width: 25px;
-		height: 10px;
-		border-top: 2px solid var(--text-primary-color);
-	}
-	.nav > .right-menu > .nav-links {
-		position: absolute;
-		display: block;
 		width: 100%;
-		background-color: var(--app-background-color);
-		height: 0px;
-		transition: all 0.3s ease-in;
-		overflow-y: hidden;
-		top: 50px;
-		left: 0px;
-	}
-	.nav > .right-menu > .nav-links > a {
-		display: block;
-		width: 100%;
-		color: var(--color-theme-accent);
-	}
-	.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-		height: 0px;
-	}
-	.nav > #nav-check:checked ~ .right-menu > .nav-links {
-		height: calc(100vh - 50px);
-		overflow-y: auto;
-	}
-
-  .nav > .right-menu > .theme-switch-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: var(--text-primary-color);
-		outline: 0;
-    padding-right: 60px;
-    margin-top: 5px;
-    svg {
-      fill: var(--text-primary-color);
-    }
-	}
+		overflow:auto;
 	
-  //////// Button style
-  button {  
-    color: var(--color-theme-accent);
-    transition: 0.4s;
-    text-transform: uppercase;
-    font-size: 20px;
-    cursor: pointer;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-	}
+		.right-menu {
+			float: right;
+			height: 100%;
+			line-height: 10px;
 	
-	.slide,
-	.close {
-		margin-top: 10px;
-		margin-bottom: 10px;
+			&:focus {
+				outline: none;
+			}
+	
+			.theme-switch-button {
+				border: none;
+				background: none;
+				cursor: pointer;
+				color: var(--text-primary-color);
+				outline: 0;
+				margin-top: 5px;
+				padding: 10px 20px;
+				svg {
+					fill: var(--text-primary-color);
+				}
+			}
+		}
 	}
-
-  .slide:hover,
-  .slide:focus {
-    border: 2px solid;
-    box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-    border-color: var(--color-theme-accent);
-    color: var(--app-background-color);
-  }
-
-  .close:hover,
-  .close:focus {
-    border-color: var(--color-theme-accent);
-    color: var(--app-background-color);
-    border: 2px solid;
-    box-shadow: 
-      inset -3.5em 0 0 0 var(--color-theme-accent),
-      inset 3.5em 0 0 0 var(--color-theme-accent);
-  }
-
 	.text-lg {
 		font-size: 24px;
 	}
@@ -1031,9 +743,6 @@
   //////// Others classes
   .name-size {
     font-size: 16px;
-	}
-  .btn-pad {
-    padding: 10px 20px;
   }
   .text-lg {
     font-size: 24px;
@@ -1046,9 +755,6 @@
 	}
   .ml-20 {
     margin-left: 20px;
-	}
-	.p-13 {
-		padding: 13px;
 	}
 	.pt-10 {
 		padding-top: 10px;
@@ -1066,6 +772,9 @@
   .mt-svg-theme {
     margin-top: 8px;
 	}
+  .mb-svg-theme {
+    margin-bottom: 8px;
+	}
 	.icon-centered {
 		svg {
 			margin: auto;
@@ -1074,7 +783,7 @@
 	}
 
 	.btn-pad {
-		padding: 7px 15px;
+		padding: 3px 7px;
 	}
 
 	/* Home Page */
@@ -1082,7 +791,7 @@
 		width: 90%;
 	}
 	.home_page {
-		padding-top: 65px;
+		padding-top: 110px;
 		.coder {
 			margin: 0 auto;
 			width: 90%;
@@ -1122,7 +831,10 @@
   /* Contact Page */
   .contact_page {
     max-width: 1000px;
-    padding-top: 65px;
+    padding-top: 110px;
+  
+    .heading {}
+  
     .container {
       padding-bottom: 30px;
       .img {
@@ -1187,1189 +899,6 @@
   }
 }
 
-/* ----------- iPhone 11 ----------- */
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 896px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
-			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
-			}
-		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
-		.text-lg {
-			font-size: 24px;
-		}
-	
-		//Icon style
-		.icon-width {
-			width: 30px;
-		}
-		.icon-height {
-			height: 30px;
-		}
-		.border-icon {
-			--tw-border-opacity: 1;
-			border-color: var(--color-theme-accent);
-		}
-		.pic-border,
-		.profile-pic {
-			border-radius: 50%;
-			width: 100%;
-			height: 100%;
-		}
-		.pic-border {
-			box-sizing: border-box;
-			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
-			padding: 2px; // width of the profile pic border
-		}
-	
-		//////// Others classes
-		.name-size {
-			font-size: 16px;
-		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
-		.text-lg {
-			font-size: 24px;
-		}
-		.mt-20 {
-			margin-top: 20px;
-		}
-		.mr-24 {
-			margin-right: 24px;
-		}
-		.ml-20 {
-			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
-		}
-		.pt-10 {
-			padding-top: 10px;
-		}
-		.pb-5 {
-			padding-bottom: 5px;
-		}
-		.hidden {
-			display: none;
-		}
-		.svg-theme-size {
-			width: 20px;
-			height: 20px;
-		}
-		.mt-svg-theme {
-			margin-top: 8px;
-		}
-		.icon-centered {
-			svg {
-				margin: auto;
-				vertical-align: middle;
-			}
-		}
-	
-		.btn-pad {
-			padding: 7px 15px;
-		}
-	
-		/* Home Page */
-		.w-content {
-			width: 90%;
-		}
-		.home_page {
-			padding-top: 65px;
-			.coder {
-				margin: 0 auto;
-				width: 90%;
-				height: 400px;
-				svg {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.details {
-				.detail:hover {
-					.icon-dev {
-						svg {
-							path {
-								fill: var(--color-theme-accent);
-							}
-						}
-					}
-				}
-			}
-		
-			.details {
-				.detail {
-					padding-top: 20px;
-					.icon-dev {
-						padding-right: 20px;
-						height: 65px;
-						svg {
-							width: 40px;
-							height: 100%;
-						}
-					}
-				}
-			}
-		}
-		
-		/* Contact Page */
-		.contact_page {
-			max-width: 1000px;
-			padding-top: 65px;
-			.container {
-				padding-bottom: 30px;
-				.img {
-					margin: 0 auto;
-					width: 80%;
-					svg {
-						width: 100%;
-						height: 100%;
-					}
-				}
-				.content {
-					p {
-						margin-bottom: 2rem;
-						margin-top: 1rem;
-						a {
-							text-decoration: none;
-							color: var(--color-theme-accent);
-							svg {
-								width: 18px;
-								height: 18px;
-								path {
-									fill: var(--color-theme-accent);
-								}
-							}
-						}
-					}
-					.social-media-profiles {
-						a {
-							padding-right: 12px;
-							padding-left: 12px;
-							svg {
-								width: 40px;
-								height: 40px;
-							}
-						}
-					}
-				}
-			}
-		}
-		////////////
-		figure {
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	
-		img {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	}
-/* ----------- iPhone 11 XR ----------- */
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 896px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
-			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
-			}
-		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
-		.text-lg {
-			font-size: 24px;
-		}
-	
-		//Icon style
-		.icon-width {
-			width: 30px;
-		}
-		.icon-height {
-			height: 30px;
-		}
-		.border-icon {
-			--tw-border-opacity: 1;
-			border-color: var(--color-theme-accent);
-		}
-		.pic-border,
-		.profile-pic {
-			border-radius: 50%;
-			width: 100%;
-			height: 100%;
-		}
-		.pic-border {
-			box-sizing: border-box;
-			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
-			padding: 2px; // width of the profile pic border
-		}
-	
-		//////// Others classes
-		.name-size {
-			font-size: 16px;
-		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
-		.text-lg {
-			font-size: 24px;
-		}
-		.mt-20 {
-			margin-top: 20px;
-		}
-		.mr-24 {
-			margin-right: 24px;
-		}
-		.ml-20 {
-			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
-		}
-		.pt-10 {
-			padding-top: 10px;
-		}
-		.pb-5 {
-			padding-bottom: 5px;
-		}
-		.hidden {
-			display: none;
-		}
-		.svg-theme-size {
-			width: 20px;
-			height: 20px;
-		}
-		.mt-svg-theme {
-			margin-top: 8px;
-		}
-		.icon-centered {
-			svg {
-				margin: auto;
-				vertical-align: middle;
-			}
-		}
-	
-		.btn-pad {
-			padding: 7px 15px;
-		}
-	
-		/* Home Page */
-		.w-content {
-			width: 90%;
-		}
-		.home_page {
-			padding-top: 65px;
-			.coder {
-				margin: 0 auto;
-				width: 90%;
-				height: 400px;
-				svg {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.details {
-				.detail:hover {
-					.icon-dev {
-						svg {
-							path {
-								fill: var(--color-theme-accent);
-							}
-						}
-					}
-				}
-			}
-		
-			.details {
-				.detail {
-					padding-top: 20px;
-					.icon-dev {
-						padding-right: 20px;
-						height: 65px;
-						svg {
-							width: 40px;
-							height: 100%;
-						}
-					}
-				}
-			}
-		}
-		
-		/* Contact Page */
-		.contact_page {
-			max-width: 1000px;
-			padding-top: 65px;
-			.container {
-				padding-bottom: 30px;
-				.img {
-					margin: 0 auto;
-					width: 80%;
-					svg {
-						width: 100%;
-						height: 100%;
-					}
-				}
-				.content {
-					p {
-						margin-bottom: 2rem;
-						margin-top: 1rem;
-						a {
-							text-decoration: none;
-							color: var(--color-theme-accent);
-							svg {
-								width: 18px;
-								height: 18px;
-								path {
-									fill: var(--color-theme-accent);
-								}
-							}
-						}
-					}
-					.social-media-profiles {
-						a {
-							padding-right: 12px;
-							padding-left: 12px;
-							svg {
-								width: 40px;
-								height: 40px;
-							}
-						}
-					}
-				}
-			}
-		}
-		////////////
-		figure {
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	
-		img {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	}
-
-/* ----------- iPhone 12, 12 Pro ----------- */
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 390px) 
-  and (max-device-width: 844px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
-			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
-			}
-		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
-		.text-lg {
-			font-size: 24px;
-		}
-	
-		//Icon style
-		.icon-width {
-			width: 30px;
-		}
-		.icon-height {
-			height: 30px;
-		}
-		.border-icon {
-			--tw-border-opacity: 1;
-			border-color: var(--color-theme-accent);
-		}
-		.pic-border,
-		.profile-pic {
-			border-radius: 50%;
-			width: 100%;
-			height: 100%;
-		}
-		.pic-border {
-			box-sizing: border-box;
-			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
-			padding: 2px; // width of the profile pic border
-		}
-	
-		//////// Others classes
-		.name-size {
-			font-size: 16px;
-		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
-		.text-lg {
-			font-size: 24px;
-		}
-		.mt-20 {
-			margin-top: 20px;
-		}
-		.mr-24 {
-			margin-right: 24px;
-		}
-		.ml-20 {
-			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
-		}
-		.pt-10 {
-			padding-top: 10px;
-		}
-		.pb-5 {
-			padding-bottom: 5px;
-		}
-		.hidden {
-			display: none;
-		}
-		.svg-theme-size {
-			width: 20px;
-			height: 20px;
-		}
-		.mt-svg-theme {
-			margin-top: 8px;
-		}
-		.icon-centered {
-			svg {
-				margin: auto;
-				vertical-align: middle;
-			}
-		}
-	
-		.btn-pad {
-			padding: 7px 15px;
-		}
-	
-		/* Home Page */
-		.w-content {
-			width: 90%;
-		}
-		.home_page {
-			padding-top: 65px;
-			.coder {
-				margin: 0 auto;
-				width: 90%;
-				height: 400px;
-				svg {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.details {
-				.detail:hover {
-					.icon-dev {
-						svg {
-							path {
-								fill: var(--color-theme-accent);
-							}
-						}
-					}
-				}
-			}
-		
-			.details {
-				.detail {
-					padding-top: 20px;
-					.icon-dev {
-						padding-right: 20px;
-						height: 65px;
-						svg {
-							width: 40px;
-							height: 100%;
-						}
-					}
-				}
-			}
-		}
-		
-		/* Contact Page */
-		.contact_page {
-			max-width: 1000px;
-			padding-top: 65px;
-			.container {
-				padding-bottom: 30px;
-				.img {
-					margin: 0 auto;
-					width: 80%;
-					svg {
-						width: 100%;
-						height: 100%;
-					}
-				}
-				.content {
-					p {
-						margin-bottom: 2rem;
-						margin-top: 1rem;
-						a {
-							text-decoration: none;
-							color: var(--color-theme-accent);
-							svg {
-								width: 18px;
-								height: 18px;
-								path {
-									fill: var(--color-theme-accent);
-								}
-							}
-						}
-					}
-					.social-media-profiles {
-						a {
-							padding-right: 12px;
-							padding-left: 12px;
-							svg {
-								width: 40px;
-								height: 40px;
-							}
-						}
-					}
-				}
-			}
-		}
-		////////////
-		figure {
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	
-		img {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	}
-
-/* ----------- iPhone 12 Pro Max ----------- */
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 428px) 
-  and (max-device-width: 926px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
-			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
-			}
-		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
-		.text-lg {
-			font-size: 24px;
-		}
-	
-		//Icon style
-		.icon-width {
-			width: 30px;
-		}
-		.icon-height {
-			height: 30px;
-		}
-		.border-icon {
-			--tw-border-opacity: 1;
-			border-color: var(--color-theme-accent);
-		}
-		.pic-border,
-		.profile-pic {
-			border-radius: 50%;
-			width: 100%;
-			height: 100%;
-		}
-		.pic-border {
-			box-sizing: border-box;
-			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
-			padding: 2px; // width of the profile pic border
-		}
-	
-		//////// Others classes
-		.name-size {
-			font-size: 16px;
-		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
-		.text-lg {
-			font-size: 24px;
-		}
-		.mt-20 {
-			margin-top: 20px;
-		}
-		.mr-24 {
-			margin-right: 24px;
-		}
-		.ml-20 {
-			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
-		}
-		.pt-10 {
-			padding-top: 10px;
-		}
-		.pb-5 {
-			padding-bottom: 5px;
-		}
-		.hidden {
-			display: none;
-		}
-		.svg-theme-size {
-			width: 20px;
-			height: 20px;
-		}
-		.mt-svg-theme {
-			margin-top: 8px;
-		}
-		.icon-centered {
-			svg {
-				margin: auto;
-				vertical-align: middle;
-			}
-		}
-	
-		.btn-pad {
-			padding: 7px 15px;
-		}
-	
-		/* Home Page */
-		.w-content {
-			width: 90%;
-		}
-		.home_page {
-			padding-top: 65px;
-			.coder {
-				margin: 0 auto;
-				width: 90%;
-				height: 400px;
-				svg {
-					width: 100%;
-					height: 100%;
-				}
-			}
-			.details {
-				.detail:hover {
-					.icon-dev {
-						svg {
-							path {
-								fill: var(--color-theme-accent);
-							}
-						}
-					}
-				}
-			}
-		
-			.details {
-				.detail {
-					padding-top: 20px;
-					.icon-dev {
-						padding-right: 20px;
-						height: 65px;
-						svg {
-							width: 40px;
-							height: 100%;
-						}
-					}
-				}
-			}
-		}
-		
-		/* Contact Page */
-		.contact_page {
-			max-width: 1000px;
-			padding-top: 65px;
-			.container {
-				padding-bottom: 30px;
-				.img {
-					margin: 0 auto;
-					width: 80%;
-					svg {
-						width: 100%;
-						height: 100%;
-					}
-				}
-				.content {
-					p {
-						margin-bottom: 2rem;
-						margin-top: 1rem;
-						a {
-							text-decoration: none;
-							color: var(--color-theme-accent);
-							svg {
-								width: 18px;
-								height: 18px;
-								path {
-									fill: var(--color-theme-accent);
-								}
-							}
-						}
-					}
-					.social-media-profiles {
-						a {
-							padding-right: 12px;
-							padding-left: 12px;
-							svg {
-								width: 40px;
-								height: 40px;
-							}
-						}
-					}
-				}
-			}
-		}
-		////////////
-		figure {
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	
-		img {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	}
-
 /* ----------- ANDRROID ----------- */
 
 /* ----------- Galaxy S4, S5 and Note 3 ----------- */
@@ -2379,110 +908,38 @@
   and (device-width: 320px) 
   and (device-height: 640px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
+		.navbar {
+			height: 70px;
 			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
 			}
 		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
 		.text-lg {
 			font-size: 24px;
 		}
@@ -2514,9 +971,6 @@
 		.name-size {
 			font-size: 16px;
 		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
 		.text-lg {
 			font-size: 24px;
 		}
@@ -2528,9 +982,6 @@
 		}
 		.ml-20 {
 			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
 		}
 		.pt-10 {
 			padding-top: 10px;
@@ -2548,6 +999,9 @@
 		.mt-svg-theme {
 			margin-top: 8px;
 		}
+		.mb-svg-theme {
+			margin-bottom: 8px;
+		}
 		.icon-centered {
 			svg {
 				margin: auto;
@@ -2556,7 +1010,7 @@
 		}
 	
 		.btn-pad {
-			padding: 7px 15px;
+			padding: 3px 7px;
 		}
 	
 		/* Home Page */
@@ -2564,7 +1018,7 @@
 			width: 90%;
 		}
 		.home_page {
-			padding-top: 65px;
+			padding-top: 110px;
 			.coder {
 				margin: 0 auto;
 				width: 90%;
@@ -2604,7 +1058,10 @@
 		/* Contact Page */
 		.contact_page {
 			max-width: 1000px;
-			padding-top: 65px;
+			padding-top: 110px;
+		
+			.heading {}
+		
 			.container {
 				padding-bottom: 30px;
 				.img {
@@ -2675,110 +1132,38 @@
   and (device-width: 360px) 
   and (device-height: 640px) 
   and (-webkit-min-device-pixel-ratio: 4) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
-	
-		.nav > .right-menu > .theme-switch-button {
+		.navbar {
+			height: 70px;
 			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
+			z-index: 100;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			overflow:auto;
+		
+			.right-menu {
+				float: right;
+				height: 100%;
+				line-height: 10px;
+		
+				&:focus {
+					outline: none;
+				}
+		
+				.theme-switch-button {
+					border: none;
+					background: none;
+					cursor: pointer;
+					color: var(--text-primary-color);
+					outline: 0;
+					margin-top: 5px;
+					padding: 10px 20px;
+					svg {
+						fill: var(--text-primary-color);
+					}
+				}
 			}
 		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
 		.text-lg {
 			font-size: 24px;
 		}
@@ -2810,9 +1195,6 @@
 		.name-size {
 			font-size: 16px;
 		}
-		.btn-pad {
-			padding: 10px 20px;
-		}
 		.text-lg {
 			font-size: 24px;
 		}
@@ -2824,9 +1206,6 @@
 		}
 		.ml-20 {
 			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
 		}
 		.pt-10 {
 			padding-top: 10px;
@@ -2844,6 +1223,9 @@
 		.mt-svg-theme {
 			margin-top: 8px;
 		}
+		.mb-svg-theme {
+			margin-bottom: 8px;
+		}
 		.icon-centered {
 			svg {
 				margin: auto;
@@ -2852,7 +1234,7 @@
 		}
 	
 		.btn-pad {
-			padding: 7px 15px;
+			padding: 3px 7px;
 		}
 	
 		/* Home Page */
@@ -2860,7 +1242,7 @@
 			width: 90%;
 		}
 		.home_page {
-			padding-top: 65px;
+			padding-top: 110px;
 			.coder {
 				margin: 0 auto;
 				width: 90%;
@@ -2900,7 +1282,10 @@
 		/* Contact Page */
 		.contact_page {
 			max-width: 1000px;
-			padding-top: 65px;
+			padding-top: 110px;
+		
+			.heading {}
+		
 			.container {
 				padding-bottom: 30px;
 				.img {
@@ -2966,296 +1351,225 @@
 	}
 
 /* ----------- Windows Phone ----------- */
+
 /* Portrait and Landscape */
 @media screen 
   and (device-width: 480px) 
-	and (device-height: 800px) {
-		#nav-check {
-			display: none;
-		}
-		.nav {
-			height: 55px;
-			width: 100%;
-			z-index:100;
-			position: fixed;
-		}
-		
-		.nav > .nav-header {
-			display: inline;
-		}
-		.nav > .right-menu > .nav-btn {
-			display: inline-block;
-			position: absolute;
-			right: 0px;
-			top: 0px;
-		}
-		.nav > .right-menu > .nav-btn > label {
-			display: inline-block;
-			width: 50px;
-			height: 50px;
-			padding: 13px;
-		}
-		.nav > .right-menu > .nav-btn > label > span {
-			display: block;
-			width: 25px;
-			height: 10px;
-			border-top: 2px solid var(--text-primary-color);
-		}
-		.nav > .right-menu > .nav-links {
-			position: absolute;
-			display: block;
-			width: 100%;
-			background-color: var(--app-background-color);
-			height: 0px;
-			transition: all 0.3s ease-in;
-			overflow-y: hidden;
-			top: 50px;
-			left: 0px;
-		}
-		.nav > .right-menu > .nav-links > a {
-			display: block;
-			width: 100%;
-			color: var(--color-theme-accent);
-		}
-		.nav > #nav-check:not(:checked) ~ .right-menu > .nav-links {
-			height: 0px;
-		}
-		.nav > #nav-check:checked ~ .right-menu > .nav-links {
-			height: calc(100vh - 50px);
-			overflow-y: auto;
-		}
+  and (device-height: 800px) {
+	.navbar {
+		height: 70px;
+		border: none;
+		z-index: 100;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		overflow:auto;
 	
-		.nav > .right-menu > .theme-switch-button {
-			border: none;
-			background: none;
-			cursor: pointer;
-			color: var(--text-primary-color);
-			outline: 0;
-			padding-right: 60px;
-			margin-top: 5px;
-			svg {
-				fill: var(--text-primary-color);
-			}
-		}
-		
-		//////// Button style
-		button {  
-			color: var(--color-theme-accent);
-			transition: 0.4s;
-			text-transform: uppercase;
-			font-size: 20px;
-			cursor: pointer;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-ms-box-sizing: border-box;
-		}
-		
-		.slide,
-		.close {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	
-		.slide:hover,
-		.slide:focus {
-			border: 2px solid;
-			box-shadow: inset 6.5em 0 0 0 var(--color-theme-accent);
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-		}
-	
-		.close:hover,
-		.close:focus {
-			border-color: var(--color-theme-accent);
-			color: var(--app-background-color);
-			border: 2px solid;
-			box-shadow: 
-				inset -3.5em 0 0 0 var(--color-theme-accent),
-				inset 3.5em 0 0 0 var(--color-theme-accent);
-		}
-	
-		.text-lg {
-			font-size: 24px;
-		}
-	
-		//Icon style
-		.icon-width {
-			width: 30px;
-		}
-		.icon-height {
-			height: 30px;
-		}
-		.border-icon {
-			--tw-border-opacity: 1;
-			border-color: var(--color-theme-accent);
-		}
-		.pic-border,
-		.profile-pic {
-			border-radius: 50%;
-			width: 100%;
+		.right-menu {
+			float: right;
 			height: 100%;
-		}
-		.pic-border {
-			box-sizing: border-box;
-			background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
-			padding: 2px; // width of the profile pic border
-		}
+			line-height: 10px;
 	
-		//////// Others classes
-		.name-size {
-			font-size: 16px;
+			&:focus {
+				outline: none;
+			}
+	
+			.theme-switch-button {
+				border: none;
+				background: none;
+				cursor: pointer;
+				color: var(--text-primary-color);
+				outline: 0;
+				margin-top: 5px;
+				padding: 10px 20px;
+				svg {
+					fill: var(--text-primary-color);
+				}
+			}
 		}
-		.btn-pad {
-			padding: 10px 20px;
+	}
+	.text-lg {
+		font-size: 24px;
+	}
+
+	//Icon style
+	.icon-width {
+		width: 30px;
+	}
+	.icon-height {
+		height: 30px;
+	}
+	.border-icon {
+		--tw-border-opacity: 1;
+		border-color: var(--color-theme-accent);
+	}
+	.pic-border,
+	.profile-pic {
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+	}
+	.pic-border {
+		box-sizing: border-box;
+		background-image: linear-gradient(to right, var(--color-theme-accent), var(--color-theme-accent));
+		padding: 2px; // width of the profile pic border
+	}
+
+	//////// Others classes
+	.name-size {
+		font-size: 16px;
+	}
+	.text-lg {
+		font-size: 24px;
+	}
+	.mt-20 {
+		margin-top: 20px;
+	}
+	.mr-24 {
+		margin-right: 24px;
+	}
+	.ml-20 {
+		margin-left: 20px;
+	}
+	.pt-10 {
+		padding-top: 10px;
+	}
+	.pb-5 {
+		padding-bottom: 5px;
+	}
+	.hidden {
+		display: none;
+	}
+	.svg-theme-size {
+		width: 20px;
+		height: 20px;
+	}
+	.mt-svg-theme {
+		margin-top: 8px;
+	}
+  .mb-svg-theme {
+    margin-bottom: 8px;
+	}
+	.icon-centered {
+		svg {
+			margin: auto;
+			vertical-align: middle;
 		}
-		.text-lg {
-			font-size: 24px;
-		}
-		.mt-20 {
-			margin-top: 20px;
-		}
-		.mr-24 {
-			margin-right: 24px;
-		}
-		.ml-20 {
-			margin-left: 20px;
-		}
-		.p-13 {
-			padding: 13px;
-		}
-		.pt-10 {
-			padding-top: 10px;
-		}
-		.pb-5 {
-			padding-bottom: 5px;
-		}
-		.hidden {
-			display: none;
-		}
-		.svg-theme-size {
-			width: 20px;
-			height: 20px;
-		}
-		.mt-svg-theme {
-			margin-top: 8px;
-		}
-		.icon-centered {
+	}
+
+	.btn-pad {
+		padding: 3px 7px;
+	}
+
+	/* Home Page */
+	.w-content {
+		width: 90%;
+	}
+	.home_page {
+		padding-top: 110px;
+		.coder {
+			margin: 0 auto;
+			width: 90%;
+			height: 400px;
 			svg {
-				margin: auto;
-				vertical-align: middle;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.details {
+			.detail:hover {
+				.icon-dev {
+					svg {
+						path {
+							fill: var(--color-theme-accent);
+						}
+					}
+				}
 			}
 		}
 	
-		.btn-pad {
-			padding: 7px 15px;
+		.details {
+			.detail {
+				padding-top: 20px;
+				.icon-dev {
+					padding-right: 20px;
+					height: 65px;
+					svg {
+						width: 40px;
+						height: 100%;
+					}
+				}
+			}
 		}
+	}
 	
-		/* Home Page */
-		.w-content {
-			width: 90%;
-		}
-		.home_page {
-			padding-top: 65px;
-			.coder {
+	/* Contact Page */
+	.contact_page {
+		max-width: 1000px;
+		padding-top: 110px;
+	
+		.heading {}
+	
+		.container {
+			padding-bottom: 30px;
+			.img {
 				margin: 0 auto;
-				width: 90%;
-				height: 400px;
+				width: 80%;
 				svg {
 					width: 100%;
 					height: 100%;
 				}
 			}
-			.details {
-				.detail:hover {
-					.icon-dev {
+			.content {
+				p {
+					margin-bottom: 2rem;
+					margin-top: 1rem;
+					a {
+						text-decoration: none;
+						color: var(--color-theme-accent);
 						svg {
+							width: 18px;
+							height: 18px;
 							path {
 								fill: var(--color-theme-accent);
 							}
 						}
 					}
 				}
-			}
-		
-			.details {
-				.detail {
-					padding-top: 20px;
-					.icon-dev {
-						padding-right: 20px;
-						height: 65px;
+				.social-media-profiles {
+					a {
+						padding-right: 12px;
+						padding-left: 12px;
 						svg {
 							width: 40px;
-							height: 100%;
+							height: 40px;
 						}
 					}
 				}
 			}
-		}
-		
-		/* Contact Page */
-		.contact_page {
-			max-width: 1000px;
-			padding-top: 65px;
-			.container {
-				padding-bottom: 30px;
-				.img {
-					margin: 0 auto;
-					width: 80%;
-					svg {
-						width: 100%;
-						height: 100%;
-					}
-				}
-				.content {
-					p {
-						margin-bottom: 2rem;
-						margin-top: 1rem;
-						a {
-							text-decoration: none;
-							color: var(--color-theme-accent);
-							svg {
-								width: 18px;
-								height: 18px;
-								path {
-									fill: var(--color-theme-accent);
-								}
-							}
-						}
-					}
-					.social-media-profiles {
-						a {
-							padding-right: 12px;
-							padding-left: 12px;
-							svg {
-								width: 40px;
-								height: 40px;
-							}
-						}
-					}
-				}
-			}
-		}
-		////////////
-		figure {
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
-		}
-	
-		img {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
-			margin-top: 0;
-			padding-bottom: 0;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 0;
-			margin-bottom: 23px;
 		}
 	}
+	////////////
+	figure {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		margin-bottom: 23px;
+	}
+
+	img {
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		margin-bottom: 23px;
+	}
+}
