@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap');
 @import 'theme-colors';
-@import 'button';
 @import 'medias';
 
 /*
@@ -363,7 +362,7 @@ h1 {
   margin-bottom: 1.45rem;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
 h2 {
@@ -504,7 +503,7 @@ a:hover {
   border-radius: 5px;
   line-height: 1;
   text-transform: uppercase;
-  padding: 6px 10px 6px;
+  // padding: 6px 10px 6px;
   position: relative;
   z-index: 0;
   margin-left: 10px;
@@ -536,4 +535,17 @@ a:hover {
 .link:hover::before {
   transform: translateY(0);
   transition: transform .25s ease-out;
+}
+
+//// Basic button style
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  line-height: 1;
+  border-radius: 5px;
+}
+
+.btn-border {
+  border: 2px solid;
 }
