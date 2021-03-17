@@ -473,6 +473,9 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border-top: 1px var(--text-normal-color);
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 [hidden],

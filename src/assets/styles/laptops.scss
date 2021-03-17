@@ -311,16 +311,12 @@
           display: flex;
           padding-bottom: 20px;
           .container {
-            // position: absolute;
             margin: auto;
-            // left: 50%;
-            // top: 50%;
-            // transform: translate(-50%, -50%);
             .ping {
               background: var(--ping-animation);
               border-radius: 50%;
-              width: 20px;
-              height: 20px;
+              width: 15px;
+              height: 15px;
             }
             @keyframes load {
               0% {
@@ -340,15 +336,16 @@
           .content {
             width: 95%;
             .periode {
-
+              // font-size: 25px;
             }
             .role {
               color: var(--text-primary-color);
               font-weight: 700;
-              font-size: 20px;
+              font-size: 24px;
             }
             .entreprise {
               font-weight: 700;
+              font-size: 20px;
             }
           }
         }
