@@ -294,6 +294,10 @@ html, body {
   // color: rgba(92,97,255,var(--text-opacity));
 }
 
+.anime-ping {
+  animation: load 1.5s ease-out infinite;
+}
+
 .bounce {
   -webkit-animation-name: bounce-animation;
   animation-name: bounce-animation;

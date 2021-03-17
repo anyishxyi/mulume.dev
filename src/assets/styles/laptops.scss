@@ -57,7 +57,7 @@
 
   // Profile style
   .profile-width {
-		width: 400px;
+		width: 450px;
   }
 	.profile-height {
 		height: 200px;
@@ -291,12 +291,68 @@
       // height: 200px;
       .bio {
         height: 100%;
-        padding-left: 100px;
+        padding-left: 70px;
         // margin: auto;
+      }
+      .content {
+        padding-bottom: 10px;
+        text-align: justify;
       }
     }
     .content {
-      // padding-bottom: 30px;
+      .title {
+        color: var(--text-primary-color);
+        font-weight: 700;
+        font-size: 28px;
+      }
+      .works {
+        padding-top: 10px;
+        .work {
+          display: flex;
+          padding-bottom: 20px;
+          .container {
+            // position: absolute;
+            margin: auto;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%, -50%);
+            .ping {
+              background: var(--ping-animation);
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+            }
+            @keyframes load {
+              0% {
+                background: var(--ping-animation);
+                border: 0px solid var(--ping-animation);
+              }
+              50% {
+                background: var(--ping-animation);
+                border: 10px solid var(--ping-color);
+              }
+              100% {
+                background: var(--ping-animation);
+                border: 0px solid var(--ping-color);
+              }
+            }
+          }
+          .content {
+            width: 95%;
+            .periode {
+
+            }
+            .role {
+              color: var(--text-primary-color);
+              font-weight: 700;
+              font-size: 20px;
+            }
+            .entreprise {
+              font-weight: 700;
+            }
+          }
+        }
+      }
     }
   }
 
