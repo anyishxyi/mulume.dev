@@ -50,55 +50,49 @@
 			<hr>
 			<div class="title">Tech skills <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="wrench" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wrench fa-w-16"><path fill="currentColor" d="M507.48 117.18c-3-12.17-12.41-21.79-24.5-25.15-12.1-3.34-25.16.11-33.97 8.97l-58.66 58.63-32.44-5.4-5.38-32.41 58.67-58.64c8.84-8.89 12.28-21.92 8.91-33.99-3.38-12.11-13.06-21.5-25.29-24.53-53.09-13.19-107.91 2.07-146.54 40.69-37.63 37.62-52.6 91.37-40.72 143.27L24.04 372.06C8.53 387.53 0 408.12 0 430.02s8.53 42.49 24.04 57.97C39.51 503.47 60.1 512 82.01 512c21.88 0 42.47-8.53 57.98-24.01l183.34-183.26c51.79 11.87 105.64-3.14 143.49-40.93 38.09-38.1 53.69-94.27 40.66-146.62zm-74.61 112.69c-28.47 28.46-70.2 38.1-109.01 25.21l-14.06-4.69-203.75 203.67c-12.85 12.84-35.29 12.81-48.07 0-6.44-6.42-9.97-14.96-9.97-24.04 0-9.08 3.53-17.61 9.97-24.03l203.84-203.78-4.63-14.03c-12.81-38.9-3.22-80.62 25.04-108.9 20.35-20.32 47.19-31.24 75.04-31.24h1.12l-57.32 57.3 15.13 90.59 90.57 15.09 57.35-57.29c.32 28.26-10.62 55.52-31.25 76.14zM88.01 408.02c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16z" class=""></path></svg></div>
 			<div class="skills flex flex-wrap justify-center">
-				<dvi class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=javascript alt="JavaScript" class="skill h-16 m-4" style="max-width: 8rem;" />
-				</dvi>
-				<div class="m-4 rounded-lg">
+				</div>
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=vuejs alt="Vuejs" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=html alt="HTML" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=css alt="CSS" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=mongodb alt="MongoDB" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=expressjs alt="ExpressJS" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=nodejs alt="NodeJS" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=docker alt="Docker" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=angular alt="Angular" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=jest alt="Jest" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<!-- <div class="m-4 rounded-lg">
-					<img :src=jwt alt="JWT" class="skill h-16 m-4" style="max-width: 8rem;" />
-				</div> -->
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=firebase alt="Firebase" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=java alt="Java" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<!-- <div class="m-4 rounded-lg">
-					<img :src=junit alt="JUnit" class="skill h-16 m-4" style="max-width: 8rem;" />
-				</div> -->
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=spring alt="Spring" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=mochajs alt="Mocha" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
-				<div class="m-4 rounded-lg">
+				<div class="m-4 rounded-lg bg-white">
 					<img :src=mysql alt="MySQL" class="skill h-16 m-4" style="max-width: 8rem;" />
 				</div>
 			</div>
@@ -155,24 +149,22 @@
 </template>
 
 <script>
-const jeanpaul = require('@/assets/images/png/jeanpaul_ngalula.png')
-const angular = require('@/assets/images/skills/angular.svg')
-const html = require('@/assets/images/skills/html.svg')
-const css = require('@/assets/images/skills/css.svg')
-const docker = require('@/assets/images/skills/docker.svg')
-const expressjs = require('@/assets/images/skills/express.svg')
-const firebase = require('@/assets/images/skills/firebase.svg')
-const java = require('@/assets/images/skills/java.svg')
-const javascript = require('@/assets/images/skills/javascript.svg')
-const jest = require('@/assets/images/skills/jest.svg')
-// const junit = require('@/assets/images/skills/junit.png')
-// const jwt = require('@/assets/images/skills/jwt.png')
-const mochajs = require('@/assets/images/skills/mochajs.svg')
-const mongodb = require('@/assets/images/skills/mongodb.svg')
-const mysql = require('@/assets/images/skills/mysql.svg')
-const nodejs = require('@/assets/images/skills/node.svg')
-const spring = require('@/assets/images/skills/spring.svg')
-const vuejs = require('@/assets/images/skills/vue.svg')
+const jeanpaul		= require('@/assets/images/png/jeanpaul_ngalula.png')
+const angular			= require('@/assets/images/skills/angular.svg')
+const html				= require('@/assets/images/skills/html.svg')
+const css					= require('@/assets/images/skills/css.svg')
+const docker			= require('@/assets/images/skills/docker.svg')
+const expressjs		= require('@/assets/images/skills/express.svg')
+const firebase		= require('@/assets/images/skills/firebase.svg')
+const java				= require('@/assets/images/skills/java.svg')
+const javascript	= require('@/assets/images/skills/javascript.svg')
+const jest				= require('@/assets/images/skills/jest.svg')
+const mochajs			= require('@/assets/images/skills/mochajs.svg')
+const mongodb			= require('@/assets/images/skills/mongodb.svg')
+const mysql				= require('@/assets/images/skills/mysql.svg')
+const nodejs			= require('@/assets/images/skills/node.svg')
+const spring			= require('@/assets/images/skills/spring.svg')
+const vuejs				= require('@/assets/images/skills/vue.svg')
 
 
 export default {
