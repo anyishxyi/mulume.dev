@@ -356,7 +356,7 @@
       .education {
         padding-top: 10px;
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         .educ {
           display: flex;
           padding-bottom: 20px;
@@ -389,7 +389,7 @@
       .languages {
         padding-top: 10px;
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         .language {
           display: flex;
           padding-bottom: 10px;
@@ -401,6 +401,18 @@
             padding-left: 50px;
             font-size: 24px;
             // width: 80%;
+          }
+        }
+      }
+      .interests {
+        margin-top: 10px;
+        .interest {
+          // margin-top: 10px;
+          .title {
+            margin-top: 20px;
+          }
+          .content {
+            margin-top: 10px;
           }
         }
       }
