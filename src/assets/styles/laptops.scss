@@ -386,6 +386,24 @@
           }
         }
       }
+      .languages {
+        padding-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        .language {
+          display: flex;
+          padding-bottom: 10px;
+          .label {
+            font-weight: 700;
+            font-size: 24px;
+          }
+          .level {
+            padding-left: 50px;
+            font-size: 24px;
+            // width: 80%;
+          }
+        }
+      }
     }
   }
 
