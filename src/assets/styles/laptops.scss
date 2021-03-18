@@ -288,7 +288,7 @@
   .about_page {
     padding-top: 125px;
     .heading {
-      // height: 200px;
+      padding-bottom: 40px;
       .bio {
         height: 100%;
         padding-left: 70px;
@@ -304,11 +304,9 @@
         color: var(--text-primary-color);
         font-weight: 700;
         font-size: 28px;
-        padding-top: 30px;
-        padding-bottom: 20px;
       }
       .works {
-        // padding-top: 30px;
+        margin-top: 20px;
         .work {
           display: flex;
           padding-bottom: 20px;
@@ -407,14 +405,15 @@
         }
       }
       .interests {
-        margin-top: 10px;
+        margin-top: 20px;
         .interest {
-          // margin-top: 10px;
+          margin-top: 10px;
           .title {
             margin-top: 20px;
           }
           .content {
-            margin-top: 10px;
+            margin-top: 5px;
+            text-align: justify;
           }
         }
       }
