@@ -592,34 +592,3 @@ button {
 .btn-border {
   border: 2px solid;
 }
-
-/////// flex images for skill section
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  // justify-content: center;
-  &:after {
-    content:'';
-    display:block;
-    flex-grow: 10;
-  }
-  li {
-    height: 150px;
-    width: 150px;
-    flex-grow: 1;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    el-image {
-      border-radius: .5rem;
-      padding-top: auto;
-      margin: 0 auto;
-      max-height: 100%;
-      min-width: 100%;
-      object-fit: cover;
-      vertical-align: bottom;
-    }
-  }
-}
