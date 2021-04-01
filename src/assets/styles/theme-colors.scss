@@ -8,7 +8,9 @@
   --social-media-color:var(--text-normal-color);
   --ping-color: #fff;
   --ping-animation: #222;
+  --btn-download-pdf-txt-color: #fff;
   --text-opacity: 1;
+  --filter-text-primary-color: invert(0%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(103%) contrast(103%);
 }
 
 [theme="darkMode"] {
@@ -22,5 +24,7 @@
   --social-media-color:var(--text-normal-color);
   --ping-color: #222;
   --ping-animation: #fff;
+  --btn-download-pdf-txt-color: #222;
 	--text-opacity: 1;
+  --filter-text-primary-color: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
 }

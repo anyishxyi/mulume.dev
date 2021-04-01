@@ -12,6 +12,8 @@ import router from './router'
 import '@/assets/styles/index.scss' // global css
 import '@/assets/images/index' //for svg files
 
+import './icons'
+
 LocalForage.config({ driver: LocalForage.IndexedDB, name: 'Hand Me', version: 1.0, storeName: 'HandMe' })
 
 Vue.config.productionTip = false
