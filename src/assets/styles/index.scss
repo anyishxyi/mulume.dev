@@ -588,3 +588,44 @@ button {
 .btn-border {
   border: 2px solid;
 }
+
+////// Download pdf button
+.btn_download_pdf {
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  background-color: var(--color-theme-accent);
+  color: white;
+  border: 2px solid var(--color-theme-accent);
+}
+
+.btn_download_pdf:hover {
+  background-color: white;
+  color: var(--color-theme-accent);
+}
+
+// .btn_download_pdf span {
+//   cursor: pointer;
+//   display: inline-block;
+//   position: relative;
+//   transition: 0.5s;
+// }
+
+// .btn_download_pdf span:after {
+//   content: '\00bb';
+//   position: absolute;
+//   opacity: 0;
+//   top: 0;
+//   right: -20px;
+//   transition: 0.5s;
+// }
+
+// .btn_download_pdf:hover span {
+//   padding-right: 25px;
+// }
+
+// .btn_download_pdf:hover span:after {
+//   opacity: 1;
+//   right: 0;
+// }

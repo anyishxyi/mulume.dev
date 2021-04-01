@@ -9,8 +9,7 @@
       <div class="bio">
 				<h1 class="font-bold text-lg text-primary-color">Hello <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="alien-monster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="bounce ml-12 ml-4 svg-inline--fa"><path fill="currentColor" d="M560,128H544a15.99954,15.99954,0,0,0-16,16v96H480V176a15.99954,15.99954,0,0,0-16-16H432V96h32a16.00079,16.00079,0,0,0,16-16V48a15.99954,15.99954,0,0,0-16-16H448a15.99954,15.99954,0,0,0-16,16V64H400a15.99954,15.99954,0,0,0-16,16v48H192V80a15.99954,15.99954,0,0,0-16-16H144V48a15.99954,15.99954,0,0,0-16-16H112A15.99954,15.99954,0,0,0,96,48V80a16.00079,16.00079,0,0,0,16,16h32v64H112a15.99954,15.99954,0,0,0-16,16v64H48V144a15.99954,15.99954,0,0,0-16-16H16A15.99954,15.99954,0,0,0,0,144V272a16.00079,16.00079,0,0,0,16,16H64v80a16.00079,16.00079,0,0,0,16,16h48v80a16.00079,16.00079,0,0,0,16,16h96a16.00079,16.00079,0,0,0,16-16V448a15.99954,15.99954,0,0,0-16-16H176V384H400v48H336a15.99954,15.99954,0,0,0-16,16v16a16.00079,16.00079,0,0,0,16,16h96a16.00079,16.00079,0,0,0,16-16V384h48a16.00079,16.00079,0,0,0,16-16V288h48a16.00079,16.00079,0,0,0,16-16V144A15.99954,15.99954,0,0,0,560,128ZM464,336H112V288h32V208h48V176H384v32h48v80h32ZM240,224H208a15.99954,15.99954,0,0,0-16,16v48a16.00079,16.00079,0,0,0,16,16h32a16.00079,16.00079,0,0,0,16-16V240A15.99954,15.99954,0,0,0,240,224Zm128,0H336a15.99954,15.99954,0,0,0-16,16v48a16.00079,16.00079,0,0,0,16,16h32a16.00079,16.00079,0,0,0,16-16V240A15.99954,15.99954,0,0,0,368,224Z" class=""></path></svg></h1>
 				<div class="content">I'm Jean-Paul, a full-stack web developer 💻 with a strong educational background in software engineering. I am doing freelance work 🚀 based in Paris 🇫🇷, but I do work remotely for international clients.</div>
-				<a :href="resume" target="_blank" download="CV_jeanpaul_ngalula_dev_js"> Download PDF</a>
-				<button class="close btn-border btn-pad" @click="downloadMyResume">Download my resume</button>
+				<a :href="resume_en" class="btn_download_pdf" target="_blank" download="CV_jeanpaul_ngalula_dev_js"> Download my resume</a>
 			</div>
 		</div>
 		<div class="content">
@@ -191,7 +190,8 @@ const vuejs				= require('@/assets/images/skills/vue.svg')
 const ionic				= require('@/assets/images/skills/ionic.svg')
 const typescript	= require('@/assets/images/skills/typescript.svg')
 
-const resume 			= require('@/assets/resume/CV_jeanpaul_ngalula_dev_js.pdf')
+const resume_en 	= require('@/assets/resume/Resume_jeanpaul_ngalula_dev_js.pdf')
+const resume_fr 	= require('@/assets/resume/CV_jeanpaul_ngalula_dev_js.pdf')
 
 export default {
   data() {
@@ -214,7 +214,8 @@ export default {
       ionic,
       typescript,
       vuejs,
-			resume
+			resume_en,
+			resume_fr
     }
   },
 	methods: {
