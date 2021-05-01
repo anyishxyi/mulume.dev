@@ -1,6 +1,6 @@
 <template>
 	<div class="about_page m-0 w-content">
-		<div class="heading flex">
+		<div class="heading flex-content">
       <div class="profile-width">
         <figure>
           <img :src=jeanpaul class="profile-about-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
