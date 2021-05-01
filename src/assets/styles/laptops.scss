@@ -208,6 +208,19 @@
     padding: 10px 20px;
   }
 
+  .m-skill {
+    margin: 16px;
+  }
+
+  .h-skill {
+    height: 64px;
+  }
+
+  .skill {
+    transition: all .3s ease-in-out;
+    filter: grayscale(0);
+  }
+
   /* Home Page */
   .w-content {
     width: 70%;

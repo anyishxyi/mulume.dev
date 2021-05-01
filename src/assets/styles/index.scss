@@ -214,19 +214,13 @@ html, body {
   margin: 1rem;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
-.skill {
-  transition: all .3s ease-in-out;
-  filter: grayscale(0);
-}
-
 .bg-white {
   --bg-opacity: 1;
   background-color: #fff;
-  // background-color: rgba(255,255,255,var(--bg-opacity));
+}
+
+.h-16 {
+  height: 4rem;
 }
 
 .m-0 {
