@@ -3,7 +3,7 @@
   <input type="checkbox" id="nav-check">
   <router-link :to="{path: '/home'}" class="txt-deco-none">
     <div class="nav-header text-lg p-13 justify-center align-items mr-24 flex">
-      <span class="icon-width icon-height">
+      <span class="icon-size">
         <figure class="pic-border">
           <img :src="jeanpaul" class="profile-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
         </figure>
