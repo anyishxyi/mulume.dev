@@ -198,10 +198,6 @@
 				inset 3.5em 0 0 0 var(--color-theme-accent);
 		}
 	
-		.text-lg {
-			font-size: 24px;
-		}
-	
 		//////// Others classes
 		.name-size {
 			font-size: 16px;
@@ -210,7 +206,7 @@
 			padding: 10px 20px;
 		}
 		.text-lg {
-			font-size: 32px;
+			font-size: 28px;
 		}
 		.mt-20 {
 			margin-top: 20px;
@@ -514,5 +510,13 @@
 			padding-right: 0;
 			padding-top: 0;
 			margin-bottom: 23px;
+		}
+	}
+
+	@media only screen 
+	and (min-device-width: 280px) 
+  and (max-device-width: 653px) {
+		.text-lg {
+			// font-size: 22px;
 		}
 	}

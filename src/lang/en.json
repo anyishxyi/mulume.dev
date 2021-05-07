@@ -1,0 +1,36 @@
+{
+  "menu": {
+    "about": "about",
+    "contact": "Get in touch"
+  },
+  "page": {
+    "home": {
+      "iam": "I am ",
+      "role": "full-stack web developer / software consultant",
+      "location": "based in France, specifically in Paris. I can do remote work for any place in the world.",
+      "too": "too",
+      "frontend": "For frontend work : I am personally a huge fan of ",
+      "frontend2": "and I have some experience in",
+      "backendMsg": "For backend work : my go-to tool is",
+      "contactme": "If you have any web development needs, I am happy to look at your project."
+    },
+    "about": {
+
+    },
+    "contact": {
+
+    }
+  },
+  "other": {
+    "with": "with",
+    "but": "but",
+    "also": "also",
+    "ihave": "j'ai",
+    "by": "by",
+    "hello": "Hello",
+    "I": "I",
+    "Iam": "I'm",
+    "webdevelopement": "web development",
+    "experience": "experience"
+  }
+}
