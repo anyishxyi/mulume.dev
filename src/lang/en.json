@@ -5,8 +5,13 @@
   },
   "page": {
     "home": {
+      "hello": "Hello",
+      "webdevelopement": "web development",
+      "role": "full-stack web developer / software consultant",
       "location": "based in France, specifically in Paris. I can do remote work for any place in the world.",
       "too": "too",
+      "Iam": "I am",
+      "with": "with",
       "frontend": "For frontend work : I am personally a huge fan of ",
       "frontend2": "and I have some experience in",
       "backendMsg": "For backend work : my go-to tool is",
@@ -20,18 +25,20 @@
 
     }
   },
+  "layout": {
+    "navbar": {
+      "with": "with",
+      "love": "love",
+      "by": "by"
+    }
+  },
   "other": {
-    "role": "full-stack web developer / software consultant",
-    "with": "with",
     "a":"a",
     "but": "but",
     "also": "also",
     "ihave": "j'ai",
     "by": "by",
-    "hello": "Hello",
     "I": "I",
-    "Iam": "I'm",
-    "webdevelopement": "web development",
     "experience": "experience"
   }
 }
