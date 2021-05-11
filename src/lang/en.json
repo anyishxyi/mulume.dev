@@ -1,11 +1,8 @@
 {
-  "menu": {
-    "about": "about",
-    "contact": "Get in touch"
-  },
   "page": {
     "home": {
       "hello": "Hello",
+      "a": "a",
       "webdevelopement": "web development",
       "role": "full-stack web developer / software consultant",
       "location": "based in France, specifically in Paris. I can do remote work for any place in the world.",
@@ -16,17 +13,25 @@
       "frontend2": "and I have some experience in",
       "backendMsg": "For backend work : my go-to tool is",
       "backendMsg2": "but I also have experience with",
-      "contactme": "If you have any web development needs, I am happy to look at your project."
+      "contactme": "If you have any web development needs, I am happy to look at your project.",
+      "touch": "Get in touch"
     },
     "about": {
 
     },
     "contact": {
-
+      "title": "Let's talk",
+      "interest": "Whether you are interested to do business with me, want to chat about some of my content, or just want to hangout, I am happy to talk to you.",
+      "other": "Feel free to check out my social media presence below to get to know me better",
+      "email": "My preferred way of contact is via "
     }
   },
   "layout": {
     "navbar": {
+      "about": "about",
+      "contact": "Get in touch"
+    },
+    "footer": {
       "with": "with",
       "love": "love",
       "by": "by"
@@ -37,7 +42,6 @@
     "but": "but",
     "also": "also",
     "ihave": "j'ai",
-    "by": "by",
     "I": "I",
     "experience": "experience"
   }

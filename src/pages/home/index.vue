@@ -31,7 +31,7 @@
 				</div>
 				<div class="pb-5 text-content text-base">
 					<div>{{ $t('page.home.contactme') }}.</div>
-					<router-link :to="{path: '/contact'}"><button class="slide mt-10 btn-border btn-pad">Get in touch</button></router-link>
+					<router-link :to="{path: '/contact'}"><button class="slide mt-10 btn-border btn-pad">{{ $t('page.home.touch') }}</button></router-link>
 				</div>
 			</div>
 		</div>
