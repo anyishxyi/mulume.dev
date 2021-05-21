@@ -8,10 +8,14 @@
           <img :src="jeanpaul" class="profile-pic" alt="Profile picture of Jean-Paul NGALULA (very handsome)" />
         </figure>
       </span>
-      <span class="pl-5 font-bold name-size color-theme-accent">Jean-Paul NGALULA</span>
+      <span class="pl-5 font-bold name-size color-theme-accent">nmcodes</span>
     </div>
   </router-link>
   <div class="right-menu flex p13">
+    <button class="theme-switch-button" @click="toggleTheme">
+      <svg-icon v-if="!!theme" icon-class="moon" class="mode-icon"/>
+      <svg-icon v-else icon-class="sun" class="mode-icon"/>
+    </button>
     <!-- <button class="theme-switch-button" @click="toggleTheme">
       <svg-icon v-if="!!theme" icon-class="moon" class="mode-icon"/>
       <svg-icon v-else icon-class="sun" class="mode-icon"/>
