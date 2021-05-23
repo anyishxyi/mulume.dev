@@ -23,22 +23,53 @@
 		.nav > .nav-btn {
 			display: none;
 		}
+		.theme-switch-button {
+			border: none;
+			background: none;
+			cursor: pointer;
+			color: var(--text-primary-color);
+			outline: 0;
+			padding: 10px 20px;
+			// svg {
+			//   fill: var(--text-primary-color);
+			// }
+			.svg-fill-color {
+				filter: var(--filter-text-primary-color);
+			}
+	
+		}
 		.nav > .nav-links {
 			display: inline;
 			float: right;
 			font-size: 18px;
 		}
+		
 		.nav > .nav-links > a {
 			display: inline-block;
 			padding: 13px 10px 13px 10px;
 			text-decoration: none;
 			color: var(--color-theme-accent);
 		}
+		
 		.nav > #nav-check {
 			display: none;
 		}
+	
+		.theme-switch-button {
+			border: none;
+			background: none;
+			cursor: pointer;
+			color: var(--text-primary-color);
+			outline: 0;
+			padding-right: 10px;
+	
+			svg {
+				fill: var(--text-primary-color);
+			}
+		}
 
 		/// Right menu
+
 		.nav > .right-menu > .nav-btn {
 			display: inline-block;
 			position: absolute;
@@ -80,17 +111,18 @@
 			height: calc(100vh - 50px);
 			overflow-y: auto;
 		}
-		.theme-switch-button {
-			margin-right: 60px;
+	
+		.nav > .right-menu > .theme-switch-button {
+			margin-bottom: 15px;
 			border: none;
 			background: none;
 			cursor: pointer;
+			color: var(--text-primary-color);
 			outline: 0;
-			height: 20px;
-			width: 20px;
-			.mode-icon {
-				float: left;
-				margin-top: 12px;
+			padding-right: 60px;
+			margin-top: 5px;
+			svg {
+				fill: var(--text-primary-color);
 			}
 		}
 
@@ -166,6 +198,10 @@
 				inset 3.5em 0 0 0 var(--color-theme-accent);
 		}
 	
+		.text-lg {
+			font-size: 24px;
+		}
+	
 		//////// Others classes
 		.name-size {
 			font-size: 16px;
@@ -174,7 +210,7 @@
 			padding: 10px 20px;
 		}
 		.text-lg {
-			font-size: 28px;
+			font-size: 32px;
 		}
 		.mt-20 {
 			margin-top: 20px;
@@ -478,13 +514,5 @@
 			padding-right: 0;
 			padding-top: 0;
 			margin-bottom: 23px;
-		}
-	}
-
-	@media only screen 
-	and (min-device-width: 280px) 
-  and (max-device-width: 653px) {
-		.text-lg {
-			// font-size: 22px;
 		}
 	}

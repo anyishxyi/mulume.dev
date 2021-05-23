@@ -24,31 +24,48 @@
   .nav > .nav-btn {
     display: none;
   }
+  .theme-switch-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--text-primary-color);
+    outline: 0;
+    padding: 10px 20px;
+    // svg {
+    //   fill: var(--text-primary-color);
+    // }
+    .svg-fill-color {
+      filter: var(--filter-text-primary-color);
+    }
 
+  }
   .nav > .nav-links {
     display: inline;
     float: right;
     font-size: 18px;
   }
+  
   .nav > .nav-links > a {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: var(--color-theme-accent);
   }
+  
   .nav > #nav-check {
     display: none;
   }
+
   .theme-switch-button {
     border: none;
     background: none;
     cursor: pointer;
+    color: var(--text-primary-color);
     outline: 0;
-    height: 20px;
-    width: 20px;
-    .mode-icon {
-      float: left;
-      margin-top: 12px;
+    padding-right: 10px;
+
+    svg {
+      fill: var(--text-primary-color);
     }
   }
 
