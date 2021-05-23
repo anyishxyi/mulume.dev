@@ -49,14 +49,14 @@ export default {
 
 <style scoped>
 .svg-icon {
-  width: 1em;
-  height: 1em;
+  width: 30px;
+  height: 30px;
   vertical-align: -0.15em;
-  fill: currentColor;
+  fill: brown;
   overflow: hidden;
 }
 .svg-external-icon {
-  background-color: currentColor;
+  background-color: brown;
   mask-size: cover!important;
   display: inline-block;
 }

@@ -1,0 +1,119 @@
+{
+  "page": {
+    "home": {
+      "hello": "Bonjour",
+      "a": "un",
+      "andI": "et j'",
+      "webdevelopement": " le développement web",
+      "role": "développeur web full-stack / Consultant informatique",
+      "location": "basé en France, plus précisément à Paris. Je peux travailler à distance partout dans le monde.",
+      "too": "aussi",
+      "Iam": "Je suis",
+      "with": "avec",
+      "frontend": "Pour frontend: je suis personnellement un grand fan de",
+      "frontend2": "et j'ai une certaine expérience en",
+      "backendMsg": "Pour backend: mon outil de prédilection est",
+      "backendMsg2": "mais j'ai aussi de l'expérience avec",
+      "contactme": "Si vous avez des besoins en développement Web, je serais heureux d'en savoir un peu plus",
+      "touch": "Contact"
+    },
+    "about": {
+      "hello": "Bonjour",
+      "presentation": "Je suis Jean-Paul, un développeur web full-stack 💻 avec une solide formation en Architecte logiciel, développeur d'applications. Je travaille suis basé à Paris 🇫🇷 mais je travaille à distance pour des clients internationaux.",
+      "downloadResume": "Téléchargez mon CV",
+      "works": {
+        "title": "Expérience",
+        "work1":{
+          "periode": "Septembre 2018 - aujourd'hui · France",
+          "role": "Développeur full-stack Javascript",
+          "entreprise": "Ownest"
+        },
+        "work2":{
+          "periode": "Juin 2018 - Août 2018 · France",
+          "role": "Stage | Développeur PHP",
+          "entreprise": "Jobnroll"
+        },
+        "work3":{
+          "periode": "Juin 2016 - Août 2017 · Congo R.D.",
+          "role": "Développeur Java/JavaEE",
+          "entreprise": "FPI"
+        }
+      },
+      "skills" : "Compétences",
+      "education" : {
+        "title": "Formation",
+        "etna": {
+          "year": "2020",
+          "degree": "Master of Science · Architecte logiciel, développeur d'application",
+          "school": "École des Technologies Numériques Appliquées (ETNA) · France 🇫🇷"
+        },
+        "unikin": {
+          "year": "2016",
+          "degree": "Licence · Science informatique",
+          "school": "Université de Kinshasa · Congo R.D. 🇨🇩"
+        }
+      },
+      "language": {
+        "french": {
+          "title": "Français",
+          "level": "Langue maternelle"
+        },
+        "english": {
+          "title": "Anglais",
+          "level": "Bilingue"
+        }
+      },
+      "interest" : {
+        "interest1": {
+          "title": "Emplois",
+          "content": "Si vous souhaitez m'embaucher, je suis intéressé à travailler dans des entreprises qui proposent des technologies modernes telles que Node.js, Vue.js, Express.js, MongoDB, etc. Je recherche un poste qui me met au défi."
+        },
+        "interest2": {
+          "title": "Voyage",
+          "content": "J'adore voyager, surtout dans les villes. J'adore quand une ville est vivante et pleine de diversité. Ce n'est peut-être pas une surprise que l'un de mes endroits préférés sur Terre soit Paris."
+        },
+        "interest3": {
+          "title": "Technologie",
+          "content": "Je suis fasciné par les avancées technologiques réalisées par des entreprises telles que Google, Tesla, Apple."
+        },
+        "interest4": {
+          "title": "Startups & Entreprises",
+          "content": "J'ai une grande curiosité entrepreneuriale et startup qui se divise en deux domaines. D'une part, les petites entreprises qui essaient de devenir grandes. D'un autre côté, j'aime suivre les mouvements stratégiques et les événements de grands acteurs tels que Google, Netflix, Spotify."
+        },
+        "interest5": {
+          "title": "Coding",
+          "content": "C'est un cliché classique. Après (ou avant) le travail, j'apprécie un peu de codage sur le côté. J'explore actuellement Ionic et je plonge dans le fonctionnement interne de Vue.js afin de pouvoir contribuer aux projets."
+        },
+        "interest6": {
+          "title": "Cinema & TV",
+          "content": "J'adore presque tous les types de films, mais je préfère toujours les films DC Comics et Marvel. En ce qui concerne la télévision: j'aime The Witcher (l'un de mes favoris), GoT, Homeland, Murder, entre autres. J'aime aussi regarder des matchs de football le week-end quand je ne peux pas aller au stade et parfois je fais un peu de jogging (si vous voulez engager de longues conversations avec moi, c'est la voie à suivre.)"
+        }
+      }
+    },
+    "contact": {
+      "title": "Parlons",
+      "interest": "Que vous souhaitiez faire des affaires avec moi, que vous souhaitiez discuter de certains de mes contenus ou simplement que vous souhaitiez participer à un hangout, je suis heureux de vous parler.",
+      "other": "N'hésitez pas à consulter ma présence sur les réseaux sociaux ci-dessous pour mieux me connaître",
+      "email": "Mon moyen de contact préféré est via "
+    }
+  },
+  "layout": {
+    "navbar": {
+      "about": "à propos",
+      "contact": "Contact"
+    },
+    "footer": {
+      "with": "avec",
+      "love": "amour",
+      "by": "par"
+    }
+  },
+  "other": {
+    "a":"un",
+    "but": "mais",
+    "also": "aussi",
+    "ihave": "j'ai",
+    "I": "Je",
+    "experience": "expérience"
+  }
+}

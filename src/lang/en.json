@@ -1,0 +1,119 @@
+{
+  "page": {
+    "home": {
+      "hello": "Hello",
+      "a": "a",
+      "andI": "and I",
+      "webdevelopement": "web development",
+      "role": "full-stack web developer / software consultant",
+      "location": "based in France, specifically in Paris. I can do remote work for any place in the world.",
+      "too": "too",
+      "Iam": "I am",
+      "with": "with",
+      "frontend": "For frontend work : I am personally a huge fan of ",
+      "frontend2": "and I have some experience in",
+      "backendMsg": "For backend work : my go-to tool is",
+      "backendMsg2": "but I also have experience with",
+      "contactme": "If you have any web development needs, I am happy to look at your project",
+      "touch": "Get in touch"
+    },
+    "about": {
+      "hello": "Hello",
+      "presentation": "I'm Jean-Paul, a full-stack web developer 💻 with a strong educational background in software engineering. I am doing freelance work 🚀 based in Paris 🇫🇷, but I do work remotely for international clients.",
+      "downloadResume": "Download my resume",
+      "works": {
+        "title": "Work Experience",
+        "work1":{
+          "periode": "September 2018 - current · France",
+          "role": "Full-stack Javascript Developer",
+          "entreprise": "Ownest"
+        },
+        "work2":{
+          "periode": "June 2018 - August 2018 · France",
+          "role": "Internship | PHP Developer",
+          "entreprise": "Jobnroll"
+        },
+        "work3":{
+          "periode": "June 2016 - August 2017 · Congo R.D.",
+          "role": "Java/JavaEE Developer",
+          "entreprise": "FPI"
+        }
+      },
+      "skills" : "Tech skills",
+      "education" : {
+        "title": "Education",
+        "etna": {
+          "year": "2020",
+          "degree": "Master of Science · Software architect, application developer",
+          "school": "École des Technologies Numériques Appliquées (ETNA) · France 🇫🇷"
+        },
+        "unikin": {
+          "year": "2016",
+          "degree": "Bachelor's degree in Computer Science",
+          "school": "Université de Kinshasa · Congo R.D. 🇨🇩"
+        }
+      },
+      "language": {
+        "french": {
+          "title": "French",
+          "level": "Mothertongue"
+        },
+        "english": {
+          "title": "English",
+          "level": "Bilingual"
+        }
+      },
+      "interest" : {
+        "interest1": {
+          "title": "Jobs",
+          "content": "If you want to hire me, I'm interested to work in companies that offer modern technologies such as Node.js, Vue.js, Express.js, MongoDB, etc. I am looking for a role that challenges me."
+        },
+        "interest2": {
+          "title": "Travel",
+          "content": "I love traveling, especially to cities. I love when a city is vibrant and full of diversity. It might not be a surprise that one of my favorite places on Earth is Paris."
+        },
+        "interest3": {
+          "title": "Technology",
+          "content": "I'm fascinated by technological advances which companies such as Google, Tesla, Apple make."
+        },
+        "interest4": {
+          "title": "Startups & Companies",
+          "content": "I have a big entrepreneurial and startup curiosity which is devided in two fields. On one hand, small companies which try to make it big. On the other hand, I like following strategic moves and happenings in big players such as Google, Netflix, Spotify."
+        },
+        "interest5": {
+          "title": "Coding",
+          "content": "This is a classic cliché. After (or before) work, I enjoy some coding on the side. I am currently exploring Ionic and diving deeping in the internal workings of Vue.js in order to be able to contribute to the projects."
+        },
+        "interest6": {
+          "title": "Cinema & TV",
+          "content": "I love almost any kind of movie, but I always prefer DC Comics and Marvel movies. As of TV: I enjoy The Witcher (one of my favorites), GoT, Homeland, Murder, among others. I also like to watch football games on weekends when I can't go to the stadium and occasionally I do a bit of jogging (If you want to engange in lengthy conversations with me, these are the way to go.)"
+        }
+      }
+    },
+    "contact": {
+      "title": "Let's talk",
+      "interest": "Whether you are interested to do business with me, want to chat about some of my content, or just want to hangout, I am happy to talk to you.",
+      "other": "Feel free to check out my social media presence below to get to know me better",
+      "email": "My preferred way of contact is via "
+    }
+  },
+  "layout": {
+    "navbar": {
+      "about": "about",
+      "contact": "Get in touch"
+    },
+    "footer": {
+      "with": "with",
+      "love": "love",
+      "by": "by"
+    }
+  },
+  "other": {
+    "a":"a",
+    "but": "but",
+    "also": "also",
+    "ihave": "j'ai",
+    "I": "I",
+    "experience": "experience"
+  }
+}
