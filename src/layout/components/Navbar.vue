@@ -12,15 +12,10 @@
     </div>
   </router-link>
   <div class="right-menu flex p13">
-    <button class="theme-switch-button" @click="toggleTheme">
-      <svg-icon v-if="!!theme" icon-class="moon" class="mode-icon"/>
-      <svg-icon v-else icon-class="sun" class="mode-icon"/>
-    </button>
-    <!-- <button class="theme-switch-button" @click="toggleTheme">
-      <svg-icon v-if="!!theme" icon-class="moon" class="mode-icon"/>
-      <svg-icon v-else icon-class="sun" class="mode-icon"/>
-    </button> -->
-
+    <span class="theme-switch-button" @click="toggleTheme">
+      <img :src=sunny v-if="!!theme" alt="sunny" class="mode-icon"/>
+      <img :src=moon v-else alt="moon" class="mode-icon"/>
+    </span>
     <div class="nav-btn">
       <label for="nav-check">
         <span></span>
@@ -39,8 +34,10 @@
 </template>
 
 <script>
-const jeanpaul = require('@/assets/images/png/jeanpaul_ngalula.png')
-const OFFSET = 60
+const OFFSET    = 60
+const jeanpaul  = require('@/assets/images/png/jeanpaul_ngalula.png')
+const moon      = require('@/assets/images/svg/moon.svg')
+const sunny     = require('@/assets/images/svg/sunny.svg')
 
 export default {
   data() {
@@ -48,7 +45,9 @@ export default {
       showNavbar: true,
       lastScrollPosition: 0,
       theme: '',
-      jeanpaul
+      jeanpaul,
+      moon,
+      sunny
     }
   },
   mounted() {
@@ -80,20 +79,10 @@ export default {
                     document.documentElement.setAttribute('theme', this.theme)
                   })
                   .catch(error => { console.error(error) })
+    },
+    setLanguage() {
+      // Cookies.set('name', 'value');
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .mode-icon {
-    font-size: 36px;
-    float: left;
-    margin-top: -2px;
-    margin-right: 15px;
-    margin-left: 5px;
-    svg {
-      fill: black;
-    }
-  }
-</style>

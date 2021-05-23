@@ -3,7 +3,8 @@
     "home": {
       "hello": "Bonjour",
       "a": "un",
-      "webdevelopement": "développement web",
+      "andI": "et j'",
+      "webdevelopement": " le développement web",
       "role": "développeur web full-stack / Consultant informatique",
       "location": "basé en France, plus précisément à Paris. Je peux travailler à distance partout dans le monde.",
       "too": "aussi",
@@ -13,7 +14,7 @@
       "frontend2": "et j'ai une certaine expérience en",
       "backendMsg": "Pour backend: mon outil de prédilection est",
       "backendMsg2": "mais j'ai aussi de l'expérience avec",
-      "contactme": "Si vous avez des besoins en développement Web, je serais heureux d'en savoir un peu plus.",
+      "contactme": "Si vous avez des besoins en développement Web, je serais heureux d'en savoir un peu plus",
       "touch": "Contact"
     },
     "about": {
