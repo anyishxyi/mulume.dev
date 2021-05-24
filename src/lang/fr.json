@@ -23,17 +23,17 @@
       "downloadResume": "Téléchargez mon CV",
       "works": {
         "title": "Expérience",
-        "work1":{
+        "ownest":{
           "periode": "Septembre 2018 - aujourd'hui · France",
           "role": "Développeur full-stack Javascript",
           "entreprise": "Ownest"
         },
-        "work2":{
+        "jobnrol":{
           "periode": "Juin 2018 - Août 2018 · France",
           "role": "Stage | Développeur PHP",
           "entreprise": "Jobnroll"
         },
-        "work3":{
+        "fpi":{
           "periode": "Juin 2016 - Août 2017 · Congo R.D.",
           "role": "Développeur Java/JavaEE",
           "entreprise": "FPI"

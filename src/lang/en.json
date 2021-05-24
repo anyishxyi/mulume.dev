@@ -23,17 +23,17 @@
       "downloadResume": "Download my resume",
       "works": {
         "title": "Work Experience",
-        "work1":{
+        "ownest":{
           "periode": "September 2018 - current · France",
           "role": "Full-stack Javascript Developer",
           "entreprise": "Ownest"
         },
-        "work2":{
+        "jobnrol":{
           "periode": "June 2018 - August 2018 · France",
           "role": "Internship | PHP Developer",
           "entreprise": "Jobnroll"
         },
-        "work3":{
+        "fpi":{
           "periode": "June 2016 - August 2017 · Congo R.D.",
           "role": "Java/JavaEE Developer",
           "entreprise": "FPI"
