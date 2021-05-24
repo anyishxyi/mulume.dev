@@ -54,6 +54,7 @@
         }
       },
       "language": {
+        "title": "Langue",
         "french": {
           "title": "Français",
           "level": "Langue maternelle"
@@ -64,27 +65,28 @@
         }
       },
       "interest" : {
-        "interest1": {
+        "title": "intérêts",
+        "jobs": {
           "title": "Emplois",
           "content": "Si vous souhaitez m'embaucher, je suis intéressé à travailler dans des entreprises qui proposent des technologies modernes telles que Node.js, Vue.js, Express.js, MongoDB, etc. Je recherche un poste qui me met au défi."
         },
-        "interest2": {
+        "travel": {
           "title": "Voyage",
           "content": "J'adore voyager, surtout dans les villes. J'adore quand une ville est vivante et pleine de diversité. Ce n'est peut-être pas une surprise que l'un de mes endroits préférés sur Terre soit Paris."
         },
-        "interest3": {
+        "tech": {
           "title": "Technologie",
           "content": "Je suis fasciné par les avancées technologiques réalisées par des entreprises telles que Google, Tesla, Apple."
         },
-        "interest4": {
+        "companies": {
           "title": "Startups & Entreprises",
           "content": "J'ai une grande curiosité entrepreneuriale et startup qui se divise en deux domaines. D'une part, les petites entreprises qui essaient de devenir grandes. D'un autre côté, j'aime suivre les mouvements stratégiques et les événements de grands acteurs tels que Google, Netflix, Spotify."
         },
-        "interest5": {
+        "coding": {
           "title": "Coding",
           "content": "C'est un cliché classique. Après (ou avant) le travail, j'apprécie un peu de codage sur le côté. J'explore actuellement Ionic et je plonge dans le fonctionnement interne de Vue.js afin de pouvoir contribuer aux projets."
         },
-        "interest6": {
+        "tv": {
           "title": "Cinema & TV",
           "content": "J'adore presque tous les types de films, mais je préfère toujours les films DC Comics et Marvel. En ce qui concerne la télévision: j'aime The Witcher (l'un de mes favoris), GoT, Homeland, Murder, entre autres. J'aime aussi regarder des matchs de football le week-end quand je ne peux pas aller au stade et parfois je fais un peu de jogging (si vous voulez engager de longues conversations avec moi, c'est la voie à suivre.)"
         }

@@ -54,6 +54,7 @@
         }
       },
       "language": {
+        "title": "Language skills",
         "french": {
           "title": "French",
           "level": "Mothertongue"
@@ -64,27 +65,28 @@
         }
       },
       "interest" : {
-        "interest1": {
+        "title": "Interests",
+        "jobs": {
           "title": "Jobs",
           "content": "If you want to hire me, I'm interested to work in companies that offer modern technologies such as Node.js, Vue.js, Express.js, MongoDB, etc. I am looking for a role that challenges me."
         },
-        "interest2": {
+        "travel": {
           "title": "Travel",
           "content": "I love traveling, especially to cities. I love when a city is vibrant and full of diversity. It might not be a surprise that one of my favorite places on Earth is Paris."
         },
-        "interest3": {
+        "tech": {
           "title": "Technology",
           "content": "I'm fascinated by technological advances which companies such as Google, Tesla, Apple make."
         },
-        "interest4": {
+        "companies": {
           "title": "Startups & Companies",
           "content": "I have a big entrepreneurial and startup curiosity which is devided in two fields. On one hand, small companies which try to make it big. On the other hand, I like following strategic moves and happenings in big players such as Google, Netflix, Spotify."
         },
-        "interest5": {
+        "coding": {
           "title": "Coding",
           "content": "This is a classic cliché. After (or before) work, I enjoy some coding on the side. I am currently exploring Ionic and diving deeping in the internal workings of Vue.js in order to be able to contribute to the projects."
         },
-        "interest6": {
+        "tv": {
           "title": "Cinema & TV",
           "content": "I love almost any kind of movie, but I always prefer DC Comics and Marvel movies. As of TV: I enjoy The Witcher (one of my favorites), GoT, Homeland, Murder, among others. I also like to watch football games on weekends when I can't go to the stadium and occasionally I do a bit of jogging (If you want to engange in lengthy conversations with me, these are the way to go.)"
         }
