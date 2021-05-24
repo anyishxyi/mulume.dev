@@ -68,55 +68,55 @@
 			<div class="title">{{ $t('page.about.skills') }} <img :src="require('@/assets/images/svg/skills.svg')" alt="skills" class="icon-tilte" style="width: 30px; height: 30px" /></div>
 			<div class="skills flex flex-wrap justify-center">
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/javascript.svg')" alt="JavaScript" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/javascript.svg')" alt="JavaScript" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/vue.svg')" alt="Vuejs" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/vue.svg')" alt="Vuejs" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/html.svg')" alt="HTML" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/html.svg')" alt="HTML" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/css.svg')" alt="CSS" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/css.svg')" alt="CSS" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/mongodb.svg')" alt="MongoDB" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/mongodb.svg')" alt="MongoDB" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/expressjs.svg')" alt="ExpressJS" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/expressjs.svg')" alt="ExpressJS" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/node.svg')" alt="NodeJS" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/node.svg')" alt="NodeJS" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/docker.svg')" alt="Docker" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/docker.svg')" alt="Docker" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/ionic.svg')" alt="ionic" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/ionic.svg')" alt="ionic" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/jest.svg')" alt="Jest" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/jest.svg')" alt="Jest" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/angular.svg')" alt="Angular" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/angular.svg')" alt="Angular" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/typescript.svg')" alt="typescript" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/typescript.svg')" alt="typescript" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/firebase.svg')" alt="Firebase" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/firebase.svg')" alt="Firebase" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/java.svg')" alt="Java" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/java.svg')" alt="Java" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/spring.svg')" alt="Spring" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/spring.svg')" alt="Spring" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/mochajs.svg')" alt="Mocha" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/mochajs.svg')" alt="Mocha" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 				<div class="m-skill rounded-lg">
-					<img :src="require('@/assets/images/skills/mysql.svg')" alt="MySQL" class="skill h-skill m-skill" style="max-width: 8rem;" />
+					<img :src="require('@/assets/images/svg/mysql.svg')" alt="MySQL" class="skill h-skill m-skill" style="max-width: 8rem;" />
 				</div>
 			</div>
 			<hr>
