@@ -8,19 +8,12 @@
 <script>
 import { AppMain, Navbar, Footer } from './components'
 
-import { mapState } from 'vuex'
-
 export default {
   name: 'Layout',
   components: {
     AppMain,
     Navbar,
     Footer
-  },
-  computed: {
-    ...mapState({
-      fixedHeader: state => state.settings.fixedHeader
-    })
   }
 }
 

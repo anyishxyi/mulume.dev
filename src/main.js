@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import Cookies from 'js-cookie'
-import store from './store'
 import App from './App.vue'
 import router from './router'
 import i18n from './lang'
@@ -23,7 +22,6 @@ Vue.use(VueMeta)
 new Vue({
   render: h => h(App),
   router,
-  store,
   i18n,
   refreshOnceOnNavigation: true,
   // created () {
