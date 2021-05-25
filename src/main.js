@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import Cookies from 'js-cookie'
-import ElementUI from 'element-ui'
-// import locale from 'element-ui/lib/locale/lang/fr'
-
 import store from './store'
 import App from './App.vue'
 import router from './router'
@@ -16,7 +13,7 @@ Vue.config.productionTip = false
 
 Vue.prototype.handleEvent = new Vue()
 
-Vue.use(ElementUI, {
+Vue.use({
   size: Cookies.get('size') || 'medium',
   i18n: (key, value) => i18n.t(key, value)
 })
