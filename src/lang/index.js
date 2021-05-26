@@ -8,9 +8,9 @@ Vue.use(VueI18n)
 
 const messages = { fr: frLocale, en: enLocale }
 export function getLanguage() {
-  const savedLanguage = Cookies.get('language')
+  const savedLanguage = Cookies.getJSON('nm-language')
   
-  if (savedLanguage) return savedLanguage
+  if (savedLanguage && savedLanguage !== undefined) return savedLanguage
 
   const language = (navigator.language || navigator.browserLanguage).toLowerCase()
   const lang = Object.keys(messages).find(locale => language.includes(locale))

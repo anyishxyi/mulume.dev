@@ -12,6 +12,8 @@
       </div>
     </router-link>
     <div class="right-menu flex p13">
+      <button @click="setFr">Fr</button>
+      <button @click="setEn">En</button>
       <span class="theme-switch-button" @click="toggleTheme">
         <img :src=sunny v-if="!!theme" alt="sunny" class="mode-icon"/>
         <img :src=moon v-else alt="moon" class="mode-icon"/>
@@ -79,8 +81,15 @@
           document.documentElement.setAttribute('theme', this.theme)
           this.$store.dispatch('setTheme', this.theme).catch(error => { console.error(error) })
         },
-        setLanguage() {
-          // Cookies.set('name', 'value');
+        setFr() {
+          this.setLanguage('fr')
+        },
+        setEn() {
+          this.setLanguage('en')
+        },
+        setLanguage(lang) {
+          this.$store.dispatch('setLanguage', lang).catch(error => { console.error(error) })
+          this.$i18n.locale = lang
         }
       }
     }

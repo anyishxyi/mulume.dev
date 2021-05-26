@@ -16,6 +16,9 @@ export default new Vuex.Store({
     GET_USER_THEME() {
 			const theme = Cookies.getJSON('nm-theme')
 			this.state.nm_theme = ( theme === undefined ) ? 'lightMode' : theme
+    },
+    SET_USER_LANGUAGE(state, language) {
+			Cookies.set('nm-language', language, { expires: 365 })
     }
   },
   actions: {
@@ -24,6 +27,12 @@ export default new Vuex.Store({
     },
     getTheme({ commit }) {
       commit('GET_USER_THEME')
+    },
+		/**
+		* Only setLanguage() methode because we can already get language in lang module
+		 */
+    setLanguage({ commit }, language) {
+      commit('SET_USER_LANGUAGE', language)
     }
   }
 })
