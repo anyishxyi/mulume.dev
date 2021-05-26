@@ -14,7 +14,7 @@ export function getLanguage() {
 
   const language = (navigator.language || navigator.browserLanguage).toLowerCase()
   const lang = Object.keys(messages).find(locale => language.includes(locale))
-  
+
   return lang ? lang : 'en'
 }
 

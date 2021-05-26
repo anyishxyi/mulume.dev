@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import Cookies from 'js-cookie'
+
 import App from './App.vue'
 import router from './router'
 import i18n from './lang'
+import store from './store'
 
 import '@/assets/styles/index.scss' // global css
 import '@/assets/images/index' //for svg files
@@ -23,12 +25,6 @@ new Vue({
   render: h => h(App),
   router,
   i18n,
-  refreshOnceOnNavigation: true,
-  // created () {
-  //   const userTheme = localStorage.getItem('user-theme')
-  //   if (userTheme) {
-  //     const theme = JSON.parse(userTheme)
-  //     this.$store.commit('SET_USER_THEME', theme)
-  //   }
-  // }
+  store,
+  refreshOnceOnNavigation: true
 }).$mount('#app')
