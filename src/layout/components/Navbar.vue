@@ -12,8 +12,13 @@
       </div>
     </router-link>
     <div class="right-menu flex p13">
-      <button @click="setFr">Fr</button>
-      <button @click="setEn">En</button>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <div @click="setFr">Français</div>
+          <div @click="setEn">English</div>
+        </div>
+      </div>
       <span class="theme-switch-button" @click="toggleTheme">
         <img :src=sunny v-if="!!theme" alt="sunny" class="mode-icon"/>
         <img :src=moon v-else alt="moon" class="mode-icon"/>
