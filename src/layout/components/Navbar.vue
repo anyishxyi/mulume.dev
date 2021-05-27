@@ -15,11 +15,9 @@
       <div class="dropdown">
         <div v-if="language && language !== 'fr'" class="changeLanguage">🇬🇧</div>
         <div v-else class="changeLanguage" >🇫🇷</div>
-        <!-- <img  v-if="language && language === 'fr'" :src="require('@/assets/images/svg/english.svg')" alt="english" class="mode-icon"/> -->
-        <!-- <img  v-else :src="require('@/assets/images/svg/france.svg')" alt="french" class="mode-icon"/> -->
         <div class="dropdown-content">
-          <div @click="setFr">Français</div>
-          <div @click="setEn">English</div>
+          <div v-if="language && language !== 'fr'" @click="setFr">Français</div>
+          <div v-else @click="setEn">English</div>
         </div>
       </div>
       <span class="theme-switch-button" @click="toggleTheme">
