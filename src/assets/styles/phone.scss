@@ -40,13 +40,14 @@
 
 		/// Right menu
 		.nav > .right-menu {
-			// margin-top: 5px;
+			margin-top: 8px;
 		}
 		.nav > .right-menu > .nav-btn {
 			display: inline-block;
 			position: absolute;
 			right: 0px;
 			top: 0px;
+			margin-top: 6px;
 		}
 		.nav > .right-menu > .nav-btn > label {
 			display: inline-block;
@@ -226,7 +227,7 @@
 			padding: 10px 20px;
 		}
 		.text-lg {
-			font-size: 26px;
+			font-size: 27px;
 		}
 		.mt-20 {
 			margin-top: 20px;
@@ -296,7 +297,7 @@
 			.coder {
 				margin: 0 auto;
 				width: 90%;
-				height: 400px;
+				height: 350px;
 				svg {
 					width: 100%;
 					height: 100%;
