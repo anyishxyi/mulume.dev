@@ -12,6 +12,14 @@
       </div>
     </router-link>
     <div class="right-menu flex p13">
+      <div class="dropdown">
+        <div v-if="language && language !== 'fr'" class="changeLanguage">🇬🇧</div>
+        <div v-else class="changeLanguage" >🇫🇷</div>
+        <div class="dropdown-content">
+          <div v-if="language && language !== 'fr'" @click="setFr">Français</div>
+          <div v-else @click="setEn">English</div>
+        </div>
+      </div>
       <span class="theme-switch-button" @click="toggleTheme">
         <img :src=sunny v-if="!!theme" alt="sunny" class="mode-icon"/>
         <img :src=moon v-else alt="moon" class="mode-icon"/>
@@ -34,55 +42,65 @@
   </template>
   
   <script>
-  const OFFSET    = 60
-  const jeanpaul  = require('@/assets/images/png/jeanpaul_ngalula.png')
-  const moon      = require('@/assets/images/svg/moon.svg')
-  const sunny     = require('@/assets/images/svg/sunny.svg')
+    const OFFSET    = 60
+    const jeanpaul  = require('@/assets/images/png/jeanpaul_ngalula.png')
+    const moon      = require('@/assets/images/svg/moon.svg')
+    const sunny     = require('@/assets/images/svg/sunny.svg')
   
-  export default {
-    data() {
-      return {
-        showNavbar: true,
-        lastScrollPosition: 0,
-        theme: '',
-        jeanpaul,
-        moon,
-        sunny
-      }
-    },
-    mounted() {
-      const localTheme = localStorage.getItem('theme'); //gets stored theme value if any
-      document.documentElement.setAttribute('data-theme', localTheme); // updates the data-theme attribute
-    },
-    async beforeMount () {
-      this.lastScrollPosition = window.pageYOffset
-      window.addEventListener('scroll', this.onScroll)
-      const viewportMeta = document.createElement('meta')
-      viewportMeta.name = 'viewport'
-      viewportMeta.content = 'width=device-width, initial-scale=1'
-      document.head.appendChild(viewportMeta)
-    },
-    beforeDestroy () {
-      window.removeEventListener('scroll', this.onScroll)
-    },
-    methods: {
-      onScroll () {
-        if (window.pageYOffset < 0) { return }
-        if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) { return }
-        this.showNavbar = window.pageYOffset < this.lastScrollPosition
+    export default {
+      data() {
+        return {
+          showNavbar: true,
+          lastScrollPosition: 0,
+          theme: '',
+          jeanpaul,
+          moon,
+          sunny,
+          language: ''
+        }
+      },
+      mounted() {
+        this.$store.dispatch('getTheme').catch(error => { console.error(error) })
+        const themeSaved = this.$store.state.nm_theme
+        this.theme = themeSaved === 'darkMode' ? 'darkMode' : ''
+        document.documentElement.setAttribute('theme', this.theme); // updates the data-theme attribute
+        this.language = this.$i18n.locale
+      },
+      async beforeMount () {
         this.lastScrollPosition = window.pageYOffset
+        window.addEventListener('scroll', this.onScroll)
+        const viewportMeta = document.createElement('meta')
+        viewportMeta.name = 'viewport'
+        viewportMeta.content = 'width=device-width, initial-scale=1'
+        document.head.appendChild(viewportMeta)
       },
-      toggleTheme() {
-        this.$store.dispatch('setTheme', this.theme)
-                    .then(() => {
-                      this.theme = this.theme === 'darkMode' ? '' : 'darkMode'
-                      document.documentElement.setAttribute('theme', this.theme)
-                    })
-                    .catch(error => { console.error(error) })
+      beforeDestroy () {
+        window.removeEventListener('scroll', this.onScroll)
       },
-      setLanguage() {
-        // Cookies.set('name', 'value');
+      methods: {
+        onScroll () {
+          if (window.pageYOffset < 0) { return }
+          if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) { return }
+          this.showNavbar = window.pageYOffset < this.lastScrollPosition
+          this.lastScrollPosition = window.pageYOffset
+        },
+        toggleTheme() {
+          this.theme = this.theme === 'darkMode' ? '' : 'darkMode'
+          document.documentElement.setAttribute('theme', this.theme)
+          this.$store.dispatch('setTheme', this.theme).catch(error => { console.error(error) })
+        },
+        setFr() {
+          this.setLanguage('fr')
+          this.language = 'fr'
+        },
+        setEn() {
+          this.setLanguage('en')
+          this.language = 'en'
+        },
+        setLanguage(lang) {
+          this.$store.dispatch('setLanguage', lang).catch(error => { console.error(error) })
+          this.$i18n.locale = lang
+        }
       }
     }
-  }
   </script>
