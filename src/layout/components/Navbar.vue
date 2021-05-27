@@ -13,7 +13,10 @@
     </router-link>
     <div class="right-menu flex p13">
       <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
+        <div v-if="language && language !== 'fr'" class="changeLanguage">🇬🇧</div>
+        <div v-else class="changeLanguage" >🇫🇷</div>
+        <!-- <img  v-if="language && language === 'fr'" :src="require('@/assets/images/svg/english.svg')" alt="english" class="mode-icon"/> -->
+        <!-- <img  v-else :src="require('@/assets/images/svg/france.svg')" alt="french" class="mode-icon"/> -->
         <div class="dropdown-content">
           <div @click="setFr">Français</div>
           <div @click="setEn">English</div>
@@ -54,7 +57,8 @@
           theme: '',
           jeanpaul,
           moon,
-          sunny
+          sunny,
+          language: ''
         }
       },
       mounted() {
@@ -62,6 +66,7 @@
         const themeSaved = this.$store.state.nm_theme
         this.theme = themeSaved === 'darkMode' ? 'darkMode' : ''
         document.documentElement.setAttribute('theme', this.theme); // updates the data-theme attribute
+        this.language = this.$i18n.locale
       },
       async beforeMount () {
         this.lastScrollPosition = window.pageYOffset
@@ -88,9 +93,11 @@
         },
         setFr() {
           this.setLanguage('fr')
+          this.language = 'fr'
         },
         setEn() {
           this.setLanguage('en')
+          this.language = 'en'
         },
         setLanguage(lang) {
           this.$store.dispatch('setLanguage', lang).catch(error => { console.error(error) })
