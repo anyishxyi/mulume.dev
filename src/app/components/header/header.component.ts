@@ -5,7 +5,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './header.component.html',
+  template: `
+  <ul>
+    <li><a (click)="changePage('home')">Home</a></li>
+    <li><a (click)="changePage('contact')">Contact</a></li>
+    <li><a (click)="changePage('about')">About</a></li>
+  </ul>
+  `,
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {

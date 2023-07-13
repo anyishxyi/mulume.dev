@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './footer.component.html',
+  template: `
+    <p>footer works!</p>
+  `,
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {

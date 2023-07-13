@@ -19,7 +19,6 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   changePage(page: string): void {
-    console.log({page});
     switch (page) {
       case 'contact':
         this.router.navigate(['/contact']);
