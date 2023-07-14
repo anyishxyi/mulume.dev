@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './contact.component.html',
+  template: `
+    <p>footer works!</p>
+  `,
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
