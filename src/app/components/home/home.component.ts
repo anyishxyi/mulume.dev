@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>home works!</p>
+    <div>
+      <h1>Jean-Paul NGALULA</h1>
+      <p><strong>Ingénieur logiciel chez <a href="https://capgemini.com" target="blank">Capgemini</a></strong>
+      <br>
+      Intéressé par le craftmanship</p>
+      <button class="c-gfjkKg">Appuyez sur <kbd>ctrl</kbd> <kbd>K</kbd> pour commencer →</button>
+    </div>
   `,
   styleUrls: ['./home.component.scss']
 })

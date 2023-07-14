@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --yellow: #ffff80;
+  --pink: #ff80bf;
+  --purple: #9580ff;
+  --red: #ff9580;
+  --orange: #ffca80;
+  --green: #8aff80;
+  --cyan: #80ffea;
+  --primary: #f2f2f2;
+  --secondary: #8f9ba8;
+  --background: #08070b;
+  --hover: #212024;
+  --command: rgba(255, 255, 255, 0.05);
+  --fonts-body: 'Biotif', sans-serif;
+  --fonts-code: 'Fira Code', monospace;
+  --fonts-heading: 'Neuzeit Grotesk Bold', sans-serif;
+  --transitions-duration: 0.2s;
+  --left: 40%;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: url('assets/fonts/Biotif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neuzeit Grotesk Bold';
+  src: url('assets/fonts/NeuzeitGro-Bol.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('assets/fonts/FiraCode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: var(--fonts-body);
+}
+
+html, body {
+  margin: 0;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // font-family: var(--fonts-body);
+}
+

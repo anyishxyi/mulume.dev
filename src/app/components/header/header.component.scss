@@ -1,0 +1,38 @@
+.navbar {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: inherit;
+  left : var(--left);
+}
+
+.navbar-left,
+.navbar-right {
+  margin: 0 10px;
+}
+
+.navbar-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-menu ul li {
+  margin: 0 10px;
+}
+
+.navbar-menu ul li a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.navbar-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.fa {
+  font-size: 18px;
+  margin-right: 5px;
+}

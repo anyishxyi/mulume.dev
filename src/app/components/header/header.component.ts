@@ -6,11 +6,22 @@ import { Component, EventEmitter, Output } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-  <ul>
-    <li><a (click)="changePage('home')">Home</a></li>
-    <li><a (click)="changePage('contact')">Contact</a></li>
-    <li><a (click)="changePage('about')">About</a></li>
-  </ul>
+   <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#"><i class="fa fa-home"></i> JP </a>
+      </div>
+      <div class="navbar-menu">
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a href="#"><i class="fa fa-user"></i> R </a>
+      </div>
+    </nav>
   `,
   styleUrls: ['./header.component.scss']
 })
