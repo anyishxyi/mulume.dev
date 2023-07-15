@@ -8,14 +8,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
   template: `
    <nav class="navbar">
       <div class="navbar-left">
-        <a href="#"><i class="fa fa-home"></i> JP </a>
+        <a href=""><i class="fa fa-home"></i> JP </a>
       </div>
       <div class="navbar-menu">
         <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="">À propos</a></li>
+          <li><a href="">Projets</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
       </div>
       <div class="navbar-right">

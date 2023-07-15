@@ -9,9 +9,11 @@ import { FooterComponent } from './components/footer/footer.component';
   standalone: true,
   imports: [CommonModule, RouterModule,  HeaderComponent, FooterComponent],
   template: `
-    <app-header (pageChange)="changePage($event)"></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <div class="container">
+      <app-header (pageChange)="changePage($event)"></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </div>
   `,
   styleUrls: ['./app.component.scss']
 })

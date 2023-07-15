@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>about works!</p>
+    <main>
+      <section class="about-section">
+        <p>about works!</p>
+      </section>
+    </main>
   `,
   styleUrls: ['./about.component.scss']
 })

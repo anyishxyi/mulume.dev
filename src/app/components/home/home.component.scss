@@ -1,6 +1,30 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .home-section {
+    height: 480px;
+    margin-top: 240px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+}
+
+
+//Laptops
+@media screen and (min-device-width: 1200px) {
+  .home-section {
+    height: 367px;
+    margin-top: 160px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
 h1 {
   font-family: var(--fonts-heading);
-  font-size: 48px;
   line-height: 50px;
   margin: 0 0 20px;
   color: var(--primary);
@@ -8,6 +32,7 @@ h1 {
 
 p {
   margin: 20px 0;
+  line-height: 28px;
   color: var(--secondary);
 }
 
@@ -23,18 +48,11 @@ a {
   transition: opacity var(--transitions-duration) ease-in-out;
 }
 
-div {
-  position: absolute;
-  top: 50%;
-  left : var(--left);
-  transform: translate(-50%, -50%);
-}
-
 .c-gfjkKg {
   appearance: none;
   background: transparent;
   border: 0px;
-  border-radius: var(--radii-borderRadius);
+  border-radius: var(--btn-borderRadius);
   color: var(--primary);
   cursor: pointer;
   display: inline-block;
@@ -52,6 +70,10 @@ div {
   background: var(--hover);
   color: var(--primary);
   opacity: 1;
+}
+
+.c-gfjkKg:hover kbd {
+  background: var(--primary);
 }
 
 kbd {
@@ -87,4 +109,3 @@ button {
   border-color: buttonborder;
   border-image: initial;
 }
-

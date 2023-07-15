@@ -16,7 +16,7 @@
   --fonts-code: 'Fira Code', monospace;
   --fonts-heading: 'Neuzeit Grotesk Bold', sans-serif;
   --transitions-duration: 0.2s;
-  --left: 40%;
+  --btn-borderRadius: 8px;
 }
 
 @font-face {
@@ -40,6 +40,20 @@
   font-style: normal;
 }
 
+//Phones
+@media screen and (max-device-width: 1200px) {
+  [class*="-section"] {
+    margin-left: 10%;
+  }
+}
+
+//Laptops0
+@media screen and (min-device-width: 1200px) {
+  [class*="-section"] {
+    margin-left: 22%;
+  }
+}
+
 * {
   font-family: var(--fonts-body);
 }
@@ -47,8 +61,21 @@
 html, body {
   margin: 0;
   background-color: var(--background);
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+[class*="-section"] {
+  flex: 1;
+}

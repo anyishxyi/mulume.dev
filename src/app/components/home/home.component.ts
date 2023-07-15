@@ -6,13 +6,15 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div>
-      <h1>Jean-Paul NGALULA</h1>
-      <p><strong>Ingénieur logiciel chez <a href="https://capgemini.com" target="blank">Capgemini</a></strong>
-      <br>
-      Intéressé par le craftmanship</p>
-      <button class="c-gfjkKg">Appuyez sur <kbd>ctrl</kbd> <kbd>K</kbd> pour commencer →</button>
-    </div>
+    <main>
+      <section class="home-section">
+        <h1>Jean-Paul NGALULA</h1>
+        <p><strong>Ingénieur logiciel chez <a href="https://capgemini.com" target="blank">Capgemini</a></strong>
+        <br>
+        Intéressé par le craftmanship</p>
+        <button class="c-gfjkKg">Appuyez sur <kbd>ctrl</kbd> <kbd>K</kbd> pour commencer →</button>
+      </section>
+    </main>
   `,
   styleUrls: ['./home.component.scss']
 })
