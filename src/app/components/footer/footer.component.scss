@@ -1,3 +1,31 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .c-dRBBau {
+    opacity: 1;
+  }
+
+  .c-iFbaKH {
+    color: var(--primary);
+  }
+}
+
+//Laptops
+@media screen and (min-device-width: 1200px) {
+  .c-dRBBau {
+    opacity: 0;
+  }
+
+  .c-iFbaKH {
+    color: var(--secondary);
+  }
+}
+
+.c-dRBBau {
+  color: var(--primary);
+  margin-left: 5px;
+  margin-top: 1px;
+}
+
 .c-fOYOSN {
   background: var(--background);
   display: flex;
@@ -11,7 +39,6 @@
 }
 
 .c-iFbaKH {
-  color: var(--secondary);
   display: flex;
   font-size: 15px;
   border: 0px;
@@ -19,13 +46,6 @@
   text-decoration: none;
   text-transform: lowercase;
   transition: color var(--transitions-duration) ease-in-out;
-}
-
-.c-dRBBau {
-  color: var(--primary);
-  opacity: 0;
-  margin-left: 5px;
-  margin-top: 1px;
 }
 
 [class*=" ri-"], [class^=ri-] {
