@@ -61,6 +61,7 @@
 html, body {
   margin: 0;
   background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
 }
 
 a:-webkit-any-link {
