@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   template: `
     <footer class="c-fOYOSN">
-      <a href="/contact" class="c-iFbaKH">
+      <a (click)="navigateTo('contact')" class="c-iFbaKH">
         <span class="c-heOjaG">Email</span><i class="c-dRBBau ri-mail-line"></i>
       </a>
       <a href="https://github.com/pxradox" target="_blank" class="c-iFbaKH">
@@ -21,5 +21,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  @Output() pageChange: EventEmitter<string> = new EventEmitter();
 
+  navigateTo(page: string): void {
+    this.pageChange.emit(page);
+  }
 }

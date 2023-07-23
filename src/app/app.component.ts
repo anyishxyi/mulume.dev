@@ -11,7 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
     <div class="container">
       <app-header (pageChange)="changePage($event)"></app-header>
       <router-outlet></router-outlet>
-      <app-footer></app-footer>
+      <app-footer (pageChange)="changePage($event)"></app-footer>
     </div>
   `,
   styles: [`
