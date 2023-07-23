@@ -43,8 +43,6 @@ export class HeaderComponent {
   private linkStates: { [name: string]: boolean } = {};
   @Output() pageChange: EventEmitter<string> = new EventEmitter();
 
-  // Créez une fonction pour générer un nouvel objet Link pour chaque lien
-
   createLink(name: string, label: string): Link {
     return { name, label, bgColor: this.linkStates[name] ? '#f0f0f0' : 'transparent' };
   }

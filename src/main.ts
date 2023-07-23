@@ -1,9 +1,13 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
-
-import { environment } from './environments/environment';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { RouterModule, Routes } from '@angular/router';
+
+import { environment } from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
 
 const routes: Routes = [
   { path: 'home', loadComponent: () => import('./app/components/home/home.component').then((c) => c.HomeComponent) },
@@ -12,9 +16,5 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home'},
   { path: '**', redirectTo: '/home'},
 ];
-
-if (environment.production) {
-  enableProdMode();
-}
 
 bootstrapApplication(AppComponent, { providers: [importProvidersFrom(RouterModule.forRoot(routes))]}).catch((error) => console.error(error));
