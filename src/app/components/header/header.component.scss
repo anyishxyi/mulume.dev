@@ -1,17 +1,31 @@
-@media (min-width: 760px) {
-  .c-dRmGAT {
-    margin-top: 0px;
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .c-fhGAOp {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 5px;
   }
 
-  .c-cGucJb {
-    order: 0;
-    flex-basis: initial;
+  .c-eEqOQi {
+    font-size: 15px;
+    padding-top: 14px !important;
+  }
+
+  .c-gfsRMa-ieTYVcq-css {
+    margin-top: 1px !important;
   }
 }
 
-@media (min-width: 425px) {
-  .c-hRSBvv {
-    justify-content: space-around;
+//Laptop
+@media screen and (min-device-width: 1200px) {
+  .c-fhGAOp {
+    font-size: 26px;
+    line-height: 18px;
+    padding: 10px;
+  }
+
+  .c-eEqOQi {
+    font-size: 20px;
   }
 }
 
@@ -37,7 +51,6 @@
 
 .c-eEqOQi {
   font-weight: 700;
-  font-size: 20px;
   text-decoration: none;
   margin-left: 12px;
   font-family: var(--fonts-heading);
@@ -58,12 +71,6 @@
 
 .c-gfsRMa:hover {
   background: var(--hover);
-}
-
-.c-fhGAOp {
-  font-size: 26px;
-  line-height: 18px;
-  padding: 10px;
 }
 
 .c-gKCiCk:hover, .c-gKCiCk:focus {
