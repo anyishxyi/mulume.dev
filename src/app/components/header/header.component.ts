@@ -1,6 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 
+
+interface Link {
+  name: string,
+  label: string; // display name
+  bgColor: string;
+}
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -10,14 +17,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
       <a (click)="navigateTo('home')" class="c-gfsRMa c-eEqOQi">Ng</a>
       <nav class="c-cGucJb">
         <ul class="c-hRSBvv">
-          <li>
-            <a (click)="navigateTo('about')" class="c-gKCiCk">
-              <span class="c-cohhyn" data-projection-id="7">A propos</span>
-            </a>
-          </li>
-          <li>
-            <a (click)="navigateTo('contact')" class="c-gKCiCk">
-              <span class="c-cohhyn" data-projection-id="9">Contact</span>
+          <!-- <li *ngFor="let link of links"
+            [ngStyle]="{ 'background-color': link.bgColor }"
+            (mouseenter)="onLinkMouseEnter(link)"
+            (mouseleave)="onLinkMouseLeave(link)"
+            (mousemove)="onLinkMouseMove($event)"
+            > -->
+          <li *ngFor="let link of links">
+            <a (click)="navigateTo(link.name)" class="c-gKCiCk">
+              <span class="c-cohhyn" data-projection-id="7">{{ link.label }}</span>
             </a>
           </li>
         </ul>
@@ -32,9 +40,46 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  private linkStates: { [name: string]: boolean } = {};
   @Output() pageChange: EventEmitter<string> = new EventEmitter();
+
+  // Créez une fonction pour générer un nouvel objet Link pour chaque lien
+
+  createLink(name: string, label: string): Link {
+    return { name, label, bgColor: this.linkStates[name] ? '#f0f0f0' : 'transparent' };
+  }
+
+  links: Link[] = [
+    this.createLink('about', 'À propos'),
+    this.createLink('contact', 'Contact')
+  ];
 
   navigateTo(page: string): void {
     this.pageChange.emit(page);
+  }
+
+  onLinkMouseEnter(link: Link) {
+    link.bgColor = '#f0f0f0'; // Change the background color when hovering over the link
+  }
+
+  onLinkMouseLeave(link: Link) {
+    link.bgColor = 'transparent'; // Change the background color back to transparent when leaving the link
+  }
+
+  onLinkMouseMove(event: MouseEvent) {
+    const movement = 20; // Adjust this value for the desired movement effect
+
+    for (const link of this.links) {
+      const linkElement = event.target as HTMLElement;
+      const linkRect = linkElement.getBoundingClientRect();
+      const linkCenterX = linkRect.left + linkRect.width / 2;
+      const linkCenterY = linkRect.top + linkRect.height / 2;
+
+      const offsetX = (linkCenterX - event.clientX) / movement;
+      const offsetY = (linkCenterY - event.clientY) / movement;
+
+      const distance = Math.sqrt(offsetX * offsetX + offsetY * offsetY);
+      link.bgColor = `rgba(240, 240, 240, ${1 - Math.min(distance, 1)})`;
+    }
   }
 }
