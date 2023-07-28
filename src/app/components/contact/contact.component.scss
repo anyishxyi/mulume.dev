@@ -1,10 +1,38 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .c-EnlPs {
+    padding: 70px 0px 0px 0px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+}
+
+//Desktop
+@media screen and (min-device-width: 1200px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .c-EnlPs {
+    padding: 100px 0px;
+  }
+
+  p {
+    margin-bottom: 57px;
+  }
+}
 form {
   margin-top: 0em;
 }
 
 h1 {
   font-family: var(--fonts-heading);
-  font-size: 48px;
   line-height: 50px;
   margin: 0 0 20px;
   color: var(--primary);
@@ -30,7 +58,6 @@ h2 {
 
 p {
   margin-top: -10px !important;
-  margin-bottom: 57px !important;
   color: var(--secondary);
 }
 
@@ -94,7 +121,6 @@ strong {
   position: relative;
   z-index: 1;
   height: 100%;
-  padding: 100px 0px;
 }
 
 .c-ekdbvK {

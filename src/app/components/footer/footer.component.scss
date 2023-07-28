@@ -7,6 +7,10 @@
   .c-iFbaKH {
     color: var(--primary);
   }
+
+  .c-fOYOSN {
+    padding: 55px 0px;
+  }
 }
 
 //Laptops
@@ -17,6 +21,10 @@
 
   .c-iFbaKH {
     color: var(--secondary);
+  }
+
+  .c-fOYOSN {
+    padding: 20px 0px;
   }
 }
 
@@ -31,7 +39,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
 }
 
 .c-iFbaKH:first-child {
