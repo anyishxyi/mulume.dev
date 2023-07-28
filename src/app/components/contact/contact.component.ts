@@ -17,11 +17,11 @@ import { Component } from '@angular/core';
             <form class="c-ccFqkw">
               <div class="c-fAxVVm">
                 <label for="name" class="c-cpOVIy">Noms</label>
-                <input id="name" type="text" placeholder="James Bond" required="" class="c-jLJtXG">
+                <input id="name" type="text" placeholder="Marian Croak" required="" class="c-jLJtXG">
               </div>
               <div class="c-fAxVVm">
                 <label for="email" class="c-cpOVIy">Email</label>
-                <input id="email" type="email" placeholder="james@bond.com" required="" class="c-jLJtXG">
+                <input id="email" type="email" placeholder="marian@croak.com" required="" class="c-jLJtXG">
               </div>
               <div class="c-fAxVVm">
                 <label for="message" class="c-cpOVIy">Message</label>
