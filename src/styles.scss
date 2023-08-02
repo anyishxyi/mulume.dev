@@ -46,12 +46,28 @@
   [class*="-section"] {
     margin-left: 10%;
   }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  section {
+    padding: 70px 0px 0px 0px;
+  }
 }
 
 //Laptops0
 @media screen and (min-device-width: 1200px) {
   [class*="-section"] {
     margin-left: 22%;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  section {
+    padding: 100px 0px;
   }
 }
 
@@ -66,9 +82,32 @@ html, body {
 }
 
 a {
-  color: -webkit-link;
+  border-bottom: 0.5px solid var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity var(--transitions-duration) ease-in-out;
   cursor: pointer;
-  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  opacity: 0.8;
+}
+
+h1 {
+  font-family: var(--fonts-heading);
+  line-height: 50px;
+  margin: 0 0 20px;
+  color: var(--primary);
+  display: block;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--primary);
+  margin: 60px 0 0;
+  font-size: 24px;
+  display: block;
+  font-weight: bold;
 }
 
 main {
@@ -100,6 +139,11 @@ button {
   border-style: outset;
   border-color: buttonborder;
   border-image: initial;
+}
+
+strong {
+  color: var(--primary);
+  font-weight: 500;
 }
 
 [class*="-section"] {

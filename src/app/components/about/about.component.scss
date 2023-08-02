@@ -1,7 +1,12 @@
-// Desktop
-@media (min-width: 760px) {
+//Phones
+@media screen and (max-device-width: 1200px) {
+
+}
+
+//Desktop
+@media screen and (min-device-width: 1200px) {
   .c-exEMEo {
-    flex-direction: row;
+    flex-direction: row; // TODO: flex-direction: column; for phone ????
   }
 
   .c-jkdSvk {
@@ -12,8 +17,8 @@
     margin-top: -6px;
   }
 
-  .c-chZgZR {
-    margin: 15px 0px;
+  .mt-5 {
+    margin-top: 5px;
   }
 }
 
@@ -24,8 +29,7 @@
 }
 
 .c-jkdSvk {
-  margin-top: 0px;
-  width: auto;
+  text-align: justify;
 }
 
 .c-EnlPs {
@@ -36,7 +40,6 @@
   position: relative;
   z-index: 1;
   height: 100%;
-  padding: 20px 0px;
 }
 
 .c-ekdbvK {
@@ -58,13 +61,18 @@
 
 .c-exEMEo {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
 .c-UazGY {
   display: flex;
   align-items: center;
+}
+
+.c-gfjkKg:hover {
+  background: var(--hover);
+  color: var(--primary);
+  opacity: 1;
 }
 
 .c-gfjkKg {
@@ -85,18 +93,40 @@
   transition: background var(--transitions-duration) ease-in-out,color var(--transitions-duration) ease-in-out;
 }
 
-h1 {
-  font-family: var(--fonts-heading);
-  font-size: 48px;
-  line-height: 50px;
-  margin: 0 0 20px;
-  color: var(--primary);
+.img-container {
+  box-sizing: border-box;
+  width: 360px;
+  height: 360px;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--btn-borderRadius);
 }
 
-h2 {
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.experience {
+  margin-bottom: 40px;
+}
+
+.experience p {
+  margin: 0px;
+}
+
+h3, h3 a {
   color: var(--primary);
-  margin: 60px 0 0;
-  font-size: 24px;
+  font-size: 18px;
+  margin: 20px 0 0;
 }
 
 p {

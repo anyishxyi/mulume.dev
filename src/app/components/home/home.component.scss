@@ -36,16 +36,8 @@ p {
   color: var(--secondary);
 }
 
-strong {
-  color: var(--primary);
-  font-weight: 500;
-}
-
-a {
-  border-bottom: 0.5px solid var(--secondary);
-  color: var(--primary);
-  text-decoration: none;
-  transition: opacity var(--transitions-duration) ease-in-out;
+section {
+  padding: 0;
 }
 
 .c-gfjkKg {
