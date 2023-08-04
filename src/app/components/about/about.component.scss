@@ -1,12 +1,14 @@
 //Phones
 @media screen and (max-device-width: 1200px) {
-
+  .c-exEMEo {
+    flex-direction: column;
+  }
 }
 
 //Desktop
 @media screen and (min-device-width: 1200px) {
   .c-exEMEo {
-    flex-direction: row; // TODO: flex-direction: column; for phone ????
+    flex-direction: row;
   }
 
   .c-jkdSvk {
@@ -19,6 +21,14 @@
 
   .mt-5 {
     margin-top: 5px;
+  }
+
+  .c-UazGY {
+    margin-top: 10px;
+  }
+
+  h2 {
+    margin: 50px 0 0;
   }
 }
 
@@ -66,6 +76,7 @@
 
 .c-UazGY {
   display: flex;
+  margin-left: 10px;
   align-items: center;
 }
 
@@ -76,13 +87,15 @@
 }
 
 .c-gfjkKg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   appearance: none;
   background: transparent;
   border: 0px;
   border-radius: var(--btn-borderRadius);
   color: var(--primary);
   cursor: pointer;
-  display: inline-block;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -91,6 +104,12 @@
   padding: 8px 10px;
   text-decoration: none;
   transition: background var(--transitions-duration) ease-in-out,color var(--transitions-duration) ease-in-out;
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .img-container {

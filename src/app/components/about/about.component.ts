@@ -13,18 +13,19 @@ import { Component } from '@angular/core';
           <div class="c-exEMEo">
             <div class="c-jkdSvk">
               <span class="img-container">
-                <img alt="jeanpaul" aria-hidden="true" src="../../../assets/img/jeanpaul_ng.png">
+                <img alt="jeanpaul" aria-hidden="true" src="../../../assets/img/jeanpaul_ng.png" loading="lazy">
               </span>
             </div>
             <div class="c-jkdSvk mt-5">
               <p class="c-chZgZR c-chZgZR-ibmnswx-css"><strong>Saut, je suis Jean-Paul NGALULA</strong>. Passionné par le développement informatique et l'innovation technologique, je suis créateur d'applications web.</p>
-              <p class="c-chZgZR">Actuellement <strong>Ingénieur logiciel</strong> chez Innov IT à <strong>Paris, France</strong>. Je suis d'origine congolaise(RDC).</p>
+              <p class="c-chZgZR">Actuellement <strong>Ingénieur logiciel</strong> chez Innov IT à <strong>Paris, France</strong></p>
               <p class="c-chZgZR">J'adore le dark mode, l'open source, et les projets annexes. Quand je ne travaille pas, j'aime pratiquer un peu de fitness, regarder des films et <strong>manger du fromage</strong>.</p>
             </div>
           </div>
           <div class="c-UazGY">
-            <a download="" role="button" href="/static/images/zeno.png" class="c-gfjkKg" style="display: inline-flex;  justify-content: center; align-items: center;">
-            <div style="width: 24px; height: 24px; margin-right: 8px;"></div>Télécharger mon CV ici</a>
+            <a download="" href="../../../assets/cv/cv_jeanpaul_ngalula.pdf" role="button" class="c-gfjkKg">
+              <img src="../../../assets/svg/download.svg" alt="download icon" class="download-icon"/>Télécharger mon CV ici
+            </a>
           </div>
           <h2>Parcours professionnel</h2>
           <div class="experience">
@@ -64,7 +65,7 @@ import { Component } from '@angular/core';
               <span> – </span>
               <span>Fév 2023</span>
               <span> • </span>
-              <span>1an 8mois</span>
+              <span>1 an 8 mois</span>
             </p>
           </div>
           <div class="experience">
@@ -78,7 +79,7 @@ import { Component } from '@angular/core';
               <span> – </span>
               <span>Jan. 2021</span>
               <span> • </span>
-              <span>2ans 5mois</span>
+              <span>2 ans 5 mois</span>
             </p>
           </div>
           <div class="experience">
@@ -106,7 +107,7 @@ import { Component } from '@angular/core';
               <span> – </span>
               <span>Aout 2017</span>
               <span> • </span>
-              <span>1an 3mois</span>
+              <span>1 an 3 mois</span>
             </p>
           </div>
         </div>
