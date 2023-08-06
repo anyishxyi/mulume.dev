@@ -1,10 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NotificationComponent } from '../notification/notification.component';
+import { NotificationService } from 'src/app/services/notification.service';
+import { Notification } from 'src/app/services/notification';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NotificationComponent],
   template: `
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">
@@ -23,10 +26,11 @@ import { Component } from '@angular/core';
             </div>
           </div>
           <div class="c-UazGY">
-            <a download="" href="../../../assets/cv/cv_jeanpaul_ngalula.pdf" role="button" class="c-gfjkKg">
+            <a (click)="downloadCV()" role="button" class="c-gfjkKg">
               <img src="../../../assets/svg/download.svg" alt="download icon" class="download-icon"/>Télécharger mon CV ici
             </a>
           </div>
+          <app-notification></app-notification>
           <h2>Parcours professionnel</h2>
           <div class="experience">
             <h3>Ingénieur logiciel</h3>
@@ -117,5 +121,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  private cvLink: string = '../../../assets/cv/cv_jeanpaul_ngalula.pdf';
 
+  constructor(private notificationService: NotificationService) {}
+
+  /**
+   * The method called when the user wants to download my CV
+   */
+  downloadCV(): void {
+    const notification: Notification = {
+      title: "Téléchargement...",
+      message: "Merci d'avoir pris le temps de télécharger mon CV"
+    };
+    const link = document.createElement('a');
+    link.href = this.cvLink;
+    link.download = '';
+    link.addEventListener('click', () => {
+      this.notificationService.showNotification(notification);
+    });
+    link.click();
+  }
 }
