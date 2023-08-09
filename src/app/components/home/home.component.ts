@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ import { Component } from '@angular/core';
         <p><strong>Ingénieur logiciel chez <a href="https://capgemini.com" target="blank">Capgemini</a></strong>
         <br>
         Intéressé par le craftmanship</p>
-        <button class="c-gfjkKg">Appuyez sur <kbd>ctrl</kbd> <kbd>K</kbd> pour commencer →</button>
+        <button (click)="displaySearchModule($event)" class="c-gfjkKg">Appuyez sur <kbd>ctrl</kbd> <kbd>K</kbd> pour commencer →</button>
       </section>
     </main>
   `,
@@ -20,4 +21,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private searchService: SearchService) {}
+
+  displaySearchModule(event: Event) {
+    event.stopPropagation();
+    this.searchService.showSearchModule(true);
+  }
 }

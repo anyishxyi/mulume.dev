@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { SearchService } from 'src/app/services/search.service';
 
 
 interface Link {
@@ -17,12 +18,6 @@ interface Link {
       <a (click)="navigateTo('home')" class="c-gfsRMa c-eEqOQi">Ng</a>
       <nav class="c-cGucJb">
         <ul class="c-hRSBvv">
-          <!-- <li *ngFor="let link of links"
-            [ngStyle]="{ 'background-color': link.bgColor }"
-            (mouseenter)="onLinkMouseEnter(link)"
-            (mouseleave)="onLinkMouseLeave(link)"
-            (mousemove)="onLinkMouseMove($event)"
-            > -->
           <li *ngFor="let link of links">
             <a (click)="navigateTo(link.name)" class="c-gKCiCk">
               <span class="c-cohhyn" data-projection-id="7">{{ link.label }}</span>
@@ -31,7 +26,7 @@ interface Link {
         </ul>
       </nav>
       <div class="c-cXvxHo">
-        <button type="button" aria-label="Command" class="c-gfsRMa c-gfsRMa-ieTYVcq-css">
+        <button (click)="displaySearchModule($event)" type="button" aria-label="Command" class="c-gfsRMa c-gfsRMa-ieTYVcq-css">
           <i class="c-fhGAOp ri-command-line"></i>
         </button>
       </div>
@@ -42,6 +37,13 @@ interface Link {
 export class HeaderComponent {
   private linkStates: { [name: string]: boolean } = {};
   @Output() pageChange: EventEmitter<string> = new EventEmitter();
+
+  constructor(private searchService: SearchService) {}
+
+  displaySearchModule(event: Event) {
+    event.stopPropagation();
+    this.searchService.showSearchModule(true);
+  }
 
   createLink(name: string, label: string): Link {
     return { name, label, bgColor: this.linkStates[name] ? '#f0f0f0' : 'transparent' };

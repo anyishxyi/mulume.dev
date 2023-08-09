@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NotificationComponent } from '../notification/notification.component';
 import { NotificationService } from 'src/app/services/notification.service';
 import { Notification } from 'src/app/services/notification';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, NotificationComponent],
+  imports: [CommonModule],
   template: `
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">
@@ -30,7 +29,6 @@ import { Notification } from 'src/app/services/notification';
               <img src="../../../assets/svg/download.svg" alt="download icon" class="download-icon"/>Télécharger mon CV ici
             </a>
           </div>
-          <app-notification></app-notification>
           <h2>Parcours professionnel</h2>
           <div class="experience">
             <h3>Ingénieur logiciel</h3>
