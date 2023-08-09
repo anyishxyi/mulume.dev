@@ -6,8 +6,14 @@ import { Subject } from 'rxjs';
 })
 export class SearchService {
   public searchSubject = new Subject<boolean>();
+  private isDisplayed: boolean = false;
 
-  showSearchModule(display: boolean) {
-    this.searchSubject.next(display);
+  showSearchModule() {
+    this.isDisplayed = !this.isDisplayed;
+    this.searchSubject.next(this.isDisplayed);
+  }
+
+  hideSearchModule() {
+    this.searchSubject.next(false);
   }
 }

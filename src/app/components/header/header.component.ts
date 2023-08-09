@@ -42,7 +42,7 @@ export class HeaderComponent {
 
   displaySearchModule(event: Event) {
     event.stopPropagation();
-    this.searchService.showSearchModule(true);
+    this.searchService.showSearchModule();
   }
 
   createLink(name: string, label: string): Link {

@@ -25,6 +25,6 @@ export class HomeComponent {
 
   displaySearchModule(event: Event) {
     event.stopPropagation();
-    this.searchService.showSearchModule(true);
+    this.searchService.showSearchModule();
   }
 }
