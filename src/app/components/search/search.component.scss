@@ -21,12 +21,13 @@
   padding: 14vh 16px 16px;
   background: rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
+  z-index: 999999;
 }
 
-.c-iqTopT {
-  background-color: var(--command);
-  backdrop-filter: saturate(300%) blur(25px);
-}
+// .c-iqTopT {
+//   background-color: var(--command);
+//   backdrop-filter: saturate(300%) blur(25px);
+// }
 
 .c-iqTopT {
   background-color: rgb(26, 28, 30);
@@ -35,6 +36,37 @@
   color: var(--primary);
   border-radius: 8px;
   overflow: hidden;
+  transform: scale(0.99);
+  pointer-events: auto;
+}
+
+.c-ertyu {
+  max-height: 400px;
+  position: relative;
+  overflow: auto;
+}
+
+.c-oeiotf {
+  // height: 78px;
+  width: 100%;
+}
+
+.c-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  transform: translateY(0px);
+}
+
+.c-imgsize {
+  width: 24px;
+  height: 24px;
+}
+
+.c-condee {
+  width: 100%;
+  transform: translateY(29px);
 }
 
 .c-ekIDDi {
@@ -61,25 +93,19 @@ input:not([type="range"]):not([type="color"]) {
   background: var(--command);
 }
 
-// .PJLV-iljSPlw-css {
-//   padding: 12px 16px;
-//   background: var(--command);
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin: 0px;
-//   cursor: pointer;
-//   color: var(--secondary);
-// }
-
-.PJLV-ieXETrn-css {
+.PJLV-iljSPlw-css {
   padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--command);
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0px;
   cursor: pointer;
+  color: var(--secondary);
+}
+
+.PJLV-iljSPlw-css :hover {
+  background: rgba(255, 255, 255, 0.1);
   color: var(--primary);
 }
 
@@ -105,4 +131,11 @@ input:not([type="range"]):not([type="color"]) {
   color: var(--secondary);
   padding: 4px 8px;
   text-transform: uppercase;
+}
+
+kbd {
+  border-radius: 4px;
+  transition: background var(--transitions-duration) ease-in-out;
+  font-family: var(--fonts-code);
+  font-size: 14px;
 }

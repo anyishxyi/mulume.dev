@@ -14,6 +14,7 @@ export class SearchService {
   }
 
   hideSearchModule() {
-    this.searchSubject.next(false);
+    this.isDisplayed = false;
+    this.searchSubject.next(this.isDisplayed);
   }
 }
