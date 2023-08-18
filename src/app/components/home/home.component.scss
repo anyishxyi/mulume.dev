@@ -1,0 +1,80 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .home-section {
+    height: 460px;
+    margin-top: 285px;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+}
+
+
+//Laptops
+@media screen and (min-device-width: 1200px) {
+  .home-section {
+    height: 390px;
+    margin-top: 200px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+h1 {
+  font-family: var(--fonts-heading);
+  line-height: 50px;
+  margin: 0 0 20px;
+  color: var(--primary);
+}
+
+p {
+  margin: 20px 0;
+  line-height: 28px;
+  color: var(--secondary);
+}
+
+section {
+  padding: 0;
+}
+
+.c-gfjkKg {
+  appearance: none;
+  background: transparent;
+  border: 0px;
+  border-radius: var(--btn-borderRadius);
+  color: var(--primary);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0px 0px 0px -10px;
+  outline: 0px;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition: background var(--transitions-duration) ease-in-out,color var(--transitions-duration) ease-in-out;
+}
+
+.c-gfjkKg:hover {
+  background: var(--hover);
+  color: var(--primary);
+  opacity: 1;
+}
+
+.c-gfjkKg:hover kbd {
+  background: var(--primary);
+}
+
+kbd {
+  color: var(--background);
+  background: var(--secondary);
+  padding: 1px 5px;
+  border-radius: 4px;
+  transition: background var(--transitions-duration) ease-in-out;
+  font-family: var(--fonts-code);
+  font-size: 14px;
+}

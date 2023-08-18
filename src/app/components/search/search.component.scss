@@ -1,0 +1,132 @@
+.container {
+  display: grid;
+  place-items: center;
+}
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.c-hWUbGb {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  inset: 0px;
+  padding: 20vh 16px 16px;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  z-index: 999999;
+}
+
+.c-iqTopT {
+  background-color: rgb(26, 28, 30);
+  max-width: 600px;
+  width: 100%;
+  color: var(--primary);
+  border-radius: 8px;
+  overflow: hidden;
+  transform: scale(0.99);
+  pointer-events: auto;
+}
+
+.c-ertyu {
+  max-height: 400px;
+  position: relative;
+  overflow: auto;
+}
+
+.c-oeiotf {
+  // height: 78px;
+  width: 100%;
+}
+
+.c-title {
+  width: 100%;
+}
+
+.c-imgsize {
+  width: 24px;
+  height: 24px;
+}
+
+.c-ekIDDi {
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0px;
+  background: var(--command);
+  color: var(--primary);
+}
+
+input:not([type="range"]):not([type="color"]) {
+  writing-mode: horizontal-tb !important;
+}
+
+.c-kcmNSe {
+  padding: 8px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--command);
+}
+
+.PJLV-iljSPlw-css {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.c-condee {
+  width: 100%;
+  background: var(--command);
+  color: var(--secondary);
+}
+
+.c-condee:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary);
+}
+
+.c-eSulSs {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.c-fixGjY {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.c-jpnQgQ {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+}
+
+.c-ddlVgM {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--secondary);
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+kbd {
+  border-radius: 4px;
+  transition: background var(--transitions-duration) ease-in-out;
+  font-family: var(--fonts-code);
+  font-size: 14px;
+}

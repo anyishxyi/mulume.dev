@@ -1,84 +1,52 @@
 {
-  "name": "nmcodes",
-  "version": "2.6.0",
-  "keywords": [
-    "vue",
-    "google",
-    "autocomplete"
-  ],
+  "name": "portfolio",
+  "description": "jp's portfolio",
+  "version": "3.0.0",
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "ng build --prod",
+    "clean-all": "npm run clean-dist && npm run clean-modules && rm package-lock.json",
+    "clean-dist": "rimraf dist/*",
+    "clean-modules": "rimraf node_modules/*",
+    "prerender": "ng run portfolio:prerender",
+    "start": "ng serve",
+    "start:prerender": "npm run prerender",
+    "test": "ng test"
   },
-  "contributors": [
-    {
-      "name": "Jean-Paul NGALULA",
-      "email": "jeanpaulngalula07@gmail.com"
-    }
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pxradox/portfolio"
   },
-  "browser": {
-    "vue": "vue/dist/vue.common.js"
-  },
-  "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
+  "author": "jeanpaulngalula07@gmail.com",
+  "license": "MIT",
+  "homepage": "https://github.com/pxradox/portfolio",
   "dependencies": {
-    "js-cookie": "^2.2.1",
-    "vue": "^2.6.10",
-    "vue-i18n": "^8.24.4",
-    "vue-meta": "^2.4.0",
-    "vue-router": "^3.1.5",
-    "vuex": "^3.6.2",
-    "webpack": "^4.41.5"
+    "@angular/animations": "^15.2.1",
+    "@angular/cdk": "^15.2.9",
+    "@angular/common": "^15.2.1",
+    "@angular/compiler": "^15.2.1",
+    "@angular/core": "^15.2.1",
+    "@angular/forms": "^15.2.1",
+    "@angular/platform-browser": "^15.2.1",
+    "@angular/platform-browser-dynamic": "^15.2.1",
+    "@angular/router": "^15.2.1",
+    "@nguniversal/builders": "^15.2.1",
+    "@nguniversal/express-engine": "^15.2.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.5.0",
+    "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "husky": "^4.2.1",
-    "lint-staged": "^10.0.7",
-    "node-sass": "^4.14.1",
-    "prettier": "^1.19.1",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {
-      "no-console": "off",
-      "no-restricted-syntax": [
-        "error",
-        {
-          "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-          "message": "Unexpected property on console object was called"
-        }
-      ]
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@angular-devkit/build-angular": "^15.2.1",
+    "@angular/cli": "^15.2.1",
+    "@angular/compiler-cli": "^15.2.1",
+    "@types/jasmine": "^4.3.1",
+    "@types/node": "^18.14.6",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.1",
+    "karma-chrome-launcher": "~3.1.1",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "^2.0.0",
+    "typescript": "~4.9.5"
+  }
 }

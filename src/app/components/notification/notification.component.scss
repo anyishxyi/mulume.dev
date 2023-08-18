@@ -1,0 +1,52 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .title {
+    font-size: 15px;
+  }
+
+  .message {
+    font-size: 13px;
+  }
+}
+
+.notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.notification {
+  display: flex;
+  background-color: var(--hover);
+  color: var(--primary);
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  margin-right: 10px;
+  margin-top: -6px;
+  color: var(--green);
+}
+
+.title {
+  font-weight: bold;
+  margin-top: -3px;
+}
+
+.message {
+  margin-top: -8px;
+}
+
+.close-button {
+  margin-left: auto;
+  margin-top: -10px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.close-button:hover {
+  opacity: 1;
+}

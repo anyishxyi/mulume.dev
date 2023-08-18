@@ -1,0 +1,147 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .c-fhGAOp {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 5px;
+  }
+
+  .c-eEqOQi {
+    font-size: 15px;
+    padding-top: 14px !important;
+  }
+
+  .c-gfsRMa-ieTYVcq-css {
+    margin-top: 1px !important;
+  }
+}
+
+//Laptop
+@media screen and (min-device-width: 1200px) {
+  .c-fhGAOp {
+    font-size: 26px;
+    line-height: 18px;
+    padding: 10px;
+  }
+
+  .c-eEqOQi {
+    font-size: 20px;
+  }
+}
+
+.c-gfsRMa-ieTYVcq-css {
+  padding-top: 10px !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-bottom: 28px !important;
+}
+
+.c-dRmGAT {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  min-height: 59px;
+  width: 100%;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+}
+
+.c-eEqOQi {
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 12px;
+  font-family: var(--fonts-heading);
+}
+
+.c-gfsRMa {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: var(--btn-borderRadius);
+  color: white;
+  cursor: pointer;
+  height: 26px;
+  padding: 10px;
+  margin-top: 10px;
+  transition: background var(--transitions-duration) ease-in-out;
+}
+
+.c-gfsRMa:hover {
+  background: var(--hover);
+}
+
+// .c-gKCiCk:hover, .c-gKCiCk:focus {
+//   opacity: 1;
+// }
+
+.c-cohhyn:hover {
+  color: var(--primary);
+}
+
+.c-cGucJb {
+  text-align: center;
+  flex: 1 1;
+}
+
+.c-cXvxHo {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+  margin-left: auto;
+}
+
+.c-hRSBvv {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: inline-flex;
+  position: relative;
+  top: 5px;
+}
+
+.c-gKCiCk {
+  border: 0px;
+  position: relative;
+}
+
+.c-cohhyn {
+  color: var(--secondary);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--transitions-duration) ease-in-out;
+}
+
+a {
+  border-bottom: 0.5px solid var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity var(--transitions-duration) ease-in-out;
+}
+
+a:hover, a:focus {
+  opacity: 0.8;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
