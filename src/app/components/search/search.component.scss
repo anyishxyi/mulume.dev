@@ -24,11 +24,6 @@
   z-index: 999999;
 }
 
-// .c-iqTopT {
-//   background-color: var(--command);
-//   backdrop-filter: saturate(300%) blur(25px);
-// }
-
 .c-iqTopT {
   background-color: rgb(26, 28, 30);
   max-width: 600px;
@@ -60,10 +55,6 @@
   height: 24px;
 }
 
-.c-condee {
-  width: 100%;
-}
-
 .c-ekIDDi {
   padding: 12px 16px;
   font-size: 16px;
@@ -90,16 +81,20 @@ input:not([type="range"]):not([type="color"]) {
 
 .PJLV-iljSPlw-css {
   padding: 12px 16px;
-  background: var(--command);
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0px;
   cursor: pointer;
+}
+
+.c-condee {
+  width: 100%;
+  background: var(--command);
   color: var(--secondary);
 }
 
-.PJLV-iljSPlw-css :hover {
+.c-condee:hover {
   background: rgba(255, 255, 255, 0.1);
   color: var(--primary);
 }
