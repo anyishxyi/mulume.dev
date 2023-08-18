@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SearchService } from 'src/app/services/search.service';
 import { SearchItem } from './search-item';
@@ -10,27 +10,46 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   template: `
-  <div *ngIf="isSearchModuleVisible" class="c-hWUbGb">
-    <div class="c-iqTopT">
-      <div>
-        <input placeholder="Type a command or search…" class="c-ekIDDi" autocomplete="off" role="combobox" spellcheck="false" aria-expanded="true" aria-controls="kbar-listbox" aria-activedescendant="kbar-listbox-item-1">
-        <div class="c-ertyu">
-          <div role="listbox" id="kbar-listbox" class="c-oeiotf">
-            <div id="kbar-listbox-item-0" role="option" aria-selected="false" class="c-title">
-              <div class="c-kcmNSe">General</div>
-            </div>
-            <div *ngFor="let item of generalItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
-              <div class="PJLV-iljSPlw-css">
-                <div class="c-eSulSs">
-                  <div class="c-imgsize">
-                    <img alt="link" class="c-imgsize" aria-hidden="true" [src]="item.src" loading="lazy">
+    <div id="{{searchElementId}}" *ngIf="isSearchModuleVisible" class="c-hWUbGb">
+      <div class="c-iqTopT">
+        <div>
+          <input #searchInput type="text" placeholder="Type a command or search…" (input)="performSearch($event)" class="c-ekIDDi" autocomplete="off" role="combobox" spellcheck="false" aria-expanded="true" aria-controls="kbar-listbox" aria-activedescendant="kbar-listbox-item-1">
+          <div class="c-ertyu">
+            <div role="listbox" id="kbar-listbox" class="c-oeiotf">
+              <div class="c-title" *ngIf="generalCPItems.length > 0">
+                <div class="c-kcmNSe">General</div>
+              </div>
+              <div *ngFor="let item of generalCPItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
+                <div class="PJLV-iljSPlw-css">
+                  <div class="c-eSulSs">
+                    <div class="c-imgsize">
+                      <img alt="link" class="c-imgsize" aria-hidden="true" [src]="item.src" loading="lazy">
+                    </div>
+                    <div class="c-fixGjY">
+                      <span>{{ item.label }}</span>
+                    </div>
                   </div>
-                  <div class="c-fixGjY">
-                    <span>{{ item.label }}</span>
+                  <div aria-hidden="true" class="c-jpnQgQ">
+                    <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{ shortcut }}</kbd>
                   </div>
                 </div>
-                <div aria-hidden="true" class="c-jpnQgQ">
-                  <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{ shortcut }}</kbd>
+              </div>
+              <div *ngIf="pageCPItems.length > 0" class="c-title">
+                <div class="c-kcmNSe">Aller à</div>
+              </div>
+              <div *ngFor="let item of pageCPItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
+                <div class="PJLV-iljSPlw-css">
+                  <div class="c-eSulSs">
+                    <div class="c-imgsize">
+                      <img alt="link" class="c-imgsize" aria-hidden="true" [src]="item.src" loading="lazy">
+                    </div>
+                    <div class="c-fixGjY">
+                      <span>{{ item.label }}</span>
+                    </div>
+                  </div>
+                  <div aria-hidden="true" class="c-jpnQgQ">
+                    <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{ shortcut }}</kbd>
+                  </div>
                 </div>
               </div>
             </div>
@@ -38,56 +57,94 @@ import { Router } from '@angular/router';
         </div>
       </div>
     </div>
-  </div>
   `,
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent implements OnInit, AfterViewInit {
+  public searchElementId = "search-element-id";
   public search$: Observable<boolean> | undefined;
   public isSearchModuleVisible: Boolean = false;
   public searchTerm: string = '';
-  public searchResults: string[] = ['home', 'about', 'contact'];
-  public generalItems: Array<SearchItem> = [];
+  public generalItems: Array<SearchItem> = new Array<SearchItem>();
+  public pageItems: Array<SearchItem> = new Array<SearchItem>();
+  public generalCPItems: Array<SearchItem> = new Array<SearchItem>();
+  public pageCPItems: Array<SearchItem> = new Array<SearchItem>();
 
-  constructor(private router: Router, private searchService: SearchService, private elementRef: ElementRef) {}
+  @ViewChild('searchInput') searchInput!: ElementRef;
 
-  ngOnInit() {
+  constructor(private router: Router, private searchService: SearchService, private cdr: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    this.generateItemList();
+    this.pageItemsList();
+  }
+
+  ngAfterViewInit(): void {
     this.searchService.searchSubject.asObservable().subscribe((display: boolean) => {
       this.isSearchModuleVisible = display;
-    });
 
-    this.generateItemList();
+      if (this.isSearchModuleVisible) {
+        this.cdr.detectChanges();
+        this.searchInput.nativeElement.focus();
+      }
+    });
   }
 
   @HostListener('document:click', ['$event'])
-  onClick(event: MouseEvent) {
-    if (!this.elementRef.nativeElement.contains(event.target)) {
+  onClick(event: MouseEvent): void {
+    const idElt = (event.target as HTMLElement).id;
+    if (idElt !== null && idElt !== undefined && idElt === this.searchElementId) {
       this.searchService.hideSearchModule();
     }
-  }
-
-  performSearch() {
-    this.searchResults = this.filterResults(this.searchTerm);
-  }
-
-  filterResults(searchTerm: string): string[] {
-    return this.searchResults.filter(result => result.includes(searchTerm));
   }
 
   handleClick(item: SearchItem): void {
     switch (item.name) {
       case "link":
+        //TODO: copy the current portfolio link on the clipboard
         break;
 
       case "source":
         window.open(item.link, '_blank');
         break;
 
+      case "home":
+      case "about":
       case "contact":
         this.searchService.hideSearchModule();
-        this.router.navigate(["contact"]);
+        this.router.navigate([item.name]);
         break;
     }
+  }
+
+  performSearch(event: Event): void {
+    if (event !== null && event.target !== null) {
+      const searchTerm = (event.target as HTMLInputElement).value.toLowerCase();
+      this.generalCPItems = this.filterItems(this.generalItems, searchTerm);
+      this.pageCPItems = this.filterItems(this.pageItems, searchTerm);
+    }
+  }
+
+  private filterItems(items: Array<SearchItem>, searchTerm: string): Array<SearchItem> {
+    return items.filter(result => result.label.toLowerCase().includes(searchTerm));
+  }
+
+  private pageItemsList(): void {
+    this.pageItems.push(
+      {
+        name: "home",
+        src: "../../../assets/svg/home.svg",
+        label: "Accueil",
+        shortcut: ["X", "H"]
+      },
+      {
+        name: "about",
+        src: "../../../assets/svg/about.svg",
+        label: "A Propos",
+        shortcut: ["X", "A"]
+      }
+    );
+    this.pageCPItems = this.pageItems;
   }
 
   private generateItemList(): void {
@@ -111,6 +168,7 @@ export class SearchComponent implements OnInit {
         link: "https://github.com/pxradox/portfolio",
         shortcut: ["S"]
       },
-    )
+    );
+    this.generalCPItems = this.generalItems;
   }
 }
