@@ -3,7 +3,7 @@
   "description": "jp's portfolio",
   "version": "3.0.0",
   "scripts": {
-    "build": "ng build --prod",
+    "build": "ng build --configuration=production",
     "clean-all": "npm run clean-dist && npm run clean-modules && rm package-lock.json",
     "clean-dist": "rimraf dist/*",
     "clean-modules": "rimraf node_modules/*",
