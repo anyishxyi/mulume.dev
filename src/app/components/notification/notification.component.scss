@@ -18,9 +18,12 @@
 
 .notification {
   display: flex;
+  padding-top: 15px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
   background-color: var(--hover);
   color: var(--primary);
-  padding: 5px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -33,11 +36,7 @@
 
 .title {
   font-weight: bold;
-  margin-top: -3px;
-}
-
-.message {
-  margin-top: -8px;
+  margin-top: -6px;
 }
 
 .close-button {

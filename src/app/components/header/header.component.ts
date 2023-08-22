@@ -15,7 +15,7 @@ interface Link {
   imports: [CommonModule],
   template: `
     <header class="c-dRmGAT">
-      <a (click)="navigateTo('home')" class="c-gfsRMa c-eEqOQi">Ng</a>
+      <a (click)="navigateTo('home')" class="c-gfsRMa c-eEqOQi">M</a>
       <nav class="c-cGucJb">
         <ul class="c-hRSBvv">
           <li *ngFor="let link of links">

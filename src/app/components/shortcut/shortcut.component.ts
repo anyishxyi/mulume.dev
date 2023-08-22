@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { ShortcutService } from 'src/app/services/shortcut.service';
 import { environment } from 'src/environments/environment';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-shortcut',
@@ -12,7 +13,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ShortcutComponent implements OnInit {
   private appURL = environment.appUrl;
-  constructor(private router: Router, private clipboard: Clipboard, private location: Location, private shortcutService: ShortcutService) {}
+  constructor(private router: Router, private clipboard: Clipboard, private location: Location, private shortcutService: ShortcutService, private searchService: SearchService) {}
 
   ngOnInit() {
     if (this.shortcutService) {
@@ -27,6 +28,9 @@ export class ShortcutComponent implements OnInit {
       });
       this.shortcutService.registerShortcut("XA", () => {
         this.router.navigate(["about"]);
+      });
+      this.shortcutService.registerShortcut("Control+k", () => {
+        this.searchService.showSearchModule();
       });
       this.shortcutService.registerShortcut('S', () => {
         const link = "https://github.com/pxradox/portfolio";

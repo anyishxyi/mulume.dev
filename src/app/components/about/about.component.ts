@@ -19,7 +19,7 @@ import { Notification } from 'src/app/services/notification';
               </span>
             </div>
             <div class="c-jkdSvk mt-5">
-              <p class="c-chZgZR c-chZgZR-ibmnswx-css"><strong>Saut, je suis Jean-Paul NGALULA</strong>. Passionné par le développement informatique et l'innovation technologique, je suis créateur d'applications web.</p>
+              <p class="c-chZgZR c-chZgZR-ibmnswx-css"><strong>Saut, je suis Jean-Paul NGALULA MULUME</strong>. Passionné par le développement informatique et l'innovation technologique, je suis créateur d'applications web.</p>
               <p class="c-chZgZR">Actuellement <strong>Ingénieur logiciel</strong> chez Innov IT à <strong>Paris, France</strong></p>
               <p class="c-chZgZR">J'adore le dark mode, l'open source, et les projets annexes. Quand je ne travaille pas, j'aime pratiquer un peu de fitness, regarder des films et <strong>manger du fromage</strong>.</p>
             </div>
