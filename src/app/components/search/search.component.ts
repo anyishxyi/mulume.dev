@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { SearchService } from 'src/app/services/search.service';
 import { SearchItem } from './search-item';
 import { Router } from '@angular/router';
+import { ShortcutService } from 'src/app/services/shortcut.service';
 
 @Component({
   selector: 'app-search',
@@ -72,11 +73,10 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   @ViewChild('searchInput') searchInput!: ElementRef;
 
-  constructor(private router: Router, private searchService: SearchService, private cdr: ChangeDetectorRef) {}
+  constructor(private router: Router, private cdr: ChangeDetectorRef, private shortcutService: ShortcutService, private searchService: SearchService) {}
 
   ngOnInit(): void {
-    this.generateItemList();
-    this.pageItemsList();
+    this.initialize();
   }
 
   ngAfterViewInit(): void {
@@ -84,6 +84,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
       this.isSearchModuleVisible = display;
 
       if (this.isSearchModuleVisible) {
+        this.initialize();
         this.cdr.detectChanges();
         this.searchInput.nativeElement.focus();
       }
@@ -101,7 +102,17 @@ export class SearchComponent implements OnInit, AfterViewInit {
   handleClick(item: SearchItem): void {
     switch (item.name) {
       case "link":
-        //TODO: copy the current portfolio link on the clipboard
+        const kbEvent = new KeyboardEvent('keydown', {
+          key: 'L',
+          code: 'KeyL',
+          keyCode: 76,
+          which: 76,
+          altKey: false,
+          ctrlKey: false,
+          shiftKey: false,
+          metaKey: false
+        });
+        this.shortcutService.handleKeyPress(kbEvent);
         break;
 
       case "source":
@@ -125,11 +136,17 @@ export class SearchComponent implements OnInit, AfterViewInit {
     }
   }
 
+  private initialize(): void {
+    this.generateItemList();
+    this.pageItemsList();
+  }
+
   private filterItems(items: Array<SearchItem>, searchTerm: string): Array<SearchItem> {
     return items.filter(result => result.label.toLowerCase().includes(searchTerm));
   }
 
   private pageItemsList(): void {
+    this.pageItems = [];
     this.pageItems.push(
       {
         name: "home",
@@ -148,6 +165,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   }
 
   private generateItemList(): void {
+    this.generalItems = [];
     this.generalItems.push(
       {
         name: "link",

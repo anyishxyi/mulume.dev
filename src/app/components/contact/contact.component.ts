@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   template: `
     <main class="c-cUWjlu c-cUWjlu-iepuTsq-css">
       <section class="c-EnlPs">
@@ -14,18 +16,18 @@ import { Component } from '@angular/core';
             <p><strong>J'adore discuter</strong> donc si vous êtes ingénieurs, étudiants, créateurs passionnés, ou autres, je suis ouvert aux échanges inspirants ! <strong>Contactez-moi</strong> et ensemble, explorons des opportunités de collaboration. Je répondrai dans les meilleurs délais.
             </p>
             <!-- <h2>Envoyez un email</h2> -->
-            <form class="c-ccFqkw">
+            <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">
               <div class="c-fAxVVm">
                 <label for="name" class="c-cpOVIy">Noms</label>
-                <input id="name" type="text" placeholder="Marian Croak" required="" class="c-jLJtXG">
+                <input id="name" name="user.name" [(ngModel)]="user.name" type="text" placeholder="Marian Croak" class="c-jLJtXG" required>
               </div>
               <div class="c-fAxVVm">
                 <label for="email" class="c-cpOVIy">Email</label>
-                <input id="email" type="email" placeholder="marian@croak.com" required="" class="c-jLJtXG">
+                <input id="email" name="user.email" [(ngModel)]="user.email" type="email" placeholder="marian@croak.com" class="c-jLJtXG" required>
               </div>
               <div class="c-fAxVVm">
                 <label for="message" class="c-cpOVIy">Message</label>
-                <textarea id="message" placeholder="Comment puis je vous aider ?" rows="4" required="" class="c-jLJtXG"></textarea>
+                <textarea id="message" name="user.message" [(ngModel)]="user.message" placeholder="Comment puis je vous aider ?" rows="4" class="c-jLJtXG" required></textarea>
               </div>
               <div class="c-fAxVVm">
                 <button type="submit" class="c-eKOIRR">Envoyer</button>
@@ -42,5 +44,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  constructor(private http: HttpClient) {}
 
+  user = {
+    name: '',
+    email: '',
+    message: ''
+  };
+
+  sendEmail() {
+    const emailData = {
+      email: this.user.email,
+      message: this.user.message
+    };
+
+    this.http.post('../../../../.netlify/functions/sendEmail', emailData).subscribe(response => { console.log(response); });
+  }
 }

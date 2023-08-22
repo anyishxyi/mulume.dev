@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShortcutComponent } from './components/shortcut/shortcut.component';
 import { SearchComponent } from './components/search/search.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { Title } from '@angular/platform-browser';
+import { filter } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,10 +30,31 @@ import { NotificationComponent } from './components/notification/notification.co
     }
   `],
 })
-export class AppComponent {
-  constructor(private router: Router) {}
+export class AppComponent implements OnInit {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title) {}
+
+  ngOnInit(): void {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+      const pageTitle = this.getPageTitle(this.activatedRoute);
+      this.titleService.setTitle(pageTitle);
+    });
+  }
 
   changePage(page: string) {
     this.router.navigate([page]);
+  }
+
+  private getPageTitle(route: ActivatedRoute): string {
+    const defaultTitle = "Jean-Paul Mulume";
+    let returnedTitle = defaultTitle;
+    if (route.firstChild) {
+      return this.getPageTitle(route.firstChild);
+    }
+
+    if (route.snapshot.data && route.snapshot.data.title) {
+      returnedTitle = `${route.snapshot.data.title} // ${defaultTitle}`;
+    }
+
+    return returnedTitle;
   }
 }

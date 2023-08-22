@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
@@ -10,11 +11,25 @@ if (environment.production) {
 }
 
 const routes: Routes = [
-  { path: 'home', loadComponent: () => import('./app/components/home/home.component').then((c) => c.HomeComponent) },
-  { path: 'contact', loadComponent: () => import('./app/components/contact/contact.component').then((c) => c.ContactComponent) },
-  { path: 'about', loadComponent: () => import('./app/components/about/about.component').then((c) => c.AboutComponent) },
+  {
+    path: 'home',
+    data: { title: 'Accueil' },
+    loadComponent: () => import('./app/components/home/home.component').then((c) => c.HomeComponent)
+  },
+  {
+    path: 'contact',
+    data: { title: 'Contact' },
+    loadComponent: () => import('./app/components/contact/contact.component').then((c) => c.ContactComponent)
+  },
+  {
+    path: 'about',
+    data: { title: 'A propos' },
+    loadComponent: () => import('./app/components/about/about.component').then((c) => c.AboutComponent)
+  },
   { path: '', pathMatch: 'full', redirectTo: '/home'},
   { path: '**', redirectTo: '/home'},
 ];
 
-bootstrapApplication(AppComponent, { providers: [importProvidersFrom(RouterModule.forRoot(routes))]}).catch((error) => console.error(error));
+bootstrapApplication(AppComponent, {
+  providers: [importProvidersFrom(RouterModule.forRoot(routes)), importProvidersFrom(HttpClientModule)]
+}).catch((error) => console.error(error));
