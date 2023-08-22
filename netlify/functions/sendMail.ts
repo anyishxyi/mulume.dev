@@ -1,7 +1,14 @@
 import { Handler } from '@netlify/functions';
-import nodemailer from 'nodemailer';
+import * as nodemailer from 'nodemailer';
 
 const handler: Handler = async (event) => {
+  if (!event.body) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify('Missing request body'),
+    };
+  }
+
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -10,11 +17,13 @@ const handler: Handler = async (event) => {
     },
   });
 
+  const requestBody = JSON.parse(event.body);
+
   const mailOptions = {
-    from: event.body.email,
+    from: requestBody.email,
     to: process.env.EMAIL,
     subject: 'Hello from Netlify Function',
-    text: event.body.message,
+    text: requestBody.message,
   };
 
   try {
