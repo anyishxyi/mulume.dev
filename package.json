@@ -43,8 +43,6 @@
     "@angular/compiler-cli": "^15.2.1",
     "@types/jasmine": "^4.3.1",
     "@types/node": "^18.17.6",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.1",
     "karma-chrome-launcher": "~3.1.1",
