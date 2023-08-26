@@ -43,8 +43,8 @@ export class ShortcutService {
 
   private notifyLinkCopy(): void {
     const notification: Notification = {
-      title: "Copier :D",
-      message: "Vous pouvez maintenant partager ce lien..."
+      title: $localize`Copied ;)`,
+      message: $localize`You can now share this link...`,
     };
     this.notificationService.showNotification(notification);
   }
