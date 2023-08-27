@@ -12,3 +12,9 @@
   <app-root></app-root>
 </body>
 </html>
+
+<script>
+  const language = navigator.language || navigator.userLanguage;
+  const locale = language.split('-')[0];
+  window.location.href = (locale === 'fr') ? '/mulume/fr/' : '/mulume/en/';
+</script>

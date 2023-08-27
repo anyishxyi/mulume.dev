@@ -2,8 +2,18 @@
   publish = "dist/mulume"
 
 [[redirects]]
+  from = "/fr/*"
+  to = "/fr/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/en/index.html"
   status = 200
 
 [headers."/*"]
