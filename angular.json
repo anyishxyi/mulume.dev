@@ -8,7 +8,7 @@
   "projects": {
     "portfolio": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "en",
         "locales": {
           "fr": "src/locale/messages.fr.xlf"
         }
@@ -85,7 +85,7 @@
               "browserTarget": "portfolio:build:production"
             },
             "development": {
-              "browserTarget": "portfolio:build:development,en"
+              "browserTarget": "portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"

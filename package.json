@@ -3,10 +3,11 @@
   "description": "jp's portfolio",
   "version": "3.0.0",
   "scripts": {
-    "build": "ng build --configuration=production",
+    "build": "ng build --localize --configuration=production",
     "clean-all": "npm run clean-dist && npm run clean-modules && rm package-lock.json",
     "clean-dist": "rimraf dist/*",
     "clean-modules": "rimraf node_modules/*",
+    "i18n": "ng extract-i18n --output-path src/locale",
     "prerender": "ng run portfolio:prerender",
     "start": "ng serve",
     "start:prerender": "npm run prerender",

@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
     <main class="c-cUWjlu c-cUWjlu-iepuTsq-css">
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
-          <h1 class="c-dcthTY c-dcthTY-icWhawk-css" i18n>Email me.</h1>
+          <h1 class="c-dcthTY c-dcthTY-icWhawk-css" i18n>Send me an email.</h1>
           <div class="PJLV">
             <p i18n><strong>I love chatting</strong> so if you are engineers, students, passionate creators, or others, I am open to inspiring exchanges!<strong> Contact me</strong> and together, let's explore opportunities for collaboration. I will respond as soon as possible.</p>
             <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">

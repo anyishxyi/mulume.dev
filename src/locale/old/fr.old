@@ -11,6 +11,7 @@
       </trans-unit>
       <trans-unit id="3917401043925207881" datatype="html">
         <source>Innovate. Collaborate. Progress.</source>
+        <target>Innover. Collaborer. Progresser.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -18,6 +19,7 @@
       </trans-unit>
       <trans-unit id="2454699314322421731" datatype="html">
         <source>jeanpaul photo</source>
+        <target>jeanpaul photo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">18</context>
@@ -25,6 +27,7 @@
       </trans-unit>
       <trans-unit id="7725157991277233496" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Hello, I am Jean-Paul NGALULA MULUME<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Passionate about computer development and technological innovation, I am a creator of web applications.</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Salut, je suis Jean-Paul NGALULA MULUME<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Passionné par le développement informatique et l'innovation technologique, je suis créateur d'applications web.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -32,6 +35,7 @@
       </trans-unit>
       <trans-unit id="762508254858239017" datatype="html">
         <source>Currently <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Software engineer<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> at Innov IT in <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Paris, France<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target>Actuellement <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Ingénieur logiciel<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> chez Innov IT à <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Paris, France<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">23</context>
@@ -39,6 +43,7 @@
       </trans-unit>
       <trans-unit id="1691399147031540592" datatype="html">
         <source>I love dark mode, open source, and side projects. When I&apos;m not working, I like to do some fitness, watch movies and <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>eat cheese<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</source>
+        <target>J'adore le dark mode, l'open source, et les projets annexes. Quand je ne travaille pas, j'aime pratiquer un peu de fitness, regarder des films et <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>manger du fromage<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">24</context>
@@ -46,6 +51,7 @@
       </trans-unit>
       <trans-unit id="588878125744955804" datatype="html">
         <source><x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;../../../assets/svg/download.svg&quot; alt=&quot;download icon&quot; i18n-alt class=&quot;download-icon&quot;/&gt;"/>Download my resume here </source>
+        <target><x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;../../../assets/svg/download.svg&quot; alt=&quot;download icon&quot; i18n-alt class=&quot;download-icon&quot;/&gt;"/>Télécharger mon CV ici </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">29,30</context>
@@ -53,6 +59,7 @@
       </trans-unit>
       <trans-unit id="6841007030243558146" datatype="html">
         <source>download icon</source>
+        <target>download icon</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -60,6 +67,7 @@
       </trans-unit>
       <trans-unit id="2612776549823718200" datatype="html">
         <source>Professional Career</source>
+        <target>Parcours professionnel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">32</context>
@@ -67,6 +75,7 @@
       </trans-unit>
       <trans-unit id="7639766050354328009" datatype="html">
         <source>Software engineer</source>
+        <target>Ingénieur logiciel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">34</context>
@@ -78,6 +87,7 @@
       </trans-unit>
       <trans-unit id="1827254498318512105" datatype="html">
         <source> • Paris, France</source>
+        <target> • Paris, France</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -101,6 +111,7 @@
       </trans-unit>
       <trans-unit id="6048892649018070225" datatype="html">
         <source>Today</source>
+        <target>Aujourd'hui</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">42</context>
@@ -108,6 +119,7 @@
       </trans-unit>
       <trans-unit id="7103610111002982098" datatype="html">
         <source>7 months</source>
+        <target>7 mois</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -115,6 +127,7 @@
       </trans-unit>
       <trans-unit id="1548591504916151015" datatype="html">
         <source>Software Engineer - Consultant</source>
+        <target>Ingénieur logiciel - Consultant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">60</context>
@@ -122,6 +135,7 @@
       </trans-unit>
       <trans-unit id="6069284791836285885" datatype="html">
         <source>1 year 8 months</source>
+        <target>1 an 8 mois</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">70</context>
@@ -129,6 +143,7 @@
       </trans-unit>
       <trans-unit id="6901531604019957317" datatype="html">
         <source>Software Engineer</source>
+        <target>Ingénieur logiciel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -136,13 +151,15 @@
       </trans-unit>
       <trans-unit id="5503134607681863472" datatype="html">
         <source>2 years 5 months</source>
+        <target>2 ans 5 mois</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6148428346448076350" datatype="html">
-        <source>Back end developer</source>
+        <source>Backend developer</source>
+        <target>Développeur Backend</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">88</context>
@@ -154,6 +171,7 @@
       </trans-unit>
       <trans-unit id="5885557757361570105" datatype="html">
         <source>3 months</source>
+        <target>3 mois</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">98</context>
@@ -161,6 +179,7 @@
       </trans-unit>
       <trans-unit id="1084069857163608759" datatype="html">
         <source>Industry Promotion Fund</source>
+        <target>Fonds de Promotion de l'Industrie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">104</context>
@@ -168,6 +187,7 @@
       </trans-unit>
       <trans-unit id="246969373437470725" datatype="html">
         <source> • Kinshasa, D.R.Congo</source>
+        <target> • Kinshasa, R.D.Congo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">105</context>
@@ -175,6 +195,7 @@
       </trans-unit>
       <trans-unit id="314866892385161250" datatype="html">
         <source>1 year 3 months</source>
+        <target>1 an 3 mois</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">112</context>
@@ -182,6 +203,7 @@
       </trans-unit>
       <trans-unit id="298947678131483247" datatype="html">
         <source>Download...</source>
+        <target>Téléchargement...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">131</context>
@@ -189,6 +211,7 @@
       </trans-unit>
       <trans-unit id="7565255955381544709" datatype="html">
         <source>Thank you for downloading my resume</source>
+        <target>Merci d'avoir télécharger mon CV</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/about/about.component.ts</context>
           <context context-type="linenumber">132</context>
@@ -196,6 +219,7 @@
       </trans-unit>
       <trans-unit id="8163845201698273057" datatype="html">
         <source>Send me an email.</source>
+        <target>Envoyez moi un email.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -203,6 +227,7 @@
       </trans-unit>
       <trans-unit id="7064123715929838162" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>I love chatting<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> so if you are engineers, students, passionate creators, or others, I am open to inspiring exchanges!<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/> Contact me<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> and together, let&apos;s explore opportunities for collaboration. I will respond as soon as possible.</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>J'adore discuter<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> donc si vous êtes ingénieurs, étudiants, créateurs passionnés, ou autres, je suis ouvert aux échanges inspirants !<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/> Contactez-moi<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> et ensemble, explorons des opportunités de collaboration. Je répondrai dans les meilleurs délais.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -210,6 +235,7 @@
       </trans-unit>
       <trans-unit id="2128800934734769071" datatype="html">
         <source>Names</source>
+        <target>Noms</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">19</context>
@@ -217,6 +243,7 @@
       </trans-unit>
       <trans-unit id="4768749765465246664" datatype="html">
         <source>Email</source>
+        <target>Email</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">23</context>
@@ -224,6 +251,7 @@
       </trans-unit>
       <trans-unit id="8066608938393600549" datatype="html">
         <source>Message</source>
+        <target>Message</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -231,6 +259,7 @@
       </trans-unit>
       <trans-unit id="6614460351173476023" datatype="html">
         <source>How can I help you ?</source>
+        <target>Comment puis je vous aider ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -238,6 +267,7 @@
       </trans-unit>
       <trans-unit id="6490688569532630280" datatype="html">
         <source>Send</source>
+        <target>Envoyer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -245,6 +275,7 @@
       </trans-unit>
       <trans-unit id="1726363342938046830" datatype="html">
         <source>About</source>
+        <target>A Propos</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/header/header.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -256,6 +287,7 @@
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
+        <target>Contact</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/header/header.component.ts</context>
           <context context-type="linenumber">52</context>
@@ -263,6 +295,7 @@
       </trans-unit>
       <trans-unit id="7297010951327645430" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Software Engineer at <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://inventiv-it.fr/&quot; target=&quot;blank&quot;&gt;"/>Inventiv IT<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Interested in craftsmanship</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Ingénieur logiciel chez <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://inventiv-it.fr/&quot; target=&quot;blank&quot;&gt;"/>Inventiv IT<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Intéressé par le craftmanship</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home/home.component.ts</context>
           <context context-type="linenumber">13,15</context>
@@ -270,20 +303,15 @@
       </trans-unit>
       <trans-unit id="7636467602294351367" datatype="html">
         <source>Press <x id="START_TAG_KBD" ctype="x-kbd" equiv-text="&lt;kbd&gt;"/>ctrl<x id="CLOSE_TAG_KBD" ctype="x-kbd" equiv-text="&lt;/kbd&gt;"/><x id="START_TAG_KBD" ctype="x-kbd" equiv-text="&lt;kbd&gt;"/>K<x id="CLOSE_TAG_KBD" ctype="x-kbd" equiv-text="&lt;/kbd&gt;"/> to start →</source>
+        <target>Appuyez sur <x id="START_TAG_KBD" ctype="x-kbd" equiv-text="&lt;kbd&gt;"/>ctrl<x id="CLOSE_TAG_KBD" ctype="x-kbd" equiv-text="&lt;/kbd&gt;"/><x id="START_TAG_KBD" ctype="x-kbd" equiv-text="&lt;kbd&gt;"/>K<x id="CLOSE_TAG_KBD" ctype="x-kbd" equiv-text="&lt;/kbd&gt;"/> pour commencer →</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home/home.component.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="879995967557782205" datatype="html">
-        <source>Type a command or search…</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="6439365426343089851" datatype="html">
         <source>General</source>
+        <target>General</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
           <context context-type="linenumber">21</context>
@@ -291,6 +319,7 @@
       </trans-unit>
       <trans-unit id="4442926641425549164" datatype="html">
         <source>Go to</source>
+        <target>Aller à</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
           <context context-type="linenumber">39</context>
@@ -298,6 +327,7 @@
       </trans-unit>
       <trans-unit id="2821179408673282599" datatype="html">
         <source>Home</source>
+        <target>Accueil</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
           <context context-type="linenumber">154</context>
@@ -305,6 +335,7 @@
       </trans-unit>
       <trans-unit id="2618101617221155143" datatype="html">
         <source>Copy link</source>
+        <target>Copier le lien</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
           <context context-type="linenumber">173</context>
@@ -312,6 +343,7 @@
       </trans-unit>
       <trans-unit id="4312183290449350804" datatype="html">
         <source>Send email</source>
+        <target>Envoyer un email</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
           <context context-type="linenumber">179</context>
@@ -319,6 +351,7 @@
       </trans-unit>
       <trans-unit id="6480390330423300875" datatype="html">
         <source>View source</source>
+        <target>Code source</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
           <context context-type="linenumber">185</context>
@@ -326,6 +359,7 @@
       </trans-unit>
       <trans-unit id="7207464367043932575" datatype="html">
         <source>Copied ;)</source>
+        <target>Copié ;)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/services/shortcut.service.ts</context>
           <context context-type="linenumber">46</context>
@@ -333,6 +367,7 @@
       </trans-unit>
       <trans-unit id="4362350729206520362" datatype="html">
         <source>You can now share this link...</source>
+        <target>Vous pouvez maintenant partager ce lien...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/services/shortcut.service.ts</context>
           <context context-type="linenumber">47</context>

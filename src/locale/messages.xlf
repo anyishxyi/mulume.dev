@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="1737753151350322492" datatype="html">
         <source><x id="PH" equiv-text="route.snapshot.data.title"/></source>
@@ -195,7 +195,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="8163845201698273057" datatype="html">
-        <source>Email me.</source>
+        <source>Send me an email.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/contact/contact.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -273,6 +273,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/home/home.component.ts</context>
           <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="879995967557782205" datatype="html">
+        <source>Type a command or search…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search/search.component.ts</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6439365426343089851" datatype="html">
