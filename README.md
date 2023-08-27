@@ -2,7 +2,7 @@
 
 > My personal website :)
 
-[![Déployer avec Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pxradox/portfolio)
+[![Déployer avec Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pxradox/mulume.dev)
 
 
 ## Technology stack
@@ -15,13 +15,13 @@
 1. Clone this repo:
 
 ```sh
-$ git clone https://github.com/pxradox/portfolio.git
+$ git clone https://github.com/pxradox/mulume.dev.git
 ```
 
 2. Then go to the project's folder:
 
 ```sh
-cd portfolio
+cd mulume.dev
 ```
 
 3. Install all dependencies:

@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio": {
+    "mulume.dev": {
       "i18n": {
         "sourceLocale": "en",
         "locales": {
@@ -30,7 +30,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": ["fr"],
-            "outputPath": "dist/portfolio",
+            "outputPath": "dist/mulume.dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -82,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolio:build:production"
+              "browserTarget": "mulume.dev:build:production"
             },
             "development": {
-              "browserTarget": "portfolio:build:development"
+              "browserTarget": "mulume.dev:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portfolio:build"
+            "browserTarget": "mulume.dev:build"
           }
         },
         "test": {
@@ -119,8 +119,8 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "guessRoutes": false,
-            "browserTarget": "portfolio:build:production",
-            "serverTarget": "portfolio:server:production",
+            "browserTarget": "mulume.dev:build:production",
+            "serverTarget": "mulume.dev:server:production",
             "routes": ["/"],
             "routesFile": "./routes.txt"
           }
@@ -128,7 +128,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/portfolio/server",
+            "outputPath": "dist/mulume.dev/server",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json"
           },

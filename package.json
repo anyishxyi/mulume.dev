@@ -1,6 +1,6 @@
 {
-  "name": "portfolio",
-  "description": "jp's portfolio",
+  "name": "mulume.dev",
+  "description": "My personal website",
   "version": "3.0.0",
   "scripts": {
     "build": "ng build --localize --configuration=production",
@@ -8,18 +8,18 @@
     "clean-dist": "rimraf dist/*",
     "clean-modules": "rimraf node_modules/*",
     "i18n": "ng extract-i18n --output-path src/locale",
-    "prerender": "ng run portfolio:prerender",
+    "prerender": "ng run mulume.dev:prerender",
     "start": "ng serve",
     "start:prerender": "npm run prerender",
     "test": "ng test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pxradox/portfolio"
+    "url": "https://github.com/pxradox/mulume.dev"
   },
   "author": "jeanpaulngalula07@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/pxradox/portfolio",
+  "homepage": "https://github.com/pxradox/mulume.dev",
   "dependencies": {
     "@angular/animations": "^15.2.1",
     "@angular/cdk": "^15.2.9",

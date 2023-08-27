@@ -33,7 +33,7 @@ export class ShortcutComponent implements OnInit {
         this.searchService.showSearchModule();
       });
       this.shortcutService.registerShortcut('S', () => {
-        const link = "https://github.com/pxradox/portfolio";
+        const link = "https://github.com/pxradox/mulume.dev";
         window.open(link, '_blank');
       });
     }
