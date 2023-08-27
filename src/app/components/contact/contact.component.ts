@@ -11,31 +11,26 @@ import { HttpClient } from '@angular/common/http';
     <main class="c-cUWjlu c-cUWjlu-iepuTsq-css">
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
-          <h1 class="c-dcthTY c-dcthTY-icWhawk-css">Envoyez moi un email.</h1>
+          <h1 class="c-dcthTY c-dcthTY-icWhawk-css" i18n>Send me an email.</h1>
           <div class="PJLV">
-            <p><strong>J'adore discuter</strong> donc si vous êtes ingénieurs, étudiants, créateurs passionnés, ou autres, je suis ouvert aux échanges inspirants ! <strong>Contactez-moi</strong> et ensemble, explorons des opportunités de collaboration. Je répondrai dans les meilleurs délais.
-            </p>
-            <!-- <h2>Envoyez un email</h2> -->
+            <p i18n><strong>I love chatting</strong> so if you are engineers, students, passionate creators, or others, I am open to inspiring exchanges!<strong> Contact me</strong> and together, let's explore opportunities for collaboration. I will respond as soon as possible.</p>
             <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">
               <div class="c-fAxVVm">
-                <label for="name" class="c-cpOVIy">Noms</label>
+                <label for="name" class="c-cpOVIy" i18n>Names</label>
                 <input id="name" name="user.name" [(ngModel)]="user.name" type="text" placeholder="Marian Croak" class="c-jLJtXG" required>
               </div>
               <div class="c-fAxVVm">
-                <label for="email" class="c-cpOVIy">Email</label>
+                <label for="email" class="c-cpOVIy" i18n>Email</label>
                 <input id="email" name="user.email" [(ngModel)]="user.email" type="email" placeholder="marian@croak.com" class="c-jLJtXG" required>
               </div>
               <div class="c-fAxVVm">
-                <label for="message" class="c-cpOVIy">Message</label>
-                <textarea id="message" name="user.message" [(ngModel)]="user.message" placeholder="Comment puis je vous aider ?" rows="4" class="c-jLJtXG" required></textarea>
+                <label for="message" class="c-cpOVIy" i18n>Message</label>
+                <textarea id="message" name="user.message" [(ngModel)]="user.message" placeholder="How can I help you ?" i18n-placeholder rows="4" class="c-jLJtXG" required></textarea>
               </div>
               <div class="c-fAxVVm">
-                <button type="submit" class="c-eKOIRR">Envoyer</button>
+                <button type="submit" class="c-eKOIRR" i18n>Send</button>
               </div>
             </form>
-            <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
-              <ol tabindex="-1" class="c-jfqASj"></ol>
-            </div>
           </div>
         </div>
       </section>

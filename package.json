@@ -1,24 +1,25 @@
 {
-  "name": "portfolio",
-  "description": "jp's portfolio",
+  "name": "mulume",
+  "description": "My personal website",
   "version": "3.0.0",
   "scripts": {
-    "build": "ng build --configuration=production",
+    "build": "ng build --localize --configuration=production",
     "clean-all": "npm run clean-dist && npm run clean-modules && rm package-lock.json",
     "clean-dist": "rimraf dist/*",
     "clean-modules": "rimraf node_modules/*",
-    "prerender": "ng run portfolio:prerender",
+    "i18n": "ng extract-i18n --output-path src/locale",
     "start": "ng serve",
-    "start:prerender": "npm run prerender",
+    "start:fr": "ng serve --configuration=fr",
+    "start:prerender": "ng run mulume:prerender",
     "test": "ng test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pxradox/portfolio"
+    "url": "https://github.com/pxradox/mulume"
   },
   "author": "jeanpaulngalula07@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/pxradox/portfolio",
+  "homepage": "https://github.com/pxradox/mulume",
   "dependencies": {
     "@angular/animations": "^15.2.1",
     "@angular/cdk": "^15.2.9",
@@ -42,6 +43,7 @@
     "@angular-devkit/build-angular": "^15.2.1",
     "@angular/cli": "^15.2.1",
     "@angular/compiler-cli": "^15.2.1",
+    "@angular/localize": "^15.2.9",
     "@types/jasmine": "^4.3.1",
     "@types/node": "^18.17.6",
     "jasmine-core": "~4.5.0",

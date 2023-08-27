@@ -9,18 +9,17 @@ import { SearchService } from 'src/app/services/search.service';
   template: `
     <main>
       <section class="home-section">
-        <h1>Jean-Paul NGALULA</h1>
-        <p><strong>Ingénieur logiciel chez <a href="https://inventiv-it.fr/" target="blank">Inventiv IT</a></strong>
+        <h1>Jean-Paul NGALULA MULUME</h1>
+        <p i18n><strong>Software Engineer at <a href="https://inventiv-it.fr/" target="blank">Inventiv IT</a></strong>
         <br>
-        Intéressé par le craftmanship</p>
-        <button (click)="displaySearchModule($event)" class="c-gfjkKg">Appuyez sur <kbd>ctrl</kbd> <kbd>K</kbd> pour commencer →</button>
+        Interested in craftsmanship</p>
+        <button (click)="displaySearchModule($event)" class="c-gfjkKg" i18n>Press <kbd>ctrl</kbd> <kbd>K</kbd> to start →</button>
       </section>
     </main>
   `,
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
   constructor(private searchService: SearchService) {}
 
   displaySearchModule(event: Event) {

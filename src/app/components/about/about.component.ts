@@ -11,105 +11,105 @@ import { Notification } from 'src/app/services/notification';
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
-          <h1 class="c-dcthTY c-dcthTY-icHFxNc-css">Innover. Collaborer. Progresser.</h1>
+          <h1 class="c-dcthTY c-dcthTY-icHFxNc-css" i18n>Innovate. Collaborate. Progress.</h1>
           <div class="c-exEMEo">
             <div class="c-jkdSvk">
               <span class="img-container">
-                <img alt="jeanpaul" aria-hidden="true" src="../../../assets/img/jeanpaul_ng.png" loading="lazy">
+                <img alt="jeanpaul photo" i18n-alt aria-hidden="true" src="../../../assets/img/jeanpaul_ng.png" loading="lazy">
               </span>
             </div>
             <div class="c-jkdSvk mt-5">
-              <p class="c-chZgZR c-chZgZR-ibmnswx-css"><strong>Saut, je suis Jean-Paul NGALULA MULUME</strong>. Passionné par le développement informatique et l'innovation technologique, je suis créateur d'applications web.</p>
-              <p class="c-chZgZR">Actuellement <strong>Ingénieur logiciel</strong> chez Innov IT à <strong>Paris, France</strong></p>
-              <p class="c-chZgZR">J'adore le dark mode, l'open source, et les projets annexes. Quand je ne travaille pas, j'aime pratiquer un peu de fitness, regarder des films et <strong>manger du fromage</strong>.</p>
+              <p class="c-chZgZR c-chZgZR-ibmnswx-css" i18n><strong>Hello, I am Jean-Paul NGALULA MULUME</strong>. Passionate about computer development and technological innovation, I am a creator of web applications.</p>
+              <p class="c-chZgZR" i18n>Currently <strong>Software engineer</strong> at Innov IT in <strong>Paris, France</strong></p>
+              <p class="c-chZgZR" i18n>I love dark mode, open source, and side projects. When I'm not working, I like to do some fitness, watch movies and <strong>eat cheese</strong>.</p>
             </div>
           </div>
           <div class="c-UazGY">
-            <a (click)="downloadCV()" role="button" class="c-gfjkKg">
-              <img src="../../../assets/svg/download.svg" alt="download icon" class="download-icon"/>Télécharger mon CV ici
+            <a (click)="downloadCV()" role="button" class="c-gfjkKg" i18n>
+              <img src="../../../assets/svg/download.svg" alt="download icon" i18n-alt class="download-icon"/>Download my resume here
             </a>
           </div>
-          <h2>Parcours professionnel</h2>
+          <h2 i18n>Professional Career</h2>
           <div class="experience">
-            <h3>Ingénieur logiciel</h3>
+            <h3 i18n>Software engineer</h3>
             <p>
               <a href="https://inventiv-it.fr/" target="_blank">Inventiv IT</a>
-              <span> • Paris, France</span>
+              <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>Sept 2023</span>
+              <span>{{ "Sept 2023" | date: 'MMM yyyy'}}</span>
               <span> – </span>
-              <span>Aujourd'hui</span>
+              <span i18n>Today</span>
             </p>
           </div>
           <div class="experience">
-            <h3>Ingénieur logiciel</h3>
+            <h3 i18n>Software engineer</h3>
             <p>
               <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>
-              <span> • Paris, France</span>
+              <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>Mars 2023</span>
+              <span>{{ "Mars 2023" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>Sept 2023</span>
+              <span>{{ "Sept 2023" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>7 mois</span>
+              <span i18n>7 months</span>
             </p>
           </div>
           <div class="experience">
-            <h3>Ingénieur logiciel - Consultant</h3>
+            <h3 i18n>Software Engineer - Consultant</h3>
             <p>
               <a href="https://www.alten.fr/" target="_blank">Alten</a>
-              <span> • Paris, France</span>
+              <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>Juil 2021</span>
+              <span>{{ "Juil 2021" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>Fév 2023</span>
+              <span>{{ "Fév 2023" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>1 an 8 mois</span>
+              <span i18n>1 year 8 months</span>
             </p>
           </div>
           <div class="experience">
-            <h3>Ingénieur logiciel</h3>
+            <h3 i18n>Software Engineer</h3>
             <p>
               <a href="https://www.ownest.io/" target="_blank">Ownest</a>
-              <span> • Paris, France</span>
+              <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>Sept. 2018</span>
+              <span>{{ "Sept. 2018" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>Jan. 2021</span>
+              <span>{{ "Jan. 2021" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>2 ans 5 mois</span>
+              <span i18n>2 years 5 months</span>
             </p>
           </div>
           <div class="experience">
-            <h3>Développeur back-end</h3>
+            <h3 i18n>Back end developer</h3>
             <p>
               <a href="https://www.jobnroll.fr/" target="_blank">Jobnroll</a>
-              <span> • Paris, France</span>
+              <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>Juin 2018</span>
+              <span>{{ "Juin 2018" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>Aout 2018</span>
+              <span>{{ "Aout 2018" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>3 mois</span>
+              <span i18n>3 months</span>
             </p>
           </div>
           <div class="experience">
-            <h3>Développeur back-end</h3>
+            <h3 i18n>Back end developer</h3>
             <p>
-              <a href="https://www.fpi-rdc.cd/" target="_blank">Fonds de Promotion de l'Industrie</a>
-              <span> • Kinshasa, R.D.Congo</span>
+              <a href="https://www.fpi-rdc.cd/" target="_blank" i18n>Industry Promotion Fund</a>
+              <span i18n> • Kinshasa, D.R.Congo</span>
             </p>
             <p>
-              <span>Juin 2016</span>
+              <span>{{ "Juin 2016" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>Aout 2017</span>
+              <span>{{ "Aout 2017" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>1 an 3 mois</span>
+              <span i18n>1 year 3 months</span>
             </p>
           </div>
         </div>
@@ -128,8 +128,8 @@ export class AboutComponent {
    */
   downloadCV(): void {
     const notification: Notification = {
-      title: "Téléchargement...",
-      message: "Merci d'avoir pris le temps de télécharger mon CV"
+      title: $localize`Download...`,
+      message: $localize`Thank you for downloading my resume`
     };
     const link = document.createElement('a');
     link.href = this.cvLink;

@@ -14,11 +14,11 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
     <div id="{{searchElementId}}" *ngIf="isSearchModuleVisible" class="c-hWUbGb">
       <div class="c-iqTopT">
         <div>
-          <input #searchInput type="text" placeholder="Type a command or search…" (input)="performSearch($event)" class="c-ekIDDi" autocomplete="off" role="combobox" spellcheck="false" aria-expanded="true" aria-controls="kbar-listbox" aria-activedescendant="kbar-listbox-item-1">
+          <input #searchInput type="text" placeholder="Type a command or search…" i18n-placeholder (input)="performSearch($event)" class="c-ekIDDi" autocomplete="off" role="combobox" spellcheck="false" aria-expanded="true" aria-controls="kbar-listbox" aria-activedescendant="kbar-listbox-item-1">
           <div class="c-ertyu">
             <div role="listbox" id="kbar-listbox" class="c-oeiotf">
               <div class="c-title" *ngIf="generalCPItems.length > 0">
-                <div class="c-kcmNSe">General</div>
+                <div class="c-kcmNSe" i18n>General</div>
               </div>
               <div *ngFor="let item of generalCPItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
                 <div class="PJLV-iljSPlw-css">
@@ -36,7 +36,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
                 </div>
               </div>
               <div *ngIf="pageCPItems.length > 0" class="c-title">
-                <div class="c-kcmNSe">Aller à</div>
+                <div class="c-kcmNSe" i18n>Go to</div>
               </div>
               <div *ngFor="let item of pageCPItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
                 <div class="PJLV-iljSPlw-css">
@@ -151,13 +151,13 @@ export class SearchComponent implements OnInit, AfterViewInit {
       {
         name: "home",
         src: "../../../assets/svg/home.svg",
-        label: "Accueil",
+        label: $localize`Home`,
         shortcut: ["X", "H"]
       },
       {
         name: "about",
         src: "../../../assets/svg/about.svg",
-        label: "A Propos",
+        label: $localize`About`,
         shortcut: ["X", "A"]
       }
     );
@@ -170,20 +170,20 @@ export class SearchComponent implements OnInit, AfterViewInit {
       {
         name: "link",
         src: "../../../assets/svg/link.svg",
-        label: "Copier le lien",
+        label: $localize`Copy link`,
         shortcut: ["L"]
       },
       {
         name: "contact",
         src: "../../../assets/svg/contact.svg",
-        label: "Envoyer un email",
+        label: $localize`Send email`,
         shortcut: ["E"]
       },
       {
         name: "source",
         src: "../../../assets/svg/source.svg",
-        label: "Code source",
-        link: "https://github.com/pxradox/portfolio",
+        label: $localize`View source`,
+        link: "https://github.com/pxradox/mulume",
         shortcut: ["S"]
       },
     );

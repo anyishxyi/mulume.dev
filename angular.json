@@ -6,7 +6,15 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio": {
+    "mulume": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,20 +31,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio",
+            "outputPath": "dist/mulume",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": [],
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -66,7 +70,17 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": ["en"]
+            },
+            "fr": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": "production"
@@ -75,10 +89,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolio:build:production"
+              "browserTarget": "mulume:build:production"
             },
             "development": {
-              "browserTarget": "portfolio:build:development"
+              "browserTarget": "mulume:build:development"
+            },
+            "fr": {
+              "browserTarget": "mulume:build:fr"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +103,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portfolio:build"
+            "browserTarget": "mulume:build"
           }
         },
         "test": {
@@ -112,8 +129,8 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "guessRoutes": false,
-            "browserTarget": "portfolio:build:production",
-            "serverTarget": "portfolio:server:production",
+            "browserTarget": "mulume:build:production",
+            "serverTarget": "mulume:server:production",
             "routes": ["/"],
             "routesFile": "./routes.txt"
           }
@@ -121,7 +138,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/portfolio/server",
+            "outputPath": "dist/mulume/server",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json"
           },
