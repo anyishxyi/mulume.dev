@@ -1,6 +1,9 @@
 [build]
   publish = "dist/mulume"
 
+[headers."/*"]
+  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+
 [[redirects]]
   from = "/fr/*"
   to = "/fr/index.html"
@@ -15,6 +18,3 @@
   from = "/*"
   to = "/en/index.html"
   status = 200
-
-[headers."/*"]
-  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
