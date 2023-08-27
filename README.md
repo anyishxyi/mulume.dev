@@ -1,8 +1,8 @@
-# mulume.dev
+# mulume
 
 > My personal website :)
 
-[![Déployer avec Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pxradox/mulume.dev)
+[![Déployer avec Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pxradox/mulume)
 
 
 ## Technology stack
@@ -15,13 +15,13 @@
 1. Clone this repo:
 
 ```sh
-$ git clone https://github.com/pxradox/mulume.dev.git
+$ git clone https://github.com/pxradox/mulume.git
 ```
 
 2. Then go to the project's folder:
 
 ```sh
-cd mulume.dev
+cd mulume
 ```
 
 3. Install all dependencies:

@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
     }
 
     if (route.snapshot.data && route.snapshot.data.title) {
-      returnedTitle = $localize`${route.snapshot.data.title}`;
+      returnedTitle = $localize `${route.snapshot.data.title}`;
       returnedTitle += ` // ${defaultTitle}`;
     }
 

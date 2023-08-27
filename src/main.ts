@@ -15,7 +15,7 @@ if (environment.production) {
 const routes: Routes = [
   {
     path: 'home',
-    data: { title: 'Accueil' },
+    data: { title: 'Home' },
     loadComponent: () => import('./app/components/home/home.component').then((c) => c.HomeComponent)
   },
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    data: { title: 'A propos' },
+    data: { title: 'About' },
     loadComponent: () => import('./app/components/about/about.component').then((c) => c.AboutComponent)
   },
   { path: '', pathMatch: 'full', redirectTo: '/home'},

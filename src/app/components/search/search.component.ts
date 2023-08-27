@@ -183,7 +183,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
         name: "source",
         src: "../../../assets/svg/source.svg",
         label: $localize`View source`,
-        link: "https://github.com/pxradox/mulume.dev",
+        link: "https://github.com/pxradox/mulume",
         shortcut: ["S"]
       },
     );

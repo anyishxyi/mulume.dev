@@ -1,5 +1,5 @@
 {
-  "name": "mulume.dev",
+  "name": "mulume",
   "description": "My personal website",
   "version": "3.0.0",
   "scripts": {
@@ -8,18 +8,18 @@
     "clean-dist": "rimraf dist/*",
     "clean-modules": "rimraf node_modules/*",
     "i18n": "ng extract-i18n --output-path src/locale",
-    "prerender": "ng run mulume.dev:prerender",
     "start": "ng serve",
-    "start:prerender": "npm run prerender",
+    "start:fr": "ng serve --configuration=fr",
+    "start:prerender": "ng run mulume:prerender",
     "test": "ng test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pxradox/mulume.dev"
+    "url": "https://github.com/pxradox/mulume"
   },
   "author": "jeanpaulngalula07@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/pxradox/mulume.dev",
+  "homepage": "https://github.com/pxradox/mulume",
   "dependencies": {
     "@angular/animations": "^15.2.1",
     "@angular/cdk": "^15.2.9",
