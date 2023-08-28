@@ -15,7 +15,7 @@ import { Notification } from 'src/app/services/notification';
           <div class="c-exEMEo">
             <div class="c-jkdSvk">
               <span class="img-container">
-                <img alt="jeanpaul photo" i18n-alt aria-hidden="true" src="../../../assets/img/jeanpaul_ng.png" loading="lazy">
+                <img alt="jeanpaul photo" i18n-alt aria-hidden="true" src="/assets/img/jeanpaul_ng.png" loading="lazy">
               </span>
             </div>
             <div class="c-jkdSvk mt-5">
@@ -26,7 +26,7 @@ import { Notification } from 'src/app/services/notification';
           </div>
           <div class="c-UazGY">
             <a (click)="downloadCV()" role="button" class="c-gfjkKg" i18n>
-              <img src="../../../assets/svg/download.svg" alt="download icon" i18n-alt class="download-icon"/>Download my resume here
+              <img src="/assets/svg/download.svg" alt="download icon" i18n-alt class="download-icon"/>Download my resume here
             </a>
           </div>
           <h2 i18n>Professional Career</h2>
