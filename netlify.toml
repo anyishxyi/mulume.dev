@@ -5,6 +5,16 @@
   Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
 
 [[redirects]]
-  from = "/:lang/*"
-  to = "/:lang/index.html"
+  from = "/fr/*"
+  to = "/fr/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/en/index.html"
   status = 200
