@@ -1,5 +1,7 @@
 [build]
   publish = "dist/mulume"
+  command = "npm run build"
+  environment = { BASE_URL = "/:lang" }
 
 [[headers]]
   for = "/*"
