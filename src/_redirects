@@ -1,0 +1,2 @@
+/* Redirect all requests to the appropriate language */
+/:lang/* /:lang/index.html 200

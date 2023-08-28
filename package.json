@@ -8,6 +8,7 @@
     "clean-dist": "rimraf dist/*",
     "clean-modules": "rimraf node_modules/*",
     "i18n": "ng extract-i18n --output-path src/locale",
+    "netlify": "cp src/_redirects dist/mulume/_redirects",
     "start": "ng serve",
     "start:fr": "ng serve --configuration=fr",
     "start:prerender": "ng run mulume:prerender",
