@@ -27,13 +27,13 @@ cd mulume
 3. Install all dependencies:
 
 ```sh
-npm install
+yarn install
 ```
 
 4. Run locally:
 
 ```sh
-npm start
+yarn start
 ```
 
 ## License

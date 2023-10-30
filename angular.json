@@ -40,7 +40,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "localize": true
+            "localize": false
           },
           "configurations": {
             "production": {
@@ -93,9 +93,6 @@
             },
             "development": {
               "browserTarget": "mulume:build:development"
-            },
-            "fr": {
-              "browserTarget": "mulume:build:fr"
             }
           },
           "defaultConfiguration": "development"
@@ -109,6 +106,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
@@ -123,37 +121,6 @@
               "src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "guessRoutes": false,
-            "browserTarget": "mulume:build:production",
-            "serverTarget": "mulume:server:production",
-            "routes": ["/"],
-            "routesFile": "./routes.txt"
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/mulume/server",
-            "main": "src/main.ts",
-            "tsConfig": "tsconfig.app.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "sourceMap": false,
-              "optimization": true
-            }
           }
         }
       }
