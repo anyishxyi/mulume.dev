@@ -33,27 +33,15 @@ import { Notification } from 'src/app/services/notification';
           <div class="experience">
             <h3 i18n>Software engineer</h3>
             <p>
-              <a href="https://inventiv-it.fr/" target="_blank">Inventiv IT</a>
-              <span i18n> • Paris, France</span>
-            </p>
-            <p>
-              <span>{{ "Sept 2023" | date: 'MMM yyyy'}}</span>
-              <span> – </span>
-              <span i18n>Today</span>
-            </p>
-          </div>
-          <div class="experience">
-            <h3 i18n>Software engineer</h3>
-            <p>
               <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>
               <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>{{ "Mars 2023" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Mar 2023" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>{{ "Sept 2023" | date: 'MMM yyyy' }}</span>
+              <span>Today</span>
               <span> • </span>
-              <span i18n>7 months</span>
+              <span i18n>{{ seniority("03/01/2023", "today") }}</span>
             </p>
           </div>
           <div class="experience">
@@ -63,11 +51,11 @@ import { Notification } from 'src/app/services/notification';
               <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>{{ "Juil 2021" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Jul 2021" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>{{ "Fév 2023" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Feb 2023" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>1 year 8 months</span>
+              <span i18n>{{ seniority("07/01/2021", "02/07/2023") }}</span>
             </p>
           </div>
           <div class="experience">
@@ -81,7 +69,7 @@ import { Notification } from 'src/app/services/notification';
               <span> – </span>
               <span>{{ "Jan. 2021" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>2 years 5 months</span>
+              <span i18n>{{ seniority("09/01/2018", "01/05/2021") }}</span>
             </p>
           </div>
           <div class="experience">
@@ -91,11 +79,11 @@ import { Notification } from 'src/app/services/notification';
               <span i18n> • Paris, France</span>
             </p>
             <p>
-              <span>{{ "Juin 2018" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Jun 2018" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>{{ "Aout 2018" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Aug 2018" | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>3 months</span>
+              <span i18n>{{ seniority("06/01/2018", "08/06/2018") }}</span>
             </p>
           </div>
           <div class="experience">
@@ -105,9 +93,9 @@ import { Notification } from 'src/app/services/notification';
               <span i18n> • Kinshasa, D.R.Congo</span>
             </p>
             <p>
-              <span>{{ "Juin 2016" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Jun 2016" | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>{{ "Aout 2017" | date: 'MMM yyyy' }}</span>
+              <span>{{ "Aug 2017" | date: 'MMM yyyy' }}</span>
               <span> • </span>
               <span i18n>1 year 3 months</span>
             </p>
@@ -138,5 +126,49 @@ export class AboutComponent {
       this.notificationService.showNotification(notification);
     });
     link.click();
+  }
+
+  seniority(startDateString: string, endDateString: string): string {
+    const startDate: Date = new Date(startDateString);
+    const endDate: Date = endDateString.toLowerCase() === 'today' ? new Date() : new Date(endDateString);
+    const millisecondsInDay = 24 * 60 * 60 * 1000;
+    const millisecondsInMonth = 30.44 * millisecondsInDay;
+
+    const diffMilliseconds = Math.abs(endDate.getTime() - startDate.getTime());
+
+    let months = Math.floor(diffMilliseconds / millisecondsInMonth);
+    const remainingDays = diffMilliseconds % millisecondsInMonth / millisecondsInDay;
+
+    if (remainingDays >= 1) {
+      months++;
+    }
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+
+    let result = '';
+
+    if (years > 0) {
+      result += years + ' year';
+      if (years > 1) {
+        result += 's';
+      }
+    }
+
+    if (remainingMonths > 0) {
+      if (result !== '') {
+        result += ' ';
+      }
+      result += remainingMonths + ' month';
+      if (remainingMonths > 1) {
+        result += 's';
+      }
+    }
+
+    if (result === '') {
+      result = '1 month';
+    }
+
+    return result;
   }
 }
