@@ -13,11 +13,11 @@ interface Link {
   imports: [CommonModule],
   template: `
     <header class="c-dRmGAT">
-      <a (click)="navigateTo('home')" class="c-gfsRMa c-eEqOQi">M</a>
+      <a (click)="navigateTo('home')" (keyup)="navigateTo('home')" class="c-gfsRMa c-eEqOQi" tabindex="0">M</a>
       <nav class="c-cGucJb">
         <ul class="c-hRSBvv">
           <li *ngFor="let link of links">
-            <a (click)="navigateTo(link.name)" class="c-gKCiCk">
+            <a (click)="navigateTo(link.name)" (keyup)="navigateTo(link.name)" class="c-gKCiCk" tabindex="1">
               <span class="c-cohhyn" data-projection-id="7">{{ link.label }}</span>
             </a>
           </li>

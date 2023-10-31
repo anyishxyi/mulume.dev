@@ -8,7 +8,7 @@ import { SearchService } from './search.service';
 })
 export class ShortcutService {
   private shortcuts: Map<string, () => void> = new Map();
-  private sequence: string = '';
+  private sequence = '';
 
   constructor(private notificationService: NotificationService, private searchService: SearchService) {}
 

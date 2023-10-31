@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   imports: [CommonModule],
   template: `
     <footer class="c-fOYOSN">
-      <a (click)="navigateTo('contact')" class="c-iFbaKH">
+      <a (click)="navigateTo('contact')" (keyup)="navigateTo('contact')" class="c-iFbaKH" tabindex="0">
         <span class="c-heOjaG">Email</span><i class="c-dRBBau ri-mail-line"></i>
       </a>
       <a href="https://github.com/pxradox" target="_blank" class="c-iFbaKH">
