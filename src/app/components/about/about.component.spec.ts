@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutComponent } from './about.component';
-import { NotificationService } from 'src/app/services/notification.service';
+import { NotificationService } from '../../services/notification.service';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -8,7 +8,7 @@ describe('AboutComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AboutComponent],
+      imports: [AboutComponent], // Utilisez le tableau 'imports' au lieu de 'declarations'
       providers: [NotificationService],
     });
 
