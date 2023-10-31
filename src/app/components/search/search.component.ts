@@ -1,5 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { SearchService } from 'src/app/services/search.service';
 import { SearchItem } from './search-item';
@@ -11,45 +19,92 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div id="{{searchElementId}}" *ngIf="isSearchModuleVisible" class="c-hWUbGb">
+    <div
+      id="{{ searchElementId }}"
+      *ngIf="isSearchModuleVisible"
+      class="c-hWUbGb">
       <div class="c-iqTopT">
         <div>
-          <input #searchInput type="text" placeholder="Type a command or search…" i18n-placeholder (input)="performSearch($event)" class="c-ekIDDi" autocomplete="off" role="combobox" spellcheck="false" aria-expanded="true" aria-controls="kbar-listbox" aria-activedescendant="kbar-listbox-item-1">
+          <input
+            #searchInput
+            type="text"
+            placeholder="Type a command or search…"
+            i18n-placeholder
+            (input)="performSearch($event)"
+            class="c-ekIDDi"
+            autocomplete="off"
+            role="combobox"
+            spellcheck="false"
+            aria-expanded="true"
+            aria-controls="kbar-listbox"
+            aria-activedescendant="kbar-listbox-item-1" />
           <div class="c-ertyu">
             <div role="listbox" id="kbar-listbox" class="c-oeiotf">
               <div class="c-title" *ngIf="generalCPItems.length > 0">
                 <div class="c-kcmNSe" i18n>General</div>
               </div>
-              <div *ngFor="let item of generalCPItems" (click)="handleClick(item)" (keyup)="handleClick(item)" role="option" aria-selected="true" class="c-condee" tabindex="0">
+              <div
+                *ngFor="let item of generalCPItems"
+                (click)="handleClick(item)"
+                (keyup)="handleClick(item)"
+                role="option"
+                aria-selected="true"
+                class="c-condee"
+                tabindex="0">
                 <div class="PJLV-iljSPlw-css">
                   <div class="c-eSulSs">
                     <div class="c-imgsize">
-                      <img alt="link" class="c-imgsize" aria-hidden="true" [src]="item.src" loading="lazy">
+                      <img
+                        alt="link"
+                        class="c-imgsize"
+                        aria-hidden="true"
+                        [src]="item.src"
+                        loading="lazy" />
                     </div>
                     <div class="c-fixGjY">
                       <span>{{ item.label }}</span>
                     </div>
                   </div>
                   <div aria-hidden="true" class="c-jpnQgQ">
-                    <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{ shortcut }}</kbd>
+                    <kbd
+                      *ngFor="let shortcut of item.shortcut"
+                      class="c-ddlVgM"
+                      >{{ shortcut }}</kbd
+                    >
                   </div>
                 </div>
               </div>
               <div *ngIf="pageCPItems.length > 0" class="c-title">
                 <div class="c-kcmNSe" i18n>Go to</div>
               </div>
-              <div *ngFor="let item of pageCPItems" (click)="handleClick(item)" (keyup)="handleClick(item)" role="option" aria-selected="true" class="c-condee" tabindex="0">
+              <div
+                *ngFor="let item of pageCPItems"
+                (click)="handleClick(item)"
+                (keyup)="handleClick(item)"
+                role="option"
+                aria-selected="true"
+                class="c-condee"
+                tabindex="0">
                 <div class="PJLV-iljSPlw-css">
                   <div class="c-eSulSs">
                     <div class="c-imgsize">
-                      <img alt="link" class="c-imgsize" aria-hidden="true" [src]="item.src" loading="lazy">
+                      <img
+                        alt="link"
+                        class="c-imgsize"
+                        aria-hidden="true"
+                        [src]="item.src"
+                        loading="lazy" />
                     </div>
                     <div class="c-fixGjY">
                       <span>{{ item.label }}</span>
                     </div>
                   </div>
                   <div aria-hidden="true" class="c-jpnQgQ">
-                    <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{ shortcut }}</kbd>
+                    <kbd
+                      *ngFor="let shortcut of item.shortcut"
+                      class="c-ddlVgM"
+                      >{{ shortcut }}</kbd
+                    >
                   </div>
                 </div>
               </div>
@@ -62,7 +117,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit, AfterViewInit {
-  public searchElementId = "search-element-id";
+  public searchElementId = 'search-element-id';
   public search$: Observable<boolean> | undefined;
   public isSearchModuleVisible = false;
   public searchTerm = '';
@@ -73,54 +128,67 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
   @ViewChild('searchInput') searchInput!: ElementRef;
 
-  constructor(private router: Router, private cdr: ChangeDetectorRef, private shortcutService: ShortcutService, private searchService: SearchService) {}
+  constructor(
+    private router: Router,
+    private cdr: ChangeDetectorRef,
+    private shortcutService: ShortcutService,
+    private searchService: SearchService
+  ) {}
 
   ngOnInit(): void {
     this.initialize();
   }
 
   ngAfterViewInit(): void {
-    this.searchService.searchSubject.asObservable().subscribe((display: boolean) => {
-      this.isSearchModuleVisible = display;
+    this.searchService.searchSubject
+      .asObservable()
+      .subscribe((display: boolean) => {
+        this.isSearchModuleVisible = display;
 
-      if (this.isSearchModuleVisible) {
-        this.initialize();
-        this.cdr.detectChanges();
-        this.searchInput.nativeElement.focus();
-      }
-    });
+        if (this.isSearchModuleVisible) {
+          this.initialize();
+          this.cdr.detectChanges();
+          this.searchInput.nativeElement.focus();
+        }
+      });
   }
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent): void {
     const idElt = (event.target as HTMLElement).id;
-    if (idElt !== null && idElt !== undefined && idElt === this.searchElementId) {
+    if (
+      idElt !== null &&
+      idElt !== undefined &&
+      idElt === this.searchElementId
+    ) {
       this.searchService.hideSearchModule();
     }
   }
 
   handleClick(item: SearchItem): void {
     switch (item.name) {
-      case "link":
-        this.shortcutService.handleKeyPress(new KeyboardEvent('keydown', {
-          key: 'L',
-          code: 'KeyL',
-          keyCode: 76,
-          which: 76,
-          altKey: false,
-          ctrlKey: false,
-          shiftKey: false,
-          metaKey: false
-        }));
+      case 'link':
+        this.shortcutService.handleKeyPress(
+          new KeyboardEvent('keydown', {
+            key: 'L',
+            code: 'KeyL',
+            keyCode: 76,
+            which: 76,
+            altKey: false,
+            ctrlKey: false,
+            shiftKey: false,
+            metaKey: false,
+          })
+        );
         break;
 
-      case "source":
+      case 'source':
         window.open(item.link, '_blank');
         break;
 
-      case "home":
-      case "about":
-      case "contact":
+      case 'home':
+      case 'about':
+      case 'contact':
         this.searchService.hideSearchModule();
         this.router.navigate([item.name]);
         break;
@@ -140,24 +208,29 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.pageItemsList();
   }
 
-  private filterItems(items: Array<SearchItem>, searchTerm: string): Array<SearchItem> {
-    return items.filter(result => result.label.toLowerCase().includes(searchTerm));
+  private filterItems(
+    items: Array<SearchItem>,
+    searchTerm: string
+  ): Array<SearchItem> {
+    return items.filter(result =>
+      result.label.toLowerCase().includes(searchTerm)
+    );
   }
 
   private pageItemsList(): void {
     this.pageItems = [];
     this.pageItems.push(
       {
-        name: "home",
-        src: "../../../assets/svg/home.svg",
+        name: 'home',
+        src: '../../../assets/svg/home.svg',
         label: $localize`Home`,
-        shortcut: ["X", "H"]
+        shortcut: ['H'],
       },
       {
-        name: "about",
-        src: "../../../assets/svg/about.svg",
+        name: 'about',
+        src: '../../../assets/svg/about.svg',
         label: $localize`About`,
-        shortcut: ["X", "A"]
+        shortcut: ['A'],
       }
     );
     this.pageCPItems = this.pageItems;
@@ -167,24 +240,24 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.generalItems = [];
     this.generalItems.push(
       {
-        name: "link",
-        src: "../../../assets/svg/link.svg",
+        name: 'link',
+        src: '../../../assets/svg/link.svg',
         label: $localize`Copy link`,
-        shortcut: ["L"]
+        shortcut: ['L'],
       },
       {
-        name: "contact",
-        src: "../../../assets/svg/contact.svg",
+        name: 'contact',
+        src: '../../../assets/svg/contact.svg',
         label: $localize`Send email`,
-        shortcut: ["E"]
+        shortcut: ['C'],
       },
       {
-        name: "source",
-        src: "../../../assets/svg/source.svg",
+        name: 'source',
+        src: '../../../assets/svg/source.svg',
         label: $localize`View source`,
-        link: "https://github.com/pxradox/mulume",
-        shortcut: ["S"]
-      },
+        link: 'https://github.com/pxradox/mulume',
+        shortcut: ['S'],
+      }
     );
     this.generalCPItems = this.generalItems;
   }

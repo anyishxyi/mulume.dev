@@ -2,6 +2,6 @@
  * notification type
  */
 export interface Notification {
-  title: string,
-  message: string
+  title: string;
+  message: string;
 }

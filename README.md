@@ -4,7 +4,6 @@
 
 [![Déployer avec Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pxradox/mulume)
 
-
 ## Technology stack
 
 - **Front-end:** [Angular](https://angular.io/)

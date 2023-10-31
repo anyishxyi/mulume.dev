@@ -15,11 +15,15 @@ import { Notification } from '../../services/notification';
           <i class="ri-checkbox-circle-fill"></i>
         </div>
         <div class="content">
-          <div class="title">{{notification?.title}}</div>
-          <div class="message">{{notification?.message}}</div>
+          <div class="title">{{ notification?.title }}</div>
+          <div class="message">{{ notification?.message }}</div>
         </div>
         <div class="close-button">
-          <i (click)="hideNotification()" (keyup)="hideNotification()" class="ri-close-fill" tabindex="0"></i>
+          <i
+            (click)="hideNotification()"
+            (keyup)="hideNotification()"
+            class="ri-close-fill"
+            tabindex="0"></i>
         </div>
       </div>
     </div>
@@ -42,7 +46,9 @@ export class NotificationComponent implements OnInit {
     this.message$.subscribe((notificationReceived: Notification) => {
       this.notification = notificationReceived;
       this.isNotificationVisible = true;
-      setTimeout(() => { this.isNotificationVisible = false; }, 3000);
+      setTimeout(() => {
+        this.isNotificationVisible = false;
+      }, 3000);
     });
   }
 }

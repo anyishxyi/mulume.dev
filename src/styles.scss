@@ -43,7 +43,7 @@
 
 //Phones
 @media screen and (max-device-width: 1200px) {
-  [class*="-section"] {
+  [class*='-section'] {
     margin-left: 10%;
   }
 
@@ -62,7 +62,7 @@
 
 //Laptops
 @media screen and (min-device-width: 1200px) {
-  [class*="-section"] {
+  [class*='-section'] {
     margin-left: 22%;
   }
 
@@ -83,7 +83,8 @@
   font-family: var(--fonts-body);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;
@@ -97,7 +98,8 @@ a {
   cursor: pointer;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   opacity: 0.8;
 }
 
@@ -152,6 +154,6 @@ strong {
   font-weight: 500;
 }
 
-[class*="-section"] {
+[class*='-section'] {
   flex: 1;
 }

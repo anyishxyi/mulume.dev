@@ -10,7 +10,10 @@ export class ShortcutService {
   private shortcuts: Map<string, () => void> = new Map();
   private sequence = '';
 
-  constructor(private notificationService: NotificationService, private searchService: SearchService) {}
+  constructor(
+    private notificationService: NotificationService,
+    private searchService: SearchService
+  ) {}
 
   registerShortcut(key: string, action: () => void) {
     this.shortcuts.set(key, action);
@@ -22,7 +25,7 @@ export class ShortcutService {
       return;
     }
 
-    if (event.ctrlKey && key === 'k') {
+    if (event.ctrlKey && key === 'm') {
       this.searchService.showSearchModule();
       event.preventDefault();
       return;

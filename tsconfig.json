@@ -15,14 +15,9 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "useDefineForClassFields": false,
-    "types": [
-      "@netlify/functions"
-    ]
+    "types": ["@netlify/functions"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

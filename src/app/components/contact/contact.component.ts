@@ -13,19 +13,50 @@ import { HttpClient } from '@angular/common/http';
         <div class="c-ekdbvK">
           <h1 class="c-dcthTY c-dcthTY-icWhawk-css" i18n>Send me an email.</h1>
           <div class="PJLV">
-            <p i18n><strong>I love chatting</strong> so if you are engineers, students, passionate creators, or others, I am open to inspiring exchanges!<strong> Contact me</strong> and together, let's explore opportunities for collaboration. I will respond as soon as possible.</p>
-            <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">
+            <p i18n>
+              <strong>I love chatting</strong> so if you are engineers,
+              students, passionate creators, or others, I am open to inspiring
+              exchanges!<strong> Contact me</strong> and together, let's explore
+              opportunities for collaboration. I will respond as soon as
+              possible.
+            </p>
+            <form
+              (ngSubmit)="sendEmail()"
+              #contactForm="ngForm"
+              class="c-ccFqkw">
               <div class="c-fAxVVm">
                 <label for="name" class="c-cpOVIy" i18n>Names</label>
-                <input id="name" name="user.name" [(ngModel)]="user.name" type="text" placeholder="Marian Croak" class="c-jLJtXG" required>
+                <input
+                  id="name"
+                  name="user.name"
+                  [(ngModel)]="user.name"
+                  type="text"
+                  placeholder="Marian Croak"
+                  class="c-jLJtXG"
+                  required />
               </div>
               <div class="c-fAxVVm">
                 <label for="email" class="c-cpOVIy" i18n>Email</label>
-                <input id="email" name="user.email" [(ngModel)]="user.email" type="email" placeholder="marian@croak.com" class="c-jLJtXG" required>
+                <input
+                  id="email"
+                  name="user.email"
+                  [(ngModel)]="user.email"
+                  type="email"
+                  placeholder="marian@croak.com"
+                  class="c-jLJtXG"
+                  required />
               </div>
               <div class="c-fAxVVm">
                 <label for="message" class="c-cpOVIy" i18n>Message</label>
-                <textarea id="message" name="user.message" [(ngModel)]="user.message" placeholder="How can I help you ?" i18n-placeholder rows="4" class="c-jLJtXG" required></textarea>
+                <textarea
+                  id="message"
+                  name="user.message"
+                  [(ngModel)]="user.message"
+                  placeholder="How can I help you ?"
+                  i18n-placeholder
+                  rows="4"
+                  class="c-jLJtXG"
+                  required></textarea>
               </div>
               <div class="c-fAxVVm">
                 <button type="submit" class="c-eKOIRR" i18n>Send</button>
@@ -36,7 +67,7 @@ import { HttpClient } from '@angular/common/http';
       </section>
     </main>
   `,
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
   constructor(private http: HttpClient) {}
@@ -44,15 +75,19 @@ export class ContactComponent {
   user = {
     name: '',
     email: '',
-    message: ''
+    message: '',
   };
 
   sendEmail() {
     const emailData = {
       email: this.user.email,
-      message: this.user.message
+      message: this.user.message,
     };
 
-    this.http.post('../../../../.netlify/functions/sendEmail', emailData).subscribe(response => { console.log(response); });
+    this.http
+      .post('../../../../.netlify/functions/sendEmail', emailData)
+      .subscribe(response => {
+        console.log(response);
+      });
   }
 }
