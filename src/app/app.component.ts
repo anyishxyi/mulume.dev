@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterModule,
+} from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShortcutComponent } from './components/shortcut/shortcut.component';
@@ -11,7 +16,15 @@ import { filter } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule,  HeaderComponent, FooterComponent, NotificationComponent, SearchComponent, ShortcutComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HeaderComponent,
+    FooterComponent,
+    NotificationComponent,
+    SearchComponent,
+    ShortcutComponent,
+  ],
   template: `
     <div class="container">
       <app-header (pageChange)="changePage($event)"></app-header>
@@ -22,23 +35,30 @@ import { filter } from 'rxjs';
       <app-shortcut></app-shortcut>
     </div>
   `,
-  styles: [`
-    .container {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-  `],
+  styles: [
+    `
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    `,
+  ],
 })
-
 export class AppComponent implements OnInit {
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private titleService: Title
+  ) {}
 
   ngOnInit(): void {
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
-      const pageTitle = this.getPageTitle(this.activatedRoute);
-      this.titleService.setTitle(pageTitle);
-    });
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const pageTitle = this.getPageTitle(this.activatedRoute);
+        this.titleService.setTitle(pageTitle);
+      });
   }
 
   changePage(page: string) {
@@ -46,14 +66,14 @@ export class AppComponent implements OnInit {
   }
 
   private getPageTitle(route: ActivatedRoute): string {
-    const defaultTitle = "Jean-Paul Mulume";
+    const defaultTitle = 'Jean-Paul Mulume';
     let returnedTitle = defaultTitle;
     if (route.firstChild) {
       return this.getPageTitle(route.firstChild);
     }
 
     if (route.snapshot.data && route.snapshot.data.title) {
-      returnedTitle = $localize `${route.snapshot.data.title}`;
+      returnedTitle = $localize`${route.snapshot.data.title}`;
       returnedTitle += ` // ${defaultTitle}`;
     }
 

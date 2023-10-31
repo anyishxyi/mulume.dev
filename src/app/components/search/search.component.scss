@@ -67,7 +67,7 @@
   color: var(--primary);
 }
 
-input:not([type="range"]):not([type="color"]) {
+input:not([type='range']):not([type='color']) {
   writing-mode: horizontal-tb !important;
 }
 

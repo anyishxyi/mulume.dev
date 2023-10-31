@@ -127,7 +127,8 @@ a {
   transition: opacity var(--transitions-duration) ease-in-out;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   opacity: 0.8;
 }
 

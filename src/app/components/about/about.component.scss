@@ -59,7 +59,7 @@
 }
 
 .c-dcthTY-icHFxNc-css {
-  background-image: linear-gradient( 135deg, var(--pink) 0%, var(--purple) 100% );
+  background-image: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
 }
 
 .c-dcthTY {
@@ -103,7 +103,9 @@
   outline: 0px;
   padding: 8px 10px;
   text-decoration: none;
-  transition: background var(--transitions-duration) ease-in-out,color var(--transitions-duration) ease-in-out;
+  transition:
+    background var(--transitions-duration) ease-in-out,
+    color var(--transitions-duration) ease-in-out;
 }
 
 .download-icon {
@@ -142,7 +144,8 @@
   margin: 0px;
 }
 
-h3, h3 a {
+h3,
+h3 a {
   color: var(--primary);
   font-size: 18px;
   margin: 20px 0 0;
