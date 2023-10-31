@@ -14,16 +14,12 @@ import { HttpClient } from '@angular/common/http';
           <h1 class="c-dcthTY c-dcthTY-icWhawk-css" i18n>Send me an email.</h1>
           <div class="PJLV">
             <p i18n>
-              <strong>I love chatting</strong> so if you are engineers,
-              students, passionate creators, or others, I am open to inspiring
-              exchanges!<strong> Contact me</strong> and together, let's explore
-              opportunities for collaboration. I will respond as soon as
+              <strong>I love chatting</strong> so if you are engineers, students, passionate
+              creators, or others, I am open to inspiring exchanges!<strong> Contact me</strong> and
+              together, let's explore opportunities for collaboration. I will respond as soon as
               possible.
             </p>
-            <form
-              (ngSubmit)="sendEmail()"
-              #contactForm="ngForm"
-              class="c-ccFqkw">
+            <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">
               <div class="c-fAxVVm">
                 <label for="name" class="c-cpOVIy" i18n>Names</label>
                 <input
@@ -84,10 +80,8 @@ export class ContactComponent {
       message: this.user.message,
     };
 
-    this.http
-      .post('../../../../.netlify/functions/sendEmail', emailData)
-      .subscribe(response => {
-        console.log(response);
-      });
+    this.http.post('../../../../.netlify/functions/sendEmail', emailData).subscribe((response) => {
+      console.log(response);
+    });
   }
 }

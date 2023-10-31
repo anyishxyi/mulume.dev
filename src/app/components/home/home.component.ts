@@ -13,9 +13,7 @@ import { SearchService } from 'src/app/services/search.service';
         <p i18n>
           <strong
             >Software Engineer at
-            <a href="https://inventiv-it.fr/" target="blank"
-              >Inventiv IT</a
-            ></strong
+            <a href="https://inventiv-it.fr/" target="blank">Inventiv IT</a></strong
           >
           <br />
           Interested in craftsmanship
