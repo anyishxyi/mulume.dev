@@ -11,9 +11,7 @@ import { Notification } from '../../services/notification';
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
-          <h1 class="c-dcthTY c-dcthTY-icHFxNc-css" i18n>
-            Innovate. Collaborate. Progress.
-          </h1>
+          <h1 class="c-dcthTY c-dcthTY-icHFxNc-css" i18n>Innovate. Collaborate. Progress.</h1>
           <div class="c-exEMEo">
             <div class="c-jkdSvk">
               <span class="img-container">
@@ -27,17 +25,16 @@ import { Notification } from '../../services/notification';
             </div>
             <div class="c-jkdSvk mt-5">
               <p class="c-chZgZR c-chZgZR-ibmnswx-css" i18n>
-                <strong>Hello, I am Jean-Paul NGALULA MULUME</strong>.
-                Passionate about computer development and technological
-                innovation, I am a creator of web applications.
+                <strong>Hello, I am Jean-Paul NGALULA MULUME</strong>. Passionate about computer
+                development and technological innovation, I am a creator of web applications.
               </p>
               <p class="c-chZgZR" i18n>
                 Currently <strong>Software engineer</strong> at Innov IT in
                 <strong>Paris, France</strong>
               </p>
               <p class="c-chZgZR" i18n>
-                I love dark mode, open source, and side projects. When I'm not
-                working, I like to do some fitness, watch movies and
+                I love dark mode, open source, and side projects. When I'm not working, I like to do
+                some fitness, watch movies and
                 <strong>eat cheese</strong>.
               </p>
             </div>
@@ -117,9 +114,7 @@ import { Notification } from '../../services/notification';
           <div class="experience">
             <h3 i18n>Back end developer</h3>
             <p>
-              <a href="https://www.fpi-rdc.cd/" target="_blank" i18n
-                >Industry Promotion Fund</a
-              >
+              <a href="https://www.fpi-rdc.cd/" target="_blank" i18n>Industry Promotion Fund</a>
               <span i18n> • Kinshasa, D.R.Congo</span>
             </p>
             <p>
@@ -161,17 +156,14 @@ export class AboutComponent {
   seniority(startDateString: string, endDateString: string): string {
     const startDate: Date = new Date(startDateString);
     const endDate: Date =
-      endDateString.toLowerCase() === 'today'
-        ? new Date()
-        : new Date(endDateString);
+      endDateString.toLowerCase() === 'today' ? new Date() : new Date(endDateString);
     const millisecondsInDay = 24 * 60 * 60 * 1000;
     const millisecondsInMonth = 30.44 * millisecondsInDay;
 
     const diffMilliseconds = Math.abs(endDate.getTime() - startDate.getTime());
 
     let months = Math.floor(diffMilliseconds / millisecondsInMonth);
-    const remainingDays =
-      (diffMilliseconds % millisecondsInMonth) / millisecondsInDay;
+    const remainingDays = (diffMilliseconds % millisecondsInMonth) / millisecondsInDay;
 
     if (remainingDays >= 1) {
       months++;

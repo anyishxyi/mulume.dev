@@ -19,10 +19,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div
-      id="{{ searchElementId }}"
-      *ngIf="isSearchModuleVisible"
-      class="c-hWUbGb">
+    <div id="{{ searchElementId }}" *ngIf="isSearchModuleVisible" class="c-hWUbGb">
       <div class="c-iqTopT">
         <div>
           <input
@@ -66,11 +63,9 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
                     </div>
                   </div>
                   <div aria-hidden="true" class="c-jpnQgQ">
-                    <kbd
-                      *ngFor="let shortcut of item.shortcut"
-                      class="c-ddlVgM"
-                      >{{ shortcut }}</kbd
-                    >
+                    <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{
+                      shortcut
+                    }}</kbd>
                   </div>
                 </div>
               </div>
@@ -100,11 +95,9 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
                     </div>
                   </div>
                   <div aria-hidden="true" class="c-jpnQgQ">
-                    <kbd
-                      *ngFor="let shortcut of item.shortcut"
-                      class="c-ddlVgM"
-                      >{{ shortcut }}</kbd
-                    >
+                    <kbd *ngFor="let shortcut of item.shortcut" class="c-ddlVgM">{{
+                      shortcut
+                    }}</kbd>
                   </div>
                 </div>
               </div>
@@ -140,27 +133,21 @@ export class SearchComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.searchService.searchSubject
-      .asObservable()
-      .subscribe((display: boolean) => {
-        this.isSearchModuleVisible = display;
+    this.searchService.searchSubject.asObservable().subscribe((display: boolean) => {
+      this.isSearchModuleVisible = display;
 
-        if (this.isSearchModuleVisible) {
-          this.initialize();
-          this.cdr.detectChanges();
-          this.searchInput.nativeElement.focus();
-        }
-      });
+      if (this.isSearchModuleVisible) {
+        this.initialize();
+        this.cdr.detectChanges();
+        this.searchInput.nativeElement.focus();
+      }
+    });
   }
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent): void {
     const idElt = (event.target as HTMLElement).id;
-    if (
-      idElt !== null &&
-      idElt !== undefined &&
-      idElt === this.searchElementId
-    ) {
+    if (idElt !== null && idElt !== undefined && idElt === this.searchElementId) {
       this.searchService.hideSearchModule();
     }
   }
@@ -208,13 +195,8 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.pageItemsList();
   }
 
-  private filterItems(
-    items: Array<SearchItem>,
-    searchTerm: string
-  ): Array<SearchItem> {
-    return items.filter(result =>
-      result.label.toLowerCase().includes(searchTerm)
-    );
+  private filterItems(items: Array<SearchItem>, searchTerm: string): Array<SearchItem> {
+    return items.filter((result) => result.label.toLowerCase().includes(searchTerm));
   }
 
   private pageItemsList(): void {

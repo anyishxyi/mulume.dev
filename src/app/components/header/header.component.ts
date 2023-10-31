@@ -28,9 +28,7 @@ interface Link {
               (keyup)="navigateTo(link.name)"
               class="c-gKCiCk"
               tabindex="1">
-              <span class="c-cohhyn" data-projection-id="7">{{
-                link.label
-              }}</span>
+              <span class="c-cohhyn" data-projection-id="7">{{ link.label }}</span>
             </a>
           </li>
         </ul>
