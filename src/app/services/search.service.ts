@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class SearchService {
   public searchSubject = new Subject<boolean>();
-  private isDisplayed: boolean = false;
+  private isDisplayed = false;
 
   showSearchModule() {
     this.isDisplayed = !this.isDisplayed;

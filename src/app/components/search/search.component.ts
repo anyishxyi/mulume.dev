@@ -20,7 +20,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
               <div class="c-title" *ngIf="generalCPItems.length > 0">
                 <div class="c-kcmNSe" i18n>General</div>
               </div>
-              <div *ngFor="let item of generalCPItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
+              <div *ngFor="let item of generalCPItems" (click)="handleClick(item)" (keyup)="handleClick(item)" role="option" aria-selected="true" class="c-condee" tabindex="0">
                 <div class="PJLV-iljSPlw-css">
                   <div class="c-eSulSs">
                     <div class="c-imgsize">
@@ -38,7 +38,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
               <div *ngIf="pageCPItems.length > 0" class="c-title">
                 <div class="c-kcmNSe" i18n>Go to</div>
               </div>
-              <div *ngFor="let item of pageCPItems" (click)="handleClick(item)" role="option" aria-selected="true" class="c-condee">
+              <div *ngFor="let item of pageCPItems" (click)="handleClick(item)" (keyup)="handleClick(item)" role="option" aria-selected="true" class="c-condee" tabindex="0">
                 <div class="PJLV-iljSPlw-css">
                   <div class="c-eSulSs">
                     <div class="c-imgsize">
@@ -64,8 +64,8 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
 export class SearchComponent implements OnInit, AfterViewInit {
   public searchElementId = "search-element-id";
   public search$: Observable<boolean> | undefined;
-  public isSearchModuleVisible: Boolean = false;
-  public searchTerm: string = '';
+  public isSearchModuleVisible = false;
+  public searchTerm = '';
   public generalItems: Array<SearchItem> = new Array<SearchItem>();
   public pageItems: Array<SearchItem> = new Array<SearchItem>();
   public generalCPItems: Array<SearchItem> = new Array<SearchItem>();
@@ -102,7 +102,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   handleClick(item: SearchItem): void {
     switch (item.name) {
       case "link":
-        const kbEvent = new KeyboardEvent('keydown', {
+        this.shortcutService.handleKeyPress(new KeyboardEvent('keydown', {
           key: 'L',
           code: 'KeyL',
           keyCode: 76,
@@ -111,8 +111,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
           ctrlKey: false,
           shiftKey: false,
           metaKey: false
-        });
-        this.shortcutService.handleKeyPress(kbEvent);
+        }));
         break;
 
       case "source":

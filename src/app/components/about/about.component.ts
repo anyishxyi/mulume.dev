@@ -25,7 +25,7 @@ import { Notification } from '../../services/notification';
             </div>
           </div>
           <div class="c-UazGY">
-            <a (click)="downloadCV()" role="button" class="c-gfjkKg" i18n>
+            <a (click)="downloadCV()" (keyup)="downloadCV()" role="button" class="c-gfjkKg" tabindex="0" i18n>
               <img src="/assets/svg/download.svg" alt="download icon" i18n-alt class="download-icon"/>Download my resume here
             </a>
           </div>
@@ -107,7 +107,7 @@ import { Notification } from '../../services/notification';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  private cvLink: string = '../../../assets/cv/cv_jeanpaul_ngalula.pdf';
+  private cvLink = '../../../assets/cv/cv_jeanpaul_ngalula.pdf';
 
   constructor(private notificationService: NotificationService) {}
 

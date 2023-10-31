@@ -19,7 +19,7 @@ import { Notification } from '../../services/notification';
           <div class="message">{{notification?.message}}</div>
         </div>
         <div class="close-button">
-          <i (click)="hideNotification()" class="ri-close-fill"></i>
+          <i (click)="hideNotification()" (keyup)="hideNotification()" class="ri-close-fill" tabindex="0"></i>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@ import { Notification } from '../../services/notification';
 export class NotificationComponent implements OnInit {
   public message$: Observable<Notification> | undefined;
   public notification: Notification | null = null;
-  public isNotificationVisible: Boolean = false;
+  public isNotificationVisible = false;
 
   constructor(private notificationService: NotificationService) {}
 

@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "665e68bd-5e10-4d60-8aeb-af4e847b62d2"
+    "analytics": "665e68bd-5e10-4d60-8aeb-af4e847b62d2",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -37,8 +40,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
             "localize": false
           },
@@ -71,7 +79,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "localize": ["en"]
+              "localize": [
+                "en"
+              ]
             },
             "fr": {
               "buildOptimizer": false,
@@ -80,7 +90,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true,
-              "localize": ["fr"]
+              "localize": [
+                "fr"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -101,6 +113,15 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "mulume:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
