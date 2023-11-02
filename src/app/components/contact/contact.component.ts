@@ -79,9 +79,6 @@ export class ContactComponent {
       email: this.user.email,
       message: this.user.message,
     };
-
-    this.http.post('../../../../.netlify/functions/sendEmail', emailData).subscribe((response) => {
-      console.log(response);
-    });
+    console.log(emailData);
   }
 }
