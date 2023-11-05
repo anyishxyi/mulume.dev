@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
     <main class="c-cUWjlu c-cUWjlu-iepuTsq-css">
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
-          <h1 class="c-dcthTY c-dcthTY-icWhawk-css" i18n>Send me an email.</h1>
+          <h1 class="c-dcthTY c-dcthTY-icWhawk-css">Send me an email.</h1>
           <div class="PJLV">
-            <p i18n>
+            <p>
               <strong>I love chatting</strong> so if you are engineers, students, passionate
               creators, or others, I am open to inspiring exchanges!<strong> Contact me</strong> and
               together, let's explore opportunities for collaboration. I will respond as soon as
@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
             </p>
             <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">
               <div class="c-fAxVVm">
-                <label for="name" class="c-cpOVIy" i18n>Names</label>
+                <label for="name" class="c-cpOVIy">Names</label>
                 <input
                   id="name"
                   name="user.name"
@@ -31,7 +31,7 @@ import { FormsModule } from '@angular/forms';
                   required />
               </div>
               <div class="c-fAxVVm">
-                <label for="email" class="c-cpOVIy" i18n>Email</label>
+                <label for="email" class="c-cpOVIy">Email</label>
                 <input
                   id="email"
                   name="user.email"
@@ -42,19 +42,18 @@ import { FormsModule } from '@angular/forms';
                   required />
               </div>
               <div class="c-fAxVVm">
-                <label for="message" class="c-cpOVIy" i18n>Message</label>
+                <label for="message" class="c-cpOVIy">Message</label>
                 <textarea
                   id="message"
                   name="user.message"
                   [(ngModel)]="user.message"
                   placeholder="How can I help you ?"
-                  i18n-placeholder
                   rows="4"
                   class="c-jLJtXG"
                   required></textarea>
               </div>
               <div class="c-fAxVVm">
-                <button type="submit" class="c-eKOIRR" i18n>Send</button>
+                <button type="submit" class="c-eKOIRR">Send</button>
               </div>
             </form>
           </div>

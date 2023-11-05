@@ -8,11 +8,10 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { Observable } from 'rxjs';
-import { SearchService } from 'src/app/services/search.service';
+import { SearchService } from '../../services/search.service';
 import { SearchItem } from './search-item';
 import { Router } from '@angular/router';
-import { ShortcutService } from 'src/app/services/shortcut.service';
+import { ShortcutService } from '../../services/shortcut.service';
 
 @Component({
   selector: 'app-search',
@@ -26,7 +25,6 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
             #searchInput
             type="text"
             placeholder="Type a command or search…"
-            i18n-placeholder
             (input)="performSearch($event)"
             class="c-ekIDDi"
             autocomplete="off"
@@ -38,7 +36,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
           <div class="c-ertyu">
             <div role="listbox" id="kbar-listbox" class="c-oeiotf">
               <div class="c-title" *ngIf="generalCPItems.length > 0">
-                <div class="c-kcmNSe" i18n>General</div>
+                <div class="c-kcmNSe">General</div>
               </div>
               <div
                 *ngFor="let item of generalCPItems"
@@ -70,7 +68,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
                 </div>
               </div>
               <div *ngIf="pageCPItems.length > 0" class="c-title">
-                <div class="c-kcmNSe" i18n>Go to</div>
+                <div class="c-kcmNSe">Go to</div>
               </div>
               <div
                 *ngFor="let item of pageCPItems"
@@ -111,9 +109,7 @@ import { ShortcutService } from 'src/app/services/shortcut.service';
 })
 export class SearchComponent implements OnInit, AfterViewInit {
   public searchElementId = 'search-element-id';
-  public search$: Observable<boolean> | undefined;
   public isSearchModuleVisible = false;
-  public searchTerm = '';
   public generalItems: Array<SearchItem> = new Array<SearchItem>();
   public pageItems: Array<SearchItem> = new Array<SearchItem>();
   public generalCPItems: Array<SearchItem> = new Array<SearchItem>();
@@ -205,13 +201,13 @@ export class SearchComponent implements OnInit, AfterViewInit {
       {
         name: 'home',
         src: '../../../assets/svg/home.svg',
-        label: $localize`Home`,
+        label: `Home`,
         shortcut: ['H'],
       },
       {
         name: 'about',
         src: '../../../assets/svg/about.svg',
-        label: $localize`About`,
+        label: `About`,
         shortcut: ['A'],
       }
     );
@@ -224,19 +220,19 @@ export class SearchComponent implements OnInit, AfterViewInit {
       {
         name: 'link',
         src: '../../../assets/svg/link.svg',
-        label: $localize`Copy link`,
+        label: `Copy link`,
         shortcut: ['L'],
       },
       {
         name: 'contact',
         src: '../../../assets/svg/contact.svg',
-        label: $localize`Send email`,
+        label: `Send email`,
         shortcut: ['C'],
       },
       {
         name: 'source',
         src: '../../../assets/svg/source.svg',
-        label: $localize`View source`,
+        label: `View source`,
         link: 'https://github.com/pxradox/mulume',
         shortcut: ['S'],
       }

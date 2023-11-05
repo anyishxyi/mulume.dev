@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SearchService } from 'src/app/services/search.service';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { SearchService } from 'src/app/services/search.service';
     <main>
       <section class="home-section">
         <h1>Jean-Paul NGALULA MULUME</h1>
-        <p i18n>
+        <p>
           <strong
             >Software Engineer at
             <a href="https://inventiv-it.fr/" target="blank">Inventiv IT</a></strong
@@ -18,7 +18,7 @@ import { SearchService } from 'src/app/services/search.service';
           <br />
           Interested in craftsmanship
         </p>
-        <button (click)="displaySearchModule($event)" class="c-gfjkKg" i18n>
+        <button (click)="displaySearchModule($event)" class="c-gfjkKg">
           Press <kbd>ctrl</kbd> <kbd>M</kbd> to start →
         </button>
       </section>
