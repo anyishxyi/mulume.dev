@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { NotificationService } from 'src/app/services/notification.service';
-import { Notification } from 'src/app/services/notification';
+import { NotificationService } from './notification.service';
+import { Notification } from './notification';
 import { SearchService } from './search.service';
 
 @Injectable({

@@ -2,9 +2,9 @@ import { Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Clipboard } from '@angular/cdk/clipboard';
-import { ShortcutService } from 'src/app/services/shortcut.service';
-import { environment } from 'src/environments/environment';
-import { SearchService } from 'src/app/services/search.service';
+import { ShortcutService } from '../../services/shortcut.service';
+import { environment } from '../../../environments/environment';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-shortcut',
@@ -42,7 +42,7 @@ export class ShortcutComponent implements OnInit {
         this.searchService.hideSearchModule();
       });
       this.shortcutService.registerShortcut('S', () => {
-        const link = 'https://github.com/pxradox/mulume';
+        const link = 'https://github.com/pxradox/mulume.dev';
         window.open(link, '_blank');
       });
     }

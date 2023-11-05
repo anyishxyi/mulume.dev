@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { SearchService } from 'src/app/services/search.service';
+import { SearchService } from '../../services/search.service';
 
 interface Link {
   name: string;
@@ -59,11 +59,11 @@ export class HeaderComponent {
   links: Link[] = [
     {
       name: 'about',
-      label: $localize`About`,
+      label: `About`,
     },
     {
       name: 'contact',
-      label: $localize`Contact`,
+      label: `Contact`,
     },
   ];
 
