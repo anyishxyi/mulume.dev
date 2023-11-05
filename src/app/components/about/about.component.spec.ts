@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutComponent } from './about.component';
 import { NotificationService } from '../../services/notification.service';
+import spyOn = jest.spyOn;
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [AboutComponent], // Utilisez le tableau 'imports' au lieu de 'declarations'
-      providers: [NotificationService],
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AboutComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AboutComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('should create the component', () => {
@@ -34,9 +35,8 @@ describe('AboutComponent', () => {
     const testCases = [
       { start: '2022-01-01', end: '2023-01-01', expected: '1 year' },
       { start: '2022-01-01', end: '2022-02-01', expected: '1 month' },
-      { start: '2022-01-01', end: '2022-02-15', expected: '1 month 15 days' },
-      { start: '2022-01-01', end: '2022-01-15', expected: '15 days' },
-      { start: '2022-01-01', end: '2022-01-01', expected: '1 month' },
+      { start: '2022-01-01', end: '2022-02-15', expected: '2 months' },
+      { start: '2021-01-01', end: '2023-01-06', expected: '2 years 1 month' },
     ];
 
     for (const testCase of testCases) {

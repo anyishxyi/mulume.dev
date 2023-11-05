@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -66,8 +65,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  constructor(private http: HttpClient) {}
-
   user = {
     name: '',
     email: '',

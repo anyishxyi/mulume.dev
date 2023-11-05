@@ -11,28 +11,27 @@ import { Notification } from '../../services/notification';
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
-          <h1 class="c-dcthTY c-dcthTY-icHFxNc-css" i18n>Innovate. Collaborate. Progress.</h1>
+          <h1 class="c-dcthTY c-dcthTY-icHFxNc-css">Innovate. Collaborate. Progress.</h1>
           <div class="c-exEMEo">
             <div class="c-jkdSvk">
               <span class="img-container">
                 <img
                   alt="jeanpaul photo"
-                  i18n-alt
                   aria-hidden="true"
                   src="/assets/img/jeanpaul_ng.png"
                   loading="lazy" />
               </span>
             </div>
             <div class="c-jkdSvk mt-5">
-              <p class="c-chZgZR c-chZgZR-ibmnswx-css" i18n>
+              <p class="c-chZgZR c-chZgZR-ibmnswx-css">
                 <strong>Hello, I am Jean-Paul NGALULA MULUME</strong>. Passionate about computer
                 development and technological innovation, I am a creator of web applications.
               </p>
-              <p class="c-chZgZR" i18n>
+              <p class="c-chZgZR">
                 Currently <strong>Software engineer</strong> at Innov IT in
                 <strong>Paris, France</strong>
               </p>
-              <p class="c-chZgZR" i18n>
+              <p class="c-chZgZR">
                 I love dark mode, open source, and side projects. When I'm not working, I like to do
                 some fitness, watch movies and
                 <strong>eat cheese</strong>.
@@ -45,84 +44,82 @@ import { Notification } from '../../services/notification';
               (keyup)="downloadCV()"
               role="button"
               class="c-gfjkKg"
-              tabindex="0"
-              i18n>
+              tabindex="0">
               <img
                 src="/assets/svg/download.svg"
                 alt="download icon"
-                i18n-alt
                 class="download-icon" />Download my resume here
             </a>
           </div>
-          <h2 i18n>Professional Career</h2>
+          <h2>Professional Career</h2>
           <div class="experience">
-            <h3 i18n>Software engineer</h3>
+            <h3>Software engineer</h3>
             <p>
               <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>
-              <span i18n> • Paris, France</span>
+              <span> • Paris, France</span>
             </p>
             <p>
               <span>{{ 'Mar 2023' | date: 'MMM yyyy' }}</span>
               <span> – </span>
               <span>Today</span>
               <span> • </span>
-              <span i18n>{{ seniority('03/01/2023', 'today') }}</span>
+              <span>{{ seniority('03/01/2023', 'today') }}</span>
             </p>
           </div>
           <div class="experience">
-            <h3 i18n>Software Engineer - Consultant</h3>
+            <h3>Software Engineer - Consultant</h3>
             <p>
               <a href="https://www.alten.fr/" target="_blank">Alten</a>
-              <span i18n> • Paris, France</span>
+              <span> • Paris, France</span>
             </p>
             <p>
               <span>{{ 'Jul 2021' | date: 'MMM yyyy' }}</span>
               <span> – </span>
               <span>{{ 'Feb 2023' | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>{{ seniority('07/01/2021', '02/07/2023') }}</span>
+              <span>{{ seniority('07/01/2021', '02/07/2023') }}</span>
             </p>
           </div>
           <div class="experience">
-            <h3 i18n>Software Engineer</h3>
+            <h3>Software Engineer</h3>
             <p>
               <a href="https://www.ownest.io/" target="_blank">Ownest</a>
-              <span i18n> • Paris, France</span>
+              <span> • Paris, France</span>
             </p>
             <p>
               <span>{{ 'Sept. 2018' | date: 'MMM yyyy' }}</span>
               <span> – </span>
               <span>{{ 'Jan. 2021' | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>{{ seniority('09/01/2018', '01/05/2021') }}</span>
+              <span>{{ seniority('09/01/2018', '01/05/2021') }}</span>
             </p>
           </div>
           <div class="experience">
-            <h3 i18n>Back end developer</h3>
+            <h3>Back end developer</h3>
             <p>
               <a href="https://www.jobnroll.fr/" target="_blank">Jobnroll</a>
-              <span i18n> • Paris, France</span>
+              <span> • Paris, France</span>
             </p>
             <p>
               <span>{{ 'Jun 2018' | date: 'MMM yyyy' }}</span>
               <span> – </span>
               <span>{{ 'Aug 2018' | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>{{ seniority('06/01/2018', '08/06/2018') }}</span>
+              <span>{{ seniority('06/01/2018', '08/06/2018') }}</span>
             </p>
           </div>
           <div class="experience">
-            <h3 i18n>Back end developer</h3>
+            <h3>Back end developer</h3>
             <p>
-              <a href="https://www.fpi-rdc.cd/" target="_blank" i18n>Industry Promotion Fund</a>
-              <span i18n> • Kinshasa, D.R.Congo</span>
+              <a href="https://www.fpi-rdc.cd/" target="_blank">Industry Promotion Fund</a>
+              <span> • Kinshasa, D.R.Congo</span>
             </p>
             <p>
               <span>{{ 'Jun 2016' | date: 'MMM yyyy' }}</span>
               <span> – </span>
               <span>{{ 'Aug 2017' | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span i18n>1 year 3 months</span>
+              <span>1 year 3 months</span>
             </p>
           </div>
         </div>
@@ -141,8 +138,8 @@ export class AboutComponent {
    */
   downloadCV(): void {
     const notification: Notification = {
-      title: $localize`Download...`,
-      message: $localize`Thank you for downloading my resume`,
+      title: `Download...`,
+      message: `Thank you for downloading my resume`,
     };
     const link = document.createElement('a');
     link.href = this.cvLink;
