@@ -14,14 +14,13 @@
     "start:fr": "ng serve --configuration=fr",
     "start:prerender": "ng run mulume:prerender",
     "test": "jest",
-    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pxradox/mulume"
+    "url": "https://github.com/pxradox/mulume.dev"
   },
   "author": "jeanpaulngalula07@gmail.com",
   "license": "MIT",
@@ -52,6 +51,7 @@
     "@angular/cli": "^16.2.8",
     "@angular/compiler-cli": "^16.2.11",
     "@angular/localize": "^16.2.11",
+    "@inrupt/jest-jsdom-polyfills": "^2.5.0",
     "@types/jest": "^29.5.7",
     "@types/node": "^18.17.6",
     "@typescript-eslint/eslint-plugin": "5.62.0",

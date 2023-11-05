@@ -30,7 +30,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser-esbuild",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/mulume",
             "index": "src/index.html",
