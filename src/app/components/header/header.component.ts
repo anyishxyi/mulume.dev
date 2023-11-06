@@ -48,14 +48,6 @@ interface Link {
 })
 export class HeaderComponent {
   @Output() pageChange: EventEmitter<string> = new EventEmitter();
-
-  constructor(private searchService: SearchService) {}
-
-  displaySearchModule(event: Event) {
-    event.stopPropagation();
-    this.searchService.showSearchModule();
-  }
-
   links: Link[] = [
     {
       name: 'about',
@@ -66,6 +58,15 @@ export class HeaderComponent {
       label: `Contact`,
     },
   ];
+
+  constructor(private searchService: SearchService) {}
+
+  displaySearchModule(event: Event) {
+    if (event) {
+      event.stopPropagation();
+      this.searchService.showSearchModule();
+    }
+  }
 
   navigateTo(page: string): void {
     this.pageChange.emit(page);
