@@ -18,4 +18,17 @@ describe('FooterComponent', () => {
   it('should create the component', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit pageChange event when navigateTo is called', () => {
+    const page = 'contact';
+    let emittedPage: string | undefined;
+
+    component.pageChange.subscribe((p) => {
+      emittedPage = p;
+    });
+
+    component.navigateTo(page);
+
+    expect(emittedPage).toBe(page);
+  });
 });
