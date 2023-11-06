@@ -186,13 +186,13 @@ export class SearchComponent implements OnInit, AfterViewInit {
     }
   }
 
+  filterItems(items: Array<SearchItem>, searchTerm: string): Array<SearchItem> {
+    return items.filter((result) => result.label.toLowerCase().includes(searchTerm));
+  }
+
   private initialize(): void {
     this.generateItemList();
     this.pageItemsList();
-  }
-
-  private filterItems(items: Array<SearchItem>, searchTerm: string): Array<SearchItem> {
-    return items.filter((result) => result.label.toLowerCase().includes(searchTerm));
   }
 
   private pageItemsList(): void {
