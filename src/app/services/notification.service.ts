@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Notification } from './notification';
 
 @Injectable({
@@ -11,5 +11,9 @@ export class NotificationService {
 
   showNotification(notif: Notification) {
     this.notificationSubject.next(notif);
+  }
+
+  getNotification(): Observable<Notification> {
+    return this.notification$;
   }
 }

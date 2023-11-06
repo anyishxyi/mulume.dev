@@ -42,7 +42,7 @@ export class NotificationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.message$ = this.notificationService.notification$;
+    this.message$ = this.notificationService.getNotification();
     this.message$.subscribe((notificationReceived: Notification) => {
       this.notification = notificationReceived;
       this.isNotificationVisible = true;
