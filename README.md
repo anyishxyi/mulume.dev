@@ -2,25 +2,25 @@
 
 > My personal website :)
 
-[![Déployer avec Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pxradox/mulume)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?repository=https://github.com/pxradox/mulume.dev)
 
 ## Technology stack
 
 - **Front-end:** [Angular](https://angular.io/)
-- **Deployment:** [Netlify](https://www.netlify.com/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
 ## Running locally
 
 1. Clone this repo:
 
 ```sh
-$ git clone https://github.com/pxradox/mulume.git
+$ git clone https://github.com/pxradox/mulume.dev.git
 ```
 
 2. Then go to the project's folder:
 
 ```sh
-cd mulume
+cd mulume.dev
 ```
 
 3. Install all dependencies:
@@ -37,4 +37,4 @@ yarn start
 
 ## License
 
-[MIT License](https://opensource.org/license/mit/) © Jean-Paul NGALULA MULUME
+[MIT License](./LICENSE) © Jean-Paul NGALULA MULUME
