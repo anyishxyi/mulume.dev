@@ -13,7 +13,7 @@ import { SearchService } from '../../services/search.service';
         <p>
           <strong
             >Software Engineer at
-            <a href="https://inventiv-it.fr/" target="blank">Inventiv IT</a></strong
+            <a href="https://www.capgemini.com/" target="blank">Capgemini</a></strong
           >
           <br />
           Interested in craftsmanship

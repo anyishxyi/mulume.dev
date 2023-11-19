@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import mailjet from 'node-mailjet';
+// import mailjet from 'node-mailjet';
 
 @Component({
   selector: 'app-contact',
