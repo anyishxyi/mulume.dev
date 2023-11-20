@@ -19,7 +19,7 @@ describe('ContactComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it ('should send an email successfull', () => {
-    component.sendEmail();
+  it('should send an email successfull', () => {
+    component.onSubmit();
   });
 });

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Actor } from './actor';
 // import mailjet from 'node-mailjet';
 
 @Component({
@@ -19,13 +20,13 @@ import { FormsModule } from '@angular/forms';
               together, let's explore opportunities for collaboration. I will respond as soon as
               possible.
             </p>
-            <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="c-ccFqkw">
+            <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="c-ccFqkw">
               <div class="c-fAxVVm">
                 <label for="name" class="c-cpOVIy">Names</label>
                 <input
                   id="name"
-                  name="user.name"
-                  [(ngModel)]="user.name"
+                  name="name"
+                  [(ngModel)]="actor.name"
                   type="text"
                   placeholder="Marian Croak"
                   class="c-jLJtXG"
@@ -35,26 +36,27 @@ import { FormsModule } from '@angular/forms';
                 <label for="email" class="c-cpOVIy">Email</label>
                 <input
                   id="email"
-                  name="user.email"
-                  [(ngModel)]="user.email"
+                  name="email"
+                  [(ngModel)]="actor.email"
                   type="email"
                   placeholder="marian@croak.com"
                   class="c-jLJtXG"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
                   required />
               </div>
               <div class="c-fAxVVm">
                 <label for="message" class="c-cpOVIy">Message</label>
                 <textarea
                   id="message"
-                  name="user.message"
-                  [(ngModel)]="user.message"
+                  name="message"
+                  [(ngModel)]="actor.message"
                   placeholder="How can I help you ?"
                   rows="4"
                   class="c-jLJtXG"
                   required></textarea>
               </div>
               <div class="c-fAxVVm">
-                <button type="submit" class="c-eKOIRR">Send</button>
+                <button type="submit" class="c-eKOIRR" [disabled]="!contactForm.valid">Send</button>
               </div>
             </form>
           </div>
@@ -65,17 +67,9 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  user = {
-    name: '',
-    email: '',
-    message: '',
-  };
+  actor = new Actor();
 
-  sendEmail() {
-    const emailData = {
-      email: this.user.email,
-      message: this.user.message,
-    };
-    console.log(emailData);
+  onSubmit() {
+    console.log(this.actor);
   }
 }
