@@ -48,5 +48,5 @@ Thumbs.db
 # Others
 package-lock.json
 
-# Envi
-.env
+# Env
+src/environments/environment.ts
