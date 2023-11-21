@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import mailjet from 'node-mailjet';
 import { Actor } from './actor';
-// import mailjet from 'node-mailjet';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -70,6 +71,34 @@ export class ContactComponent {
   actor = new Actor();
 
   onSubmit() {
-    console.log(this.actor);
+    const mailjetClient = mailjet.apiConnect(environment.MJ_API_KEY, environment.MJ_API_SECRET);
+    const request = mailjetClient.post('send', { version: 'v3.1' }).request({
+      Messages: [
+        {
+          From: {
+            Email: this.actor.email,
+            Name: this.actor.name,
+          },
+          To: [
+            {
+              Email: environment.MY_EMAIL,
+              Name: 'Jean-Paul NGALULA',
+            },
+          ],
+          Subject: 'Message from my portfolio!',
+          TextPart: 'Dear passenger 1, welcome to Mailjet! May the delivery force be with you!',
+          HTMLPart:
+            '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you! baby !',
+        },
+      ],
+    });
+
+    request
+      .then((result: any) => {
+        console.log(result.body);
+      })
+      .catch((err: any) => {
+        console.log(err.statusCode);
+      });
   }
 }
