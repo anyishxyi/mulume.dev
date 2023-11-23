@@ -6,7 +6,7 @@
     "build": "ng build --configuration=production",
     "ci": "yarn clean-dist && yarn clean-modules && yarn install --frozen-lockfile",
     "clean-all": "yarn clean-dist && yarn clean-modules && rm yarn.lock",
-    "clean-dist": "rimraf dist/*",
+    "clean-dist": "rm -rf dist",
     "clean-modules": "rm -rf node_modules",
     "dev": "ng serve",
     "i18n": "ng extract-i18n --output-path src/locale",
