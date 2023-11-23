@@ -9,18 +9,27 @@ on:
 
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Set Node.js 20.9.0
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run build --if-present
+          node-version: 20.9.0
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: ci # will run `yarn ci` command
+
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build # will run `yarn build` command
+
+      - name: Test the application
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test # will run `yarn test` command

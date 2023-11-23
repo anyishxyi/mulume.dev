@@ -4,9 +4,10 @@
   "version": "3.0.0",
   "scripts": {
     "build": "ng build --configuration=production",
-    "clean-all": "npm run clean-dist && npm run clean-modules && rm package-lock.json",
+    "ci": "yarn clean-dist && yarn clean-modules && yarn install --frozen-lockfile",
+    "clean-all": "yarn clean-dist && yarn clean-modules && rm yarn.lock",
     "clean-dist": "rimraf dist/*",
-    "clean-modules": "rimraf node_modules/*",
+    "clean-modules": "rm -rf node_modules",
     "dev": "ng serve",
     "i18n": "ng extract-i18n --output-path src/locale",
     "prettier": "npx prettier --write .",
