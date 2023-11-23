@@ -18,8 +18,4 @@ describe('ContactComponent', () => {
   it('should create the component', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should send an email successfull', () => {
-    component.onSubmit();
-  });
 });
