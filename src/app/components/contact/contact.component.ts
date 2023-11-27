@@ -70,7 +70,7 @@ import { Notification, NotificationType } from '../../services/notification';
 })
 export class ContactComponent {
   actor = new Actor();
-
+  
   constructor(
     private http: HttpClient,
     private notificationService: NotificationService
