@@ -31,6 +31,13 @@
 .icon {
   margin-right: 10px;
   margin-top: -6px;
+}
+
+.icon-color-failed {
+  color: var(--red);
+}
+
+.icon-color-success {
   color: var(--green);
 }
 

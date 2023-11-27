@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NotificationService } from '../../services/notification.service';
-import { Notification } from '../../services/notification';
+import { Notification, NotificationType } from '../../services/notification';
 
 @Component({
   selector: 'app-notification',
@@ -11,8 +11,13 @@ import { Notification } from '../../services/notification';
   template: `
     <div *ngIf="isNotificationVisible" class="notification-container">
       <div class="notification">
-        <div class="icon">
+        <div
+          *ngIf="notification?.type === NotificationType.SUCCESS"
+          class="icon icon-color-success">
           <i class="ri-checkbox-circle-fill"></i>
+        </div>
+        <div *ngIf="notification?.type === NotificationType.FAILED" class="icon icon-color-failed">
+          <i class="ri-close-circle-fill"></i>
         </div>
         <div class="content">
           <div class="title">{{ notification?.title }}</div>
@@ -51,4 +56,6 @@ export class NotificationComponent implements OnInit {
       }, 3000);
     });
   }
+
+  protected readonly NotificationType = NotificationType;
 }

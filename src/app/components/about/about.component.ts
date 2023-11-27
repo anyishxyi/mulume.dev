@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NotificationService } from '../../services/notification.service';
-import { Notification } from '../../services/notification';
+import { Notification, NotificationType } from '../../services/notification';
 
 @Component({
   selector: 'app-about',
@@ -140,6 +140,7 @@ export class AboutComponent {
     const notification: Notification = {
       title: `Download...`,
       message: `Thank you for downloading my resume`,
+      type: NotificationType.SUCCESS,
     };
     const link = document.createElement('a');
     link.href = this.cvLink;

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import mailjet from 'node-mailjet';
+import { HttpClient } from '@angular/common/http';
 import { Actor } from './actor';
-import { environment } from '../../../environments/environment';
+import { NotificationService } from '../../services/notification.service';
+import { Notification, NotificationType } from '../../services/notification';
 
 @Component({
   selector: 'app-contact',
@@ -70,35 +71,27 @@ import { environment } from '../../../environments/environment';
 export class ContactComponent {
   actor = new Actor();
 
-  onSubmit() {
-    const mailjetClient = mailjet.apiConnect(environment.MJ_API_KEY, environment.MJ_API_SECRET);
-    const request = mailjetClient.post('send', { version: 'v3.1' }).request({
-      Messages: [
-        {
-          From: {
-            Email: this.actor.email,
-            Name: this.actor.name,
-          },
-          To: [
-            {
-              Email: environment.MY_EMAIL,
-              Name: 'Jean-Paul NGALULA',
-            },
-          ],
-          Subject: 'Message from my portfolio!',
-          TextPart: 'Dear passenger 1, welcome to Mailjet! May the delivery force be with you!',
-          HTMLPart:
-            '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you! baby !',
-        },
-      ],
-    });
+  constructor(
+    private http: HttpClient,
+    private notificationService: NotificationService
+  ) {}
 
-    request
-      .then((result: any) => {
-        console.log(result.body);
-      })
-      .catch((err: any) => {
-        console.log(err.statusCode);
-      });
+  onSubmit() {
+    this.http.post('/api/handler', this.actor).subscribe({
+      complete: () => {
+        this.notifyMessageSent('Message sent successfully...', NotificationType.SUCCESS);
+        this.actor = new Actor();
+      },
+      error: () => this.notifyMessageSent('Message failed...', NotificationType.FAILED),
+    });
+  }
+
+  private notifyMessageSent(message: string, type: NotificationType): void {
+    const notification: Notification = {
+      title: `Message`,
+      message,
+      type,
+    };
+    this.notificationService.showNotification(notification);
   }
 }
