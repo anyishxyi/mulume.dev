@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NotificationComponent } from './notification.component';
-import { Notification } from '../../services/notification';
+import { Notification, NotificationType } from '../../services/notification';
 import { Observable, of } from 'rxjs';
 import { NotificationService } from '../../services/notification.service';
 import { By } from '@angular/platform-browser';
@@ -30,6 +30,7 @@ describe('NotificationComponent', () => {
     const notification: Notification = {
       title: 'Test Title',
       message: 'Test Message',
+      type: NotificationType.SUCCESS,
     };
 
     const message$: Observable<Notification> = of(notification);
@@ -53,6 +54,7 @@ describe('NotificationComponent', () => {
     const notification: Notification = {
       title: 'Test Title',
       message: 'Test Message',
+      type: NotificationType.SUCCESS,
     };
 
     const message$: Observable<Notification> = of(notification);
