@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NotificationService } from './notification.service';
-import { Notification } from './notification';
+import { Notification, NotificationType } from './notification';
 import { SearchService } from './search.service';
 
 @Injectable({
@@ -48,6 +48,7 @@ export class ShortcutService {
     const notification: Notification = {
       title: $localize`Copied ;)`,
       message: $localize`You can now share this link...`,
+      type: NotificationType.SUCCESS,
     };
     this.notificationService.showNotification(notification);
   }

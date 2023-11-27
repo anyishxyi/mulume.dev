@@ -32,7 +32,8 @@ yarn install
 4. Run locally:
 
 ```sh
-yarn start
+yarn dev
+
 ```
 
 ## License
