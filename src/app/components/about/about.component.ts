@@ -18,7 +18,7 @@ import { Notification, NotificationType } from '../../services/notification';
                 <img
                   alt="jeanpaul photo"
                   aria-hidden="true"
-                  src="/assets/img/jeanpaul_ng.png"
+                  src="/assets/img/jeanpaul_nm.jpg"
                   loading="lazy" />
               </span>
             </div>
