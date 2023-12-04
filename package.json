@@ -74,8 +74,5 @@
     "ts-node": "^10.9.1",
     "typescript": "5.2",
     "husky": "^8.0.0"
-  },
-  "engines": {
-    "node": ">=20.5.0"
   }
 }
