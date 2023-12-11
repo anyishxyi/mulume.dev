@@ -9,7 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { SearchService } from '../../services/search.service';
-import { SearchItem } from './search-item';
+import { SearchItem, SearchItemNames, SearchItemShortcuts } from './search-item';
 import { Router } from '@angular/router';
 import { ShortcutService } from '../../services/shortcut.service';
 
@@ -165,13 +165,14 @@ export class SearchComponent implements OnInit, AfterViewInit {
         );
         break;
 
-      case 'source':
+      case SearchItemNames.SOURCE:
         window.open(item.link, '_blank');
         break;
 
-      case 'home':
-      case 'about':
-      case 'contact':
+      case SearchItemNames.HOME:
+      case SearchItemNames.ABOUT:
+      case SearchItemNames.CONTACT:
+      case SearchItemNames.PROJECTS:
         this.searchService.hideSearchModule();
         this.router.navigate([item.name]);
         break;
@@ -199,16 +200,22 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.pageItems = [];
     this.pageItems.push(
       {
-        name: 'home',
+        name: SearchItemNames.HOME,
         src: '../../../assets/svg/home.svg',
         label: `Home`,
-        shortcut: ['H'],
+        shortcut: [SearchItemShortcuts.HOME],
       },
       {
-        name: 'about',
+        name: SearchItemNames.ABOUT,
         src: '../../../assets/svg/about.svg',
         label: `About`,
-        shortcut: ['A'],
+        shortcut: [SearchItemShortcuts.ABOUT],
+      },
+      {
+        name: SearchItemNames.PROJECTS,
+        src: '../../../assets/svg/projects.svg',
+        label: `Projects`,
+        shortcut: [SearchItemShortcuts.PROJECTS],
       }
     );
     this.pageCPItems = this.pageItems;
@@ -218,23 +225,23 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.generalItems = [];
     this.generalItems.push(
       {
-        name: 'link',
+        name: SearchItemNames.LINK,
         src: '../../../assets/svg/link.svg',
         label: `Copy link`,
-        shortcut: ['L'],
+        shortcut: [SearchItemShortcuts.LINK],
       },
       {
-        name: 'contact',
+        name: SearchItemNames.CONTACT,
         src: '../../../assets/svg/contact.svg',
         label: `Send email`,
-        shortcut: ['C'],
+        shortcut: [SearchItemShortcuts.CONTACT],
       },
       {
-        name: 'source',
+        name: SearchItemNames.SOURCE,
         src: '../../../assets/svg/source.svg',
         label: `View source`,
         link: 'https://github.com/pxradox/mulume.dev',
-        shortcut: ['S'],
+        shortcut: [SearchItemShortcuts.SOURCE],
       }
     );
     this.generalCPItems = this.generalItems;

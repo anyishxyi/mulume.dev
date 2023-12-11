@@ -15,7 +15,7 @@ import { Notification, NotificationType } from '../../services/notification';
       <section class="c-EnlPs">
         <div class="c-ekdbvK">
           <h1 class="c-dcthTY c-dcthTY-icWhawk-css">Send me an email.</h1>
-          <div class="PJLV">
+          <div>
             <p>
               <strong>I love chatting</strong> so if you are engineers, students, passionate
               creators, or others, I am open to inspiring exchanges!<strong> Contact me</strong> and
@@ -70,7 +70,7 @@ import { Notification, NotificationType } from '../../services/notification';
 })
 export class ContactComponent {
   actor = new Actor();
-  
+
   constructor(
     private http: HttpClient,
     private notificationService: NotificationService
