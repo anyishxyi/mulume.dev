@@ -5,6 +5,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
 import { ShortcutService } from '../../services/shortcut.service';
 import { environment } from '../../../environments/environment';
 import { SearchService } from '../../services/search.service';
+import { SearchItemNames, SearchItemShortcuts } from '../search/search-item';
 
 @Component({
   selector: 'app-shortcut',
@@ -23,25 +24,28 @@ export class ShortcutComponent implements OnInit {
 
   ngOnInit() {
     if (this.shortcutService) {
-      this.shortcutService.registerShortcut('L', () => {
+      this.shortcutService.registerShortcut(SearchItemShortcuts.LINK, () => {
         this.clipboard.copy(`${this.appURL}${this.location.path()}`);
       });
-      this.shortcutService.registerShortcut('C', () => {
-        this.router.navigate(['contact']);
+      this.shortcutService.registerShortcut(SearchItemShortcuts.CONTACT, () => {
+        this.router.navigate([SearchItemNames.CONTACT]);
       });
-      this.shortcutService.registerShortcut('H', () => {
-        this.router.navigate(['home']);
+      this.shortcutService.registerShortcut(SearchItemShortcuts.HOME, () => {
+        this.router.navigate([SearchItemNames.HOME]);
       });
-      this.shortcutService.registerShortcut('A', () => {
-        this.router.navigate(['about']);
+      this.shortcutService.registerShortcut(SearchItemShortcuts.ABOUT, () => {
+        this.router.navigate([SearchItemNames.ABOUT]);
       });
-      this.shortcutService.registerShortcut('Control+m', () => {
+      this.shortcutService.registerShortcut(SearchItemShortcuts.PROJECTS, () => {
+        this.router.navigate([SearchItemNames.PROJECTS]);
+      });
+      this.shortcutService.registerShortcut(SearchItemShortcuts.SEARCH_MODULE, () => {
         this.searchService.showSearchModule();
       });
-      this.shortcutService.registerShortcut('Escape', () => {
+      this.shortcutService.registerShortcut(SearchItemShortcuts.ESCAPE, () => {
         this.searchService.hideSearchModule();
       });
-      this.shortcutService.registerShortcut('S', () => {
+      this.shortcutService.registerShortcut(SearchItemShortcuts.SOURCE, () => {
         const link = 'https://github.com/pxradox/mulume.dev';
         window.open(link, '_blank');
       });
