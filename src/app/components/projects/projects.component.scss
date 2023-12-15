@@ -20,6 +20,14 @@
   .hidden {
     display: none;
   }
+
+  .text-sm {
+    width: 2rem;
+  }
+
+  .mt-12 {
+    margin-top: 0;
+  }
 }
 
 //Desktop
@@ -29,11 +37,23 @@
   }
 
   form {
-    margin-top: 0em;
+    margin-top: 0;
   }
 
   th {
     text-align: center;
+  }
+
+  .mt-12 {
+    margin-top: 3rem;
+  }
+
+  .sm-hidden {
+    display: none;
+  }
+
+  .wide-width {
+    width: 8rem;
   }
 }
 
@@ -93,10 +113,6 @@ p {
 
 .w-full {
   width: 100%;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 table {
@@ -167,11 +183,6 @@ tr {
   font-weight: 600;
 }
 
-.text-sm {
-  font-size: .875rem;
-  line-height: 1.25rem;
-}
-
 .pr-8 {
   padding-right: 2rem;
 }
@@ -202,11 +213,6 @@ tbody {
 tr {
   display: table-row;
   vertical-align: inherit;
-}
-
-.text-sm {
-  font-size: .875rem;
-  line-height: 1.25rem;
 }
 
 .align-top {
@@ -253,10 +259,10 @@ menu, ol, ul {
 }
 
 ul {
-  margin-block-start: 1em;
+  margin-block-start: 0;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   padding-inline-start: 40px;
 }
 
@@ -332,10 +338,6 @@ ul {
 
 .font-medium {
   font-weight: 500;
-}
-
-.text-sm {
-  font-size: .875rem;
 }
 
 .items-baseline {
