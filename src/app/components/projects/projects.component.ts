@@ -119,13 +119,13 @@ export class ProjectsComponent implements OnInit {
       {
         year: '2023',
         title: 'My portfolio v2',
-        technologies: ['Angular', 'typescript', 'HTML/CSS', 'vercel/functions'],
+        technologies: ['Angular', 'TypeScript', 'HTML/CSS', 'Vercel/Functions'],
         link: 'https://mulume.dev',
       },
       {
         year: '2021',
         title: 'My portfolio v1',
-        technologies: ['Vue.js', 'javascript', 'HTML/CSS'],
+        technologies: ['Vue.js', 'JavaScript', 'HTML/CSS'],
         link: 'https://mulume-old.netlify.app',
       }
     );
