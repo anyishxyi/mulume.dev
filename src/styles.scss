@@ -49,7 +49,7 @@
   font-family: 'Neuzeit Grotesk Bold';
   src: url('assets/fonts/NeuzeitGro-Bol.ttf') format('truetype');
   font-weight: bold;
-  font-style: bold;
+  font-style: normal;
 }
 
 @font-face {
@@ -60,7 +60,7 @@
 }
 
 //Phones
-@media screen and (max-device-width: 1200px) {
+@media screen and (max-device-width: 961px) {
   [class*='-section'] {
     margin-left: 10%;
   }
@@ -78,8 +78,8 @@
   }
 }
 
-//Laptops
-@media screen and (min-device-width: 1200px) {
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media screen and (min-width:961px)  {
   [class*='-section'] {
     margin-left: 22%;
   }

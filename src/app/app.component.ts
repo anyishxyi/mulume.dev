@@ -23,11 +23,11 @@ import { filter } from 'rxjs';
   template: `
     <div class="container">
       <app-header (pageChange)="changePage($event)"></app-header>
-      <router-outlet></router-outlet>
+      <router-outlet />
       <app-footer (pageChange)="changePage($event)"></app-footer>
-      <app-notification></app-notification>
-      <app-search></app-search>
-      <app-shortcut></app-shortcut>
+      <app-notification />
+      <app-search />
+      <app-shortcut />
     </div>
   `,
   styles: [
