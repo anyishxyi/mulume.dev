@@ -14,7 +14,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
         tabindex="0">
         <span class="c-heOjaG">Email</span><i class="c-dRBBau ri-mail-line"></i>
       </a>
-      <a href="https://github.com/pxradox" target="_blank" class="c-iFbaKH">
+      <a href="https://github.com/anyishxyi" target="_blank" class="c-iFbaKH">
         <span class="c-heOjaG">GitHub</span><i class="c-dRBBau ri-github-line"></i>
       </a>
       <a href="https://linkedin.com/in/jeanpaulngalula" target="_blank" class="c-iFbaKH">
