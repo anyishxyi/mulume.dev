@@ -1,7 +1,7 @@
 //Phones
 /* smartphones, iPhone, portrait 480x320 phones */
 // eg iPhone 6/7/8
-@media screen and (min-width:320px) and (max-height: 700px)  {
+@media screen and (min-width: 320px) and (max-height: 700px) {
   .c-fhGAOp {
     font-size: 16px;
     line-height: 18px;
@@ -26,7 +26,7 @@
 }
 
 // eg iPhone 6/7/8 Plus
-@media screen and (min-width:320px) and (min-height: 700px)  {
+@media screen and (min-width: 320px) and (min-height: 700px) {
   .c-cUWjlu {
     padding-bottom: 35px;
   }
@@ -50,7 +50,7 @@
 }
 
 // eg: iPhone15 Pro, iPhone X
-@media screen and (min-width:320px) and (min-height: 750px)  {
+@media screen and (min-width: 320px) and (min-height: 750px) {
   .c-cUWjlu {
     padding-bottom: 75px;
   }
@@ -74,7 +74,7 @@
 }
 
 // eg: iPhone14 Pro Max
-@media screen and (min-width:320px) and (min-height: 900px) {
+@media screen and (min-width: 320px) and (min-height: 900px) {
   .c-cUWjlu {
     padding-bottom: 75px;
   }
@@ -98,7 +98,7 @@
 }
 
 /* big landscape tablets, laptops, and desktops */
-@media screen and (min-width:961px)  {
+@media screen and (min-width: 961px) {
   .c-fhGAOp {
     font-size: 26px;
     line-height: 18px;
