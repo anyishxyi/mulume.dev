@@ -53,3 +53,4 @@ package-lock.json
 .vercel
 .husky
 .vscode
+.nx/
