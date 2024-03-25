@@ -24,31 +24,45 @@ export class ShortcutComponent implements OnInit {
 
   ngOnInit() {
     if (this.shortcutService) {
-      this.shortcutService.registerShortcut(SearchItemShortcuts.LINK, () => {
-        this.clipboard.copy(`${this.appURL}${this.location.path()}`);
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.CONTACT, () => {
-        this.router.navigate([SearchItemNames.CONTACT]);
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.HOME, () => {
-        this.router.navigate([SearchItemNames.HOME]);
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.ABOUT, () => {
-        this.router.navigate([SearchItemNames.ABOUT]);
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.PROJECTS, () => {
-        this.router.navigate([SearchItemNames.PROJECTS]);
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.SEARCH_MODULE, () => {
-        this.searchService.showSearchModule();
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.ESCAPE, () => {
-        this.searchService.hideSearchModule();
-      });
-      this.shortcutService.registerShortcut(SearchItemShortcuts.SOURCE, () => {
-        const link = 'https://github.com/pxradox/mulume.dev';
-        window.open(link, '_blank');
-      });
+      const shortcuts = [
+        {
+          key: SearchItemShortcuts.LINK,
+          action: () => this.clipboard.copy(`${this.appURL}${this.location.path()}`),
+        },
+        {
+          key: SearchItemShortcuts.CONTACT,
+          action: () => this.router.navigate([SearchItemNames.CONTACT]),
+        },
+        {
+          key: SearchItemShortcuts.HOME,
+          action: () => this.router.navigate([SearchItemNames.HOME]),
+        },
+        {
+          key: SearchItemShortcuts.ABOUT,
+          action: () => this.router.navigate([SearchItemNames.ABOUT]),
+        },
+        {
+          key: SearchItemShortcuts.ARTICLES,
+          action: () => this.router.navigate([SearchItemNames.ARTICLES]),
+        },
+        {
+          key: SearchItemShortcuts.PROJECTS,
+          action: () => this.router.navigate([SearchItemNames.PROJECTS]),
+        },
+        {
+          key: SearchItemShortcuts.SEARCH_MODULE,
+          action: () => this.searchService.showSearchModule(),
+        },
+        { key: SearchItemShortcuts.ESCAPE, action: () => this.searchService.hideSearchModule() },
+        {
+          key: SearchItemShortcuts.SOURCE,
+          action: () => window.open('https://github.com/pxradox/mulume.dev', '_blank'),
+        },
+      ];
+
+      shortcuts.forEach((shortcut) =>
+        this.shortcutService.registerShortcut(shortcut.key, shortcut.action)
+      );
     }
   }
 

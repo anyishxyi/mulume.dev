@@ -54,6 +54,10 @@ export class HeaderComponent {
       label: `About`,
     },
     {
+      name: 'articles',
+      label: 'Articles',
+    },
+    {
       name: 'projects',
       label: 'Projects',
     },

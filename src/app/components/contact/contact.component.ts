@@ -77,7 +77,7 @@ export class ContactComponent {
   ) {}
 
   onSubmit() {
-    this.http.post('/api/handler', this.actor).subscribe({
+    this.http.post('/api/mail', this.actor).subscribe({
       complete: () => {
         this.notifyMessageSent('Message sent successfully...', NotificationType.SUCCESS);
         this.actor = new Actor();
