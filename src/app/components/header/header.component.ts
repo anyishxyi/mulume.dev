@@ -22,7 +22,7 @@ interface Link {
       >
       <nav class="c-cGucJb">
         <ul class="c-hRSBvv">
-          <li *ngFor="let link of links">
+          <li *ngFor="let link of links" [ngClass]="{ 'hide-on-mobile': link.name === 'contact' }">
             <a
               (click)="navigateTo(link.name)"
               (keyup)="navigateTo(link.name)"

@@ -12,7 +12,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 
     const transporter = nodemailer.createTransport({
-      host: process.env.host,
+      host: process.env.HOST,
       port: 465,
       secure: true,
       auth: {

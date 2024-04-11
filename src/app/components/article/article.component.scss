@@ -1,0 +1,26 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .c-cUWjlu {
+    padding-bottom: 50px;
+  }
+}
+
+//Desktop
+@media screen and (min-device-width: 1200px) {
+}
+
+.c-ekdbvK {
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article-header {
+  padding: 50px;
+  text-align: center;
+}

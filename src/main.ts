@@ -43,6 +43,12 @@ const routes: Routes = [
     loadComponent: () =>
       import('./app/components/articles/articles.component').then((c) => c.ArticlesComponent),
   },
+  {
+    path: 'article/:id',
+    data: { title: 'Article' },
+    loadComponent: () =>
+      import('./app/components/article/article.component').then((c) => c.ArticleComponent),
+  },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: '**', redirectTo: '/home' },
 ];

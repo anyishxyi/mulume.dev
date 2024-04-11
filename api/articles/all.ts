@@ -2,7 +2,7 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import fs from 'fs';
 import path from 'path';
 
-export default async function articles(_: VercelRequest, res: VercelResponse) {
+export default async function all(_: VercelRequest, res: VercelResponse) {
   try {
     const directoryPath = path.join(process.cwd(), 'src/assets/articles');
 
@@ -12,10 +12,9 @@ export default async function articles(_: VercelRequest, res: VercelResponse) {
         return;
       }
 
-      const mdFiles = files.filter((file: string) => file.endsWith('.md')).length;
+      const mdFiles = files.filter((file: string) => file.endsWith('.md'));
 
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).send({ count: mdFiles });
+      res.status(200).send({ files: mdFiles });
     });
   } catch (error) {
     res.status(500).send(0);

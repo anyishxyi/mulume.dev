@@ -93,8 +93,19 @@
   }
 }
 
+/* Apply to every phone */
+@media screen and (max-width: 900px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 /* big landscape tablets, laptops, and desktops */
 @media screen and (min-width: 961px) {
+  .hide-on-mobile {
+    display: block;
+  }
+
   .c-fhGAOp {
     font-size: 26px;
     line-height: 18px;
