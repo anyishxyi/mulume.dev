@@ -12,10 +12,6 @@
     margin-top: 10px;
   }
 
-  .c-gfsRMa {
-    margin-top: 0;
-  }
-
   .c-eEqOQi {
     font-size: 15px;
   }
@@ -97,8 +93,19 @@
   }
 }
 
+/* Apply to every phone */
+@media screen and (max-width: 900px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 /* big landscape tablets, laptops, and desktops */
 @media screen and (min-width: 961px) {
+  .hide-on-mobile {
+    display: block;
+  }
+
   .c-fhGAOp {
     font-size: 26px;
     line-height: 18px;
@@ -119,7 +126,7 @@
 }
 
 .c-gfsRMa-ieTYVcq-css {
-  padding: 10px 0 28px !important;
+  padding: 10px 0 6px !important;
 }
 
 .c-dRmGAT {

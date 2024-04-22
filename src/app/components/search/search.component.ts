@@ -171,6 +171,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
 
       case SearchItemNames.HOME:
       case SearchItemNames.ABOUT:
+      case SearchItemNames.ARTICLES:
       case SearchItemNames.CONTACT:
       case SearchItemNames.PROJECTS:
         this.searchService.hideSearchModule();
@@ -210,6 +211,12 @@ export class SearchComponent implements OnInit, AfterViewInit {
         src: '../../../assets/svg/about.svg',
         label: `About`,
         shortcut: [SearchItemShortcuts.ABOUT],
+      },
+      {
+        name: SearchItemNames.ARTICLES,
+        src: '../../../assets/svg/articles.svg',
+        label: `Articles`,
+        shortcut: [SearchItemShortcuts.ARTICLES],
       },
       {
         name: SearchItemNames.PROJECTS,

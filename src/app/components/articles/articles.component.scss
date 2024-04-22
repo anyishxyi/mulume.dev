@@ -1,0 +1,142 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  .c-cUWjlu {
+    padding-bottom: 50px;
+  }
+
+  .c-fSaYMf {
+    display: inline-block;
+  }
+
+  .c-gpWHDs {
+    text-align: left;
+  }
+}
+
+//Desktop
+@media screen and (min-device-width: 1200px) {
+  .c-fSaYMf {
+    display: flex;
+  }
+
+  .c-gpWHDs {
+    text-align: right;
+  }
+}
+
+*,
+:after,
+:before {
+  border: 0 solid #e5e7eb;
+}
+
+main {
+  display: block;
+}
+
+h2 {
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+
+.c-fCdXZe {
+  list-style: none;
+  margin: 10px 0px 0px;
+  padding: 0px;
+}
+
+.c-fSaYMf {
+  border: 0px;
+  color: var(--secondary);
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 20px 0px;
+  width: 100%;
+  opacity: 1;
+  transition: all var(--transitions-duration) ease-in-out;
+  text-decoration: none;
+  position: relative;
+}
+
+.c-ixeOpV {
+  border-bottom: 1px solid var(--hover);
+}
+
+.c-ixeOpV :hover {
+  color: var(--primary);
+}
+
+.c-jXjAdA {
+  display: block;
+  max-width: 500px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: left;
+}
+
+.c-gpWHDs {
+  color: var(--secondary);
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.c-cUWjlu {
+  overflow: hidden;
+  flex: 1 1 0%;
+}
+
+.c-EnlPs {
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--secondary);
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.c-ekdbvK {
+  margin: 0px auto;
+  max-width: 760px;
+  padding: 0px 20px;
+}
+
+.c-dcthTY-icWhawk-css {
+  background-image: linear-gradient(135deg, var(--yellow) 0%, var(--pink) 100%);
+}
+
+.c-dcthTY {
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+  vertical-align: middle;
+}
