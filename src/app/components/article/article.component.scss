@@ -5,22 +5,53 @@
   }
 }
 
-//Desktop
-@media screen and (min-device-width: 1200px) {
+.c-jEusvl {
+  font-size: 60px;
+  line-height: 80px;
 }
 
-.c-ekdbvK {
-  /* Set a specific height */
-  min-height: 100vh;
+.c-jEusvl {
+  color: var(--primary);
+  z-index: 3;
+}
 
-  /* Create the parallax scrolling effect */
+.c-hZAbru {
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  margin: 0px;
+  width: 100%;
+}
+
+.c-hAKjjp {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.article-header {
-  padding: 50px;
-  text-align: center;
+.article-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 32px;
+  text-align: justify;
+}
+
+.article-content {
+  color: var(--secondary);
+  max-width: 760px;
+  padding: 0 20px;
+  font-size: 16px;
 }

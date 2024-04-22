@@ -21,7 +21,7 @@ import { FormatArticlesPipe } from '../../pipe/format-articles.pipe';
             <h2>All Articles</h2>
             <ul id="content" class="mt-12 w-full border-collapse text-left">
               <li class="c-ixeOpV" *ngFor="let article of articles | formatArticles">
-                <span class="c-fSaYMf" (click)="showArticleDetail(article.title)">
+                <span class="c-fSaYMf" (click)="showArticleDetail(article.title, article.date)">
                   <span class="c-jXjAdA">{{ formatArticleTitle(article.title) }}</span>
                   <span class="c-gpWHDs">{{ article.date | date: 'mediumDate' }}</span>
                 </span>
@@ -46,8 +46,8 @@ export class ArticlesComponent implements OnInit {
     this.getArticles();
   }
 
-  showArticleDetail(id: string): void {
-    this.router.navigate(['/article', id]);
+  showArticleDetail(title: string, date: Date | null): void {
+    this.router.navigate(['/article', title], { info: [date] });
   }
 
   formatArticleTitle(title: string) {

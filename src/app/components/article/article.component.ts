@@ -1,8 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
+import { Article } from './article';
 
 @Component({
   selector: 'app-article',
@@ -10,26 +11,29 @@ import { MarkdownModule, provideMarkdown } from 'ngx-markdown';
   imports: [CommonModule, MarkdownModule],
   providers: [provideMarkdown()],
   template: `
-    <main>
-      <section class="c-EnlPs">
-        <div class="c-ekdbvK" [style.background-image]="'url(' + articleBackgroundImage + ')'">
-          <div class="article-header">
-            <h1>{{ articleTitle }}</h1>
-          </div>
-        </div>
-        <div class="article-body">
-          <markdown [data]="articleContent"></markdown>
-        </div>
-      </section>
-    </main>
+    <div class="parallax" [style.background-image]="'url(' + article.bgImage + ')'">
+      <h1 class="c-cnxBZg c-jEusvl">{{ article.title }}</h1>
+      <h2 class="c-hAKjjp c-hZAbru">
+        <time>{{ article.date | date: 'mediumDate' }}</time>
+        <span> • </span>
+        <span class="" [innerHTML]="article.bgCredit"></span>
+      </h2>
+    </div>
+    <div class="article-body">
+      <markdown [data]="article.content" class="article-content"></markdown>
+    </div>
   `,
   styleUrls: ['./article.component.scss'],
 })
 export class ArticleComponent implements OnInit {
-  articleID = 'article-example_1706396400000';
-  articleTitle: string = 'Thats my title';
-  articleBackgroundImage: string = '';
-  articleContent: string | undefined = '# Test';
+  article: Article = {
+    bgCredit: '',
+    bgImage: '',
+    content: '',
+    date: new Date(),
+    title: '',
+  };
+  artitleSubString: string | null = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -37,36 +41,38 @@ export class ArticleComponent implements OnInit {
   ) {}
 
   async ngOnInit(): Promise<void> {
-    this.getArticleTitle();
-    await this.loadMarkdownContent();
+    this.getArticleBackground();
+    await this.getArticle();
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const offset = window.pageYOffset;
-    const background = document.querySelector('.c-ekdbvK') as HTMLElement; // Spécifiez le type HTMLElement
-    if (background) {
-      background.style.backgroundPositionY = -offset * 0.5 + 'px';
-    }
-  }
-
-  getArticleTitle(): void {
+  getArticleBackground(): void {
     this.route.paramMap.subscribe((params) => {
-      const title = params.get('id');
-      if (title) {
-        this.articleBackgroundImage = `assets/img/${title}.jpeg`;
-        this.articleTitle = this.formatArticleTitle(title);
+      this.artitleSubString = params.get('id');
+      if (this.artitleSubString) {
+        this.article.bgImage = `assets/img/${this.artitleSubString}.jpg`;
       }
     });
   }
 
-  formatArticleTitle(title: string) {
-    const word = title.split('-').toString().replace(/,/g, ' ');
-    return word.charAt(0).toUpperCase() + word.slice(1);
+  async getArticle(): Promise<void> {
+    if (this.artitleSubString) {
+      const response: Article | undefined = await this.http
+        .get<Article>('/api/articles/find', {
+          params: { title: this.artitleSubString },
+          responseType: 'json',
+        })
+        .toPromise();
+
+      if (response) {
+        this.article.content = response.content;
+        this.article.date = new Date(Number(response.date));
+        this.article.title = response.title;
+        this.article.bgCredit = response.bgCredit;
+      }
+    }
   }
 
-  async loadMarkdownContent(): Promise<void> {
-    const markdownPath = `assets/articles/${this.articleID}.md`;
-    this.articleContent = await this.http.get(markdownPath, { responseType: 'text' }).toPromise();
+  customTransform(html: string): string {
+    return html.replace('<p>', '<p class="p-casaersz">');
   }
 }

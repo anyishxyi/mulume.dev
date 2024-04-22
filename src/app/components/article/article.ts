@@ -1,5 +1,7 @@
-export class Article {
-  title = '';
-  date = '';
-  link = '';
+export interface Article {
+  bgCredit: string;
+  bgImage: string;
+  content: string;
+  date: Date;
+  title: string;
 }

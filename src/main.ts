@@ -45,7 +45,7 @@ const routes: Routes = [
   },
   {
     path: 'article/:id',
-    data: { title: 'Article' },
+    data: { title: 'Article', date: new Date() },
     loadComponent: () =>
       import('./app/components/article/article.component').then((c) => c.ArticleComponent),
   },
