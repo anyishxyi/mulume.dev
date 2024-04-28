@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { HomeComponent } from './home.component';
 import { SearchService } from '../../services/search.service';
-import spyOn = jest.spyOn;
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -24,7 +24,7 @@ describe('HomeComponent', () => {
 
   it('should call displaySearchModule on button click', () => {
     const searchService = TestBed.inject(SearchService);
-    const showSearchModuleSpy = spyOn(searchService, 'showSearchModule');
+    const showSearchModuleSpy = vi.spyOn(searchService, 'showSearchModule');
 
     const button = fixture.debugElement.query(By.css('button'));
     button.nativeElement.click();

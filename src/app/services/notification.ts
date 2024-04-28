@@ -2,6 +2,7 @@
  * notification type
  */
 export interface Notification {
+  visibility: boolean;
   title: string;
   message: string;
   type: NotificationType;

@@ -49,7 +49,7 @@ export class ArticleComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       this.artitleSubString = params.get('id');
       if (this.artitleSubString) {
-        this.article.bgImage = `assets/img/${this.artitleSubString}.jpg`;
+        this.article.bgImage = `/img/${this.artitleSubString}.jpg`;
       }
     });
   }

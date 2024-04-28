@@ -69,7 +69,7 @@ import { Notification, NotificationType } from '../../services/notification';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  actor = new Actor();
+  actor: Actor = new Actor();
 
   constructor(
     private http: HttpClient,
@@ -88,6 +88,7 @@ export class ContactComponent {
 
   private notifyMessageSent(message: string, type: NotificationType): void {
     const notification: Notification = {
+      visibility: true,
       title: `Message`,
       message,
       type,

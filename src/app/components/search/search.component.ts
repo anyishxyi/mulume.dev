@@ -202,25 +202,25 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.pageItems.push(
       {
         name: SearchItemNames.HOME,
-        src: '../../../assets/svg/home.svg',
+        src: '/src/assets/svg/home.svg',
         label: `Home`,
         shortcut: [SearchItemShortcuts.HOME],
       },
       {
         name: SearchItemNames.ABOUT,
-        src: '../../../assets/svg/about.svg',
+        src: '/src/assets/svg/about.svg',
         label: `About`,
         shortcut: [SearchItemShortcuts.ABOUT],
       },
       {
         name: SearchItemNames.ARTICLES,
-        src: '../../../assets/svg/articles.svg',
+        src: '/src/assets/svg/articles.svg',
         label: `Articles`,
         shortcut: [SearchItemShortcuts.ARTICLES],
       },
       {
         name: SearchItemNames.PROJECTS,
-        src: '../../../assets/svg/projects.svg',
+        src: '/src/assets/svg/projects.svg',
         label: `Projects`,
         shortcut: [SearchItemShortcuts.PROJECTS],
       }
@@ -233,19 +233,19 @@ export class SearchComponent implements OnInit, AfterViewInit {
     this.generalItems.push(
       {
         name: SearchItemNames.LINK,
-        src: '../../../assets/svg/link.svg',
+        src: '/src/assets/svg/link.svg',
         label: `Copy link`,
         shortcut: [SearchItemShortcuts.LINK],
       },
       {
         name: SearchItemNames.CONTACT,
-        src: '../../../assets/svg/contact.svg',
+        src: '/src/assets/svg/contact.svg',
         label: `Send email`,
         shortcut: [SearchItemShortcuts.CONTACT],
       },
       {
         name: SearchItemNames.SOURCE,
-        src: '../../../assets/svg/source.svg',
+        src: '/src/assets/svg/source.svg',
         label: `View source`,
         link: 'https://github.com/pxradox/mulume.dev',
         shortcut: [SearchItemShortcuts.SOURCE],

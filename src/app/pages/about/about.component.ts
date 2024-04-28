@@ -18,7 +18,7 @@ import { Notification, NotificationType } from '../../services/notification';
                 <img
                   alt="jeanpaul photo"
                   aria-hidden="true"
-                  src="/assets/img/jeanpaul_nm.jpg"
+                  src="/src/assets/img/jeanpaul_nm.jpg"
                   loading="lazy" />
               </span>
             </div>
@@ -46,7 +46,7 @@ import { Notification, NotificationType } from '../../services/notification';
               class="c-gfjkKg"
               tabindex="0">
               <img
-                src="/assets/svg/download.svg"
+                src="/src/assets/svg/download.svg"
                 alt="download icon"
                 class="download-icon" />Download my resume here
             </a>
@@ -138,6 +138,7 @@ export class AboutComponent {
    */
   downloadCV(): void {
     const notification: Notification = {
+      visibility: true,
       title: `Download...`,
       message: `Thank you for downloading my resume`,
       type: NotificationType.SUCCESS,

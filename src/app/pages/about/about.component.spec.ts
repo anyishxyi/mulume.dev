@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { AboutComponent } from './about.component';
 import { NotificationService } from '../../services/notification.service';
-import spyOn = jest.spyOn;
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -23,7 +23,7 @@ describe('AboutComponent', () => {
 
   it('should trigger downloadCV and show notification', () => {
     const notificationService = TestBed.inject(NotificationService);
-    const downloadSpy = spyOn(notificationService, 'showNotification');
+    const downloadSpy = vi.spyOn(notificationService, 'showNotification');
 
     component.downloadCV();
 

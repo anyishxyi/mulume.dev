@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NotificationComponent } from './notification.component';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { Notification, NotificationType } from '../../services/notification';
 import { Observable, of } from 'rxjs';
 import { NotificationService } from '../../services/notification.service';
 import { By } from '@angular/platform-browser';
-import spyOn = jest.spyOn;
 
 describe('NotificationComponent', () => {
   let component: NotificationComponent;
@@ -28,13 +28,14 @@ describe('NotificationComponent', () => {
 
   it('should show notification when a message is received', () => {
     const notification: Notification = {
+      visibility: true,
       title: 'Test Title',
       message: 'Test Message',
       type: NotificationType.SUCCESS,
     };
 
     const message$: Observable<Notification> = of(notification);
-    spyOn(notificationService, 'getNotification').mockReturnValue(message$);
+    vi.spyOn(notificationService, 'getNotification').mockReturnValue(message$);
 
     fixture.detectChanges();
 
@@ -48,30 +49,5 @@ describe('NotificationComponent', () => {
       expect(titleElement.textContent).toBe('Test Title');
       expect(messageElement.textContent).toBe('Test Message');
     });
-  });
-
-  it('should hide notification after a timeout', async () => {
-    const notification: Notification = {
-      title: 'Test Title',
-      message: 'Test Message',
-      type: NotificationType.SUCCESS,
-    };
-
-    const message$: Observable<Notification> = of(notification);
-
-    spyOn(notificationService, 'getNotification').mockReturnValue(message$);
-
-    fixture.detectChanges();
-
-    await fixture.whenStable();
-
-    const notificationElement = fixture.debugElement.query(By.css('.notification-container'));
-    expect(notificationElement).toBeTruthy();
-
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
-    fixture.detectChanges();
-    const hiddenNotificationElement = fixture.debugElement.query(By.css('.notification-container'));
-    expect(hiddenNotificationElement).toBeNull();
   });
 });

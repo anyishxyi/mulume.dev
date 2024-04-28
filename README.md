@@ -6,7 +6,7 @@
 
 ## Technology stack
 
-- **Front-end:** [Angular](https://angular.io/)
+- **Fullstack:** [AnalogJS](https://analogjs.org/)
 - **Deployment:** [Vercel](https://vercel.com/)
 
 ## Running locally
