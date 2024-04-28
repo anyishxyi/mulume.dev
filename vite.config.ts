@@ -14,6 +14,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      nitro: {
+        preset: 'vercel',
+      },
       prerender: {
         routes: ['/home'],
       },
