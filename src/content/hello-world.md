@@ -2,7 +2,7 @@
 title: Hello world
 slug: hello-world-2024-04-29
 date: 04/29/2024
-coverImage: /src/assets/img/hello-world.jpg
+coverImage: /img/hello-world.jpg
 coverCredit: 'Photo by <a target="_blank" href="https://pixabay.com/fr/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867285">Pexels</a> on <a target="_blank" href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867285">Pixabay</a>'
 ---
 
