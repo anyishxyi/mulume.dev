@@ -56,12 +56,6 @@ describe('SearchComponent', () => {
         label: `About`,
         shortcut: ['A'],
       },
-      {
-        name: 'articles',
-        src: '/src/assets/svg/articles.svg',
-        label: 'Articles',
-        shortcut: ['R'],
-      },
     ]);
   });
 

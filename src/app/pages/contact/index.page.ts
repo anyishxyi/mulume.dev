@@ -1,15 +1,19 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RouteMeta } from '@analogjs/router';
 import { Actor } from './actor';
 import { NotificationService } from '../../services/notification.service';
 import { Notification, NotificationType } from '../../services/notification';
 
+export const routeMeta: RouteMeta = {
+  title: 'Contact // Jean-Paul NGALULA',
+};
+
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   template: `
     <main class="c-cUWjlu c-cUWjlu-iepuTsq-css">
       <section class="c-EnlPs">
@@ -66,9 +70,9 @@ import { Notification, NotificationType } from '../../services/notification';
       </section>
     </main>
   `,
-  styleUrls: ['./contact.component.scss'],
+  styleUrls: ['./contact.page.scss'],
 })
-export class ContactComponent {
+export default class ContactComponent {
   actor: Actor = new Actor();
 
   constructor(

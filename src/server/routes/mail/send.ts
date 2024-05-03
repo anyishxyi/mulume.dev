@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
       text: messageContent,
     });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     setResponseStatus(event, 500, 'Error while trying to send a mail');
     return {};
   }

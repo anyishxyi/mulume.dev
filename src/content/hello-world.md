@@ -1,3 +1,11 @@
+---
+title: Hello world
+slug: hello-world-2024-04-29
+date: 04/29/2024
+coverImage: /src/assets/img/hello-world.jpg
+coverCredit: 'Photo by <a target="_blank" href="https://pixabay.com/fr/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867285">Pexels</a> on <a target="_blank" href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867285">Pixabay</a>'
+---
+
 Bonjour à tous et bienvenue sur mon blog ! Je suis ravi de vous accueillir pour mon tout premier article intitulé "**Hello World**". Pourquoi ce titre ? Parce que, tout comme le célèbre programme du même nom est le point de départ pour de nombreux développeurs, ce blog marque le début d'une nouvelle aventure pour moi dans le monde du développement fullstack.
 
 En tant que développeur fullstack spécialisé dans **Java** et **Angular**, je suis passionné par la création d'applications web innovantes et fonctionnelles. Au fil des années, j'ai acquis une solide expérience dans ces technologies et j'ai hâte de partager mes connaissances, mes découvertes et mes réflexions avec vous à travers ce blog.

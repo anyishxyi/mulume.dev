@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { AboutComponent } from './about.component';
+import AboutComponent from './index.page';
 import { NotificationService } from '../../services/notification.service';
 
 describe('AboutComponent', () => {

@@ -1,12 +1,17 @@
-import { CommonModule } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouteMeta } from '@analogjs/router';
 import { NotificationService } from '../../services/notification.service';
 import { Notification, NotificationType } from '../../services/notification';
+
+export const routeMeta: RouteMeta = {
+  title: 'About // Jean-Paul NGALULA',
+};
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [DatePipe],
   template: `
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">
@@ -55,15 +60,29 @@ import { Notification, NotificationType } from '../../services/notification';
           <div class="experience">
             <h3>Software engineer</h3>
             <p>
+              <a href="https://www.soprasteria.com" target="_blank">Sopra Steria</a>
+              <span> • Paris, France</span>
+            </p>
+            <p>
+              <span>{{ 'May 2024' | date: 'MMM yyyy' }}</span>
+              <span> – </span>
+              <span>Today</span>
+              <span> • </span>
+              <span>{{ seniority('05/13/2024', 'today') }}</span>
+            </p>
+          </div>
+          <div class="experience">
+            <h3>Software engineer</h3>
+            <p>
               <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>
               <span> • Paris, France</span>
             </p>
             <p>
               <span>{{ 'Mar 2023' | date: 'MMM yyyy' }}</span>
               <span> – </span>
-              <span>Today</span>
+              <span>{{ 'April 2024' | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>{{ seniority('03/01/2023', 'today') }}</span>
+              <span>{{ seniority('01/03/2023', '04/29/2024') }}</span>
             </p>
           </div>
           <div class="experience">
@@ -126,10 +145,10 @@ import { Notification, NotificationType } from '../../services/notification';
       </section>
     </main>
   `,
-  styleUrls: ['./about.component.scss'],
+  styleUrls: ['./about.page.scss'],
 })
-export class AboutComponent {
-  private cvLink = '../../../assets/cv/cv_jeanpaul_ngalula.pdf';
+export default class AboutComponent {
+  private readonly cvLink = '/src/assets/cv/cv_jeanpaul_ngalula.pdf';
 
   constructor(private notificationService: NotificationService) {}
 

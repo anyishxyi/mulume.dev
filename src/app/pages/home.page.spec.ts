@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { By } from '@angular/platform-browser';
-import { HomeComponent } from './home.component';
-import { SearchService } from '../../services/search.service';
+import HomeComponent from './index.page';
+import { SearchService } from '../services/search.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

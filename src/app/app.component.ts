@@ -1,20 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { filter } from 'rxjs';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShortcutComponent } from './components/shortcut/shortcut.component';
 import { SearchComponent } from './components/search/search.component';
 import { NotificationComponent } from './components/notification/notification.component';
-import { Title } from '@angular/platform-browser';
-import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
-    RouterModule,
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
@@ -56,7 +53,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  changePage(page: string) {
+  changePage(page: string): void {
     this.router.navigate([page]);
   }
 

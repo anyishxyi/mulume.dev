@@ -1,13 +1,16 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { RouteMeta } from '@analogjs/router';
+import { SearchService } from '../services/search.service';
 
-import { SearchService } from '../../services/search.service';
+export const routeMeta: RouteMeta = {
+  title: 'Home // Jean-Paul NGALULA',
+};
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [RouterLink],
   template: `
     <main>
       <section class="home-section">
@@ -15,7 +18,7 @@ import { SearchService } from '../../services/search.service';
         <p>
           <strong
             >Software Engineer at
-            <a href="https://www.capgemini.com/" target="blank">Capgemini</a></strong
+            <a href="https://www.soprasteria.com/" target="blank">Sopra Steria</a></strong
           >
           <br />
           Interested in craftsmanship
@@ -26,9 +29,9 @@ import { SearchService } from '../../services/search.service';
       </section>
     </main>
   `,
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.page.scss'],
 })
-export class HomeComponent {
+export default class HomeComponent {
   constructor(private searchService: SearchService) {}
 
   displaySearchModule(event: Event) {

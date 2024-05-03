@@ -7,7 +7,7 @@
       "projectType": "application",
       "root": ".",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "blog",
       "architect": {
         "build": {
           "builder": "@analogjs/platform:vite",
@@ -33,7 +33,7 @@
           "defaultConfiguration": "development",
           "options": {
             "buildTarget": "mulume:build",
-            "port": 4000
+            "port": 5173
           },
           "configurations": {
             "development": {
@@ -58,7 +58,7 @@
     }
   },
   "cli": {
-    "analytics": "3a272e17-ee0a-4f3b-b5ce-f2976a228cdb",
+    "analytics": false,
     "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

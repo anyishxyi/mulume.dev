@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+package-lock.json
 
 # Node
 /node_modules
@@ -44,3 +45,4 @@ Thumbs.db
 
 # Env
 .env
+.vercel/

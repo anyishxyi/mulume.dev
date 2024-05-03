@@ -1,5 +1,6 @@
-import { ProjectsComponent } from './projects.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
+import ProjectsComponent from './index.page';
 
 describe('ProjectsComponent', () => {
   let fixture: ComponentFixture<ProjectsComponent>;

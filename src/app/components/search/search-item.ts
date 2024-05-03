@@ -8,9 +8,9 @@ export interface SearchItem {
 
 export enum SearchItemNames {
   ABOUT = 'about',
-  ARTICLES = 'articles',
+  BLOG = 'blog',
   CONTACT = 'contact',
-  HOME = 'home',
+  HOME = '/',
   LINK = 'link',
   PROJECTS = 'projects',
   SOURCE = 'source',
@@ -18,7 +18,7 @@ export enum SearchItemNames {
 
 export enum SearchItemShortcuts {
   ABOUT = 'A',
-  ARTICLES = 'R',
+  BLOG = 'B',
   CONTACT = 'C',
   ESCAPE = 'Escape',
   HOME = 'H',

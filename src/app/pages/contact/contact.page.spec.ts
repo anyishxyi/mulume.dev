@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ContactComponent } from './contact.component';
+import { beforeEach, describe, expect, it } from 'vitest';
+import ContactComponent from './index.page';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;

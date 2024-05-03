@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { SearchService } from '../../services/search.service';
 
@@ -10,27 +10,25 @@ interface Link {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgClass],
   template: `
     <header class="c-dRmGAT">
-      <a
-        (click)="navigateTo('home')"
-        (keyup)="navigateTo('home')"
-        class="c-gfsRMa c-eEqOQi"
-        tabindex="0"
+      <a (click)="navigateTo('/')" (keyup)="navigateTo('/')" class="c-gfsRMa c-eEqOQi" tabindex="0"
         >M</a
       >
       <nav class="c-cGucJb">
         <ul class="c-hRSBvv">
-          <li *ngFor="let link of links" [ngClass]="{ 'hide-on-mobile': link.name === 'contact' }">
-            <a
-              (click)="navigateTo(link.name)"
-              (keyup)="navigateTo(link.name)"
-              class="c-gKCiCk"
-              tabindex="1">
-              <span class="c-cohhyn" data-projection-id="7">{{ link.label }}</span>
-            </a>
-          </li>
+          @for (link of links; track link.name) {
+            <li [ngClass]="{ 'hide-on-mobile': link.name === 'contact' }">
+              <a
+                (click)="navigateTo(link.name)"
+                (keyup)="navigateTo(link.name)"
+                class="c-gKCiCk"
+                tabindex="1">
+                <span class="c-cohhyn" data-projection-id="7">{{ link.label }}</span>
+              </a>
+            </li>
+          }
         </ul>
       </nav>
       <div class="c-cXvxHo">
@@ -54,8 +52,8 @@ export class HeaderComponent {
       label: `About`,
     },
     {
-      name: 'articles',
-      label: 'Articles',
+      name: 'blog',
+      label: 'Blog',
     },
     {
       name: 'projects',
