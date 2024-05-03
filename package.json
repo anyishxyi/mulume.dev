@@ -31,6 +31,7 @@
   "dependencies": {
     "@analogjs/content": "^1.2.2",
     "@analogjs/router": "^1.2.2",
+    "@angular/cli": "^17.2.0",
     "@angular/animations": "^17.2.0",
     "@angular/cdk": "17.3.6",
     "@angular/common": "^17.2.0",
@@ -63,7 +64,6 @@
     "@angular-eslint/eslint-plugin-template": "17.3.0",
     "@angular-eslint/schematics": "17.3.0",
     "@angular-eslint/template-parser": "17.3.0",
-    "@angular/cli": "^17.2.0",
     "@angular/compiler-cli": "^17.2.0",
     "@nx/vite": "~18.0.0",
     "@types/nodemailer": "^6.4.14",
