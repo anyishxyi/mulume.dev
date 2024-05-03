@@ -23,7 +23,7 @@ export const routeMeta: RouteMeta = {
                 <img
                   alt="jeanpaul photo"
                   aria-hidden="true"
-                  src="/src/assets/img/jeanpaul_nm.jpg"
+                  src="/img/jeanpaul_nm.jpg"
                   loading="lazy" />
               </span>
             </div>
@@ -50,10 +50,8 @@ export const routeMeta: RouteMeta = {
               role="button"
               class="c-gfjkKg"
               tabindex="0">
-              <img
-                src="/src/assets/svg/download.svg"
-                alt="download icon"
-                class="download-icon" />Download my resume here
+              <img src="/svg/download.svg" alt="download icon" class="download-icon" />Download my
+              resume here
             </a>
           </div>
           <h2>Professional Career</h2>
@@ -148,7 +146,7 @@ export const routeMeta: RouteMeta = {
   styleUrls: ['./about.page.scss'],
 })
 export default class AboutComponent {
-  private readonly cvLink = '/src/assets/cv/cv_jeanpaul_ngalula.pdf';
+  private readonly cvLink = '/cv/cv_jeanpaul_ngalula.pdf';
 
   constructor(private notificationService: NotificationService) {}
 

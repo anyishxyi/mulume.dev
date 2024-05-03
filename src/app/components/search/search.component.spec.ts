@@ -44,7 +44,7 @@ describe('SearchComponent', () => {
     expect(filterItemsSpy.mock.results[0].value).toEqual([
       {
         name: 'contact',
-        src: '/src/assets/svg/contact.svg',
+        src: '/svg/contact.svg',
         label: `Send email`,
         shortcut: ['C'],
       },
@@ -52,7 +52,7 @@ describe('SearchComponent', () => {
     expect(filterItemsSpy.mock.results[1].value).toEqual([
       {
         name: 'about',
-        src: '/src/assets/svg/about.svg',
+        src: '/svg/about.svg',
         label: `About`,
         shortcut: ['A'],
       },
