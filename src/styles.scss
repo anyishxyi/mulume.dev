@@ -15,6 +15,7 @@
   --fonts-body: 'Biotif', sans-serif;
   --fonts-code: 'Fira Code', monospace;
   --fonts-heading: 'Neuzeit Grotesk Bold', sans-serif;
+  --fonts-not-found: 'Montserrat Bold', sans-serif;
   --transitions-duration: 0.2s;
   --btn-borderRadius: 8px;
   --space-navHeightMobil: 100px;
@@ -55,6 +56,13 @@
 @font-face {
   font-family: 'Fira Code';
   src: url('assets/fonts/FiraCode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -174,4 +182,44 @@ strong {
 
 [class*='-section'] {
   flex: 1;
+}
+
+kbd {
+  color: var(--background);
+  background: var(--secondary);
+  padding: 1px 5px;
+  border-radius: 4px;
+  transition: background var(--transitions-duration) ease-in-out;
+  font-family: var(--fonts-code);
+  font-size: 14px;
+}
+
+.c-gfjkKg {
+  appearance: none;
+  background: transparent;
+  border: 0px;
+  border-radius: var(--btn-borderRadius);
+  color: var(--primary);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0px 0px 0px -10px;
+  outline: 0px;
+  padding: 8px 10px;
+  text-decoration: none;
+  transition:
+    background var(--transitions-duration) ease-in-out,
+    color var(--transitions-duration) ease-in-out;
+}
+
+.c-gfjkKg:hover {
+  background: var(--hover);
+  color: var(--primary);
+  opacity: 1;
+}
+
+.c-gfjkKg:hover kbd {
+  background: var(--primary);
 }

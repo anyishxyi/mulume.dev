@@ -1,122 +1,64 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "665e68bd-5e10-4d60-8aeb-af4e847b62d2",
-    "schematicCollections": ["@angular-eslint/schematics"]
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "mulume": {
-      "i18n": {
-        "sourceLocale": "en",
-        "locales": {
-          "fr": {
-            "translation": "src/locale/messages.fr.xlf"
-          }
-        }
-      },
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "blog",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser-esbuild",
+          "builder": "@analogjs/platform:vite",
           "options": {
-            "outputPath": "dist/mulume",
-            "index": "src/index.html",
+            "configFile": "vite.config.ts",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "src/assets/articles",
-                "output": "/assets/articles/"
-              }
-            ],
-            "styles": ["src/styles.scss"],
-            "scripts": [],
-            "localize": false
+            "outputPath": "dist/client",
+            "tsConfig": "tsconfig.app.json"
           },
+          "defaultConfiguration": "production",
           "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "5kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "outputHashing": "all"
-            },
             "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true,
-              "localize": ["en"]
+              "mode": "development"
             },
-            "fr": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true,
-              "localize": ["fr"]
+            "production": {
+              "sourcemap": false,
+              "mode": "production"
             }
-          },
-          "defaultConfiguration": "production"
+          }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@analogjs/platform:vite-dev-server",
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "mulume:build",
+            "port": 5173
+          },
           "configurations": {
+            "development": {
+              "buildTarget": "mulume:build:development",
+              "hmr": true
+            },
             "production": {
               "buildTarget": "mulume:build:production"
-            },
-            "development": {
-              "buildTarget": "mulume:build:development"
             }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "mulume:build"
           }
+        },
+        "test": {
+          "builder": "@analogjs/platform:vitest"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": ["./**/*.ts", "./**/*.html"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

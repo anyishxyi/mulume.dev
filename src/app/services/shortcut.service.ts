@@ -46,8 +46,9 @@ export class ShortcutService {
 
   private notifyLinkCopy(): void {
     const notification: Notification = {
-      title: $localize`Copied ;)`,
-      message: $localize`You can now share this link...`,
+      visibility: true,
+      title: `Copied ;)`,
+      message: `You can now share this link...`,
       type: NotificationType.SUCCESS,
     };
     this.notificationService.showNotification(notification);

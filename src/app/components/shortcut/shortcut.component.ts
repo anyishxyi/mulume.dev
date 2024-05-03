@@ -42,8 +42,8 @@ export class ShortcutComponent implements OnInit {
           action: () => this.router.navigate([SearchItemNames.ABOUT]),
         },
         {
-          key: SearchItemShortcuts.ARTICLES,
-          action: () => this.router.navigate([SearchItemNames.ARTICLES]),
+          key: SearchItemShortcuts.BLOG,
+          action: () => this.router.navigate([SearchItemNames.BLOG]),
         },
         {
           key: SearchItemShortcuts.PROJECTS,

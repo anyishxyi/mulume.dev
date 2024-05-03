@@ -1,0 +1,93 @@
+//Phones
+@media screen and (max-device-width: 1200px) {
+  #notfound {
+    height: 94vh;
+  }
+
+  .notfound .notfound-404 {
+    height: 148px;
+    margin-bottom: -30px;
+  }
+
+  .notfound .notfound-404 h1 {
+    font-size: 86px;
+  }
+
+  .notfound .notfound-404 h2 {
+    font-size: 16px;
+    top: 110px;
+  }
+}
+
+//Desktop
+@media screen and (min-device-width: 1200px) {
+  #notfound {
+    height: 90vh;
+  }
+
+  .notfound .notfound-404 {
+    margin: 0 auto 20px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 236px;
+  }
+
+  .notfound .notfound-404 h2 {
+    font-size: 28px;
+  }
+}
+
+#notfound {
+  position: relative;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 200px;
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  margin: 0;
+  color: var(--secondary);
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound .notfound-404 h2 {
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--background);
+  padding: 10px 5px;
+  margin: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

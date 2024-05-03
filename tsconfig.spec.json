@@ -5,7 +5,9 @@
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "outDir": "./out-tsc/spec",
-    "types": ["@angular/localize", "jest"]
+    "target": "es2016",
+    "types": ["node", "vitest/globals"]
   },
+  "files": ["src/test.ts"],
   "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }

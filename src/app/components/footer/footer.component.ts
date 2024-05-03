@@ -1,10 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
   template: `
     <footer class="c-fOYOSN">
       <a

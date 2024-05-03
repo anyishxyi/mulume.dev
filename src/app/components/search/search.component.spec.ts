@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ElementRef } from '@angular/core';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { SearchComponent } from './search.component';
 
 describe('SearchComponent', () => {
@@ -32,7 +33,7 @@ describe('SearchComponent', () => {
     const event = new Event('input');
     inputElementNative.dispatchEvent(event);
 
-    const filterItemsSpy = jest.spyOn(component, 'filterItems');
+    const filterItemsSpy = vi.spyOn(component, 'filterItems');
 
     component.performSearch(event);
 
@@ -43,7 +44,7 @@ describe('SearchComponent', () => {
     expect(filterItemsSpy.mock.results[0].value).toEqual([
       {
         name: 'contact',
-        src: '../../../assets/svg/contact.svg',
+        src: '/src/assets/svg/contact.svg',
         label: `Send email`,
         shortcut: ['C'],
       },
@@ -51,15 +52,9 @@ describe('SearchComponent', () => {
     expect(filterItemsSpy.mock.results[1].value).toEqual([
       {
         name: 'about',
-        src: '../../../assets/svg/about.svg',
+        src: '/src/assets/svg/about.svg',
         label: `About`,
         shortcut: ['A'],
-      },
-      {
-        name: 'articles',
-        src: '../../../assets/svg/articles.svg',
-        label: 'Articles',
-        shortcut: ['R'],
       },
     ]);
   });
@@ -76,7 +71,7 @@ describe('SearchComponent', () => {
     const event = new Event('input');
     inputElementNative.dispatchEvent(event);
 
-    const filterItemsSpy = jest.spyOn(component, 'filterItems');
+    const filterItemsSpy = vi.spyOn(component, 'filterItems');
 
     component.performSearch(event);
 
