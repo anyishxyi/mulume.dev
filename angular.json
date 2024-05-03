@@ -17,7 +17,6 @@
             "outputPath": "dist/client",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "polyfills": "src/polyfills.ts",
             "assets": [
               "src/favicon.ico",
               "src/assets",
