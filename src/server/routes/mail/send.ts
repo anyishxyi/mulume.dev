@@ -38,6 +38,6 @@ export default defineEventHandler(async (event) => {
   } catch (error) {
     console.error(error);
     setResponseStatus(event, 500, 'Error while trying to send a mail');
-    return {};
+    return error;
   }
 });

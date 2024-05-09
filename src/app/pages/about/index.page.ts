@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouteMeta } from '@analogjs/router';
 import { NotificationService } from '../../services/notification.service';
@@ -11,7 +11,7 @@ export const routeMeta: RouteMeta = {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, NgOptimizedImage],
   template: `
     <main class="c-cUWjlu c-cUWjlu-ihoTsLD-css">
       <section class="c-EnlPs">

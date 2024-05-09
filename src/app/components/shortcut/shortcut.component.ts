@@ -13,7 +13,7 @@ import { SearchItemNames, SearchItemShortcuts } from '../search/search-item';
   template: '',
 })
 export class ShortcutComponent implements OnInit {
-  private appURL = environment.appUrl;
+  private appURL = environment.APP_URL;
   constructor(
     private router: Router,
     private clipboard: Clipboard,

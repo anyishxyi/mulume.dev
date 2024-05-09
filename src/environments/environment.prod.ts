@@ -1,7 +1,10 @@
 export const environment = {
   production: true,
-  appUrl: 'https://mulume.dev',
-  MJ_API_KEY: '',
-  MJ_API_SECRET: '',
-  MY_EMAIL: 'jeanpaulngalula07@gmail.com',
+  MY_EMAIL: '',
+  CLIENT_ID: '',
+  CLIENT_SECRET: '',
+  REDIRECT_URI: '',
+  REFRESH_TOKEN: '',
+  HOST: '',
+  APP_URL: '',
 };
