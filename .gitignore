@@ -46,3 +46,5 @@ Thumbs.db
 # Env
 .env
 .vercel/
+*.sh
+.vercel
