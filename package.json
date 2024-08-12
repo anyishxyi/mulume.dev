@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "ng build",
+    "build-dev": "vercel",
     "ci": "yarn clean-dist && yarn clean-modules && yarn install --production",
     "clean": "yarn clean-dist && yarn clean-modules && yarn clean-nx && rm yarn.lock",
     "clean-dist": "rm -rf dist",
