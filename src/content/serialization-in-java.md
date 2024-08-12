@@ -95,6 +95,7 @@ Dans cet exemple, SubClass est sérialisable, mais SuperClass ne l’est pas. Si
 Les classes internes, y compris les classes locales et anonymes, posent un défi particulier pour la sérialisation. Ces classes ne sont généralement pas sérialisables par défaut, même si elles implémentent Serializable. Cela est dû à leur lien étroit avec l’instance de la classe englobante, rendant leur sérialisation plus complexe.
 
 ### 6.1. Classes Internes Non Statiques
+
 Une classe interne non statique est liée à une instance spécifique de la classe englobante. Cela signifie qu’elle a implicitement accès aux membres de l’instance de la classe englobante, ce qui rend sa sérialisation difficile.
 
 **Exemple :**
@@ -172,7 +173,8 @@ Lorsque vous créez une classe sérialisable en Java, il est courant de voir une
 ### 7.1. Pourquoi Utiliser serialVersionUID ?
 
 Le champ serialVersionUID est important pour plusieurs raisons :
-- Compatibilité des Versions : Lorsqu’une classe sérialisable évolue, des modifications telles que l’ajout de nouveaux champs ou la modification de la hiérarchie de classe peuvent rendre les versions plus anciennes incompatibles avec les nouvelles versions. Si vous ne définissez pas explicitement un serialVersionUID, le runtime de Java génère automatiquement un identifiant basé sur divers aspects de la classe (noms des champs, méthodes, etc.). Toutefois, cela peut provoquer des erreurs de désérialisation si la classe a été modifiée. 
+
+- Compatibilité des Versions : Lorsqu’une classe sérialisable évolue, des modifications telles que l’ajout de nouveaux champs ou la modification de la hiérarchie de classe peuvent rendre les versions plus anciennes incompatibles avec les nouvelles versions. Si vous ne définissez pas explicitement un serialVersionUID, le runtime de Java génère automatiquement un identifiant basé sur divers aspects de la classe (noms des champs, méthodes, etc.). Toutefois, cela peut provoquer des erreurs de désérialisation si la classe a été modifiée.
 - ontrôle de la Version : En définissant explicitement un serialVersionUID, vous avez un contrôle total sur la compatibilité entre différentes versions de la classe. Si vous ne modifiez pas cet identifiant lors de l’évolution de la classe, vous garantissez que les instances sérialisées avec l’ancienne version peuvent toujours être désérialisées avec la nouvelle version.
 
 **Exemple :**
@@ -202,7 +204,7 @@ Le serialVersionUID peut devenir une source de problèmes de compatibilité dans
 
 Supposons que vous ayez la classe Person avec un serialVersionUID initial de 1L. Si vous modifiez ce serialVersionUID en 2L sans changer la structure de la classe, les anciennes instances sérialisées avec 1L ne pourront plus être désérialisées.
 
-```Java 
+```Java
 import java.io.Serializable;
 
 public class Person implements Serializable {
@@ -221,7 +223,7 @@ Cela entraînera une incompatibilité, même si la structure de la classe n’a 
 
 **Exemple :**
 
-```Java 
+```Java
 import java.io.Serializable;
 
 public class Person implements Serializable {
