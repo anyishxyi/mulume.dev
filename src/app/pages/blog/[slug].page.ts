@@ -17,7 +17,9 @@ export const routeMeta: RouteMeta = {
       <article
         class="parallax"
         [style.background-image]="'url(' + post.attributes.coverImage + ')'">
-        <h1 class="c-cnxBZg c-jEusvl">{{ post.attributes.title }}</h1>
+        <h1 class="c-jEusvl" [ngStyle]="{ 'font-size': 60 + 'px' }">
+          {{ post.attributes.title }}
+        </h1>
         <h2 class="c-hAKjjp c-hZAbru">
           <time>{{ post.attributes.date | date: 'mediumDate' }}</time>
           <span> • </span>

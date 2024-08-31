@@ -1,5 +1,6 @@
 ---
 title: Hello world
+titleSize: 60
 slug: hello-world-2024-04-29
 date: 04/29/2024
 coverImage: /img/hello-world.jpg

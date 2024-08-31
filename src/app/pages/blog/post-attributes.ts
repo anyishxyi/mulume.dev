@@ -4,4 +4,5 @@ export default interface PostAttributes {
   coverImage: string;
   slug: string;
   title: string;
+  titleSize: number;
 }
