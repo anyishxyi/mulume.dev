@@ -1,9 +1,10 @@
 ---
 title: Sérialisation en Java - Objets Sérialisables et Non Sérialisables
+titleSize: 45
 slug: serialization-in-java-2024-08-12
 date: 08/12/2024
-coverImage: /img/hello-world.jpg
-coverCredit: 'Photo by <a target="_blank" href="https://pixabay.com/fr/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867285">Pexels</a> on <a target="_blank" href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1867285">Pixabay</a>'
+coverImage: /img/serialization.jpg
+coverCredit: 'Photo by <a href="https://pixabay.com/fr/users/skitterphoto-324082/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=384596">Rudy and Peter Skitterians</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=384596">Pixabay</a>'
 ---
 
 La sérialisation est un concept fondamental en Java qui permet de convertir un objet en un flux de bytes afin qu’il puisse être stocké sur disque, transmis à travers un réseau, ou encore sauvegardé pour être restauré ultérieurement. Pour qu’un objet Java soit sérialisable, sa classe doit implémenter une interface spécifique. Cet article explore les mécanismes de sérialisation en Java, les classes qui peuvent être sérialisées, ainsi que les situations où la sérialisation n’est pas possible.
@@ -18,12 +19,12 @@ Pour qu’une classe soit sérialisable, elle doit implémenter l’interface Se
 
 **Exemple :**
 
-```
+```java
 import java.io.Serializable;
 
 public class Person implements Serializable {
-private String name;
-private int age;
+    private String name;
+    private int age;
 
     // Constructeurs, getters, setters, etc.
 }
@@ -35,7 +36,7 @@ Dans cet exemple, la classe Person est sérialisable car elle implémente Serial
 
 En Java, toutes les classes ne sont pas sérialisables par défaut. Si une classe n’implémente pas l’interface Serializable, ses objets ne pourront pas être sérialisés. Par exemple :
 
-```
+```java
 public class Employee {
     private String name;
     private double salary;
@@ -50,7 +51,7 @@ La classe Employee dans cet exemple n’est pas sérialisable, car elle n’impl
 
 Même dans une classe sérialisable, il peut y avoir des champs que vous ne souhaitez pas sérialiser. Java fournit le mot-clé transient pour indiquer que ces champs ne doivent pas être inclus dans le processus de sérialisation.
 
-```Java
+```java
 import java.io.Serializable;
 
 public class BankAccount implements Serializable {
@@ -69,10 +70,11 @@ Lorsque vous travaillez avec l’héritage, la sérialisation devient légèreme
 
 **Exemple :**
 
-```
-class SuperClass {
-    protected String superClassField;
+```java
+import java.io.Serializable;
 
+public class SuperClass {
+    protected String superClassField;
     public SuperClass(String superClassField) {
         this.superClassField = superClassField;
     }
@@ -100,7 +102,7 @@ Une classe interne non statique est liée à une instance spécifique de la clas
 
 **Exemple :**
 
-```
+```java
 import java.io.Serializable;
 
 public class OuterClass {
@@ -124,7 +126,7 @@ Les classes anonymes posent un défi encore plus grand. Ces classes sont souvent
 
 **Exemple :**
 
-```
+```java
 import java.io.Serializable;
 
 public class OuterClass {
@@ -148,7 +150,7 @@ Contrairement aux classes internes non statiques, les classes internes statiques
 
 **Exemple :**
 
-```
+```java
 import java.io.Serializable;
 
 public class OuterClass {
@@ -179,12 +181,11 @@ Le champ serialVersionUID est important pour plusieurs raisons :
 
 **Exemple :**
 
-```Java
+```java
 import java.io.Serializable;
 
 public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
-
     private String name;
     private int age;
 
@@ -204,12 +205,11 @@ Le serialVersionUID peut devenir une source de problèmes de compatibilité dans
 
 Supposons que vous ayez la classe Person avec un serialVersionUID initial de 1L. Si vous modifiez ce serialVersionUID en 2L sans changer la structure de la classe, les anciennes instances sérialisées avec 1L ne pourront plus être désérialisées.
 
-```Java
+```java
 import java.io.Serializable;
 
 public class Person implements Serializable {
     private static final long serialVersionUID = 2L; // Changement manuel
-
     private String name;
     private int age;
 
@@ -223,12 +223,11 @@ Cela entraînera une incompatibilité, même si la structure de la classe n’a 
 
 **Exemple :**
 
-```Java
+```java
 import java.io.Serializable;
 
 public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
-
     private String name;
     private int age;
     private String address; // Nouveau champ ajouté

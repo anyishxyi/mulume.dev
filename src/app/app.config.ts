@@ -12,9 +12,7 @@ import {
 } from '@analogjs/content';
 import { PrismHighlighter } from '@analogjs/content/prism-highlighter';
 
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-markup';
-import 'prismjs/components/prism-java';
+import '/src/assets/intellij-dark-theme.css';
 
 export const appConfig: ApplicationConfig = {
   providers: [
