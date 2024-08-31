@@ -4,7 +4,7 @@
   "version": "2.1.0",
   "type": "module",
   "scripts": {
-    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" ng build",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=3072\" ng build",
     "ci": "yarn clean-dist && yarn clean-modules && yarn install --production",
     "clean": "yarn clean-dist && yarn clean-modules && yarn clean-nx && rm yarn.lock",
     "clean-dist": "rm -rf dist",
