@@ -28,8 +28,6 @@ export default defineEventHandler(async (event) => {
 
     const messageContent = `Message from: ${user.email} via my portfolio:\n\n${user.message}`;
 
-    console.log(process.env['MY_EMAIL']);
-
     setResponseStatus(event, 200, 'Email sent successfully!');
     return await transporter.sendMail({
       from: user.email,
