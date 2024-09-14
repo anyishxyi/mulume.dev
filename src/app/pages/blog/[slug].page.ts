@@ -42,6 +42,7 @@ export default class PostComponent {
   post$: Observable<ContentFile> | null = null;
   comments = viewChild<ElementRef>('comments');
 
+  // Ajoute la section commentaire dans tous les blogs
   addCommentsEffect = effect(() => {
     if (!this.comments()?.nativeElement) return;
 
@@ -58,7 +59,7 @@ export default class PostComponent {
   constructor() {
     this.post$ = injectContent<PostAttributes>().pipe(
       tap(({ attributes: { title, description, coverImage } }) => {
-        this.title.setTitle(title);
+        this.title.setTitle(`${title} // Jean-Paul NGALULA`);
         this.meta.updateTag({ name: 'description', content: description });
         this.meta.updateTag({ name: 'og:description', content: description });
         this.meta.updateTag({ name: 'og:image', content: coverImage });

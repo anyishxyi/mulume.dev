@@ -58,20 +58,6 @@ export const routeMeta: RouteMeta = {
           <div class="experience">
             <h3>Software engineer</h3>
             <p>
-              <a href="https://www.soprasteria.com" target="_blank">Sopra Steria</a>
-              <span> • Paris, France</span>
-            </p>
-            <p>
-              <span>{{ 'May 2024' | date: 'MMM yyyy' }}</span>
-              <span> – </span>
-              <span>Today</span>
-              <span> • </span>
-              <span>{{ seniority('05/13/2024', 'today') }}</span>
-            </p>
-          </div>
-          <div class="experience">
-            <h3>Software engineer</h3>
-            <p>
               <a href="https://www.capgemini.com/" target="_blank">Capgemini</a>
               <span> • Paris, France</span>
             </p>
@@ -80,7 +66,7 @@ export const routeMeta: RouteMeta = {
               <span> – </span>
               <span>{{ 'April 2024' | date: 'MMM yyyy' }}</span>
               <span> • </span>
-              <span>{{ seniority('01/03/2023', '04/29/2024') }}</span>
+              <span>{{ seniority('01/03/2023', 'today') }}</span>
             </p>
           </div>
           <div class="experience">
