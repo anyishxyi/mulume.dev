@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
-import analog from '@analogjs/platform';
+import analog, { PrerenderContentFile } from '@analogjs/platform';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -14,13 +14,35 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      nitro: {
+        preset: 'vercel',
+      },
       content: {
         prismOptions: {
           additionalLangs: ['java'],
         },
       },
       prerender: {
-        routes: ['/', '/about', '/blog'],
+        routes: async () => [
+          '/',
+          '/about',
+          '/blog',
+          {
+            contentDir: 'src/content',
+            transform: (file: PrerenderContentFile) => {
+              // do not include files marked as draft in frontmatter
+              if (file.attributes['draft']) {
+                return false;
+              }
+              // use the slug from frontmatter if defined, otherwise use the files basename
+              const slug = file.attributes['slug'] || file.name;
+              return `/blog/${slug}`;
+            },
+          },
+        ],
+        sitemap: {
+          host: 'https://www.mulume.dev',
+        },
       },
     }),
   ],

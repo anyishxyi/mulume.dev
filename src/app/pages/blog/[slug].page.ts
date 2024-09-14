@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, effect, ElementRef, inject, viewChild } from '@angular/core';
 import { AsyncPipe, DatePipe } from '@angular/common';
-import { injectContent, MarkdownComponent } from '@analogjs/content';
+import { Meta, Title } from '@angular/platform-browser';
+import { ContentFile, injectContent, MarkdownComponent } from '@analogjs/content';
 import { RouteMeta } from '@analogjs/router';
 import PostAttributes from './post-attributes';
+import { Observable, tap } from 'rxjs';
 
 export const routeMeta: RouteMeta = {
   title: 'Post // Jean-Paul NGALULA',
@@ -29,10 +31,40 @@ export const routeMeta: RouteMeta = {
       <div class="article-body">
         <analog-markdown class="article-content" [content]="post.content"></analog-markdown>
       </div>
+      <div #comments></div>
     }
   `,
   styleUrls: ['./post.page.scss'],
 })
 export default class PostComponent {
-  readonly post$ = injectContent<PostAttributes>('slug');
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+  post$: Observable<ContentFile> | null = null;
+  comments = viewChild<ElementRef>('comments');
+
+  // Ajoute la section commentaire dans tous les blogs
+  addCommentsEffect = effect(() => {
+    if (!this.comments()?.nativeElement) return;
+
+    const script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'anyishxyi/mulume.dev');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'dark-blue');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    this.comments()?.nativeElement.appendChild(script);
+  });
+
+  constructor() {
+    this.post$ = injectContent<PostAttributes>().pipe(
+      tap(({ attributes: { title, description, coverImage } }) => {
+        this.title.setTitle(`${title} // Jean-Paul NGALULA`);
+        this.meta.updateTag({ name: 'description', content: description });
+        this.meta.updateTag({ name: 'og:description', content: description });
+        this.meta.updateTag({ name: 'og:image', content: coverImage });
+        this.meta.updateTag({ name: 'og:title', content: title });
+      })
+    );
+  }
 }
