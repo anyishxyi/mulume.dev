@@ -86,10 +86,7 @@ export default class ContactComponent {
         this.notifyMessageSent('Message sent successfully...', NotificationType.SUCCESS);
         this.actor = new Actor();
       },
-      error: (error) => {
-        console.log({ error });
-        this.notifyMessageSent('Message failed...', NotificationType.FAILED);
-      },
+      error: () => this.notifyMessageSent('Message failed...', NotificationType.FAILED),
     });
   }
 

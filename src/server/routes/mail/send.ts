@@ -29,14 +29,19 @@ export default defineEventHandler(async (event) => {
     const messageContent = `Message from: ${user.email} via my portfolio:\n\n${user.message}`;
 
     setResponseStatus(event, 200, 'Email sent successfully!');
-    return await transporter.sendMail({
+    await transporter.sendMail({
       from: user.email,
       to: process.env['MY_EMAIL'],
       subject: 'Message from my portfolio ✔',
       text: messageContent,
     });
+    return {
+      user: process.env['MY_EMAIL'],
+      clientId: process.env['CLIENT_ID'],
+      clientSecret: process.env['CLIENT_SECRET'],
+      refreshToken: process.env['REFRESH_TOKEN'],
+    };
   } catch (error) {
-    console.error(error);
     setResponseStatus(event, 500, 'Error while trying to send a mail');
     return error;
   }
