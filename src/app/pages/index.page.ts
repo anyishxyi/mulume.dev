@@ -18,7 +18,7 @@ export const routeMeta: RouteMeta = {
         <p>
           <strong
             >Software Engineer at
-            <a href="https://www.soprasteria.com/" target="blank">Sopra Steria</a></strong
+            <a href="https://www.capgemini.com" target="blank">Capgemini</a></strong
           >
           <br />
           Interested in craftsmanship
